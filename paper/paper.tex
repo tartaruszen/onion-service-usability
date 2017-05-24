@@ -1,0 +1,77 @@
+\documentclass[9pt,twocolumn]{extarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage{newpxtext} % An improved version of the Palantino font...
+\usepackage{newpxmath} % ...and its math version.
+\usepackage{authblk}   % Use author blocks.
+\usepackage[top=2cm,bottom=2.5cm,left=2cm,right=2cm]{geometry}
+\usepackage{balance}
+\usepackage{tikz}
+\usepackage{xspace} % For reasonable spacing in custom commands.
+\usepackage{xcolor} % For colourful links.
+\usepackage[backend=biber,style=alphabetic,backref=true,maxnames=20,urldate=long]{biblatex}
+\usepackage{hyperref} % For clickable links.
+\usepackage[l2tabu, orthodox]{nag}
+\usepackage{subcaption}
+
+\setlength{\columnsep}{0.7CM}
+
+\addbibresource{paper.bib}
+
+\definecolor{darkblue}{rgb}{0.1,0.1,0.4}
+
+\newcommand{\ie}{{\it i.e.}\xspace}
+\newcommand{\eg}{{\it e.g.}\xspace}
+\newcommand{\ea}{{\it et al.}\xspace}
+\newcommand{\etc}{{\it etc.}\xspace}
+\newcommand{\aka}{a.k.a.\xspace}
+\newcommand{\first}{(\emph{i})\xspace}
+\newcommand{\second}{(\emph{ii})\xspace}
+\newcommand{\third}{(\emph{iii})\xspace}
+\newcommand{\fourth}{(\emph{iv})\xspace}
+\newcommand{\fifth}{(\emph{v})\xspace}
+
+\hypersetup{
+	pdftitle={How do Tor users interact with onion services?},
+	pdfauthor={},
+	pdfkeywords={},
+	colorlinks=true,
+	urlcolor=darkblue,
+	linkcolor=darkblue,
+	citecolor=darkblue
+}
+
+\renewcommand*{\bibfont}{\small}
+
+\title{
+    {\Huge \textbf{How do Tor users interact with onion services?}}
+}
+
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\input{abstract}
+
+\input{introduction}
+
+\input{related-work}
+
+\input{background}
+
+\input{survey-design}
+
+\input{results}
+
+\input{discussion}
+
+\input{conclusion}
+
+\input{acknowledgements}
+
+\balance
+\printbibliography
+
+\end{document}

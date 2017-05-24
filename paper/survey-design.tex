@@ -1,0 +1,105 @@
+\section{Survey design}
+\label{sec:survey-design}
+
+We investigate how Tor users interact with onion services by designing and
+administering a survey.
+
+\subsection{Research question}
+We designed the survey to answer the following research questions: \emph{How do
+Tor users interact with onion services?}  An answer to this research question
+allows us to both create more usable anonymity systems and build these systems
+in a way that human-centered attacks such as phishing are exacerbated.  In
+particular, we seek to answer the following three aspects:
+
+\begin{itemize}
+    \item What is the expectation of privacy when people use Tor Browser in
+        general and onion sites in particular?
+    \item What is the security/usability trade-off of vanity onion domains?
+    \item Do people handle onion domains differently than normal domains?
+\end{itemize}
+
+\subsection{Design}
+\begin{itemize}
+    \item Our survey consists of six blocks:
+        \begin{enumerate}
+            \item Consent and demographics
+            \item Tor usage
+            \item Onion site usage
+            \item Onion site operation
+            \item Onion site phishing and impersonation
+            \item Expectations of privacy
+        \end{enumerate}
+    \item Mention that we got IRB approval once we got it.
+    \item We implemented our survey in Qualtrics and made sure that it can be
+        answered correctly over Tor Browser.  Used a Qualtrics feature so that
+        participants can answer the survey only once.
+    \item We used four screener questions distributed over four distinct
+        blocks, \ie, questions whose sole purpose is to check whether the
+        respondent is paying attention.~\cite{Berinsky2014a}.
+    \item Having followed mailing lists \etc for many years, we did not feel the
+        need for focus groups to explore what topics are worth inquiring.
+    \item Used cognitive pretesting (sometimes also called cognitive
+        interviewing)~\cite{Collins2003a}.  Pretesting can show us that
+        respondents \first understand questions, \second understand questions
+        consistently, and \third understand questions the way that we intended.
+        Two main strategies are \emph{think-aloud interviewing} and
+        \emph{probing}.  In addition, we can ask respondends about the
+        confidence they have in their responses.  However, not all cognitive
+        processes can be verbalized and cognitive pretesting may change the way
+        respondents answer questions.  We had $N$ respondents (talk about
+        demographics) based on whose input we iteratively improved our survey.
+
+        $M$ respondents were fluent, but non-native English speakers.
+    \item We tried hard to have neutral, non-leading questions.
+    \item Question randomization.
+    \item Basic statistics.  The survey consists of X questions and takes
+        approximately Y minutes to complete.  We used our university's
+        Qualtrics membership to create the survey.
+\end{itemize}
+
+\subsection{Participant recruiting}
+\begin{itemize}
+    \item Tor's population is unknown.  We barely know its size.  Besides, there
+        is no way to recruit all Tor users with equal probability.  Therefore,
+        we will have inevitable sampling bias in our results.  We work around
+        that by using diverse recruitment media and making our sample size as
+        large as possible.
+    \item Post on Tor's blog?\\\url{https://blog.torproject.org}
+    \item Ask Tor to post on its Twitter account?\\\url{https://twitter.com/torproject}
+    \item Post on Tor's mailing lists
+    \item Post on social media such as:
+        \begin{itemize}
+            \item \url{https://reddit.com/r/tor/}
+            \item \url{https://reddit.com/r/onions/}
+            \item \url{https://reddit.com/r/samplesize/}
+        \end{itemize}
+    \item Use Amazon's Mechanical Turk
+    \item Facebook ads?
+    \item Google surveys?
+    \item Craigslist?
+\end{itemize}
+
+Important things to consider in questions:
+\begin{itemize}
+    \item Are our results generalizable to self-authenticating names?
+    \item Ordering of questions matters.
+    \item Use aided recall for behavioral questions.
+    \item Questions should be non-threatening (is there a ``right'' or ``wrong''
+        answer?).  If respondents think they would
+        look bad, they may answer not truthfully.
+    \item Avoid jargon and unusual vocabulary (to non-native English speakers)
+\end{itemize}
+
+\subsection{Incentives for participation}
+\begin{itemize}
+    \item Have a few high-value gift cards in lottery.
+    \item Have many low-value gift cards for everyone.
+    \item Bitcoins?
+\end{itemize}
+
+\subsection{Data analysis}
+
+\subsection{Limitations}
+\begin{itemize}
+    \item Representative sample?
+\end{itemize}
