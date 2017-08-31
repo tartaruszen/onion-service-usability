@@ -1,10 +1,13 @@
-\section{Survey design}
+\section{Online survey}
+\label{sec:method}
+
+\subsection{Survey design}
 \label{sec:survey-design}
 
 We investigate how Tor users interact with onion services by designing and
 administering a survey.
 
-\subsection{Research question}
+\subsubsection{Research question}
 We designed the survey to answer the following research questions: \emph{How do
 Tor users interact with onion services?}  An answer to this research question
 allows us to both create more usable anonymity systems and build these systems
@@ -18,18 +21,7 @@ particular, we seek to answer the following three aspects:
     \item Do people handle onion domains differently than normal domains?
 \end{itemize}
 
-\subsection{Interviews}
-All our interview questions are listed in
-Appendix~\ref{app:interview-questions}.
-\begin{itemize}
-    \item Our survey pre-tests showed that the questions on expectations of
-        privacy were difficult to understand.
-    \item We conducted semi-structured interviews to understand peoples'
-        expectation of privacy when using Tor.
-    \item We designed interview questions to be open-ended.
-\end{itemize}
-
-\subsection{Design}
+\subsubsection{Design}
 
 \begin{itemize}
     \item Our survey consists of six blocks:
@@ -41,11 +33,10 @@ Appendix~\ref{app:interview-questions}.
             \item Onion site phishing and impersonation
             \item Expectations of privacy
         \end{enumerate}
-    \item Mention that we got institutional review board (IRB) approval once we
-        got it.
     \item We implemented our survey in Qualtrics and made sure that it can be
-        answered correctly over Tor Browser.  Used a Qualtrics feature so that
-        participants can answer the survey only once.
+        answered correctly over Tor Browser---it needed JavaScript, though.
+        Used a Qualtrics feature so that participants can answer the survey only
+        once.
     \item We used four screener questions distributed over four distinct
         blocks, \ie, questions whose sole purpose is to check whether the
         respondent is paying attention.~\cite{Berinsky2014a}.
@@ -61,41 +52,33 @@ Appendix~\ref{app:interview-questions}.
         processes can be verbalized and cognitive pretesting may change the way
         respondents answer questions.  We had $N$ respondents (talk about
         demographics) based on whose input we iteratively improved our survey.
-
         $M$ respondents were fluent, but non-native English speakers.
     \item We tried hard to have neutral, non-leading questions.
-    \item Question randomization.
     \item Basic statistics.  The survey consists of X questions and takes
         approximately Y minutes to complete.  We used our university's
         Qualtrics membership to create the survey.
 \end{itemize}
 
-\subsection{Participant recruiting}
+\subsubsection{Participant recruiting}
 \begin{itemize}
     \item Tor's population is unknown.  We barely know its size.  Besides, there
         is no way to recruit all Tor users with equal probability.  Therefore,
         we will have inevitable sampling bias in our results.  We work around
         that by using diverse recruitment media and making our sample size as
         large as possible.
-    \item Post on Tor's blog?\\\url{https://blog.torproject.org}
-    \item Ask Tor to post on its Twitter account?\\\url{https://twitter.com/torproject}
-    \item Post on Tor's mailing lists
+    \item Post on Tor's blog\\\url{https://blog.torproject.org/blog/take-part-study-help-improve-onion-services}.}
+    \item Tor tweeted it\\\url{https://twitter.com/torproject}
     \item Post on social media such as:
         \begin{itemize}
             \item \url{https://reddit.com/r/tor/}
             \item \url{https://reddit.com/r/onions/}
             \item \url{https://reddit.com/r/samplesize/}
         \end{itemize}
-    \item Use Amazon's Mechanical Turk
-    \item Facebook ads?
-    \item Google surveys?
-    \item Craigslist?
+    \item Started survey on 2017-08-16 and ended survey on 2017-XX-XX.
 \end{itemize}
 
-Important things to consider in questions:
 \begin{itemize}
     \item Are our results generalizable to self-authenticating names?
-    \item Ordering of questions matters.
     \item Use aided recall for behavioral questions.
     \item Questions should be non-threatening (is there a ``right'' or ``wrong''
         answer?).  If respondents think they would
@@ -103,16 +86,15 @@ Important things to consider in questions:
     \item Avoid jargon and unusual vocabulary (to non-native English speakers)
 \end{itemize}
 
-\subsection{Incentives for participation}
+\subsubsection{Incentives for participation}
 \begin{itemize}
-    \item Have a few high-value gift cards in lottery.
-    \item Have many low-value gift cards for everyone.
-    \item Bitcoins?
+    \item Difficult to do in anonymous fashion so we decided to not have
+        incentives for survey.
 \end{itemize}
 
-\subsection{Data analysis}
+\subsubsection{Data analysis}
 
-\subsection{Limitations}
+\subsubsection{Limitations}
 \begin{itemize}
     \item Representative sample?
 \end{itemize}
