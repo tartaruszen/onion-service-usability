@@ -45,6 +45,39 @@ Response = collections.namedtuple("Response", ["start_date", "end_date",
     "bogus1", "bogus2", "bogus3", "bogus4"])
 
 
+class Demographic(object):
+    """
+    Represents a demographic, i.e., a subset of all responses.
+    """
+
+    def __init__(self, responses):
+        self.responses = responses
+
+    def __iter__(self):
+        for x in self.responses:
+            yield x
+
+    def __len__(self):
+
+        return len(self.responses)
+
+    def filter(self, question, answer):
+        """Filter demographic for the given answer to the given question."""
+
+        return Demographic([r for r in self.responses
+                            if r.__getattribute__(question) in answer])
+
+    def frac(self, question, answer):
+        """Return fraction that provided given answer to given question."""
+
+        return float(len(self.filter(question, answer))) / len(self.responses)
+
+    def pct(self, question, answer):
+        """Return percentage that provided given answer to given question."""
+
+        return self.frac(question, answer) * 100
+
+
 def log(*args, **kwargs):
     """Generic log function that prints to stderr."""
 
@@ -79,21 +112,21 @@ def parse_data(file_name=sys.argv[1]):
 def analyse():
     """Analyse the data set."""
 
-    responses = parse_data()
+    population = Demographic(parse_data())
 
     # Select subjects that have either an undergraduate or a graduate degree.
 
-    educated = [r for r in responses if r.q1_5 in ["3", "4"]]
+    educated = Demographic([r for r in population if r.q1_5 in ["3", "4"]])
 
     # Select subjects that are either highly knowledgeable or experts in
     # Internet privacy and security.
 
-    experts = [r for r in responses if r.q1_6 in ["4", "5"]]
+    experts = Demographic([r for r in population if r.q1_6 in ["4", "5"]])
 
     # Select subjects that either use Tor Browser as their main browser or use
     # Tor on average once a day.
 
-    frequent_users = [r for r in responses if r.q2_3 in ["1", "6"]]
+    freq_users = Demographic([r for r in population if r.q2_3 in ["1", "6"]])
 
     return 0
 
