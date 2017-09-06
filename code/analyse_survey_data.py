@@ -128,6 +128,12 @@ def analyse():
 
     freq_users = Demographic([r for r in population if r.q2_3 in ["1", "6"]])
 
+    print("%.2f%% of frequent Tor users use onion sites frequently." %
+          freq_users.pct("q3_3", ["1", "2"]))
+
+    print("%.2f%% of Tor users use onion sites frequently." %
+          population.pct("q3_3", ["1", "2"]))
+
     return 0
 
 
