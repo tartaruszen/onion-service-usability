@@ -106,7 +106,10 @@ def parse_data(file_name=sys.argv[1]):
 
     log("Parsed %d responses" % len(responses))
 
-    return responses
+    # Discard the first three "responses" because they are meta data and not
+    # actual responses.
+
+    return responses[3:]
 
 
 def analyse():
