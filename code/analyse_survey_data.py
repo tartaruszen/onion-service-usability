@@ -70,7 +70,13 @@ class Demographic(object):
     def frac(self, question, answer):
         """Return fraction that provided given answer to given question."""
 
-        return float(len(self.filter(question, answer))) / len(self.responses)
+        # Get total number of responses, i.e., responses that didn't select an
+        # empty set of answers.
+
+        total = len([r for r in self.responses
+                     if r.__getattribute__(question) != ""])
+
+        return float(len(self.filter(question, answer))) / total
 
     def pct(self, question, answer):
         """Return percentage that provided given answer to given question."""
