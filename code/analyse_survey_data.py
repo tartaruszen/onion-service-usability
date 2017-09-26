@@ -61,6 +61,10 @@ class Demographic(object):
 
         return len(self.responses)
 
+    def remove(self, elem):
+
+        self.responses.remove(elem)
+
     def filter(self, question, answer):
         """Filter demographic for the given answer to the given question."""
 
@@ -118,10 +122,55 @@ def parse_data(file_name=sys.argv[1]):
     return responses[3:]
 
 
+def prune_data(demographic):
+    """
+    Weed out low-quality and incomplete responses.
+
+    We employ a number of heuristics to remove responses that...
+    - ...did not finish the survey.
+    - ...did not get at least two out of four attention checks.
+    """
+
+    orig_size = len(demographic)
+    log("Starting with %d responses before pruning." % orig_size)
+
+    # Weed out responses that did not finish the survey.
+
+    demographic = demographic.filter("finished", "1")
+    log("%d (%.2f%%) responses left after pruning non-finished responses." %
+        (len(demographic), float(len(demographic)) / orig_size * 100))
+
+    # Analyse attention checks.  Responses must have gotten at least two out of
+    # four attention checks correct to be considered valid.
+
+    min_correct = 2
+    attention_checks = [("q2_5",  ["3", "4"]),
+                        ("q3_12", ["2"]),
+                        ("q5_8",  ["4"]),
+                        ("q6_8",  ["1"])]
+
+    for response in demographic:
+        correct = 0
+        for question, auth_answer in attention_checks:
+
+            # Does the responden't answer match the authoritative answer?
+
+            resp_answer = response.__getattribute__(question).split(",")
+            correct += resp_answer == auth_answer
+        if correct < min_correct:
+            demographic.remove(response)
+
+    log("%d (%.2f%%) responses left after pruning failed attention checks." %
+        (len(demographic), float(len(demographic)) / orig_size * 100))
+
+    return demographic
+
+
 def analyse():
     """Analyse the data set."""
 
     population = Demographic(parse_data())
+    population = prune_data(population)
 
     # Select subjects that have either an undergraduate or a graduate degree.
 
