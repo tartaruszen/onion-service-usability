@@ -22,6 +22,8 @@ import codecs
 import collections
 import termcolor
 
+METADATA_LINES = 3
+
 # A Response tuple enables intuitive access to specific questions, e.g., by
 # writing resp.q5_4 to access question 4 in Section 5.
 
@@ -51,9 +53,11 @@ class Demographic(object):
     """
 
     def __init__(self, responses):
+
         self.responses = responses
 
     def __iter__(self):
+
         for x in self.responses:
             yield x
 
@@ -119,7 +123,7 @@ def parse_data(file_name=sys.argv[1]):
     # Discard the first three "responses" because they are meta data and not
     # actual responses.
 
-    return responses[3:]
+    return responses[METADATA_LINES:]
 
 
 def prune_data(demographic):
