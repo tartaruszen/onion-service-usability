@@ -14,6 +14,8 @@
     \item Self-selection bias.
     \item We reached mostly heavy Tor users who presumably know more than the
         occasional user.
+    \item Survivor bias: We heard mostly/only from people who can tolerate Tor's
+        usability issues.
 \end{itemize}
 
 \subsection{Data quality}
@@ -28,22 +30,22 @@ percent of respondents are younger than 36, and another sixty percent has at
 least a graduate degree.  Finally, another sixty percent considers themselves
 at least highly knowledgeable in matters of Internet privacy and security.
 
-\begin{figure}
-\centering
-\includegraphics[width=\linewidth]{figures/p08-sketch.pdf}
-\caption{Not all subjects had a correct mental model of the Tor network but
-everyone understood that Tor redirects network traffic over nodes.}
-\label{fig:p11-sketch}
-\end{figure}
+% \begin{figure}
+% \centering
+% \includegraphics[width=\linewidth]{figures/p08-sketch.pdf}
+% \caption{Not all subjects had a correct mental model of the Tor network but
+% everyone understood that Tor redirects network traffic over nodes.}
+% \label{fig:p11-sketch}
+% \end{figure}
 
 \begin{table*}[ht]
 	\centering
 	\begin{tabular}{l r l r l r l r}
 	\toprule
-	\multicolumn{2}{c}{Gender (\%)} &
-	\multicolumn{2}{c}{Age (\%)} &
-	\multicolumn{2}{c}{Education (\%)} &
-	\multicolumn{2}{c}{Domain knowledge (\%)} \\
+	Gender & \% &
+	Age & \% &
+	Education & \% &
+	Domain knowledge & \% \\
 	\midrule
 	Female & 8.9  & 18--25   & 35.5 & No degree     & 5.5  & No knowledge             & 0.5  \\
 	Male   & 86.3 & 26--35   & 34.6 & High school   & 31.9 & Mildly knowledgeable     & 7.6  \\
@@ -96,8 +98,59 @@ Half of our respondents use Tor either once a day or consider Tor Browser their
 main browser.
 
 \subsection{Onion service usage}
+
+\subsubsection{Perception of next-generation domain format}
+
+Recall that the next generation of onion services will extend the domain length
+from 16 to 54 characters, almost three times the length of the current domain
+format.
+
+We asked our survey respondents if they expect this format change to affect
+their browsing habits.  591 users answered this question.  95 (16\%) selected
+that prop224 domains will change their habits while the remaining 496 (84\%)
+selected that their habits won't be affected.
+
+Respondents who believe that their habits will change (16\%) gave the
+following reasons:
+
+These results suggest that the new domain format is among the
+minor usability issues surrounding onion services.  In fact, an
+easy-to-remember domain format ranks last among the six criteria whose
+importance we asked users about.  On a five-point Likert scale ranging
+from "not at all important" to "very important," we got the following
+results:
+
+Problematic:
+``I only memorize the first part of the domain''
+
+``If there isn't some cognizable word at the start, it'll be more difficult for
+me to determine if I'm going to the correct domain or a scam. I may end up going
+to less .onion sites as a result.''
+
+\subsubsection{Susceptibility to phishing}
+\begin{itemize}
+    \item Attack partially documented in academic
+        literature~\cite[\S~5.1]{Winter2016a}.  Monteiro provided a
+        timeline~\cite{Monteiro2016a}.
+    \item Many ad-hoc anti-phishing methods, some of which incorrect.
+\end{itemize}
+
+\subsubsection{Perception of vanity onion domains}
+\begin{description}
+    \item[$+$] Combination of vanity prefix and Markov Model-selected suffix can
+        deliver memorable domain for v2 domains.
+    \item[$+$] Reveals what the onion service is hosting.
+    \item[$-$] May provide false sense of security.
+    \item[$-$] Only available to people with resources.
+    \item[$-$] Conflicts with peoples' (flawed) expectation that a domain must
+        be random to stay hidden.
+\end{description}
+
+Technical ways to exacerbate creation of vanity domains: Incorporate scrypt into
+key generation process.
+If vanity domains remain, have Tor process support it?
+
 \subsection{Onion service operation}
-\subsection{Onion service phishing}
 \subsection{Expectations of privacy}
 
 \subsection{Participants}
