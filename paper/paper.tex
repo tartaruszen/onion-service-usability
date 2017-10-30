@@ -1,8 +1,7 @@
-\documentclass[9pt,twocolumn]{extarticle}
+\documentclass[letterpaper,twocolumn,10pt]{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage{newpxtext} % An improved version of the Palantino font...
-\usepackage{newpxmath} % ...and its math version.
+\usepackage{usenix}
 \usepackage{authblk}   % Use author blocks.
 \usepackage[top=2cm,bottom=2.5cm,left=2cm,right=2cm]{geometry}
 \usepackage{balance}
@@ -47,15 +46,22 @@
 
 \renewcommand*{\bibfont}{\small}
 
+\begin{document}
+
+% Don't want date printed
+\date{}
+
 \title{
-    {\Huge \textbf{How do Tor users interact with onion services?}}
+    {\Large \textbf{How do Tor users interact with onion services?}}
 }
 
 \author{}
 
-\begin{document}
-
 \maketitle
+
+% Use the following at camera-ready time to suppress page numbers.
+% Comment it out when you first submit the paper for review.
+\thispagestyle{empty}
 
 \input{abstract}
 
@@ -78,7 +84,9 @@
 \input{acknowledgements}
 
 \balance
-\printbibliography
+
+{\footnotesize
+\printbibliography}
 
 \input{appendix}
 
