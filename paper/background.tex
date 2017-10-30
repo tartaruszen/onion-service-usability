@@ -1,69 +1,66 @@
 \section{Background}
 \label{sec:background}
 
-To create an onion domain, a Tor client first generates an RSA key pair.  It
-then computes the SHA-1 hash over the onion service's public key, truncates it
-to 80 bits, and encodes these 80 bits in Base32, resulting in sixteen
-characters.  Onion domains are self-authenticating, meaning that as long as a
-client has the correct domain, it knows what public key to expect.
+Onion services are TCP services that are only accessible over the Tor network.
+While conventional Internet services are contacted over their IP address, onion
+services are contacted over their onion domain, which is resolved and routed
+inside the Tor network.  Due to onion services being hosted in the Tor network,
+network traffic traverses six Tor relays (see Figure~\ref{fig:onion-service})
+before it reaches the onion service.  The resulting increase in latency is the
+cost of the anonymity that onion services provide.
 
-The perfect naming scheme should have three properties:
-\begin{description}
-    \item[Secure] The mapping from the name to the underlying resource (e.g., an
-        IP address) must be secure.
-    \item[Memorable] People should be able to remember the name easily.
-    \item[Global] The name should have the same meaning for every participant
-        in the system.
-\end{description}
-
-\begin{figure}
-  \centering
-
-  \begin{subfigure}[b]{\linewidth}
-    \centering
-    \includegraphics[width=0.7\linewidth]{figures/login-warning-1.png}
-    \caption{During the login process, an onion site explicitly warns of an
-    impersonation site.}
-    \label{fig:login-warning-1}
-  \end{subfigure}
-
-  \begin{subfigure}[b]{\linewidth}
-    \centering
-    \includegraphics[width=0.8\linewidth]{figures/login-warning-2.png}
-    \caption{Aware of an ongoing phishing attack, another onion site warns its
-    users of impersonation sites.}
-    \label{fig:login-warning-2}
-  \end{subfigure}
-
-  \caption{Reacting to phishing attacks, some onion service operators now
-  display warnings as part of the login process.}
-\end{figure}
-
-Possible to use scallion~\cite{scallion}.
-
-In practice, most naming schemes only seem to satisfy two out of these three
-properties.  This observation is colloquially referred to as ``Zooko's
-triangle,'' illustrated in \autoref{fig:naming-triangle}.  DNS is memorable
-and global but not secure because numerous attacks exist to feed DNS users a
-false mapping from domain to IP address.  Onion domains are secure and global
-but not memorable because they are long and randomly generated.  Petname systems
-(e.g., your buddy list in your instant messaging application) are memorable and
-secure but not global.
-
-\begin{figure}
+\begin{figure*}[ht]
 \centering
-\begin{tikzpicture}
+\begin{tikzpicture}[node distance=0.5cm]
+\tikzset{>=latex}
 
-\draw (0.0,0.0) node[anchor=east] {Global}
-        -- node [midway, below, sloped] {{\footnotesize Onion domains}}
-      (3.0,0.0) node[anchor=west] {Secure}
-        -- node [midway, above, sloped] {{\footnotesize Petnames}}
-      (1.5,2.6) node[anchor=south] {Memorable}
-        -- node [midway, above, sloped] {{\footnotesize DNS}}
-      (0.0,0.0);
+\tikzstyle{block} = [rectangle, draw, rounded corners, text centered,
+                     minimum height=0.5cm]
+
+\node[block,fill=green!20]             (TB)  {Tor Browser};
+\node[block,fill=blue!20,right=of TB]  (GR1) {Guard};
+\node[block,fill=blue!20,right=of GR1] (MR1) {Middle};
+\node[block,fill=gray!20,right=of MR1] (R)   {Rendezvous};
+\node[block,fill=blue!20,right=of R]   (MR2) {Middle};
+\node[block,fill=blue!20,right=of MR2] (MR3) {Middle};
+\node[block,fill=blue!20,right=of MR3] (GR2) {Guard};
+\node[block,fill=red!20,right=of GR2]  (OS)  {Onion service};
+
+\draw[<->] (TB.east)  -- (GR1.west);
+\draw[<->] (GR1.east) -- (MR1.west);
+\draw[<->] (MR1.east) -- (R.west);
+\draw[<->] (R.east)   -- (MR2.west);
+\draw[<->] (MR2.east) -- (MR3.west);
+\draw[<->] (MR3.east) -- (GR2.west);
+\draw[<->] (GR2.east) -- (OS.west);
 
 \end{tikzpicture}
-\caption{``Zooko's triangle,'' a conjecture that posits that any naming scheme
-can only satisfy two properties out of secure, memorable, and global.}
-\label{fig:naming-triangle}
-\end{figure}
+\caption{When a user connects to an onion service, there are six relays in
+between her Tor Browser (on the left) and the onion service (on the right).}
+\label{fig:onion-service}
+\end{figure*}
+
+To create an onion domain, a Tor client first generates an RSA key pair.  It
+then computes the SHA-1 hash over the RSA public key, truncates it to 80 bits,
+and encodes these 80 bits in Base32, resulting in sixteen characters, \eg,
+\texttt{expyuzz4wqqyqhjn}.  Due to the domain being a function of the public
+key, onion domains are self-authenticating, meaning that as long as a client has
+the correct domain, it knows what public key to expect.  The downside is that
+sixteen random characters are impractical to remember.  However, onion domains
+can be made at least partially meaningful by repeatedly creating RSA keys until
+the resulting domain contains a desired string.  These domains are referred to
+as \emph{vanity onion domains}.  The longer the desired string, the more time it
+takes to find a matching key pair.  In practice, onion service operators use
+tools such as scallion~\cite{scallion} that parallelize the search for suitable
+keys to speed up the process.  Vanity domains are used by several organizations
+such as Facebook (\url{facebookcorewwwi.onion}), ProPublica
+(\url{propub3r6espa33w.onion}), and the New York Times
+(\url{nytimes3xbfgragh.onion}).
+
+Onion services are private by default.  Once an onion service is created, it is
+up to its operator to announce it to the public, \eg, by adding it to onion site
+search engines such as Ahmia.\footnote{The search engine is available online at
+\url{https://ahmia.fi}.}  The lack of a go-to service such as Google for
+onion service discovery means that the community has devised various ways to
+publish onion services; most importantly an array of search engines and curated
+lists.
