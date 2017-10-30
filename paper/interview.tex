@@ -1,56 +1,139 @@
 \section{Interview study}
 \label{sec:interview-study}
 
-\subsection{Research ethics}
-The institutional review board (IRB) of Princeton University deemed our study
-exempt (IRB protocol number: 8251).  Before the interview we asked our subjects
-to sign a consent form, we explicitly asked for permission to record the
-conversation, and we made it clear that subjects could withdraw their consent at
-any time.
+We conducted a series of semi-structured interviews about the use of Tor
+Browser and onion services to explore user experience outside the constraints
+of our online survey, and to inform the creation of our survey---and vice versa
+because we conducted more interviews after our survey ended.
 
 \subsection{Method}
-We conducted a series of semi-structured interviews to learn what is worth
-asking in our surveys.
 
-\subsubsection{Participants}
-We created a pre-interview survey (see Appendix~\ref{app:interview-survey}) to
-select eligible subjects.
+We developed a question set that served as the basis for each interview.  The
+semi-structured nature of the interviews allowed us to deviate from our
+questions, \eg, by asking follow-up questions.  Our question set began with
+demographic information (gender, age range, occupation, country of residence,
+and level of education), followed by information about online behavior, and
+finally questions specific to Tor Browser and onion services.
 
-We conducted thirteen interviews at the Citizen Lab Summer Institute 2017 in
-Toronto.\footnote{Information about the conference is online at
-\url{https://citizenlab.ca/summerinstitute/2017.html}.}  
+\subsubsection{Recruitment}
 
-We had three interviewers.  How did we split up in groups?  Were all interviews in English?
+We created a short pre-interview survey (see
+Appendix~\ref{sec:interview-survey}) to select eligible subjects.  This survey
+was advertised in a post on The Tor Project's blog~\cite{Winter2017a} and its
+Twitter account.  Our selection process focused on laypeople and sought to
+maximize cultural, gender, location, education, and age diversity.  We ended up
+interviewing seventeen subjects whose demographic information is shown in
+Table~\ref{tab:interviewees}.  In addition to our online screening, we
+recruited participants in person at an Internet freedom event.
 
-\begin{table*}
-	\centering
-	\begin{tabular}{l r l r l r l r}
-	\toprule
-	\multicolumn{2}{c}{Age (\%)} &
-	\multicolumn{2}{c}{Gender (\%)} &
-	\multicolumn{2}{c}{Country of residence (\%)} &
-	\multicolumn{2}{c}{Education (\%)} \\
-	\midrule
-	18--25   & 0  & Female & 38 & Canada         & 38 & No degree     & 0 \\
-	26--35   & 69 & Male   & 62 & Colombia       & 8  & High school   & 8 \\
-	36--45   & 31 &        &    & Germany        & 8  & Graduate      & 15 \\
-	46--55   & 0  &        &    & Mexico         & 8  & Post graduate & 77 \\
-	56--65   & 0  &        &    & Netherlands    & 8  & & \\
-	$\ge$ 66 & 0  &        &    & United Kingdom & 15 & & \\
-	         &    &        &    & USA            & 15 & & \\
-	\bottomrule
-	\end{tabular}
-	\caption{The distribution over gender, age, country of residence, and
-	education for our $N$ interview subjects.}
-	\label{tab:interviewees}
+It is difficult to draw a uniform sample of Tor users to interview. We belive
+that The Tor Project's blog and Twitter account are mainly read by users who
+are particularly technical while many non-technical users may install Tor
+Browser in a one-off process and then never read anything again.  To make
+matters worse, due to Tor Browser's very nature as an anonymity tool, many
+users value their privacy significantly more than the average Internet user,
+making it difficult to have users trust us enough to talk about their browsing
+habits.  We believe that our sample is biased towards more knowledgable and
+technical users, but it also shows how diverse Tor's user base is.  Our
+participants were human rights activists, legal professionals, writers,
+artists, and journalists, just to name a few.
+
+\begin{table*}[ht]
+    \centering
+    \begin{tabular}{l r r l r r l r r l r r}
+    \toprule
+    Age & \# & \% &
+    Gender & \# & \% &
+    Country of residence & \# & \% &
+    Education & \# & \% \\
+    \midrule
+    18--25 & 2  & 11.8 & Female & 5  & 29.4 & Australia      & 1 & 5.9  & No degree     & 1  & 5.9 \\
+    26--35 & 10 & 58.8 & Male   & 12 & 70.6 & Canada         & 5 & 29.4 & High school   & 3  & 17.7 \\
+    36--45 & 4  & 23.5 &        &    &      & Colombia       & 1 & 5.9  & Graduate      & 3  & 17.7 \\
+    46--55 & 1  & 5.9  &        &    &      & Germany        & 1 & 5.9  & Post graduate & 10 & 58.8 \\
+           &    &      &        &    &      & India          & 1 & 5.9  & & & \\
+           &    &      &        &    &      & Indonesia      & 1 & 5.9  & & & \\
+           &    &      &        &    &      & Mexico         & 1 & 5.9  & & & \\
+           &    &      &        &    &      & Netherlands    & 1 & 5.9  & & & \\
+           &    &      &        &    &      & South Korea    & 1 & 5.9  & & & \\
+           &    &      &        &    &      & United Kingdom & 2 & 11.8 & & & \\
+           &    &      &        &    &      & U.S.A.         & 2 & 11.8 & & & \\
+    \bottomrule
+    \end{tabular}
+    \caption{The distribution over gender, age, country of residence, and
+    education for our seventeen interview subjects.}
+    \label{tab:interviewees}
 \end{table*}
+
+\subsubsection{Procedure}
+
+We conducted thirteen interviews in person and four interviews remotely; over
+Skype, Signal, WhatsApp, and Jitsi---depending on what our interviewees felt
+the most comfortable with.  For in-person interviews we asked our interviewees
+to sign a consent form.  This was not practical for remote interviews, so we
+sent the consent form in advance over email and asked for verbal consent before
+the interview.  In all cases we explicitly asked for permission to record the
+conversation.  All except two participants agreed to have the interview
+recorded.  For these two interviews we took notes instead.  All interviews
+concluded with a debriefing phase in which we asked if our participants had any
+remaining questions.  Some were curious if technical explanations they provided
+earlier were correct.  Finally, we offered our participants a gift card worth
+20 USD as a token of appreciation.
+
+Once all interviews were transcribed, we employed qualitative data coding to
+analyze the transcripts.  Each interview transcript was coded by two members of
+our team.  This process identified TODO themes, all listed in
+Appendix~\ref{sec:coding-themes}.
+
+\subsection{Research ethics}
+
+The institutional review board (IRB) of Princeton University deemed our study
+exempt from further review.\footnote{Our IRB protocol number is 8251.}  Before
+each in-person interview we asked our subjects to sign a consent form.  This
+was not practical for remote interviews, so we sought permission from our IRB
+to use verbal instead of written consent.  In all interviews we explicitly
+asked for permission to record the conversation, to which all but two
+participants agreed.  In these two cases the interviewer took notes instead.
+Finally, we made it clear that our participants could withdraw their consent at
+any time.  Once we transcribed our interview recordings, we deleted the
+original recordings.  We used the services of the company Rev to have our
+recordings transcribed.  A mutually-signed non-disclosure agreement protected
+the confidentiality of our data.
 
 \subsection{Results}
 
-\begin{figure}
-\centering
-\includegraphics[width=0.8\linewidth]{figures/os-sketch.pdf}
-\caption{One subject's mental model of an onion service---four Tor relays in a
-sequence.}
-\label{fig:os-sketch}
-\end{figure}
+\subsubsection{Advantages}
+
+\begin{itemize}
+    \item Better privacy and security
+    \item Gives you control over your data
+    \item Perceived feeling of safety
+\end{itemize}
+
+\subsubsection{Disadvantages}
+
+\begin{itemize}
+    \item Slow browsing
+    \item 90s browsing experience
+    \item CAPTCHAs
+    \item Tor makes you stick out
+    \item Harmful ``public image'' of Tor
+\end{itemize}
+
+\subsubsection{Threat model}
+
+\begin{itemize}
+    \item Advertising companies
+\end{itemize}
+
+\subsubsection{Onion services}
+
+\begin{itemize}
+    \item Some users feel safer, some less safe when using onion services
+\end{itemize}
+
+\subsubsection{Miscellaneous}
+
+\begin{itemize}
+    \item Briding cultural gaps
+\end{itemize}
