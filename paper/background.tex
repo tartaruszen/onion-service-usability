@@ -40,6 +40,18 @@ between her Tor Browser (on the left) and the onion service (on the right).}
 \label{fig:onion-service}
 \end{figure*}
 
+As of October 2017, there are approximately 50,000 unique onion services online
+each day, illustrated in Figure~\ref{fig:os-growth}.  The number of Tor users
+accessing these onion services is not known because The Tor Project does not
+collect such statistics.
+
+\begin{figure}[ht]
+\includegraphics[width=\linewidth]{figures/os-growth.pdf}
+\caption{The estimated median number of unique onion services per day since
+2015.}
+\label{fig:os-growth}
+\end{figure}
+
 To create an onion domain, a Tor client first generates an RSA key pair.  It
 then computes the SHA-1 hash over the RSA public key, truncates it to 80 bits,
 and encodes these 80 bits in Base32, resulting in sixteen characters, \eg,
@@ -60,7 +72,6 @@ such as Facebook (\url{facebookcorewwwi.onion}), ProPublica
 Onion services are private by default.  Once an onion service is created, it is
 up to its operator to announce it to the public, \eg, by adding it to onion site
 search engines such as Ahmia.\footnote{The search engine is available online at
-\url{https://ahmia.fi}.}  The lack of a go-to service such as Google for
-onion service discovery means that the community has devised various ways to
-publish onion services; most importantly an array of search engines and curated
-lists.
+\url{https://ahmia.fi}.}  The lack of a go-to service such as Google for onion
+service discovery had the community devise various ways to publish onion
+services; most importantly an array of search engines and curated lists.

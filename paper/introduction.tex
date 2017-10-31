@@ -1,13 +1,14 @@
 \section{Introduction}
 \label{sec:introduction}
 
-Online anonymity is typically synonymous with \emph{client anonymity}; VPNs
-promise to disguise one's IP address, An equally pressing requirement can be
-\emph{server anonymity} when the operator of a site is facing harassment or legal
-repercussions.  Decoupling a server's content from the identity of its operator
-can mitigate these issues.  Several systems implement various flavours of server
-anonymity, including I2P, Freenet, and X, but in this work we focus on Tor's
-onion services.
+The colloquial meaning behind online anonymity typically implies client
+anonymity, \ie, a user disguises her IP address towards a web service, for
+example by using a VPN.  A lesser-known use case is server anonymity in which
+the IP address of a web service is disguised.  Just like end users, server
+operators can have good reasons to disguise the location of their services; be
+it to escape harassment, or evade legal repercussions, just to name a few.
+Perhaps the most popular way of exposing an anonymous service on the Internet is
+Tor's onion services.
 
 The Tor anonymity network is primarily known as a tool that enables client
 anonymity, \ie, it allows users who download the project's Tor Browser to
@@ -34,13 +35,6 @@ services remains mostly unexplored.
 The most salient aspect of onion services is their peculiar domain names.
 Being derived from RSA public keys, they consist of random Base32 characters
 such as the following three examples.
-
-\begin{figure}[t]
-\includegraphics[width=\linewidth]{figures/os-growth.pdf}
-\caption{The estimated median number of unique onion services per day since
-2015.}
-\label{fig:os-growth}
-\end{figure}
 
 {\footnotesize
 \begin{verbatim}
