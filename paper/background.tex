@@ -9,36 +9,49 @@ network traffic traverses six Tor relays (see Figure~\ref{fig:onion-service})
 before it reaches the onion service.  The resulting increase in latency is the
 cost of the anonymity that onion services provide.
 
-\begin{figure*}[ht]
+\begin{figure}[t]
 \centering
-\begin{tikzpicture}[node distance=0.5cm]
-\tikzset{>=latex}
+\begin{tikzpicture}[node distance=0.4cm]
 
+\tikzset{>=latex}
 \tikzstyle{block} = [rectangle, draw, rounded corners, text centered,
                      minimum height=0.5cm]
 
-\node[block,fill=green!20]             (TB)  {Tor Browser};
-\node[block,fill=blue!20,right=of TB]  (GR1) {Guard};
-\node[block,fill=blue!20,right=of GR1] (MR1) {Middle};
-\node[block,fill=gray!20,right=of MR1] (R)   {Rendezvous};
-\node[block,fill=blue!20,right=of R]   (MR2) {Middle};
-\node[block,fill=blue!20,right=of MR2] (MR3) {Middle};
-\node[block,fill=blue!20,right=of MR3] (GR2) {Guard};
-\node[block,fill=red!20,right=of GR2]  (OS)  {Onion service};
+\node[block,fill=black!60,
+      text=white]         (TB)  {Tor Browser};
+\node[block,right=of TB]  (GR1) {Guard};
+\node[block,right=of GR1] (MR1) {Middle};
+\node[block,below=of MR1] (R)   {Rendezvous};
+\node[block,below=of R]   (MR2) {Middle};
+\node[block,left=of  MR2] (MR3) {Middle};
+\node[block,left=of  MR3] (GR2) {Guard};
+\node[block,fill=black!60,
+            text=white,
+            left=of GR2]  (OS)  {Onion service};
 
-\draw[<->] (TB.east)  -- (GR1.west);
-\draw[<->] (GR1.east) -- (MR1.west);
-\draw[<->] (MR1.east) -- (R.west);
-\draw[<->] (R.east)   -- (MR2.west);
-\draw[<->] (MR2.east) -- (MR3.west);
-\draw[<->] (MR3.east) -- (GR2.west);
-\draw[<->] (GR2.east) -- (OS.west);
+\draw[<->] (TB.east)   -- (GR1.west);
+\draw[<->] (GR1.east)  -- (MR1.west);
+\draw[<->] (MR1.south) -- (R.north);
+\draw[<->] (R.south)   -- (MR2.north);
+\draw[<->] (MR2.west)  -- (MR3.east);
+\draw[<->] (MR3.west)  -- (GR2.east);
+\draw[<->] (GR2.west)  -- (OS.east);
+
+\draw[|-|] ([yshift=3pt] GR1.north west)
+           -- node [above, midway] {Circuit}
+           ([yshift=3pt] MR1.north east);
+
+\draw[|-|] ([yshift=-3pt] GR2.south west)
+           -- node [below, midway] {Circuit}
+           ([yshift=-3pt] MR2.south east);
 
 \end{tikzpicture}
-\caption{When a user connects to an onion service, there are six relays in
-between her Tor Browser (on the left) and the onion service (on the right).}
+\caption{A connection to an onion service typically consists of six Tor relays.
+Both the client and the onion service create a circuit (consisting of two and
+three relays, respectively) to the rendezvous relay that serves as a short-lived
+data exchange point.}
 \label{fig:onion-service}
-\end{figure*}
+\end{figure}
 
 As of October 2017, there are approximately 50,000 unique onion services online
 each day, illustrated in Figure~\ref{fig:os-growth}.  The number of Tor users
