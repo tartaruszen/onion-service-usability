@@ -37,13 +37,13 @@ cost of the anonymity that onion services provide.
 \draw[<->] (MR3.west)  -- (GR2.east);
 \draw[<->] (GR2.west)  -- (OS.east);
 
-\draw[|-|] ([yshift=3pt] GR1.north west)
-           -- node [above, midway] {Circuit}
-           ([yshift=3pt] MR1.north east);
+\draw[|-|,gray] ([yshift=3pt] GR1.north west)
+                -- node [above, midway, text=gray] {Circuit}
+                ([yshift=3pt] MR1.north east);
 
-\draw[|-|] ([yshift=-3pt] GR2.south west)
-           -- node [below, midway] {Circuit}
-           ([yshift=-3pt] MR2.south east);
+\draw[|-|,gray] ([yshift=-3pt] GR2.south west)
+                -- node [below, midway, text=gray] {Circuit}
+                ([yshift=-3pt] MR2.south east);
 
 \end{tikzpicture}
 \caption{A connection to an onion service typically consists of six Tor relays.
