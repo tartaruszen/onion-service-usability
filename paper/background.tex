@@ -74,13 +74,19 @@ the correct domain, it knows what public key to expect.  The downside is that
 sixteen random characters are impractical to remember.  However, onion domains
 can be made at least partially meaningful by repeatedly creating RSA keys until
 the resulting domain contains a desired string.  These domains are referred to
-as \emph{vanity onion domains}.  The longer the desired string, the more time it
-takes to find a matching key pair.  In practice, onion service operators use
-tools such as scallion~\cite{scallion} that parallelize the search for suitable
-keys to speed up the process.  Vanity domains are used by several organizations
-such as Facebook (\url{facebookcorewwwi.onion}), ProPublica
-(\url{propub3r6espa33w.onion}), and the New York Times
-(\url{nytimes3xbfgragh.onion}).
+as \emph{vanity onion domains}.  A vanity prefix of length $n$ takes on average
+$0.5 \cdot 32^n$ key creations given Base32's alphabet size of 32 characters.
+After having created a set of domains with a vanity prefix, one can search this
+set for the domain that is the easiest to remember, \eg, by using a Markov model
+to filter domains that resemble words in the English language.  While this
+process will not yield coherent domains, it will greatly facilitate
+memorization.
+
+In practice, onion service operators use tools such as scallion~\cite{scallion},
+which speed up the process by parallelizing the search for suitable keys.
+Vanity domains are used by several organizations such as Facebook
+(\url{facebookcorewwwi.onion}), ProPublica (\url{propub3r6espa33w.onion}), and
+the New York Times (\url{nytimes3xbfgragh.onion}).
 
 Onion services are private by default.  Once an onion service is created, it is
 up to its operator to announce it to the public, \eg, by adding it to onion site
