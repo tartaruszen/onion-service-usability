@@ -68,10 +68,17 @@ collect such statistics.
 To create an onion domain, a Tor client first generates an RSA key pair.  It
 then computes the SHA-1 hash over the RSA public key, truncates it to 80 bits,
 and encodes these 80 bits in Base32, resulting in sixteen characters, \eg,
-\texttt{expyuzz4wqqyqhjn}.  Due to the domain being a function of the public
-key, onion domains are self-authenticating, meaning that as long as a client has
-the correct domain, it knows what public key to expect.  The downside is that
-sixteen random characters are impractical to remember.  However, onion domains
+\texttt{expyuzz4wqqyqhjn}.  As of November 2017, The Tor Project is deploying
+the next generation of onion services whose domain format will feature 56
+characters~\cite[\S~6]{Mathewson2013a}---a Base32 encoding of the onion
+service's public key, a checksum, and a version number.  Since the next
+generation uses elliptic curve cryptography, it is possible to make the entire
+public key (instead of just a hash over the public key) part of the domain.
+
+Due to an onion domain being a function of the public key, onion domains are
+self-authenticating, meaning that as long as a client has the correct domain, it
+knows what public key to expect.  The downside is that sixteen random characters
+are impractical to remember, let alone 56 characters.  However, onion domains
 can be made at least partially meaningful by repeatedly creating RSA keys until
 the resulting domain contains a desired string.  These domains are referred to
 as \emph{vanity onion domains}.  A vanity prefix of length $n$ takes on average
