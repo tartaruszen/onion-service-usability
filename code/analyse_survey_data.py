@@ -118,12 +118,14 @@ def parse_data(file_name=sys.argv[1]):
     for row in csvread:
         responses.append(Response(*row))
 
-    log("Parsed %d responses" % len(responses))
-
     # Discard the first three "responses" because they are meta data and not
     # actual responses.
 
-    return responses[METADATA_LINES:]
+    responses = responses[METADATA_LINES:]
+
+    log("Parsed %d responses" % len(responses))
+
+    return responses
 
 
 def prune_data(demographic):
