@@ -36,6 +36,11 @@ respondents answer questions.  We had five pretesters based on whose input we
 iteratively improved our survey.  Two pretesters were native English speakers
 while the remaining three were fluent but spoke English as a second language.
 
+To weed out low-quality responses we incorporated four attention checks into our
+survey~\cite{Berinsky2014a}.  Having four attention checks instead of just one
+allows us to measure a respondent's \emph{degree} of attention, meaning that we
+only discard responses that failed more than two attention checks.
+
 The majority of our survey focused on onion services but we also added some
 questions about Tor in general.  Table~\ref{tab:survey-structure} shows that our
 survey consists of six blocks that are ordered by topic.  It takes about fifteen
@@ -90,41 +95,22 @@ our interview participants turned down the gift cards that we offered.
 \subsection{Results}
 \label{sec:results}
 
-\subsubsection{Demographics}
+Throughout all 27 days, our survey was taken 828 times.  However, not all
+responses are necessarily of high quality; people may have rushed their answers,
+aborted our survey prematurely, or given deliberately wrong answers.  We weed
+out such low-quality responses that \first did not finish the survey and that
+\second failed more than two out of our four attention checks.  We collected a
+total of 828 responses but only 604 (73\%) completed the survey and 527 (64\%)
+passed at least two attention checks.  The remainder of this section analyzes
+these 527 responses.
 
-\subsubsection{Data pruning}
-\begin{itemize}
-    \item Median response time was 15 minutes, but wide variance.
-    \item Attention checks didn't work that well.
-    \item We used four screener questions distributed over four distinct
-        blocks, \ie, questions whose sole purpose is to check whether the
-        respondent is paying attention.~\cite{Berinsky2014a}.
-\end{itemize}
-
-\subsubsection{Biases}
-\begin{itemize}
-    \item Security-conscious people didn't respond because our survey required
-        JavaScript.
-    \item Self-selection bias.
-    \item We reached mostly heavy Tor users who presumably know more than the
-        occasional user.
-    \item Survivor bias: We heard mostly/only from people who can tolerate Tor's
-        usability issues.
-\end{itemize}
-
-\subsubsection{Data quality}
-\begin{itemize}
-    \item Attention checks.
-\end{itemize}
-
-\subsubsection{Demographics}
 Table~\ref{tab:survey-demo} shows the demographics of our survey.  Not
-surprisingly, our demographic is \emph{young and educated}: more than sixty
-percent of respondents are younger than 36, and another sixty percent has at
-least a graduate degree.  Finally, another sixty percent considers themselves
-at least highly knowledgeable in matters of Internet privacy and security.
+surprisingly, our respondents were \emph{young and educated}: more than sixty
+percent are younger than 36, and another sixty percent has at least a graduate
+degree.  Finally, another sixty percent considers themselves at least highly
+knowledgeable in matters of Internet privacy and security.
 
-\begin{table*}[ht]
+\begin{table*}[t]
 	\centering
 	\begin{tabular}{l r l r l r l r}
 	\toprule
@@ -146,49 +132,81 @@ at least highly knowledgeable in matters of Internet privacy and security.
 	\label{tab:survey-demo}
 \end{table*}
 
-\subsubsection{Tor usage}
-The three entities most Tor users seek to protect themselves against are
-governments (X\%), ISPs (X\%), and corporations (X\%).  Generally speaking,
-people use Tor to protect themselves from a wide variety of threats including:
+
+\subsubsection{Biases}
+
+As mentioned earlier, it is very difficult to draw a truly uniform sample of Tor
+users.  The only way to reach all Tor users uniformly would be to modify Tor
+Browser's landing page that is displayed on start.  Unfortunately, this approach
+is very invasive.  We opted for asking The Tor Project to disseminate our survey
+on its blog and social media accounts.  We believe that this recruitment
+strategy came with the following biases.
+
 \begin{description}
-    \item[Corporations] because of tracking, advertising, and profiling.  Some
-        respondents specifically pointed out Google and Facebook.
-    \item[Service providers] such as ISPs, backbone ISPs, and websites
-        themselves.  In fact, the ISP is the most popular ``threat'' to our
-        respondents with XX\%.
-    \item[Governments] because of mass surveillance, law enforcement, and
-        government-mandated censorship.  Governments are the second most
-        popular threat with XX\%.
-    \item[Personal threats] including identity theft, targeted harassment, and
-        stalking.
-    \item[Research] allows users to learn about a topic without revealing their
-        interest in it.  Some respondents use Tor for search engine
-        optimization, computer security research, and to research medical
-        conditions.
-    \item[Technical] use cases include IPv6 connectivity, the evasion of
-        geographical restrictions, and access to onion services.  A small
-        number of respondents is only interested in technical aspects other
-        than privacy.
+    \item[Survivor bias] We predominantly heard from people who can tolerate
+        Tor's usability issues enough to still be around and take a survey on
+        the topic.  We likely did not hear from many---if any---people who gave
+        up on Tor and are no longer around to tell their tale.  The danger of
+        survivor bias lies in optimizing the user experience for the subset of
+        people who could tolerate a bad user experience.
+
+    \item[Self-selection bias] Due to the nature of our online survey,
+        participants could voluntarily select themselves into the group of
+        respondents.
+        No paranoid people or people who don't like
+        JavaScript.  Not a huge problem as we know how they think.  We also
+        mostly reached people who are unusually engaged.
 \end{description}
 
-One respondent stated that they don't need anonymity themselves but instead use
-Tor to provide cover traffic for ``people who need protection.''
+\subsubsection{Tor usage}
 
-Another respondent uses Tor to have IPv6 connectivity---some exit relays are
-multi-homed and can connect to both IPv4 and IPv6 endpoints.
+Our survey started with two general questions about the use of Tor Browser.
+Figure~\ref{fig:tor-usage} illustrates how often our respondents use Tor
+Browser.  Almost half of our participants use Tor Browser either daily or even
+as their main browser.
 
-Finally, some respondents mentioned that they are using Tor only to connect to
-onion services.
+Figure~\ref{fig:tor-threats} illustrates what entities our respondents seek to
+protect themselves from when using Tor Browser.  The majority considers ad
+companies, governments, and---most prominently---their ISP.  More relatable
+entities such as family, employer, and school are less prevalent.
 
-Half of our respondents use Tor either once a day or consider Tor Browser their
-main browser.
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/tor-usage.pdf}
+    \caption{The usage frequency of Tor Browser among our respondents.  Almost
+    half of our respondents use Tor Browser either daily or as their main
+    browser.}
+    \label{fig:tor-usage}
+\end{figure}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/tor-threats.pdf}
+    \caption{The threat actors that our respondents seek to protect themselves
+        from by using Tor Browser.}
+    \label{fig:tor-threats}
+\end{figure}
+
+People who selected ``Other'' gave a variety of responses.  A number of
+respondents specifically pointed out Google and Facebook.  ISPs, backbone ISPs,
+and websites were another common theme.  A number of respondents are struggling
+with personal threats that include identity theft, targeted harassment, and
+stalking.  Research is another common theme.  Several respondents want to learn
+about a topic without revealing their interest in it.  Some respondents use Tor
+for search engine optimization, computer security research, and to research
+medical conditions.  Finally, Tor provides technical advantages that don't
+involve a threat actor.  Some respondents want IPv6 connectivity, evasion of
+geographical content restrictions, and access to onion services.  A small number
+of respondents is only interested in technical aspects other than privacy.  One
+respondent stated that they don't need anonymity themselves but instead use Tor
+to provide cover traffic for ``people who need protection.''
 
 \subsubsection{Onion service usage}
 
 \subsubsection{Perception of next-generation domain format}
 
 Recall that the next generation of onion services will extend the domain length
-from 16 to 54 characters, almost three times the length of the current domain
+from 16 to 56 characters, almost three times the length of the current domain
 format.
 
 We asked our survey respondents if they expect this format change to affect
