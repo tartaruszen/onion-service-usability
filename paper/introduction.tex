@@ -9,7 +9,7 @@ operators can have good reasons to disguise the location of their services; be
 it to escape harassment, evade legal repercussions, or voice dissenting
 opinions, just to name a few.  Perhaps the most popular way of exposing an
 anonymous service on the Internet is Tor's onion services.\footnote{Onion
-services used to be known as ``hidden services,'' but were recently relabeled to
+services used to be known as ``hidden services'' but were recently relabeled to
 reflect the fact that onion services provide more than just ``hiding'' a
 service.}
 
@@ -17,7 +17,7 @@ Originally deployed in 2004, onion services have grown substantially over the
 last years, both in the number of services and users.  As of May 2017, The Tor
 Project's statistics show that more than 50,000 onion services are online each
 day, relaying more than 750 MBps of network traffic.  Not all of these services
-host web sites---other use cases such as meta data-free
+host web sites: other use cases such as metadata-free
 messaging~\cite{ricochet} and file sharing~\cite{onionshare} have emerged as
 well.  Learning the number of onion service users is more challenging.  In 2016,
 Facebook reported that more than one million users logged into their onion
@@ -26,16 +26,16 @@ service over a one month period~\cite{facebook-users}.
 % Enumerate usability issues in the form of a short experience story instead?
 % start with discover, then that you need Tor, then weird domain format, etc
 From a usability point of view, onion services differ from conventional web
-services in several aspects; \first they can only be accessed over the Tor
+services in several aspects: \first they can only be accessed over the Tor
 network; \second their domains are hashes over public keys, rendering them hard
 to remember; \third network latency is noticeable because of the additional hops
-in between client and onion service, and \fourth onion services are private by
+in between client and onion service; and \fourth onion services are private by
 default and must be manually disseminated by their operator. To date our
 understanding of how users deal with these idiosyncrasies is merely anecdotal.
 Despite the lack of literature, much work has investigated potential
 improvements.  In this work, we seek to fill this gap by answering the research
 question of how Tor users interact with onion services.  In particular, we set
-out to understand users' mental models, their expectation of privacy, the issues
+out to understand users' mental models, their expectations of privacy, the issues
 that they experience, and how they adapted their workflows to deal with onion
 services.
 
@@ -46,7 +46,7 @@ services.
 \label{fig:os-interface}
 \end{figure}
 
-Onion services don't exist in a vacuum.  They are tightly coupled to their
+Now, onion services don't exist in a vacuum.  They are tightly coupled to their
 surrounding software ecosystem, most importantly Tor Browser.  Focusing our work
 on onion services only would miss important context.  While our research
 question is about onion services, we aim to get as complete a picture as
@@ -68,9 +68,9 @@ of Tor that may cause security issues, \second the domain format of onion
 services, while cumbersome, is not among the most pressing usability issues,
 \third the content that onion services are perceived to host causes trust issues
 for non-technical users, and \fourth onion service operators fight phishing
-attacks by having devised a number of strategies, many of which ineffective.
+attacks by having devised a number of strategies, many of which are ineffective.
 
-Our work benefits The Tor Project by serving as guideline to improve the
+Our work benefits The Tor Project by serving as guidelines to improve the
 usability of both Tor Browser and onion services.  At the time of this writing,
 The Tor Project is finalizing the design and implementation of the next
 generation of onion services, and we hope that our results can inform this
@@ -97,6 +97,6 @@ The rest of this paper is structured as follows.  We begin by discussing related
 work in Section~\ref{sec:related-work}, followed by background on onion services
 in Section~\ref{sec:background}.  Section~\ref{sec:interview-study} then dives
 into our interview study, followed by Section~\ref{sec:online-survey} which
-focuses on our online survey.  We finally discuss our results in
+focuses on our online survey.  Finally, we discuss our results in
 Section~\ref{sec:discussion} and conclude our work in
 Section~\ref{sec:conclusion}.
