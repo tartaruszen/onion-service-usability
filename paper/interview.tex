@@ -3,7 +3,7 @@
 
 We conducted a series of semi-structured interviews about the use of Tor
 Browser and onion services to explore user experience outside the constraints
-of our online survey, and to inform the creation of our survey---and vice versa
+of our online survey and to inform the creation of our survey---and vice versa
 because we conducted more interviews after our survey ended.
 
 \subsection{Method}
@@ -89,7 +89,7 @@ Appendix~\ref{sec:coding-themes}.
 
 The institutional review board (IRB) of Princeton University deemed our study
 exempt from further review.\footnote{Our IRB protocol number is 8251.}  Before
-each in-person interview we asked our subjects to sign a consent form.  This
+each in-person interview, we asked our subjects to sign a consent form.  This
 was not practical for remote interviews, so we sought permission from our IRB
 to use verbal instead of written consent.  In all interviews we explicitly
 asked for permission to record the conversation, to which all but two
@@ -124,7 +124,7 @@ I love how I can monitor the network through this little kind of bar that
 comes up.
 \end{displayquote}
 
-More generally, some participants wished it was easier to learn what is
+More generally, some participants wished it were easier to learn what is
 happening behind the scenes:
 
 \begin{displayquote}
@@ -162,9 +162,9 @@ and then getting the onion set up.  But it's just very basic.  I have to go [to]
 other people's blog post to find out.
 \end{displayquote}
 
-In addition to the comprehensiveness of documentation, one participant struggled
+In addition to the lack of comprehensiveness of documentation, one participant struggled
 with the lack of localization.  While Tor Browser's user interface is available
-in Spanish, the documentation isn't:
+in Spanish, the documentation is not:
 
 \begin{displayquote}
 Think more [about] the Spanish community\dots because in my case I'm trying to
@@ -176,10 +176,10 @@ During our interviews we asked our participants to draw a sketch of how they
 believe Tor and onion services work.  Everybody could draw a sketch of Tor but
 some didn't draw onion services as they had no mental model for it.
 Interestingly, all participants understood that Tor bounces network traffic
-across several relays, and that this is key to the anonymity Tor provides.  For
+across several relays and that this is key to the anonymity Tor provides.  For
 example, Figure~\ref{fig:tor-sketch} stems from a participant with no technical
 background.  While the details are incorrect,\footnote{Tor circuits use the same
-forward and backward path and default two three hops.} the sketch correctly
+forward and backward path and default to three hops.} the sketch correctly
 resembles that a Tor circuit contains several hops.
 
 \begin{figure}[t]
@@ -187,7 +187,7 @@ resembles that a Tor circuit contains several hops.
     \includegraphics[width=0.8\linewidth]{figures/p08-tor-sketch.jpg}
     \caption{A non-technical interview subject's sketch of how they believe Tor
     works.  The participant correctly understands the concept of bouncing
-    network traffic over several hops}
+    network traffic over several hops.}
     \label{fig:tor-sketch}
 \end{figure}
 
@@ -200,15 +200,15 @@ resembles that a Tor circuit contains several hops.
     \label{fig:os-sketch}
 \end{figure}
 
-\subsubsection{Misunderstanding}
+\subsubsection{Misunderstandings}
 
 Some statements of our participants suggested that they misunderstood aspects of
 Tor.  A particularly common theme we encountered was the conflation of nuanced
 aspects of anonymity.  Some of our participants did not distinguish between
 anonymizing their identity and anonymizing the IP address.  There is still merit
 in using Facebook's onion service.  While the company indeed learns who is
-logging in, they will not learn their users location, operating system, and
-users get end-to-end security outside of the often-brittle X.509 ecosystem as
+logging in, they will not learn their users' location and operating system, and
+users get end-to-end security outside of the often brittle X.509 ecosystem as
 well as self-authenticating names.  These concepts are difficult to convey to
 users, however.  One participant voiced:
 
@@ -216,7 +216,6 @@ users, however.  One participant voiced:
 What's the point of going to Facebook using onion services when their business
 model is still about collecting your data?
 \end{displayquote}
-
 Even technical users sometimes exhibit this ``all or nothing'' approach to
 anonymity.
 
@@ -245,7 +244,7 @@ and\dots or supposedly.
 \end{displayquote}
 
 Crime taking place over Tor and particularly on onion services was a common
-theme.  Most of our participant feel safer when using Tor Browser over another
+theme.  Most of our participants feel safer when using Tor Browser instead of another
 browser.  Some further distinguished between security and privacy, with one
 respondent saying that ``\emph{Mozilla and Google do a lot for security but not
 for privacy}.''  Another participant 
@@ -253,7 +252,7 @@ for privacy}.''  Another participant
 \subsubsection{Disadvantages}
 
 We were particularly interested in hearing what kind of issues Tor users face.
-Perhaps the most common issue is---still---browsing speed:
+Perhaps the most common issue is (still) browsing speed:
 
 \begin{displayquote}
 The speed of it is problematic; sometimes I have a path that allows me to watch
@@ -261,7 +260,7 @@ streaming full HD YouTube videos, and the next time five minutes later I'm
 barely getting kilobytes through.
 \end{displayquote}
 
-Occasionally, Tor's reputation precedes it, and prepares users for what to
+Occasionally, Tor's reputation precedes it and prepares users for what to
 expect:
 
 \begin{displayquote}
@@ -277,7 +276,7 @@ looked like I was in 1982},'' and ``\emph{I think the colors look a bit old
 fashioned and in the former Soviet Union}\dots''
 
 Many of our participants expressed concern that their use of Tor makes them
-``stick out'' or paint a target on their backs.  Asked about the disadvantages
+``stick out'' or paints a target on their backs.  Asked about the disadvantages
 of using Tor, one participant responded:
 
 \begin{displayquote}
