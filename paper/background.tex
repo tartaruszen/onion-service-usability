@@ -2,9 +2,9 @@
 \label{sec:background}
 
 Onion services are TCP services that are only accessible over the Tor network.
-While conventional Internet services are contacted over their IP address, onion
-services are contacted over their onion domain, which is resolved and routed
-inside the Tor network.  Due to onion services being hosted in the Tor network,
+While conventional Internet services are contacted via their IP addresses, onion
+services are contacted via their onion domains, which are resolved and routed
+inside the Tor network.  Due to onion services' being hosted in the Tor network,
 network traffic traverses six Tor relays (see Figure~\ref{fig:onion-service})
 before it reaches the onion service.  The resulting increase in latency is the
 cost of the anonymity that onion services provide.
@@ -54,7 +54,7 @@ data exchange point.}
 \end{figure}
 
 As of October 2017, there are approximately 50,000 unique onion services online
-each day, illustrated in Figure~\ref{fig:os-growth}.  The number of Tor users
+each day, as illustrated in Figure~\ref{fig:os-growth}.  The number of Tor users
 accessing these onion services is not known because The Tor Project does not
 collect such statistics.
 
@@ -71,11 +71,11 @@ and encodes these 80 bits in Base32, resulting in sixteen characters, \eg,
 \texttt{expyuzz4wqqyqhjn}.  As of November 2017, The Tor Project is deploying
 the next generation of onion services whose domain format will feature 56
 characters~\cite[\S~6]{Mathewson2013a}---a Base32 encoding of the onion
-service's public key, a checksum, and a version number.  Since the next
+service's public key, a checksum, and a version number.  Because the next
 generation uses elliptic curve cryptography, it is possible to make the entire
 public key (instead of just a hash over the public key) part of the domain.
 
-Due to an onion domain being a function of the public key, onion domains are
+Due to an onion domain's being a function of the public key, onion domains are
 self-authenticating, meaning that as long as a client has the correct domain, it
 knows what public key to expect.  The downside is that sixteen random characters
 are impractical to remember, let alone 56 characters.  However, onion domains
@@ -99,5 +99,5 @@ Onion services are private by default.  Once an onion service is created, it is
 up to its operator to announce it to the public, \eg, by adding it to onion site
 search engines such as Ahmia.\footnote{The search engine is available online at
 \url{https://ahmia.fi}.}  The lack of a go-to service such as Google for onion
-service discovery had the community devise various ways to publish onion
+service discovery prompted the community to devise various ways to publish onion
 services; most importantly an array of search engines and curated lists.
