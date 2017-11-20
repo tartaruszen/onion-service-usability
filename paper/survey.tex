@@ -203,6 +203,41 @@ to provide cover traffic for ``people who need protection.''
 
 \subsubsection{Onion service usage}
 
+The usage frequency of onion services is almost uniformly distributed among our
+respondents; 24\% use onion sites less than once a month, 22\% use them about
+monthly, 25\% weekly, and 23\% daily.  The remaining 6\% has never used an onion
+service before.
+
+The majority of our respondents (61.8\%) has used onion services for purposes
+other than web browsing before.  Several protocols such as the chat application
+Ricochet~\cite{ricochet} and the file sharing application
+OnionShare~\cite{onionshare} were purpose-built on top of onion services while
+existing TCP-based tools such as SSH can also be used with onion addresses
+instead of traditional IP addresses.  Almost one third (29.7\%) of our
+participants use onion service for non-browsing activities at least once a week.
+
+But why do Tor users browse onion services in the first place?
+Figure~\ref{fig:onion-usage} provides an answer.  The majority uses onion
+services because of the additional anonymity (70\%) and the additional security
+(61\%).  For 46\% it is the only way to access some content they enjoy, so using
+onion services is a necessity.  27\% of our respondents found themselves curious
+about the ``Dark Web'' and set out to find their own answer and 19\%
+occasionally stumble upon links to onion services in their day-to-day browsing
+activity.  Respondents who selected ``Other'' gave a variety of reasons, the
+most predominant of which was the ability to set up a TCP service behind a NAT
+device.  That way, it is possible to run an SSH server in a home network that
+has neither a permanent IP address, nor port forwarding.  Other noteworthy
+respondents use onion services to reduce the load on exit relays, to do
+technical research, and to access sites that are otherwise unavailable.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/onion-usage.pdf}
+    \caption{Our respondents' (multiple choice) reasons for using onion
+    services.}
+    \label{fig:onion-usage}
+\end{figure}
+
 \subsubsection{Perception of next-generation domain format}
 
 Recall that the next generation of onion services will extend the domain length
