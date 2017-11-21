@@ -238,6 +238,71 @@ technical research, and to access sites that are otherwise unavailable.
     \label{fig:onion-usage}
 \end{figure}
 
+\subsubsection{Onion service discovery}
+
+Recall that onion services are private by default, leaving it up to their
+operator to disseminate the domain.  Established search engines such as Google
+are therefore inadequate to find content on onion services.  We wanted to find
+out how our respondents discover onion services.
+Figure~\ref{fig:onion-discovery} illustrates the results.  The three most
+popular ways of discovering new onion sites, all approximating 50\%, are social
+networking sites such as Twitter and Reddit, the list of search engines such as
+Ahmia\footnote{Ahmia.fi is an onion site search engine that crawls
+user-submitted onion domains.  It publishes the list of all indexed onion
+services at \url{https://ahmia.fi/onions/}.}, and randomly encountering links
+when browsing the web.
+
+While significantly less popular, discovering onion domains through friends and
+family has the advantage of trust.  Some of our interview participant indicated
+that they heavily rely on this distribution method simply because they can trust
+the origin.  Finally, a mere 4\% indicated that they are not interested in
+learning about new onion services.
+
+Respondents who selected ``Other'' predominantly brought up
+independently-maintained lists of onion services and aggregators.  A noteworthy
+example is the Hidden Wiki.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/onion-discovery.pdf}
+    \caption{Our respondents' (multiple choice) methods of discovering onion
+    services.}
+    \label{fig:onion-discovery}
+\end{figure}
+
+The next question in our survey then asked if our respondents are satisfied with
+the way they discover onion services.  60\% selected ``Yes'' while 40\% selected
+``No.'' Some respondents who selected ``Yes'' brought up that they have no
+interest in learning about new onion services, in part because they only use a
+small set of onion services.  Among the people who are not satisfied, the most
+prominent complaint was about broken links on onion site lists.  There is
+non-trivial churn among onion sites and our respondents were frustrated that
+existing lists are typically not curated and contain many dead links.
+
+Many respondents were not aware of search engines such as ahmia.fi.  Among those
+that were, many were not satisfied with both the search results and the number
+of indexed onion sites.  Unsurprisingly, a ``Google for onion sites'' was a
+frequent wish.
+
+Several respondents were unhappy with existing aggregators.  In addition to
+broken links, some distrust lists because they occasionally contain scam and
+phishing sites.  The difficulty of telling apart two given onion domain names
+exacerbates this issue.  Another common wish for aggregators was for them to be
+more verbose in their description of onion sites.  In particular, some
+respondents want to avoid illegal and pornographic content, which is often
+difficult if the description is vague and the onion domain reveals nothing about
+its content.
+
+Many respondents expressed frustration about the difficulty of finding out if
+site X also provides a corresponding onion service.  A common wish was to have
+site X list its onion service prominently in a footer.  Ironically, some
+respondents were surprised that torproject.org has a corresponding onion site --
+they couldn't find it on the web site.
+
+Interestingly, some respondents voiced frustration about various usability
+issues, but mentioned in the same sentence that this is an inherent trade-off of
+privacy technology, suggesting that there is nothing that can be done about it.
+
 \subsubsection{Perception of next-generation domain format}
 
 Recall that the next generation of onion services will extend the domain length
