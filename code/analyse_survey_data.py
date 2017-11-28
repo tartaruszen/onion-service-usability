@@ -119,15 +119,15 @@ def log(*args, **kwargs):
           *args, file=sys.stderr, **kwargs)
 
 
-def parse_data(file_name=sys.argv[1]):
+def parse_data(file_name):
     """Parse survey data from the given file."""
 
     responses = []
 
-    log("Opening file %s" % file_name)
+    log("Attempting to open file '%s'." % file_name)
 
     try:
-        fd = codecs.open(sys.argv[1], "rb", "utf-16")
+        fd = codecs.open(file_name, "rb", "utf-16")
     except Exception as err:
         log(err)
         sys.exit(1)
@@ -280,7 +280,11 @@ def onion_usage(d):
 def analyse():
     """Analyse the data set."""
 
-    population = prune_data(Demographic(parse_data()))
+    if len(sys.argv) != 2:
+        log("Usage: %s FILE_NAME" % sys.argv[0])
+        return 1
+
+    population = prune_data(Demographic(parse_data(sys.argv[1])))
 
     # Select subjects that have either an undergraduate or a graduate degree.
 
