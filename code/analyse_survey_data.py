@@ -16,6 +16,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+import re
 import sys
 import csv
 import codecs
@@ -23,6 +24,11 @@ import collections
 import termcolor
 
 METADATA_LINES = 3
+
+# Questions that have multiple choices save the answer as a comma-separated
+# list of numbers, e.g.: 1,4,5,9
+
+MULTIPLE_CHOICE_RESPONSE = re.compile("^\d,[\d,]*$")
 
 # A Response tuple enables intuitive access to specific questions, e.g., by
 # writing resp.q5_4 to access question 4 in Section 5.
@@ -72,8 +78,20 @@ class Demographic(object):
     def filter(self, question, answer):
         """Filter demographic for the given answer to the given question."""
 
-        return Demographic([r for r in self.responses
-                            if r.__getattribute__(question) in answer])
+        assert isinstance(question, str)
+
+        filtered = Demographic([])
+        for r in self.responses:
+
+            if isinstance(r.__getattribute__(question), list):
+                match = lambda x, y: x in y
+            elif isinstance(r.__getattribute__(question), str):
+                match = lambda x, y: x == y
+
+            if match(answer, r.__getattribute__(question)):
+                filtered.responses.append(r)
+
+        return filtered
 
     def frac(self, question, answer):
         """Return fraction that provided given answer to given question."""
@@ -116,14 +134,23 @@ def parse_data(file_name=sys.argv[1]):
 
     csvread = csv.reader(fd, delimiter="\t")
     for row in csvread:
+
+        # Turn non-text responses into lists.
+
+        for i, field in enumerate(row):
+            if re.match(MULTIPLE_CHOICE_RESPONSE, field.strip()):
+                row[i] = field.split(",")
+
         responses.append(Response(*row))
 
     # Discard the first three "responses" because they are meta data and not
     # actual responses.
 
+    log("Discarding the first %d meta data lines." % METADATA_LINES)
+
     responses = responses[METADATA_LINES:]
 
-    log("Parsed %d responses" % len(responses))
+    log("Parsed %d survey responses." % len(responses))
 
     return responses
 
@@ -151,9 +178,9 @@ def prune_data(demographic):
 
     min_correct = 2
     attention_checks = [("q2_5",  ["3", "4"]),
-                        ("q3_12", ["2"]),
-                        ("q5_8",  ["4"]),
-                        ("q6_8",  ["1"])]
+                        ("q3_12", "2"),
+                        ("q5_8",  "4"),
+                        ("q6_8",  "1")]
 
     for response in demographic:
         correct = 0
@@ -161,7 +188,7 @@ def prune_data(demographic):
 
             # Does the responden't answer match the authoritative answer?
 
-            resp_answer = response.__getattribute__(question).split(",")
+            resp_answer = response.__getattribute__(question)
             correct += resp_answer == auth_answer
         if correct < min_correct:
             demographic.remove(response)
@@ -172,31 +199,111 @@ def prune_data(demographic):
     return demographic
 
 
+def tor_usage(d):
+    """
+    Analyse questions in the "Tor usage" block of the survey.
+
+    `d' is the given demographic, i.e., our survey responses after they were
+    pruned of low-quality responses.
+    """
+
+    print("---\nQuestion 2.3:")
+    print("%6.2f%% never use Tor Browser."            % d.pct("q2_3", "5"))
+    print("%6.2f%% use Tor Browser less than montly." % d.pct("q2_3", "4"))
+    print("%6.2f%% use Tor Browser once a month."     % d.pct("q2_3", "3"))
+    print("%6.2f%% use Tor Browser once a week."      % d.pct("q2_3", "2"))
+    print("%6.2f%% use Tor Browser once a day."       % d.pct("q2_3", "1"))
+    print("%6.2f%% use Tor Browser as main browser."  % d.pct("q2_3", "6"))
+
+    print("---\nQuestion 2.4:")
+    print("%6.2f%% worry about their government."         % d.pct("q2_4", "1"))
+    print("%6.2f%% worry about other governments."        % d.pct("q2_4", "2"))
+    print("%6.2f%% worry about their ISP."                % d.pct("q2_4", "3"))
+    print("%6.2f%% worry about their school."             % d.pct("q2_4", "4"))
+    print("%6.2f%% worry about their employwer."          % d.pct("q2_4", "5"))
+    print("%6.2f%% worry about their friends and family." % d.pct("q2_4", "6"))
+    print("%6.2f%% worry about ad companies."             % d.pct("q2_4", "7"))
+    print("%6.2f%% worry about hackers in open WiFis."    % d.pct("q2_4", "8"))
+    print("%6.2f%% worry about other actors."             % d.pct("q2_4", "9"))
+
+
+def onion_usage(d):
+    """
+    Analyse questions in the "Onion site usage" block of the survey.
+
+    `d' is the given demographic, i.e., our survey responses after they were
+    pruned of low-quality responses.
+    """
+
+    print("---\nQuestion 3.3:")
+    print("%6.2f%% never used onion sites."    % d.pct("q3_3", "5"))
+    print("%6.2f%% use onion sites < monthly." % d.pct("q3_3", "4"))
+    print("%6.2f%% use onion sites monthly."   % d.pct("q3_3", "3"))
+    print("%6.2f%% use onion sites weekly."    % d.pct("q3_3", "2"))
+    print("%6.2f%% use onion sites daily."     % d.pct("q3_3", "1"))
+
+    print("---\nQuestion 3.4:")
+    print("%6.2f%% never use OSs for non-browsing."     % d.pct("q3_4", "5"))
+    print("%6.2f%% use OSs for non-browsing < monthly." % d.pct("q3_4", "4"))
+    print("%6.2f%% use OSs for non-browsing monthly."   % d.pct("q3_4", "3"))
+    print("%6.2f%% use OSs for non-browsing weekly."    % d.pct("q3_4", "2"))
+    print("%6.2f%% use OSs for non-browsing daily."     % d.pct("q3_4", "1"))
+
+    print("---\nQuestion 3.5:")
+    print("%6.2f%% b/c of more anonymity"          % d.pct("q3_5", "1"))
+    print("%6.2f%% b/c of more security"           % d.pct("q3_5", "2"))
+    print("%6.2f%% b/c some sites are only onions" % d.pct("q3_5", "3"))
+    print("%6.2f%% just click on random links"     % d.pct("q3_5", "4"))
+    print("%6.2f%% curious about the dark web"     % d.pct("q3_5", "5"))
+    print("%6.2f%% b/c of other reasons"           % d.pct("q3_5", "6"))
+
+    print("---\nQuestion 3.6:")
+    print("%6.2f%% from social networking"   % d.pct("q3_6", "2"))
+    print("%6.2f%% from search engine lists" % d.pct("q3_6", "1"))
+    print("%6.2f%% from random encounters"   % d.pct("q3_6", "4"))
+    print("%6.2f%% from friends/family"      % d.pct("q3_6", "3"))
+    print("%6.2f%% from other"               % d.pct("q3_6", "6"))
+    print("%6.2f%% are not interested"       % d.pct("q3_6", "5"))
+
+    print("---\nQuestion 3.8:")
+    print("%6.2f%% save list on computer"             % d.pct("q3_8", "1"))
+    print("%6.2f%% write them down using pen & paper" % d.pct("q3_8", "2"))
+    print("%6.2f%% bookmark in tor browser"           % d.pct("q3_8", "3"))
+    print("%6.2f%% use web-based bookmarking service" % d.pct("q3_8", "4"))
+    print("%6.2f%% use search engine each time"       % d.pct("q3_8", "5"))
+    print("%6.2f%% use trusted sites for onion links" % d.pct("q3_8", "9"))
+    print("%6.2f%% memorize some onion domains"       % d.pct("q3_8", "6"))
+    print("%6.2f%% don't have a good solution"        % d.pct("q3_8", "7"))
+    print("%6.2f%% other"                             % d.pct("q3_8", "8"))
+
+
 def analyse():
     """Analyse the data set."""
 
-    population = Demographic(parse_data())
-    population = prune_data(population)
+    population = prune_data(Demographic(parse_data()))
 
     # Select subjects that have either an undergraduate or a graduate degree.
 
-    educated = Demographic([r for r in population if r.q1_5 in ["3", "4"]])
+    graduates = Demographic([r for r in population
+                             if set(r.q1_5).issubset(set(["3", "4"]))])
 
     # Select subjects that are either highly knowledgeable or experts in
     # Internet privacy and security.
 
-    experts = Demographic([r for r in population if r.q1_6 in ["4", "5"]])
+    experts = Demographic([r for r in population
+                           if set(r.q1_6).issubset(set(["4", "5"]))])
 
     # Select subjects that either use Tor Browser as their main browser or use
     # Tor on average once a day.
 
-    freq_users = Demographic([r for r in population if r.q2_3 in ["1", "6"]])
+    freq_users = Demographic([r for r in population
+                              if set(r.q2_3).issubset(set(["1", "6"]))])
 
-    print("%.2f%% of frequent Tor users use onion sites frequently." %
-          freq_users.pct("q3_3", ["1", "2"]))
+    log("Analysing questions about Tor usage.")
+    tor_usage(population)
 
-    print("%.2f%% of Tor users use onion sites frequently." %
-          population.pct("q3_3", ["1", "2"]))
+    log("Analysing questions about onion site usage.")
+    onion_usage(population)
 
     return 0
 
