@@ -303,26 +303,47 @@ Interestingly, some respondents voiced frustration about various usability
 issues, but mentioned in the same sentence that this is an inherent trade-off of
 privacy technology, suggesting that there is nothing that can be done about it.
 
-\subsubsection{Perception of next-generation domain format}
+\subsubsection{Onion service domain format}
 
-Recall that the next generation of onion services will extend the domain length
-from 16 to 56 characters, almost three times the length of the current domain
-format.
+Conventional domains are designed to be easy to remember and recognize.  But how do users
+handle the randomly-generated onion domains?  Question 3.8 in our survey asked
+exactly that, with the responses being illustrated in
+Figure~\ref{fig:onion-domain-mgmt}.
 
-We asked our survey respondents if they expect this format change to affect
-their browsing habits.  \textbf{TODO: we're only looking at 527 respondents, though, according to section intro.} 591 users answered this question.  95 (16\%) selected
-that prop224 domains will change their habits while the remaining 496 (84\%)
-selected that their habits won't be affected.
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/onion-domain-mgmt.pdf}
+    \caption{The strategies that our respondents use to handle onion domains.
+    More than half use bookmarks inside of Tor Browser and a quarter thinks that
+    there's no good solution.}
+    \label{fig:onion-domain-mgmt}
+\end{figure}
 
-Respondents who believe that their habits will change (16\%) gave the
-following reasons:
+Most respondents use bookmarks inside Tor Browser for onion domains.  While
+convenient, it leaves a trace of (presumably) visited sites on one's computer.
+One of Tor Browser's security requirements is ``disk avoidance,'' \ie, the
+browser must not write anything to disk that would reveal the user's browsing
+history~\cite[\S~2.1]{Perry2017a}.  Bookmarking links is a violation of this
+security requirement.  Many of our respondents were aware of this issue.  About
+a dozen respondents who selected ``Other'' stated that they store onion domains
+encryptedly---either in a text file or in their password manager.
 
-These results suggest that the new domain format is among the
-minor usability issues surrounding onion services.  In fact, an
-easy-to-remember domain format ranks last among the six criteria whose
-importance we asked users about.  On a five-point Likert scale ranging
-from "not at all important" to "very important," we got the following
-results:
+Somewhat less popular is saving onion domains in local text files (36\%),
+getting them from trusted websites (34\%), use search engines (18\%), memorize
+domains (16\%), use some other techniques (9\%) or employ pen and paper (8\%).
+Notably, one quarter of our respondents does not have a good solution to the
+problem.  Given the alarming number of (possibly insecure) home-baked solutions,
+a Tor Browser extension may be warranted to approach the problem.
+
+The next question in our survey asked if our respondents expect the
+next-generation domain format to change their browsing habits.  Interestingly,
+only 17\% expect to have their browsing habits changed while 83\% don't.  Among
+the respondents who selected ``Yes,'' many expressed that they memorize a small
+number of onion domains (such as Facebook's), which will no longer be possible.
+People who selected ``No'' mostly bring up that they treat onion domains as
+opaque identifiers that they handle via tools such as bookmarks.  These results
+suggest that the current state is dire, yet not expected to get much worse with
+the new domain format.
 
 Problematic:
 ``I only memorize the first part of the domain''
