@@ -277,6 +277,33 @@ def onion_usage(d):
     print("%6.2f%% other"                             % d.pct("q3_8", "8"))
 
 
+def onion_operation(d):
+
+    print("---\nQuestion 4.2:")
+    print("%6.2f%% set up their own OS"  % d.pct("q4_2", "1"))
+    print("%6.2f%% considered it" % d.pct("q4_2", "2"))
+    print("%6.2f%% did not consider it" % d.pct("q4_2", "3"))
+
+    print("---\nQuestion 4.4:")
+    print("%6.2f%% for anonymity"       % d.pct("q4_4", "1"))
+    print("%6.2f%% for e2e security"    % d.pct("q4_4", "2"))
+    print("%6.2f%% for 3rd party tools" % d.pct("q4_4", "3"))
+    print("%6.2f%% for NAT traversal"   % d.pct("q4_4", "6"))
+    print("%6.2f%% out of curiosity"    % d.pct("q4_4", "4"))
+    print("%6.2f%% for other reasons"   % d.pct("q4_4", "5"))
+
+    print("---\nQuestion 4.5:")
+    print("%6.2f%% for public use"  % d.pct("q4_5", "1"))
+    print("%6.2f%% for private use" % d.pct("q4_5", "2"))
+
+    print("---\nQuestion 4.6:")
+    print("%6.2f%% not at all" % d.pct("q4_6_3", "1"))
+    print("%6.2f%% slightly"   % d.pct("q4_6_3", "2"))
+    print("%6.2f%% somewhat"   % d.pct("q4_6_3", "3"))
+    print("%6.2f%% moderately" % d.pct("q4_6_3", "4"))
+    print("%6.2f%% extremely"  % d.pct("q4_6_3", "5"))
+
+
 def analyse():
     """Analyse the data set."""
 
@@ -308,6 +335,9 @@ def analyse():
 
     log("Analysing questions about onion site usage.")
     onion_usage(population)
+
+    log("Analysing questions about onion site operation.")
+    onion_operation(population)
 
     return 0
 
