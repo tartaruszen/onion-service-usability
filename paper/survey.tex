@@ -352,6 +352,52 @@ Problematic:
 me to determine if I'm going to the correct domain or a scam. I may end up going
 to less .onion sites as a result.''
 
+\subsubsection{Onion service operation}
+
+A survey question block on onion service operation shed light on the reasons for
+running onion services and what sort of issues users face when doing so.  40\%
+of our respondents once set up an onion service.  Among the respondents who
+never have, 31\% have considered doing so while 30\% have never even considered
+it.  Interestingly, 79\% of operators have run an onion service for private use
+while 53\% have run them for the public.
+
+Figure~\ref{fig:onion-operation-reasons} gives an overview of the reasons for
+running onion services.  Interestingly, the extra security properties overshadow
+the anonymity properties of onion services.  Another particularly popular reason
+is NAT traversal---many respondents noted that onion services allow them to
+expose a TCP service in their home network despite being behind a NAT device.
+Finally, some people run onion service indirectly because third-party tools such
+as OnionShare~\cite{onionshare} or Ricochet~\cite{ricochet} are built on top of
+them.  Onion services can have clear benefits for businesses as well as
+evidenced by one respondent who wrote on onion services: ``We use it for
+delivering updates to our router to customers securely and without leaking
+metadata.''
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/onion-operation-reasons.pdf}
+    \caption{The reasons people have for running onion services.}
+    \label{fig:onion-operation-reasons}
+\end{figure}
+
+Figure~\ref{fig:onion-operation-concerns} illustrates the concerns that onion
+service operators face.  We consider three attacks; \first somebody setting up a
+phishing site for the operator's site, \second a denial-of-service attack, and
+\third a deanonymization attack.  More than half of our respondents are at least
+somewhat concerned about all of these attacks.  Almost 40\% claim to be
+extremely concerned about somebody deanonymizing their onion service.  Indeed,
+many respondents lamented the difficulty of knowing that an onion service setup
+is robust against application-layer deanonymization attacks.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/onion-operation-concerns.pdf}
+    \caption{The level of concern onion service operators have with respect to a
+    phishing clone of their service, denial-of-service attacks, and
+    deanonymization.}
+    \label{fig:onion-operation-concerns}
+\end{figure}
+
 \subsubsection{Susceptibility to phishing}
 \begin{itemize}
     \item Attack partially documented in academic
@@ -374,10 +420,3 @@ to less .onion sites as a result.''
 Technical ways to exacerbate creation of vanity domains: Incorporate scrypt into
 key generation process.
 If vanity domains remain, have Tor process support it?
-
-\subsubsection{Random anecdotes}
-\begin{itemize}
-    \item In pre-test: one person considered the onion domain itself
-        confidential and was worried about the domain's prefix revealing
-        anything about its content.
-\end{itemize}
