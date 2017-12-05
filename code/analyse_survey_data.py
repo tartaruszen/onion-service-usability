@@ -304,6 +304,47 @@ def onion_operation(d):
     print("%6.2f%% extremely"  % d.pct("q4_6_3", "5"))
 
 
+def onion_impersonation(d):
+
+    print("---\nQuestion 5.2:")
+    print("%6.2f%% once typed an onion domain"  % d.pct("q5_2", "1"))
+    print("%6.2f%% never typed an onion domain" % d.pct("q5_2", "2"))
+
+    print("---\nQuestion 5.5:")
+    print("%6.2f%% thought about authenticity"       % d.pct("q5_5", "1"))
+    print("%6.2f%% never thought about authenticity" % d.pct("q5_5", "2"))
+
+    print("---\nQuestion 5.6:")
+    print("%6.2f%% verify in address bar"            % d.pct("q5_6", "1"))
+    print("%6.2f%% use bookmarks"                    % d.pct("q5_6", "2"))
+    print("%6.2f%% look at the clearnet site"        % d.pct("q5_6", "3"))
+    print("%6.2f%% sometimes cannot tell diff"       % d.pct("q5_6", "4"))
+    print("%6.2f%% copy & paste from trusted source" % d.pct("q5_6", "7"))
+    print("%6.2f%% check onion site's https cert"    % d.pct("q5_6", "8"))
+    print("%6.2f%% don't check"                      % d.pct("q5_6", "5"))
+    print("%6.2f%% do other stuff"                   % d.pct("q5_6", "6"))
+
+    print("---\nQuestion 5.7:")
+    print("%6.2f%%   1-3" % d.pct("q5_7", "1"))
+    print("%6.2f%%   4-6" % d.pct("q5_7", "2"))
+    print("%6.2f%%   7-9" % d.pct("q5_7", "3"))
+    print("%6.2f%% 10-12" % d.pct("q5_7", "4"))
+    print("%6.2f%% 13-16" % d.pct("q5_7", "5"))
+
+    print("---\nQuestion 5.9:")
+    print("%6.2f%% sent bitcoins"       % d.pct("q5_9", "1"))
+    print("%6.2f%% never sent bitcoins" % d.pct("q5_9", "2"))
+
+    print("---\nQuestion 5.11:")
+    print("%6.2f%% useful b/c easy to remember"         % d.pct("q5_11", "1"))
+    print("%6.2f%% useful b/c easy to recognise"        % d.pct("q5_11", "2"))
+    print("%6.2f%% like them b/c they make site unique" % d.pct("q5_11", "3"))
+    print("%6.2f%% dislike b/c domain should be random" % d.pct("q5_11", "4"))
+    print("%6.2f%% don't see a benefit"                 % d.pct("q5_11", "5"))
+    print("%6.2f%% don't have an opinion"               % d.pct("q5_11", "6"))
+    print("%6.2f%% other"                               % d.pct("q5_11", "7"))
+
+
 def analyse():
     """Analyse the data set."""
 
@@ -338,6 +379,9 @@ def analyse():
 
     log("Analysing questions about onion site operation.")
     onion_operation(population)
+
+    log("Analysing questions about onion site impersonation.")
+    onion_impersonation(population)
 
     return 0
 
