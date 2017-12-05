@@ -1,0 +1,21 @@
+library(ggplot2)
+
+cairo_pdf("onion-operation-reasons.pdf", height=1.4, width=4)
+
+df <- data.frame(
+    freq = c("Anonymity", "E2E security",
+             "Third-party tool", "NAT traversal",
+             "Curiosity", "Other"),
+    pct = c(46.34, 61.46, 27.32, 55.12, 59.51, 21.95)
+)
+
+df$freq <- factor(df$freq, levels = df$freq[order(df$pct)])
+
+ggplot(data = df, aes(x = freq, y = pct)) +
+       geom_bar(stat = "identity", fill = "steelblue") +
+       labs(x = "Why run onion\nservices?") +
+       labs(y = "Percentage") +
+       coord_flip() +
+       theme_minimal()
+
+dev.off()
