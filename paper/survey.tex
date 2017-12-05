@@ -398,25 +398,65 @@ is robust against application-layer deanonymization attacks.
     \label{fig:onion-operation-concerns}
 \end{figure}
 
-\subsubsection{Susceptibility to phishing}
-\begin{itemize}
-    \item Attack partially documented in academic
-        literature~\cite[\S~5.1]{Winter2016a}.  Monteiro provided a
-        timeline~\cite{Monteiro2016a}.
-    \item Many ad-hoc anti-phishing methods, some of which incorrect.
-\end{itemize}
+\subsubsection{Susceptibility to phishing attacks}
 
-\subsubsection{Perception of vanity onion domains}
-\begin{description}
-    \item[$+$] Combination of vanity prefix and Markov Model-selected suffix can
-        deliver memorable domain for v2 domains.
-    \item[$+$] Reveals what the onion service is hosting.
-    \item[$-$] May provide false sense of security.
-    \item[$-$] Only available to people with resources.
-    \item[$-$] Conflicts with people's (flawed) expectation that a domain must
-        be random to stay hidden.
-\end{description}
+Phishing remains an issue despite onion services' extra anonymity and security
+properties.  Past work has uncovered an attack that transparently rewrote
+Bitcoin addresses to hijack Bitcoin
+transactions~\cite{Winter2016a,Nurmi2015a,Monteiro2016a}.  Key to this attack is
+the difficulty of telling apart an authentic from an impersonation domain.  For
+conventional domains we rely on (EV) certificates, browser protections, search
+results, and long-lived reputation, but none of these methods work well for
+onion services.  Does the nature of onion services facilitate phishing attacks?
+If so, what can we do to mitigate the issue?
 
-Technical ways to exacerbate creation of vanity domains: Incorporate scrypt into
-key generation process.
-If vanity domains remain, have Tor process support it?
+We asked our respondents if they ever thought about the authenticity of an onion
+site.  With 80\%, the majority of our respondents did while 20\% didn't.
+Clearly, there is a need for verification but how does one verify that an onion
+service is authentic?  Figure~\ref{fig:determining-legitimacy} gives an overview
+of the strategies that our respondents employ.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/determining-legitimacy.pdf}
+    \caption{How our respondents determine an onion service's legitimacy.}
+    \label{fig:determining-legitimacy}
+\end{figure}
+
+More than half either consult trusted sources (\eg friends or another web site)
+or use bookmarks when revisiting onion services.  Many respondents also verify
+the domain in the browser's address bar (46\%), check if the corresponding web
+site has a link to its onion site (41\%), or hope that the onion service has an
+HTTPS certificate (36\%).\footnote{DigiCert is issuing EV-certificates for onion
+sites~\cite{DigiCert2015a} but adoption has been slow---presumably in part
+because EV certificates require the CA to verify the applicant's identity
+and they are not for free.}  Alarmingly, almost 30\% of respondents stated that
+they sometimes cannot tell the difference between an authentic service and an
+impersonation, and 11\% never check a service's legitimacy in the first place.
+People who selected ``Other'' provided a wide variety of ad-hoc phishing
+protections---some clearly misguided, which reinforces the scope of the problem.
+
+Originally meant to improve usability, vanity onion domains also play a role in
+the context of phishing.  There is concern that the short and recognizable
+prefixes tempt users to only verify the prefix and ignore subsequent
+characters~\cite{Winter2015a}.  This oversight may allow attackers to create
+impersonation domains that feature the prefix but differ in subsequent
+characters.  Nurmi~\cite{Nurmi2015a} and Monteiro~\cite{Monteiro2016a} have both
+documented such an attack but its effectiveness is not known.
+
+The majority of our respondents appreciates vanity domains because they are easy
+to remember (64\%), easy to recognize (64\%), and they provide a unique
+``branding'' (34\%).  Some responses indicate that a vanity prefix conveniently
+informs about an onion service's topic, letting visitors know what to expect.
+Only 8\% dislike vanity onion domains and 15\% don't have an opinion.
+Interestingly, some respondents consider vanity domains unfair because wealthy
+entities can afford to generate longer prefixes.  Several respondents voiced
+their concern that vanity domains create a false sense of security and
+facilitate phishing attacks.  In a separate question we inquired how many
+characters our respondents verify in onion domains.  43\% verify 13--16 digits,
+\ie (almost) the full domain, while 46\% verify up to nine digits, which is
+within the realm of brute force attacks.  Finally, a handful number of
+respondents cited misguided reasons why they dislike vanity domains, \eg some
+believe that vanity domains are a sign of weak hash functions while others
+believe that vanity domains make the onion service ``less hidden'' or allow
+somebody to create ``the same private key.''
