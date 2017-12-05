@@ -19,7 +19,6 @@ import (
 	"flag"
 	"fmt"
 	"log"
-	"net"
 	"strings"
 
 	pcap "github.com/akrennmair/gopcap"
@@ -47,16 +46,6 @@ func is_onion_domain(name string, counter int) bool {
 	}
 
 	return false
-}
-
-func getIpAddr(pkt *pcap.Packet) string {
-
-	pkt.Decode()
-	if ip, ipOk := pkt.Headers[0].(*pcap.Iphdr); ipOk {
-		return net.IP(ip.SrcIp).String()
-	}
-
-	return ""
 }
 
 func analysePcap(filename string) {
