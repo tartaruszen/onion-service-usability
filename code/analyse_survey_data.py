@@ -345,6 +345,23 @@ def onion_impersonation(d):
     print("%6.2f%% other"                               % d.pct("q5_11", "7"))
 
 
+def privacy_expectation(d):
+
+    print("---\nQuestion 6.4:")
+    print("%6.2f%% very unsafe"     % d.pct("q6_4", "5"))
+    print("%6.2f%% somewhat unsafe" % d.pct("q6_4", "4"))
+    print("%6.2f%% neutral"         % d.pct("q6_4", "3"))
+    print("%6.2f%% somewhat safe"   % d.pct("q6_4", "1"))
+    print("%6.2f%% very safe"       % d.pct("q6_4", "2"))
+
+    print("---\nQuestion 6.6:")
+    print("%6.2f%% very unsafe"     % d.pct("q6_6", "1"))
+    print("%6.2f%% somewhat unsafe" % d.pct("q6_6", "2"))
+    print("%6.2f%% neutral"         % d.pct("q6_6", "3"))
+    print("%6.2f%% somewhat safe"   % d.pct("q6_6", "4"))
+    print("%6.2f%% very safe"       % d.pct("q6_6", "5"))
+
+
 def analyse():
     """Analyse the data set."""
 
@@ -382,6 +399,9 @@ def analyse():
 
     log("Analysing questions about onion site impersonation.")
     onion_impersonation(population)
+
+    log("Analysing questions about privacy expectations.")
+    privacy_expectation(population)
 
     return 0
 

@@ -465,3 +465,46 @@ respondents cited misguided reasons why they dislike vanity domains, \eg some
 believe that vanity domains are a sign of weak hash functions while others
 believe that vanity domains make the onion service ``less hidden'' or allow
 somebody to create ``the same private key.''
+
+\subsubsection{Perceived security}
+
+Questions 6.4 and 6.6 asked how safe our respondents feel when using Tor Browser
+and onion services, respectively.  Figure~\ref{fig:perceived-security} shows the
+results.  Using Tor Browser makes 86\% of our respondents feel at least somewhat
+safe.  The same is true for 67\% when using onion services---clearly not as many
+as for Tor Browser.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/perceived-security.pdf}
+    \caption{The level of security our respondents perceive when using Tor
+    Browser (TB) and onion services (OSs).}
+    \label{fig:perceived-security}
+\end{figure}
+
+Asked about why our respondents feel that way about Tor Browser, our results
+reveal that non-experts lack the ability to evaluate (or even understand) Tor's
+design which is why they defer to expert opinion, their gut feeling, or the
+trust they have in Tor developers.  The Tor Project is perceived to take
+security and privacy more seriously than any other browser vendor, which is
+appreciated among our respondents.  Most of our respondents' criticism focused
+not on Tor Browser but on the underlying Firefox code base.  Many participants
+were unhappy with the exploit mitigation techniques, the lack of sandboxing, and
+the complex code base.  Chrome was sometimes brought up as the golden standard
+for browser security.\footnote{Note that our survey was run before Mozilla
+released Firefox Quantum on Nov 14, 2017, which brought substantial improvements
+in both security and usability.}  Malicious exit relays were a concern for a
+handful of participants while another couple of participants are concerned that
+their use of Tor makes them stick out and turn into a target for government
+agencies.  Some participants weren't sure if their Tor setup works properly---a
+common theme that we also noticed in our interviews: Non-technical users desire
+visual feedback confirming that their network traffic comes out ``somewhere
+else.''
+
+With respect to onion services, the majority expressed that the added security
+and anonymity makes them feel safe.  Another factor contributing to the
+perceived security is that onion services make use of far fewer advertising
+companies.  Orthogonal to the technology, many participants voiced concern about
+illegal and questionable content on onion services, described by some as a
+``Wild West.''  Phishing sites, honeypots, and compromised onion sites further
+contribute to this perception.
