@@ -5,7 +5,7 @@ Onion services are TCP services that are only accessible over the Tor network.
 While conventional Internet services are contacted via their IP addresses, onion
 services are contacted via their onion domains, which are resolved and routed
 inside the Tor network.  Due to onion services being hosted in the Tor network,
-network traffic traverses six Tor relays (see Figure~\ref{fig:onion-service})
+network traffic traverses six Tor relays (see Figure~\ref{fig:onion-connection})
 before it reaches the onion service.  The resulting increase in latency is the
 cost of the anonymity that onion services provide.
 
@@ -50,7 +50,7 @@ cost of the anonymity that onion services provide.
 Both the client and the onion service create a circuit (consisting of two and
 three relays, respectively) to the rendezvous relay that serves as a short-lived
 data exchange point.}
-\label{fig:onion-service}
+\label{fig:onion-connection}
 \end{figure}
 
 As of October 2017, there are approximately 50,000 unique onion services online
