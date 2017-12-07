@@ -109,6 +109,11 @@ class Demographic(object):
 
         return self.frac(question, answer) * 100
 
+    def count(self, question, answer):
+
+        return len([r for r in self.responses
+                    if r.__getattribute__(question) == answer])
+
 
 def log(*args, **kwargs):
     """Generic log function that prints to stderr."""
@@ -362,6 +367,39 @@ def privacy_expectation(d):
     print("%6.2f%% very safe"       % d.pct("q6_6", "5"))
 
 
+def demographic_info(d):
+
+    print("---\nQuestion 1.3:")
+    print("%3d%6.2f%% are female" % (d.count("q1_3", "1"), d.pct("q1_3", "1")))
+    print("%3d%6.2f%% are male"   % (d.count("q1_3", "2"), d.pct("q1_3", "2")))
+    print("%3d%6.2f%% other"      % (d.count("q1_3", "3"), d.pct("q1_3", "3")))
+    print("%3d%6.2f%% n/a"        % (d.count("q1_3", ""),  d.pct("q1_3", "")))
+
+    print("---\nQuestion 1.4:")
+    print("%3d%6.2f%% 18-25" % (d.count("q1_4", "1"), d.pct("q1_4", "1")))
+    print("%3d%6.2f%% 26-35" % (d.count("q1_4", "2"), d.pct("q1_4", "2")))
+    print("%3d%6.2f%% 36-45" % (d.count("q1_4", "3"), d.pct("q1_4", "3")))
+    print("%3d%6.2f%% 46-55" % (d.count("q1_4", "4"), d.pct("q1_4", "4")))
+    print("%3d%6.2f%% 56-65" % (d.count("q1_4", "5"), d.pct("q1_4", "5")))
+    print("%3d%6.2f%% >65"   % (d.count("q1_4", "6"), d.pct("q1_4", "6")))
+    print("%3d%6.2f%% n/a"   % (d.count("q1_4", ""),  d.pct("q1_4", "")))
+
+    print("---\nQuestion 1.5:")
+    print("%3d%6.2f%% < high school" % (d.count("q1_5", "1"), d.pct("q1_5", "1")))
+    print("%3d%6.2f%% high school"   % (d.count("q1_5", "2"), d.pct("q1_5", "2")))
+    print("%3d%6.2f%% graduate"      % (d.count("q1_5", "3"), d.pct("q1_5", "3")))
+    print("%3d%6.2f%% post-grad"     % (d.count("q1_5", "4"), d.pct("q1_5", "4")))
+    print("%3d%6.2f%% n/a"           % (d.count("q1_5", ""),  d.pct("q1_5", "")))
+
+    print("---\nQuestion 1.6:")
+    print("%3d%6.2f%% nothing"  % (d.count("q1_6", "1"), d.pct("q1_6", "1")))
+    print("%3d%6.2f%% mildly"   % (d.count("q1_6", "2"), d.pct("q1_6", "2")))
+    print("%3d%6.2f%% moderate" % (d.count("q1_6", "3"), d.pct("q1_6", "3")))
+    print("%3d%6.2f%% highly"   % (d.count("q1_6", "4"), d.pct("q1_6", "4")))
+    print("%3d%6.2f%% expert"   % (d.count("q1_6", "5"), d.pct("q1_6", "5")))
+    print("%3d%6.2f%% n/a"      % (d.count("q1_6", ""),  d.pct("q1_6", "")))
+
+
 def analyse():
     """Analyse the data set."""
 
@@ -402,6 +440,9 @@ def analyse():
 
     log("Analysing questions about privacy expectations.")
     privacy_expectation(population)
+
+    log("Analysing demographic information.")
+    demographic_info(population)
 
     return 0
 
