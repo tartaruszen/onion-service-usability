@@ -101,3 +101,31 @@ search engines such as Ahmia.\footnote{The search engine is available online at
 \url{https://ahmia.fi}.}  The lack of a go-to service such as Google for onion
 service discovery prompted the community to devise various ways to publish onion
 services; most importantly an array of search engines and curated lists.
+
+Tor Browser's user interface when accessing onion services is designed to be
+seamless.  Figure~\ref{fig:non-onion-service} shows the UI when accessing The
+Tor Project's web site while Figure~\ref{fig:onion-service} shows a connection
+to the corresponding onion site.
+
+\begin{figure}[t]
+    \centering
+
+    \begin{subfigure}[t]{\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/non-onion-service.png}
+        \subcaption{The Tor Project's web site when accessed over its
+        conventional domain.}
+        \label{fig:non-onion-service}
+    \end{subfigure}
+
+    \begin{subfigure}[t]{\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/onion-service.png}
+        \subcaption{The Tor Project's web site when accessed over its onion
+        service.}
+        \label{fig:onion-service}
+    \end{subfigure}
+
+    \caption{Tor Browser 7.0.10's user interface on Windows 10 when opening a
+    conventional domain and when opening the corresponding onion service.}
+\end{figure}
