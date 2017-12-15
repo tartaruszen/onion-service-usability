@@ -352,6 +352,11 @@ def onion_impersonation(d):
 
 def privacy_expectation(d):
 
+    print("---\nQuestion 6.2 txt:")
+    for r in d.responses:
+        if r.q6_2_text != "":
+            print("- %s" % r.q6_2_text)
+
     print("---\nQuestion 6.4:")
     print("%6.2f%% very unsafe"     % d.pct("q6_4", "5"))
     print("%6.2f%% somewhat unsafe" % d.pct("q6_4", "4"))
