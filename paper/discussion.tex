@@ -2,35 +2,50 @@
 \label{sec:discussion}
 
 \subsection{Take-aways for Tor developers}
+
+Several of our interview participants pointed out Tor Browser's antiquated user
+interface.  Past work has shown that users interpret unrelated aspects such as
+voice quality as a proxy signal for security, which raises the question if the
+same holds true for user interface design~\cite[\S~IV.A]{Abu-Salma2017a}.  If
+so, it is important to equip Tor Browser with a modern user interface.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/tor-comic.jpg}
+    \caption{A comic draft that illustrates what Tor can and cannot provide for
+        non-technical users.  The comic was drawn by artist Jason Li while
+        working with one of the authors.}
+    \label{fig:tor-comic}
+\end{figure}
+
 \subsection{Take-aways for Tor users}
+
+The strong security properties of onion services are futile if users cannot tell
+apart a genuine domain from its impersonation.  Awareness of this issue is the
+first step and several onion services have long begun to alert their users.
+
+
+
+% could tor show you when an onion service descriptor was first published?
+
+
 \subsection{Take-aways for Tor researchers}
-\begin{itemize}
-    \item Think about how much demographic information you really need.
-    \item Avoid JavaScript.
-    \item No trackers etc., and try to avoid third parties such as Google.
-\end{itemize}
 
-\begin{itemize}
-    \item Tor is working on a new onion service design~\cite{Mathewson2013a}.
-        Anything we can say about that?
-    \item Modern UI matters.  We know that people think less of security if UI
-        looks bad.  Tor perceived as ``90s browsing experience.''
-\end{itemize}
-
-\subsection{Limitations}
-\begin{itemize}
-    \item Selection bias: Our demographic may not be representative because we
-        selected people who may care more about onion sites than the average Tor
-        user.  Many Tor users may do nothing other than download Tor Browser.
-        Also, our demographic is self-selected.
-    \item Cultural bias: Our survey was only in English, so it may not
-        generalize well to non-English speakers.  We know that there are
-        cultural differences in security behavior~\cite{Sawaya2017a}.
-    \item Survivor bias: We may not have reached people who used to use Tor and
-        stopped using it because of usability issues.  The people who remain can
-        tolerate the usability issues.
-    \item We are only talking to Tor users.  People who never used Tor may also
-        have interesting and valuable opinions.  There may be survivor bias in
-        Tor -- only the people willing to put up with usability issues stick
-        around.
-\end{itemize}
+We found it challenging, yet rewarding and illuminating to study the Tor
+community.  Tor users obviously value their privacy which reduces their
+willingness to participate in research projects.  Past academic research
+projects that involved questionable methods turned this care into distrust for
+many users.  Showing willingness to directly interact with the community and
+taking seriously their concerns signals respect and transparent methods.  For
+our online survey, we recommend to use software that works in Tor
+Browser\footnote{Note that Tor Browser supports three security levels; the
+default of ``low,'' ``medium,'' and ``high.''  Some users brought to our
+attention that our survey did not work when the security level is set to
+``high'' because it disables JavaScript, which our survey required---an
+oversight on our end.} and does not fetch tracking scripts such as Google
+Analytics.  For the survey design, one likely has to forego asking questions
+that are best practice such as income level and country of residence.  We made
+even the basic information we asked optional so our respondents had the chance
+to answer the survey without providing any personal information at all.  In our
+interviews we tried to accomodate the needs of our participants by using
+software of their choice.
