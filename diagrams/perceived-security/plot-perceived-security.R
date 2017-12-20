@@ -17,6 +17,6 @@ ggplot(data = df, aes(x = variable, y = value, fill = Perception)) +
        coord_flip() +
        theme_minimal() +
        theme(legend.key.size = unit(0.8, "line")) +
-       scale_fill_manual(values=c("#043061", "#1f66ab", "#4293c3", "#92c4de", "#d1e5f0"))
+       scale_fill_brewer(palette = "Blues", direction = -1)
 
 dev.off()
