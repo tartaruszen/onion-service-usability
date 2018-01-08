@@ -1,67 +1,65 @@
 \section{Related work}
 \label{sec:related-work}
 
-Tor's user interface has seen numerous substantial changes since its deployment
-in 2003~\cite{Syverson2005a}; from a manually-installed Tor ``button,'' to the
-Tor Browser Bundle, to the currently-used Tor Browser.
-
-Installation hasn't always been as easy as today, prompting Clark, van Oorschot,
-and Adams to use cognitive walkthroughs to study how users install, configure,
-and run Tor~\cite{Clark2007a}.  The authors uncovered several usability hurdles
-such as jargon-laden documentation, confusing menus, and insufficient visual
-feedback.  As of October 2017, the study is ten years old---Tor Browser has
-since seen radical changes.
+Tor's user interface has seen numerous substantial changes since its creation in
+2003~\cite{Syverson2005a}; from a manually-installed Tor ``button,'' to the Tor
+Browser Bundle, to the currently-used Tor Browser.  Installation hasn't always
+been as easy as today, which prompted Clark, van Oorschot, and Adams to use
+cognitive walkthroughs to study how users install, configure, and run
+Tor~\cite{Clark2007a}.  The authors uncovered usability hurdles such as
+jargon-laden documentation, confusing menus, and insufficient visual feedback.
+As of January 2018, the study is ten years old---Tor Browser has since seen
+radical changes.
 
 Much more recently, in 2014, Norcie \ea identified stop-points in the
 installation and use of the Tor Browser Bundle~\cite{Norcie2014a}.\footnote{The
 Tor Browser Bundle was later rebranded and is now known as Tor Browser.}  These
 stop-points represent places in a user interface that require action but are met
-with confusion by users.  Having identified these stop points, the authors then
-issued interface design recommendations and subsequently tested these
-recommendations in a user study.
+instead with confusion by users.  Having identified these stop-points, the
+authors then issued interface design recommendations and subsequently tested
+these recommendations in a user study.
 
-Motivated by Tor's anti-censorship components, Fifield \ea published a design to
-study the usability of Tor as a censorship circumvention
-tool~\cite{Fifield2015a}.  The authors plan to recruit hundreds of users to
-study how they use Tor's configuration wizard in an adversarial setting.  This
-effort made use of both qualitative and quantitative methods.  Lee
-\ea~\cite{Lee2017a} studied the usability of Tor Launcher, the graphical
-configuration tool that allows users to configure Tor Browser.  Their results
-paint a bleak picture: 79\% of users' connection attempts in a simulated
-censored environment failed.  However, the researchers showed that their
-interface improvements resulted in less difficulties for users.
+Inspired by Tor's use as anti-censorship system, Fifield \ea published a design
+to study the usability of Tor as a censorship circumvention
+tool~\cite{Fifield2015a}.  By drawing on both qualitative and quantitative
+methods, the authors plan to recruit hundreds of users to study how they use
+Tor's configuration wizard in an adversarial setting.  Lee \ea~\cite{Lee2017a}
+studied the usability of Tor Launcher, the graphical configuration tool that
+allows users to configure Tor Browser.  Their findings paint a bleak picture:
+79\% of users' connection attempts in a simulated censored environment failed.
+However, the researchers showed that their proposed interface improvements
+resulted in less difficulties for users.
 
 Forte \ea studied the privacy practices of contributors to open collaboration
 projects~\cite{Forte2017a}.  The authors interviewed 23 contributors to The Tor
 Project and Wikipedia to learn about how privacy concerns affect their
 contribution practices.  The study found that contributors worry about an array
-of threats, including surveillance, violence, harassment, and loss of
+of threats including surveillance, violence, harassment, and loss of
 opportunity.
 
 Most recently in 2017, Gallagher \ea conducted a series of semi-structured
 interviews to understand both why people use Tor and how they understand the
 technology~\cite{Gallagher2017a}.  The authors found that experts tend to have a
-network-centric view of Tor and tend to use it frequently over time while
-non-experts have a goal-oriented view and see Tor as a black box that provides a
-service.  Consequently, non-experts don't use Tor if they don't need its
-service.  Furthermore, non-experts tend to consider a single threat while the
-threat model of experts contains multiple actors.
+network-centric view of Tor and tend to use it frequently while non-experts have
+a goal-oriented view and see Tor as a black box that provides a service.
+Consequently, non-experts don't use Tor if they don't need its service.
+Furthermore, non-experts tend to consider a single threat while the threat model
+of experts contains multiple actors.
+
+Several research efforts sought to alleviate the handling of randomly-generated
+domain names.  Sai and Fink proposed a mnemonic system that maps 80-bit onion
+domains to sentences~\cite{Sai2012a}.  Their work is inspired by mnemonicode, a
+method to map binary data to words~\cite{mnemonicode}.  Victors \ea proposed a
+more radical approach by designing the Onion Name System~\cite{Victors2017a}
+which allows users to reference an onion service by a meaningful and
+globally-unique identifier.  Kadianakis \ea designed a modular name system API
+that allows Tor clients to configure name systems (\eg
+GNS~\cite{Schanzenbach2012a} or OnioNS~\cite{Victors2017a}) on a per-domain
+basis~\cite{Kadianakis2016a}.  Kadianakis summarized the current state of
+research on onion service naming systems in a blog post~\cite{Kadianakis2017a}.
 
 We improve on the existing body of work by studying unanswered questions about
 the use of Tor Browser and---the focus of this paper---how users interact with
-onion services.  We hope that our results generalize to other systems that use
-self-authenticating names such as Freenet~\cite{Freenet} and Bitcoin addresses.
-
-While nobody has studied the usability of onion services per se, some research
-results are quite related.  To mitigate the usability issue of
-randomly-generated domain names, Sai and Fink proposed a mnemonic system that
-maps 80-bit onion domains to sentences~\cite{Sai2012a}.  Their work is inspired
-by mnemonicode, a method to map binary data to words~\cite{mnemonicode}.
-Victors \ea propose a more radical approach by designing the Onion Name
-System~\cite{Victors2017a} which allows users to reference an onion service by a
-meaningful and globally-unique identifier.  Kadianakis \ea proposed a modular
-name system API that allows Tor clients to configure name systems (\eg
-GNS~\cite{Schanzenbach2012a} or OnioNS~\cite{Victors2017a}) on a per-domain
-basis~\cite{Kadianakis2016a}.  Kadianakis summarized the current state of
-research that would improve the naming system behind next-generation onion
-domains~\cite{Kadianakis2017a}.
+onion services.  We believe that many of our findings generalize to other
+systems, \eg, Freenet~\cite{Freenet} and Bitcoin also employ self-authenticating
+names.
