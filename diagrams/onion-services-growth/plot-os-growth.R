@@ -10,6 +10,8 @@ data <- read.csv(input_file, header=TRUE)
 data$date <- as.POSIXct(paste(data$date), format="%Y-%m-%d")
 data$date <- as.Date(data$date)
 
+data <- subset(data, type == "dir-onions-seen")
+
 df <- data.frame(x = data$date,
                  y = data$wmedian)
 
