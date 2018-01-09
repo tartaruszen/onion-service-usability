@@ -2,12 +2,10 @@
 \label{sec:background}
 
 Onion services are TCP services that are only accessible over the Tor network.
-While conventional Internet services are contacted via their IP addresses, onion
-services are contacted via their onion domains, which are resolved and routed
-inside the Tor network.  Due to onion services being hosted in the Tor network,
-network traffic traverses six Tor relays (see Figure~\ref{fig:onion-connection})
-before it reaches the onion service.  The resulting increase in latency is the
-cost of the anonymity that onion services provide.
+Onion domains take the place of IP addresses, which traditional TCP services use
+for addressing.  These onion domains are resolved and routed inside the Tor
+network, resulting in a circuit between the client and the onion service which
+(by default) features six hops (see Figure~\ref{fig:onion-connection}).
 
 \begin{figure}[t]
 \centering
@@ -53,59 +51,50 @@ data exchange point.}
 \label{fig:onion-connection}
 \end{figure}
 
-As of October 2017, there are approximately 50,000 unique onion services online
-each day, as illustrated in Figure~\ref{fig:os-growth}.  The number of Tor users
-accessing these onion services is not known because The Tor Project does not
-collect such statistics.
+The creation of a new onion domain requires a Tor daemon to generate an RSA key
+pair.  It then computes the SHA-1 hash over the RSA public key, truncates it to
+80 bits, and encodes these 80 bits in Base32, resulting in sixteen characters,
+\eg, expyuzz4wqqyqhjn.  As of January 2018, The Tor Project is deploying the
+next generation of onion services whose domain format will feature 56 instead of
+sixteen characters~\cite[\S~6]{Mathewson2013a}---a Base32 encoding of the onion
+service's public key, a checksum, and a version number.  Because of the next
+generation using elliptic curve cryptography, the entire public key (instead of
+just a hash over the public key) is embedded in the domain.
 
-\begin{figure}[t]
-\includegraphics[width=\linewidth]{figures/os-growth.pdf}
-\caption{The estimated median number of unique onion services per day since
-2015.}
-\label{fig:os-growth}
-\end{figure}
+Due to an onion domain being a function of its public key, onion domains are
+self-authenticating, \ie, as long as a client has the correct domain, it knows
+what public key to expect.  The downside is that sixteen random characters are
+impractical to remember, let alone 56 characters.
 
-To create an onion domain, a Tor client first generates an RSA key pair.  It
-then computes the SHA-1 hash over the RSA public key, truncates it to 80 bits,
-and encodes these 80 bits in Base32, resulting in sixteen characters, \eg,
-\texttt{expyuzz4wqqyqhjn}.  As of November 2017, The Tor Project is deploying
-the next generation of onion services whose domain format will feature 56
-characters~\cite[\S~6]{Mathewson2013a}---a Base32 encoding of the onion
-service's public key, a checksum, and a version number.  Because the next
-generation uses elliptic curve cryptography, it is possible to make the entire
-public key (instead of just a hash over the public key) part of the domain.
-
-Due to an onion domain's being a function of the public key, onion domains are
-self-authenticating, meaning that as long as a client has the correct domain, it
-knows what public key to expect.  The downside is that sixteen random characters
-are impractical to remember, let alone 56 characters.  However, onion domains
-can be made at least partially meaningful by repeatedly creating RSA keys until
-the resulting domain contains a desired string.  These domains are referred to
-as \emph{vanity onion domains}.  A vanity prefix of length $n$ takes on average
+We can make onion domains at least partially meaningful by repeatedly creating
+RSA keys until the resulting domain contains a desired string.  We call these
+\emph{vanity onion domains}.  A vanity prefix of length $n$ takes on average
 $0.5 \cdot 32^n$ key creations given Base32's alphabet size of 32 characters.
-After having created a set of domains with a vanity prefix, one can search this
-set for the domain that is the easiest to remember, \eg, by using a Markov model
-to filter domains that resemble words in the English language.  While this
-process will not yield coherent domains, it will greatly facilitate
-memorization.
-
-In practice, onion service operators use tools such as scallion~\cite{scallion},
-which speed up the process by parallelizing the search for suitable keys.
-Several organizations including Facebook (\url{facebookcorewwwi.onion}),
-ProPublica (\url{propub3r6espa33w.onion}), and the New York Times
-(\url{nytimes3xbfgragh.onion}) employ vanity domains.
+After having created a set of domains featuring a vanity prefix, one can search
+this set for the domain that is the easiest to remember, \eg, by using a Markov
+model to filter domains that resemble words in the English language.  While this
+method will not produce fully-meaningful domains, it can facilitate memorization
+as evidenced by the vanity domains of Facebook
+(\href{https://www.facebookcorewwwi.onion}{facebookcorewwwi.onion}),
+ProPublica
+(\href{http://propub3r6espa33w.onion}{propub3r6espa33w.onion}),
+and the New York Times
+(\href{https://www.nytimes3xbfgragh.onion}{nytimes3xbfgragh.onion}).  In
+practice, many onion service operators use the tool scallion~\cite{scallion} to
+find vanity domains in parallel.
 
 Onion services are private by default.  Once an onion service is created, it is
-up to its operator to announce it to the public, \eg, by adding it to onion site
-search engines such as Ahmia.\footnote{The search engine is available online at
-\url{https://ahmia.fi}.}  The lack of a go-to service such as Google for onion
-service discovery prompted the community to devise various ways to publish onion
-services; most importantly an array of search engines and curated lists.
+its operator's task to disseminate the domain, \eg, by adding it to onion site
+search engines such as Ahmia~\cite{ahmia}.  The lack of a go-to service such as
+Google for onion service discovery prompted the community to devise various ways
+to disseminate onion services, most importantly an array of search engines and
+curated lists.
 
-Tor Browser's user interface when accessing onion services is designed to be
-seamless.  Figure~\ref{fig:non-onion-service} shows the UI when accessing The
-Tor Project's web site while Figure~\ref{fig:onion-service} shows a connection
-to the corresponding onion site.
+On the usability front, Tor Browser's user interface when accessing onion
+services is designed to be seamless.  Figure~\ref{fig:non-onion-service} shows
+the UI when accessing The Tor Project's web site while
+Figure~\ref{fig:onion-service} shows a connection to the corresponding onion
+site.
 
 \begin{figure}[t]
     \centering
@@ -127,5 +116,7 @@ to the corresponding onion site.
     \end{subfigure}
 
     \caption{Tor Browser 7.0.10's user interface on Windows 10 when opening a
-    conventional domain and when opening the corresponding onion service.}
+    conventional domain (top) and when opening the corresponding onion service
+    (bottom).  Note that the onion version lacks a padlock icon---an issue
+    that's currently being worked on~\cite{trac23247}.}
 \end{figure}
