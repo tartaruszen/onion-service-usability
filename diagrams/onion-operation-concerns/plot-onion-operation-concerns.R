@@ -1,7 +1,8 @@
+library(tikzDevice)
 library(ggplot2)
 library(reshape2)
 
-cairo_pdf("onion-operation-concerns.pdf", height=1.5, width=4)
+tikz(file = "onion-operation-concerns.tex", height=1.3, width=3.2)
 
 d <- read.csv("data.csv", check.names = FALSE)
 
@@ -16,6 +17,7 @@ ggplot(data = df, aes(x = variable, y = value, fill = Concern)) +
        labs(y = "Percentage") +
        coord_flip() +
        theme_minimal() +
+       theme(axis.title = element_text(size = rel(0.9))) +
        theme(legend.key.size = unit(0.8, "line")) +
        scale_fill_brewer(palette = "Blues", direction = -1)
 

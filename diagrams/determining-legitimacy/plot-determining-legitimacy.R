@@ -1,6 +1,7 @@
+library(tikzDevice)
 library(ggplot2)
 
-cairo_pdf("determining-legitimacy.pdf", height=1.8, width=4)
+tikz(file = "determining-legitimacy.tex", height=1.6, width=3.2)
 
 df <- data.frame(
     freq = c("Verify address bar", "Use bookmarks",
@@ -17,6 +18,7 @@ ggplot(data = df, aes(x = freq, y = pct)) +
        labs(x = "How to determine a\nservice's legitimacy?") +
        labs(y = "Percentage") +
        coord_flip() +
-       theme_minimal()
+       theme_minimal() +
+       theme(axis.title = element_text(size = rel(0.9)))
 
 dev.off()

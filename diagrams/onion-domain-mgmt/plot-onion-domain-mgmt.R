@@ -1,6 +1,7 @@
+library(tikzDevice)
 library(ggplot2)
 
-cairo_pdf("onion-domain-mgmt.pdf", height=1.8, width=4)
+tikz(file = "onion-domain-mgmt.tex", height=1.7, width=3.2)
 
 df <- data.frame(
     freq = c("Save in local text file", "Save with pen and paper",
@@ -17,6 +18,7 @@ ggplot(data = df, aes(x = freq, y = pct)) +
        labs(x = "How do you handle\nonion domains?") +
        labs(y = "Percentage") +
        coord_flip() +
-       theme_minimal()
+       theme_minimal() +
+       theme(axis.title = element_text(size = rel(0.9)))
 
 dev.off()

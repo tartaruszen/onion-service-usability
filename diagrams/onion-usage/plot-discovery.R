@@ -1,6 +1,7 @@
+library(tikzDevice)
 library(ggplot2)
 
-cairo_pdf("onion-discovery.pdf", height=1.4, width=4)
+tikz(file = "onion-discovery.tex", height=1.3, width=3.2)
 
 df <- data.frame(
     freq = c("Social networking sites", "Search engine lists",
@@ -16,6 +17,7 @@ ggplot(data = df, aes(x = freq, y = pct)) +
        labs(x = "Way of\ndiscovery") +
        labs(y = "Percentage") +
        coord_flip() +
-       theme_minimal()
+       theme_minimal() +
+       theme(axis.title = element_text(size = rel(0.9)))
 
 dev.off()

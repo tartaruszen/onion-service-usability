@@ -1,6 +1,7 @@
+library(tikzDevice)
 library(ggplot2)
 
-cairo_pdf("tor-threats.pdf", height=2, width=4)
+tikz(file = "tor-threats.tex", height=1.7, width=3.2)
 
 df <- data.frame(
     threats = c("My government", "Other governments", "My ISP", "My school",
@@ -16,6 +17,7 @@ ggplot(data = df, aes(x = threats, y = count)) +
        labs(x = "Actors in threat model") +
        labs(y = "Percentage") +
        coord_flip() +
-       theme_minimal()
+       theme_minimal() +
+       theme(axis.title = element_text(size = rel(0.9)))
 
 dev.off()

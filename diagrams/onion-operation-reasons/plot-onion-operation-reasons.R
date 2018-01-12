@@ -1,9 +1,10 @@
+library(tikzDevice)
 library(ggplot2)
 
-cairo_pdf("onion-operation-reasons.pdf", height=1.4, width=4)
+tikz(file = "onion-operation-reasons.tex", height=1.3, width=3.2)
 
 df <- data.frame(
-    freq = c("Anonymity", "E2E security",
+    freq = c("Anonymity", "End-to-end security",
              "Third-party tool", "NAT traversal",
              "Curiosity", "Other"),
     pct = c(46.34, 61.46, 27.32, 55.12, 59.51, 21.95)
@@ -16,6 +17,7 @@ ggplot(data = df, aes(x = freq, y = pct)) +
        labs(x = "Why run onion\nservices?") +
        labs(y = "Percentage") +
        coord_flip() +
-       theme_minimal()
+       theme_minimal() +
+       theme(axis.title = element_text(size = rel(0.9)))
 
 dev.off()
