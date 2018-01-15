@@ -281,6 +281,60 @@ def onion_usage(d):
     print("%6.2f%% don't have a good solution"        % d.pct("q3_8", "7"))
     print("%6.2f%% other"                             % d.pct("q3_8", "8"))
 
+    print("---\nQuestion 3.13:")
+    print("%6.2f%% none"            % d.pct("q3_13", "1"))
+    print("%6.2f%% one"             % d.pct("q3_13", "2"))
+    print("%6.2f%% two"             % d.pct("q3_13", "3"))
+    print("%6.2f%% three"           % d.pct("q3_13", "4"))
+    print("%6.2f%% four"            % d.pct("q3_13", "5"))
+    print("%6.2f%% more than four"  % d.pct("q3_13", "6"))
+
+    print("---\nQuestion 3.14:")
+    print("%6.2f%% yes" % d.pct("q3_14", "1"))
+    print("%6.2f%% no"  % d.pct("q3_14", "2"))
+
+    print("---\nQuestion 3.15:")
+    print("%6.2f%% allows me to open the site more quickly"             % d.pct("q3_15", "1"))
+    print("%6.2f%% don’t want to leave any digital traces"              % d.pct("q3_15", "2"))
+    print("%6.2f%% can be sure that I end up at the right onion site"   % d.pct("q3_15", "3"))
+    print("%6.2f%% automatically start to memorize it"                  % d.pct("q3_15", "4"))
+    print("%6.2f%% other"                                               % d.pct("q3_15", "5"))
+
+    print("---\nQuestion 3.16 (facebookcorewwwi.onion):")
+    print("%6.2f%% very easy"                   % d.pct("q3_16_1", "1"))
+    print("%6.2f%% somewhat easy"               % d.pct("q3_16_1", "2"))
+    print("%6.2f%% neither easy nor difficult"  % d.pct("q3_16_1", "3"))
+    print("%6.2f%% somewhat difficult"          % d.pct("q3_16_1", "4"))
+    print("%6.2f%% very difficult"              % d.pct("q3_16_1", "5"))
+
+    print("---\nQuestion 3.16 (expyuzz4wqqyqhjn.onion):")
+    print("%6.2f%% very easy"                   % d.pct("q3_16_2", "1"))
+    print("%6.2f%% somewhat easy"               % d.pct("q3_16_2", "2"))
+    print("%6.2f%% neither easy nor difficult"  % d.pct("q3_16_2", "3"))
+    print("%6.2f%% somewhat difficult"          % d.pct("q3_16_2", "4"))
+    print("%6.2f%% very difficult"              % d.pct("q3_16_2", "5"))
+
+    print("---\nQuestion 3.16 (torproz4wqqyqhjn.onion):")
+    print("%6.2f%% very easy"                   % d.pct("q3_16_3", "1"))
+    print("%6.2f%% somewhat easy"               % d.pct("q3_16_3", "2"))
+    print("%6.2f%% neither easy nor difficult"  % d.pct("q3_16_3", "3"))
+    print("%6.2f%% somewhat difficult"          % d.pct("q3_16_3", "4"))
+    print("%6.2f%% very difficult"              % d.pct("q3_16_3", "5"))
+
+    print("---\nQuestion 3.16 (torprojectqyqhjn.onion):")
+    print("%6.2f%% very easy"                   % d.pct("q3_16_4", "1"))
+    print("%6.2f%% somewhat easy"               % d.pct("q3_16_4", "2"))
+    print("%6.2f%% neither easy nor difficult"  % d.pct("q3_16_4", "3"))
+    print("%6.2f%% somewhat difficult"          % d.pct("q3_16_4", "4"))
+    print("%6.2f%% very difficult"              % d.pct("q3_16_4", "5"))
+
+    '''
+    print("---\nQuestion 3.17 txt:")
+    for r in d.responses:
+        if r.q3_17 != "":
+            print("- %s" % r.q3_17)
+    '''
+
 
 def onion_operation(d):
 
