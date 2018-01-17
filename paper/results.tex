@@ -7,6 +7,70 @@ the operation of onion services.  We interweave the results from our online
 survey and from our interviews, focusing primarily on our survey data but
 bringing up anecdotes and findings from our interviews as appropriate.
 
+\subsection{The Tor Project}
+
+While we focused on the usability of onion services and Tor Browser, our
+interviews and some of our survey data provided insight into how users perceive
+The Tor Project and the work it does.
+
+\subsubsection{Education and documentation}
+
+The Tor Project's documentation covers a wide array of issues, including
+installation, use on Android, operation of relays, several FAQs, and a wiki.
+Having worked with this documentation, some of our participants lamented its
+scope:
+
+\begin{displayquote}[P14]
+Tor does a good job on their web site of telling you to modify your
+[configuration] file, and then getting the onion set up.  But it's just very
+basic.  I have to go [to] other people's blog post to find out.
+\end{displayquote}
+
+Comprehensive documentation is only useful if it is understood, \ie, available
+in an array of different languages.  Another participant struggled with the lack
+of localization.  While Tor Browser's user interface is available in Spanish,
+the documentation is not:
+
+\begin{displayquote}[P11]
+Think more [about] the Spanish community\dots because in my case I'm trying to
+train people to use Tor but I work in the indigenous communities and there are
+some things that [are] hard for me to explain in terms of how you use Tor\dots
+\end{displayquote}
+
+\subsubsection{Public perception}
+
+The Tor Project goes to great lengths to minimize the trust its users have to
+place in it by publishing design documents, source code, and coordinating
+development in public.  However, laypeople lack the skill while experts
+typically lack the time to audit source code which is why trust and reputation
+still matter.  Among our interview participants, The Tor Project enjoyed a lot
+of trust:
+
+\begin{displayquote}[P08]
+Because, you guys\dots have the sort of\dots not a monopoly on trust, but you
+have like a really great brand name when it comes to this stuff\dots
+\end{displayquote}
+
+While the work of Tor developers is held in high esteem, the content that is
+hosted on onion services is perceived very differently.  Upon being told what an
+onion service is, one participant sought clarification:
+
+\begin{displayquote}[P03]
+So it's like the Hidden Wiki and stuff like that, where you can buy drugs
+and\dots or supposedly.
+\end{displayquote}
+
+Several interviewees voiced concern that their mere use of Tor may draw unwanted
+attention.  Tor Browser comes with modules that disguise the fact that one is
+using Tor but a standard Tor connection does not use these modules, making it
+easy to identify for Internet service providers~\cite{pluggable}.  One
+participant worried:
+
+\begin{displayquote}[P03]
+I guess you could put yourself on some kind of watch lists, that you are a
+person of interest, just because you're using [Tor].
+\end{displayquote}
+
 \subsection{Tor Browser usage}
 
 Our survey started with two general questions about the use of Tor Browser.
@@ -60,7 +124,7 @@ JAP~\cite{jap}, Tor Browser makes no attempt to display the degree of anonymity
 it believes it can provide.  Asked about how well Tor works for them, one
 of our participants explained:
 
-\begin{displayquote}
+\begin{displayquote}[P12]
 In terms of the anonymity, you can't really tell\dots That's fairly opaque, so I
 can't even tell how effective that's working, or whether it is\dots
 \end{displayquote}
@@ -69,29 +133,6 @@ Quantifying anonymity in a real-world setting is complex, error-prone, and often
 misleading.  What's more, Tor Browser does not have available all the data it
 needs to quantify its user's anonymity---an ``anonymity meter'' may therefore
 create more problems than it solves.
-
-\subsubsection{Education and documentation}
-
-Instead of quantifying anonymity, The Tor Project focuses its efforts on
-education and documentation.  Having worked with this documentation, some of our
-participants lamented its scope:
-
-\begin{displayquote}
-Tor does a good job on their web site of telling you to modify your
-[configuration] file, and then getting the onion set up.  But it's just very
-basic.  I have to go [to] other people's blog post to find out.
-\end{displayquote}
-
-Comprehensive documentation is only useful if it is understood, \ie, available
-in an array of different languages.  Another participant struggled with the lack
-of localization.  While Tor Browser's user interface is available in Spanish,
-the documentation is not:
-
-\begin{displayquote}
-Think more [about] the Spanish community\dots because in my case I'm trying to
-train people to use Tor but I work in the indigenous communities and there are
-some things that [are] hard for me to explain in terms of how you use Tor\dots
-\end{displayquote}
 
 \subsubsection{Users like a view under the hood}
 
@@ -107,7 +148,7 @@ Several of our participants enjoyed Tor Browser's visual feedback, illustrated
 in Figure~\ref{fig:tor-button}, that shows the circuit that is used for a given
 site.  One interviewee expressed delight about the interface:
 
-\begin{displayquote}
+\begin{displayquote}[P08]
 I love how I can monitor the network through this little kind of bar that comes
 up.
 \end{displayquote}
@@ -115,7 +156,7 @@ up.
 Not satisfied with seeing only the current circuit, some participants wished it
 were easier to learn what else is happening behind the scenes:
 
-\begin{displayquote}
+\begin{displayquote}[P02]
 {[It]} would be nice to have some kind of application, something on that browser,
 that gives you an impression of\dots what the Tor Browser's actually doing.
 \end{displayquote}
@@ -128,51 +169,17 @@ done~\cite[\S~4.3.2]{Gallagher2017a}, can easily feel bewildered and
 overwhelmed.  One aspect in which more transparency could indeed benefit Tor's
 entire user base is when websites don't load, as suggested by one participant:
 
-\begin{displayquote}
+\begin{displayquote}[P05]
 \dots maybe some sort of graphical representation of is the circuit still
 being built, or is the circuit built, and the site isn't responding at all to
 the third relay?
-\end{displayquote}
-
-\subsubsection{Public perception}
-
-The Tor Project goes to great lengths to minimize the trust its users have to
-place in it by publishing design documents, source code, and coordinating
-development in public.  However, laypeople lack the skill while experts
-typically lack the time to audit source code which is why trust and reputation
-still matter.  Among our interview participants, The Tor Project enjoyed a lot
-of trust:
-
-\begin{displayquote}
-Because, you guys\dots have the sort of\dots not a monopoly on trust, but you
-have like a really great brand name when it comes to this stuff\dots
-\end{displayquote}
-
-While the work of Tor developers is held in high esteem, the content that is
-hosted on onion services is perceived very differently.  Upon being told what an
-onion service is, one participant sought clarification:
-
-\begin{displayquote}
-So it's like the Hidden Wiki and stuff like that, where you can buy drugs
-and\dots or supposedly.
-\end{displayquote}
-
-Several interviewees voiced concern that their mere use of Tor may draw unwanted
-attention.  Tor Browser comes with modules that disguise the fact that one is
-using Tor but a standard Tor connection does not use these modules, making it
-easy to identify for Internet service providers~\cite{pluggable}.  One
-participant worried:
-
-\begin{displayquote}
-I guess you could put yourself on some kind of watch lists, that you are a
-person of interest, just because you're using [Tor].
 \end{displayquote}
 
 \subsubsection{Users lament speed, user interface, and CAPTCHAs}
 
 Perhaps the most prevalent issue is, still, browsing speed:
 
-\begin{displayquote}
+\begin{displayquote}[P01]
 The speed of it is problematic; sometimes I have a path that allows me to watch
 streaming full HD YouTube videos, and the next time, five minutes later, I'm
 barely getting kilobytes through.
@@ -181,7 +188,7 @@ barely getting kilobytes through.
 Occasionally Tor is preceded by its reputation, preparing users for what to
 expect:
 
-\begin{displayquote}
+\begin{displayquote}[P03]
 I didn't think it was as slow as people say it was. People said it would be much
 slower experience but\ldots a little bit slower, but it didn't matter for the
 things that I was doing.
@@ -194,7 +201,7 @@ like it was about five years outdated,'' ``it looked like I was in 1982,'' and
 Interestingly, one participant drew the opposite conclusion, expressing that the
 antiquated user interface evoked trust:
 
-\begin{displayquote}
+\begin{displayquote}[P02]
 At the same time I thought\ldots it gave them a certain amount of credibility,
 like they weren't building this for the looks, but they were building it for
 functionality\ldots  At the same time, as I thought it was outdated in terms of
@@ -209,7 +216,7 @@ being granted access to a website.  In 2016, Khattak \ea documented the issue
 for a number of content providers~\cite{Khattak2016a}.  One interviewee summed
 up the situation as follows:
 
-\begin{displayquote}
+\begin{displayquote}[P06]
 It is still sometimes challenging using some everyday services, because of
 CAPTCHAs and those things, but I also understand that's not so much to do with
 Tor, but to do with the creators of those web sites.
@@ -223,7 +230,7 @@ and security, brought up by practically all of our participants.  One of our
 more technical interviewees further distinguished between security and privacy.
 Asked about if they feel safer when using Tor, they responded:
 
-\begin{displayquote}
+\begin{displayquote}[P06]
 In a privacy sense, I do. In a security sense\ldots I don't assume that Tor is
 protecting me from all of the vulnerabilities or exploits that I might
 encounter\ldots
@@ -233,7 +240,7 @@ Besides the obvious improvement in security and privacy, a defining aspect of
 Tor is that it puts its users back in control, or, as one of our participants
 eloquently put it:
 
-\begin{displayquote}
+\begin{displayquote}[P02]
 I feel like I'm more in control of my internet experience that way, I'm not sort
 of like a will-less victim of what other people want to do with me, so I feel
 I'm more empowered and have more agency when I use the Tor Browser.
@@ -328,7 +335,7 @@ disguising their real-world identity, and instead used the umbrella term of
 incomplete picture of the security and privacy guarantees that Tor provides,
 as evidenced by one participant's question:
 
-\begin{displayquote}
+\begin{displayquote}[P07]
 What's the point of going to Facebook using onion services when their business
 model is still about collecting your data?
 \end{displayquote}
