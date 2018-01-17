@@ -1,172 +1,13 @@
-\section{Online survey}
-\label{sec:online-survey}
-
-One month after conducting our first batch of interviews, we launched an online
-survey whose purpose was to obtain a large and diverse number of responses to
-specific questions.  We used our preliminary interview data to refine our survey
-questions.
-
-\subsection{Method}
-\label{sec:survey-design}
-
-We created our survey in Qualtrics because our institution had a subscription,
-it had all the features we deemed necessary, and an out-of-the-box Tor Browser
-could display its interface correctly.  Qualtrics however requires JavaScript
-which is deactivated if Tor Browser is set to its highest security setting.  A
-number of users complained about this reliance on JavaScript in the comments of
-our recruitment blog post~\cite{Winter2017a}.
-
-Our survey was only available in English but we targeted an international
-audience because Sawaya \ea showed that there are cultural differences in
-security behavior~\cite{Sawaya2017a}.  Ignoring these differences would
-tailor Tor Browser to the needs of a predominantly Western audience which runs
-counter to The Tor Project's global reach.
-
-We used cognitive pretesting (sometimes also called cognitive interviewing) to
-improve the wording of our survey questions~\cite{Collins2003a}.  Pretesting
-reveals if respondents \first understand questions, \second understand questions
-consistently, and \third understand questions the way we intended.  A pretest
-entailed administering our survey and asking our respondents to fill out the
-survey while verbalizing their thought process.  We occasionally asked follow-up
-questions to make sure that our pretesters understood all questions as intended.
-However, not all cognitive processes can be verbalized and cognitive pretesting
-may change the way respondents answer questions.  We had five pretesters whose
-input helped us improved our survey iteratively.  Two pretesters were native
-English speakers while the remaining three were fluent but spoke English as a
-second language.
-
-To weed out low-quality responses we incorporated four attention checks into our
-survey~\cite{Berinsky2014a}.  Having four attention checks instead of just one
-allows us to measure a respondent's \emph{degree} of attention, meaning that we
-only discard responses that failed more than two attention checks.
-
-The majority of our survey focused on onion services, but we also added some
-questions about Tor in general.  Table~\ref{tab:survey-structure} shows that our
-survey consists of six blocks that are ordered by topic.  It takes about fifteen
-minutes to answer all questions.  The full survey is listed in
-Appendix~\ref{app:interview-questions}.  Finally, we launched our survey on
-August 16, 2017 and ended it on September 11, 2017, so it was active for 27
-days.
-
-\begin{table}[t]
-	\centering
-	\begin{tabular}{l r}
-	\toprule
-	Topic & \# of questions \\
-	\midrule
-	Consent and demographic information & 1 \\
-	Tor usage & 4 \\
-	Onion site usage & 20 \\
-	Onion site operation & 5 \\
-	Onion site phishing and impersonation & 9 \\
-	Expectations of privacy & 9 \\
-	End of survey & 1 \\
-	\midrule
-	Total & 49 \\
-	\bottomrule
-	\end{tabular}
-	\caption{The topical question blocks in our survey and the number of
-	questions they contain.}
-	\label{tab:survey-structure}
-\end{table}
-
-\subsubsection{Recruitment}
-
-Similar to our interviews, we advertised our survey in a blog post on The Tor
-Project's blog~\cite{Winter2017a}, on its corresponding Twitter account, and on
-three Reddit subforums.\footnote{The forums are \url{https://reddit.com/r/tor/},
-\url{https://reddit.com/r/onions/}, and \url{https://reddit.com/r/samplesize/}.}
-Again, note that this recruitment strategy is likely to bias our sample towards
-more engaged users as casual Tor users are unlikely to follow The Tor Project's
-blog or Twitter account.
-
-\subsubsection{Research ethics}
-Respondents had to agree to a consent form before starting the survey. The
-consent form informed the respondents about the procedure of our experiment and
-verified that all respondents were at least eighteen years of age.
-
-To provide additional incentives, we originally planned to give respondents the
-option to participate in a gift card lottery.  We abandoned the idea because it
-was non-trivial to reconcile a lottery with anonymous participation because we
-would have to collect our respondents' email addresses.  Despite the lack of
-incentives, we collected a sufficient number of responses.  In fact, we believe
-that many of our respondents were primarily motivated by improving Tor---some of
-our interview participants turned down the gift cards that we offered.
-
-\subsection{Results}
+\section{Results}
 \label{sec:results}
 
-Throughout all 27 days, our survey was taken 828 times.  However, not all
-responses are necessarily of high quality; people may have rushed their answers,
-aborted our survey prematurely, or given deliberately wrong answers.  We weed
-out such low-quality responses that \first did not finish the survey and that
-\second failed more than two out of our four attention checks.  We collected a
-total of 828 responses but only 604 (73\%) completed the survey and 527 (64\%)
-passed at least two attention checks.  The remainder of this section analyzes
-these 527 responses.
+We organize the presentation of our findings by topic, starting with Tor
+Browser, and then onion service-specific topics such as service discovery and
+the operation of onion services.  We interweave the results from our online
+survey and from our interviews, focusing primarily on our survey data but
+bringing up anecdotes and findings from our interviews as appropriate.
 
-Table~\ref{tab:survey-demo} shows the demographics of our survey.  Not
-surprisingly, our respondents were \emph{young and educated}: more than sixty
-percent are younger than 36, and another sixty percent have at least a graduate
-degree.  Finally, another sixty percent consider themselves at least highly
-knowledgeable in matters of Internet privacy and security.
-
-\begin{table*}[t]
-	\centering
-	\begin{tabular}{l r r | l r r | l r r | l r r}
-	\toprule
-	Gender & \# & \% &
-	Age & \# & \% &
-	Education & \# & \% &
-	Domain knowledge & \# & \% \\
-	\midrule
-	Male   & 444 & 85.7 & 18--25 & 186 & 35.7 & No degree     &  26 & 5.0  & No knowledge             &   1 & 0.2  \\
-	Female &  49 &  9.5 & 26--35 & 184 & 35.3 & High school   & 173 & 33.3 & Mildly knowledgeable     &  37 & 7.1  \\
-	Other  &  25 &  4.8 & 36--45 &  88 & 16.9 & Graduate      & 215 & 41.4 & Moderately knowledgeable & 178 & 34.1 \\
-	N/A    &   9 &  1.7 & 46--55 &  43 &  8.3 & Post graduate & 105 & 20.2 & Highly knowledgeable     & 230 & 44.1 \\
-	       &     &      & 56--65 &  16 &  3.0 & N/A           &   8 &  1.5 & Expert                   &  76 & 14.6 \\
-	       &     &      & $>$ 65 &   4 &  0.8 &               &     &      & N/A                      &   5 &  1.0 \\
-	       &     &      & N/A    &   6 &  1.2 &               &     &      &                          &     & \\
-	\bottomrule
-	\end{tabular}
-	\caption{The distribution over gender, age, education, and domain knowledge
-	for our 527 survey respondents.  It was optional to provide demographic
-	information which is why we lack data for a small number of respondents.}
-	\label{tab:survey-demo}
-\end{table*}
-
-
-\subsubsection{Biases}
-
-It is difficult to draw a truly uniform sample of Tor users.  The only way to
-reach all Tor users uniformly would be to modify Tor Browser's landing page
-that is displayed on start---an approach that we considered prohibitively
-invasive.  Instead, we decided to ask The Tor Project to disseminate our survey
-on its blog and social media accounts.  We believe that this recruitment
-strategy was subject to the following biases.
-
-\paragraph{Non-response bias} 
-People who noticed our call for volunteers and decided against participating
-may exhibit traits that are fundamentally different from those who did
-participate.  These non-respondents may have valued their privacy too much,
-falsely believed that their experience is irrelevant, lacked the time, or had
-other reasons not to participate.
-
-\paragraph{Survivor bias}
-We predominantly heard from people who can tolerate Tor's usability issues,
-which is why they are still around to tell their tale.  We likely did not hear
-from many---if any---people who gave up on Tor and were thus unable to tell us
-what drove them away.  The danger of survivor bias lies in optimizing the user
-experience for the subset of people who can tolerate a non-optimal user
-experience.
-
-\paragraph{Self-selection bias}
-Due to the nature of our online survey, participants could voluntarily select
-themselves into the group of respondents.  This set of people may be unusually
-engaged and technical, which is why they have formed opinions that they
-consider worth sharing.
-
-\subsubsection{Tor usage}
+\subsection{Tor Browser usage}
 
 Our survey started with two general questions about the use of Tor Browser.
 Figure~\ref{fig:tor-usage} illustrates how often our respondents use Tor
@@ -209,7 +50,200 @@ of respondents are only interested in technical aspects other than privacy.  One
 respondent stated that they don't need anonymity themselves but instead use Tor
 to provide cover traffic for ``people who need protection.''
 
-\subsubsection{Onion service usage}
+\subsubsection{Quantifying anonymity is hard}
+
+The degree of anonymity that protects a Tor user in a given situation depends on
+a number of variables including her guard relay, intermediate autonomous systems
+between the user and her destination, and other people that are using Tor at the
+same time, just to name a few.  Unlike other anonymity tools such as
+JAP~\cite{jap}, Tor Browser makes no attempt to display the degree of anonymity
+it believes it can provide.  Asked about how well Tor works for them, one
+of our participants explained:
+
+\begin{displayquote}
+In terms of the anonymity, you can't really tell\dots That's fairly opaque, so I
+can't even tell how effective that's working, or whether it is\dots
+\end{displayquote}
+
+Quantifying anonymity in a real-world setting is complex, error-prone, and often
+misleading.  What's more, Tor Browser does not have available all the data it
+needs to quantify its user's anonymity---an ``anonymity meter'' may therefore
+create more problems than it solves.
+
+\subsubsection{Education and documentation}
+
+Instead of quantifying anonymity, The Tor Project focuses its efforts on
+education and documentation.  Having worked with this documentation, some of our
+participants lamented its scope:
+
+\begin{displayquote}
+Tor does a good job on their web site of telling you to modify your
+[configuration] file, and then getting the onion set up.  But it's just very
+basic.  I have to go [to] other people's blog post to find out.
+\end{displayquote}
+
+Comprehensive documentation is only useful if it is understood, \ie, available
+in an array of different languages.  Another participant struggled with the lack
+of localization.  While Tor Browser's user interface is available in Spanish,
+the documentation is not:
+
+\begin{displayquote}
+Think more [about] the Spanish community\dots because in my case I'm trying to
+train people to use Tor but I work in the indigenous communities and there are
+some things that [are] hard for me to explain in terms of how you use Tor\dots
+\end{displayquote}
+
+\subsubsection{Users like a view under the hood}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/tor-button-screenshot.jpg}
+    \caption{A click on the onion icon reveals the Tor relays that constitute
+    the circuit that was used to fetch the current page.}
+    \label{fig:tor-button}
+\end{figure}
+
+Several of our participants enjoyed Tor Browser's visual feedback, illustrated
+in Figure~\ref{fig:tor-button}, that shows the circuit that is used for a given
+site.  One interviewee expressed delight about the interface:
+
+\begin{displayquote}
+I love how I can monitor the network through this little kind of bar that comes
+up.
+\end{displayquote}
+
+Not satisfied with seeing only the current circuit, some participants wished it
+were easier to learn what else is happening behind the scenes:
+
+\begin{displayquote}
+{[It]} would be nice to have some kind of application, something on that browser,
+that gives you an impression of\dots what the Tor Browser's actually doing.
+\end{displayquote}
+
+Finding the right balance between what information to show and what to hide is
+challenging in itself, and only exacerbated by Tor's heterogeneous user base:
+While technical users may appreciate a look ``under the hood,'' non-technical
+users, who often use Tor as a tool to get a specific job
+done~\cite[\S~4.3.2]{Gallagher2017a}, can easily feel bewildered and
+overwhelmed.  One aspect in which more transparency could indeed benefit Tor's
+entire user base is when websites don't load, as suggested by one participant:
+
+\begin{displayquote}
+\dots maybe some sort of graphical representation of is the circuit still
+being built, or is the circuit built, and the site isn't responding at all to
+the third relay?
+\end{displayquote}
+
+\subsubsection{Public perception}
+
+The Tor Project goes to great lengths to minimize the trust its users have to
+place in it by publishing design documents, source code, and coordinating
+development in public.  However, laypeople lack the skill while experts
+typically lack the time to audit source code which is why trust and reputation
+still matter.  Among our interview participants, The Tor Project enjoyed a lot
+of trust:
+
+\begin{displayquote}
+Because, you guys\dots have the sort of\dots not a monopoly on trust, but you
+have like a really great brand name when it comes to this stuff\dots
+\end{displayquote}
+
+While the work of Tor developers is held in high esteem, the content that is
+hosted on onion services is perceived very differently.  Upon being told what an
+onion service is, one participant sought clarification:
+
+\begin{displayquote}
+So it's like the Hidden Wiki and stuff like that, where you can buy drugs
+and\dots or supposedly.
+\end{displayquote}
+
+Several interviewees voiced concern that their mere use of Tor may draw unwanted
+attention.  Tor Browser comes with modules that disguise the fact that one is
+using Tor but a standard Tor connection does not use these modules, making it
+easy to identify for Internet service providers~\cite{pluggable}.  One
+participant worried:
+
+\begin{displayquote}
+I guess you could put yourself on some kind of watch lists, that you are a
+person of interest, just because you're using [Tor].
+\end{displayquote}
+
+\subsubsection{Users lament speed, user interface, and CAPTCHAs}
+
+Perhaps the most prevalent issue is, still, browsing speed:
+
+\begin{displayquote}
+The speed of it is problematic; sometimes I have a path that allows me to watch
+streaming full HD YouTube videos, and the next time, five minutes later, I'm
+barely getting kilobytes through.
+\end{displayquote}
+
+Occasionally Tor is preceded by its reputation, preparing users for what to
+expect:
+
+\begin{displayquote}
+I didn't think it was as slow as people say it was. People said it would be much
+slower experience but\ldots a little bit slower, but it didn't matter for the
+things that I was doing.
+\end{displayquote}
+
+In addition to the perceived slowness, several participants lamented the
+old-fashioned user interface.  Tor Browser's looks were described as ``it felt
+like it was about five years outdated,'' ``it looked like I was in 1982,'' and
+``I think the colors look a bit old fashioned and in the former Soviet Union.''
+Interestingly, one participant drew the opposite conclusion, expressing that the
+antiquated user interface evoked trust:
+
+\begin{displayquote}
+At the same time I thought\ldots it gave them a certain amount of credibility,
+like they weren't building this for the looks, but they were building it for
+functionality\ldots  At the same time, as I thought it was outdated in terms of
+how it looked, I also thought it was sort of genuine in a way.
+\end{displayquote}
+
+Orthogonal Tor's speed and user interface, the browsing experience occasionally
+suffers.  Relying on naive, IP address-based metrics of ``maliciousness,'' some
+content delivery networks such as Cloudflare label Tor exit relays as malicious
+which results in Tor users having to solve (sometimes multiple) CAPTCHAs before
+being granted access to a website.  In 2016, Khattak \ea documented the issue
+for a number of content providers~\cite{Khattak2016a}.  One interviewee summed
+up the situation as follows:
+
+\begin{displayquote}
+It is still sometimes challenging using some everyday services, because of
+CAPTCHAs and those things, but I also understand that's not so much to do with
+Tor, but to do with the creators of those web sites.
+\end{displayquote}
+
+\subsubsection{Tor Browser provides security, privacy, and control}
+
+Let's turn to the advantages that our interviewees see in Tor Browser.  It comes
+as no surprise that the main benefit of Tor Browser is the increase in privacy
+and security, brought up by practically all of our participants.  One of our
+more technical interviewees further distinguished between security and privacy.
+Asked about if they feel safer when using Tor, they responded:
+
+\begin{displayquote}
+In a privacy sense, I do. In a security sense\ldots I don't assume that Tor is
+protecting me from all of the vulnerabilities or exploits that I might
+encounter\ldots
+\end{displayquote}
+
+Besides the obvious improvement in security and privacy, a defining aspect of
+Tor is that it puts its users back in control, or, as one of our participants
+eloquently put it:
+
+\begin{displayquote}
+I feel like I'm more in control of my internet experience that way, I'm not sort
+of like a will-less victim of what other people want to do with me, so I feel
+I'm more empowered and have more agency when I use the Tor Browser.
+\end{displayquote}
+
+\subsection{Onion service usage}
+
+We now move on to results specific to onion services.
+
+\subsubsection{Usage frequency}
 
 The usage frequency of onion services is almost uniformly distributed among our
 respondents; 24\% use onion sites less than once a month, 22\% use them about
@@ -246,7 +280,67 @@ technical research, and to access sites that are otherwise unavailable.
     \label{fig:onion-usage}
 \end{figure}
 
-\subsubsection{Onion service discovery}
+\subsubsection{Mental models}
+
+We asked our participants to draw sketches of how they believe Tor and onion
+services work.\footnote{All sketches are available online at
+\url{https://nymity.ch/onion-services/mental-models/}.}   Everybody drew a
+sketch of Tor but some didn't draw onion services because they had no mental
+model of it.  Interestingly, all participants understood that bouncing network
+traffic across several relays is key to Tor's anonymity, as evidenced by
+Figure~\ref{fig:tor-sketch} that stems from a participant with no technical
+background.\footnote{Nevertheless the sketch got two details wrong: the number
+of hops in a Tor circuit is three and the circuit's forward and reverse path are
+identical.}  Analogously, most of our participants understood that network
+traffic does not leave the Tor network when connecting to onion services.
+Figure~\ref{fig:os-sketch} illustrates an example, again drawn by a
+non-technical participant.  The last hop in the circuit is an onion, correctly
+suggesting that network traffic does not leave the Tor network.
+
+\begin{figure}[t]
+    \centering
+
+    \begin{subfigure}[t]{\linewidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{figures/tor-sketch.jpg}
+        \subcaption{A non-technical interview subject's sketch of how they
+        believe Tor works.  The participant correctly understands the concept of
+        bouncing network traffic over several hops.}
+        \label{fig:tor-sketch}
+    \end{subfigure}
+
+    \begin{subfigure}[t]{\linewidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{figures/os-sketch.jpg}
+        \subcaption{A non-technical interview subject's sketch of their mental
+        model of an onion service.  Instead of a web site, the final hop is
+        another Tor hop.}
+        \label{fig:os-sketch}
+    \end{subfigure}
+
+    \caption{Sketches of two different, non-technical interview participants of
+    how Tor works (top) and how onion services work (bottom).}
+\end{figure}
+
+Some of our interviewees did not distinguish disguising their IP address from
+disguising their real-world identity, and instead used the umbrella term of
+``anonymity'' to refer to both concepts.  This conflation of concepts paints an
+incomplete picture of the security and privacy guarantees that Tor provides,
+as evidenced by one participant's question:
+
+\begin{displayquote}
+What's the point of going to Facebook using onion services when their business
+model is still about collecting your data?
+\end{displayquote}
+
+There is merit in using Facebook's onion service.  While the company obviously
+knows who is logging in, they do not know Tor users' location, operating system,
+or browser details.  On top of that, users get end-to-end security as well as
+self-authenticating names.  These benefits are difficult to convey to
+non-technical users and even experts sometimes advocate an ``all or nothing''
+approach to online anonymity.
+
+\subsubsection{Onion service discovery is a mess}
 
 Recall that onion services are private by default, leaving it up to their
 operator to disseminate the domain.  Established search engines such as Google
@@ -311,11 +405,17 @@ Interestingly, some respondents voiced frustration about various usability
 issues, but mentioned in the same sentence that this is an inherent trade-off of
 privacy technology, suggesting that there is nothing that can be done about it.
 
-\subsubsection{Onion service domain format}
+\subsubsection{Tools help managing the onion service domain format}
 
-Conventional domains are designed to be easy to remember and recognize.  But how do users
-handle the randomly-generated onion domains?  Question 3.8 in our survey asked
-exactly that, with the responses being illustrated in
+% An unrelated yet hardly unexpected source of confusion is the domain format of
+% onion services.  Some users have come to believe that the seemingly-random
+% characters in onion domains is the reason why onion services are anonymous.
+% Accordingly, these users also believe that vanity domains are ``less anonymous''
+% because part of their domains is clearly not random.
+
+Conventional domains are designed to be easy to remember and recognize.  But how
+do users handle the randomly-generated onion domains?  Question 3.8 in our
+survey asked exactly that, with the responses being illustrated in
 Figure~\ref{fig:onion-domain-mgmt}.
 
 \begin{figure}[t]
