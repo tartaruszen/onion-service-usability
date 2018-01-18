@@ -81,7 +81,7 @@ embed it in their daily workflow:
 
 \begin{displayquote}[P07]
 Right now, I use it very little, just because I don't have a lot of reasons to,
-because of that fact that I have other security practices that do the trick for
+because of the fact that I have other security practices that do the trick for
 the kind of work that I do.
 \end{displayquote}
 
@@ -118,27 +118,7 @@ don't need anonymity themselves but use Tor to provide cover traffic for
     \label{fig:tor-threats}
 \end{figure}
 
-\subsubsection{Quantifying anonymity is hard}
-
-The degree of anonymity that protects a Tor user in a given situation depends on
-a number of variables including her guard relay, intermediate autonomous systems
-between the user and her destination, and other people that are using Tor at the
-same time, just to name a few.  Unlike other anonymity tools such as
-JAP~\cite{jap}, Tor Browser makes no attempt to display the degree of anonymity
-it believes it can provide.  Asked about how well Tor works for them, one
-of our participants explained:
-
-\begin{displayquote}[P12]
-In terms of the anonymity, you can't really tell\dots That's fairly opaque, so I
-can't even tell how effective that's working, or whether it is\dots
-\end{displayquote}
-
-Quantifying anonymity in a real-world setting is complex, error-prone, and often
-misleading.  What's more, Tor Browser does not have available all the data it
-needs to quantify its user's anonymity---an ``anonymity meter'' may therefore
-create more problems than it solves.
-
-\subsubsection{Users like a view under the hood}
+\subsubsection{Users enjoy a look ``under the hood''}
 
 \begin{figure}[t]
     \centering
@@ -148,9 +128,9 @@ create more problems than it solves.
     \label{fig:tor-button}
 \end{figure}
 
-Several of our participants enjoyed Tor Browser's visual feedback, illustrated
-in Figure~\ref{fig:tor-button}, that shows the circuit that is used for a given
-site.  One interviewee expressed delight about the interface:
+By clicking on the onion icon in the top left corner of Tor Browser (see
+Figure~\ref{fig:tor-button}), one can see the circuit that is used for the
+current web site.  Some of our interviewees appreciated this visual feedback:
 
 \begin{displayquote}[P08]
 I love how I can monitor the network through this little kind of bar that comes
@@ -166,12 +146,12 @@ that gives you an impression of\dots what the Tor Browser's actually doing.
 \end{displayquote}
 
 Finding the right balance between what information to show and what to hide is
-challenging in itself, and only exacerbated by Tor's heterogeneous user base:
+challenging in itself, and only exacerbated by Tor's heterogeneous user base.
 While technical users may appreciate a look ``under the hood,'' non-technical
-users, who often use Tor as a tool to get a specific job
-done~\cite[\S~4.3.2]{Gallagher2017a}, can easily feel bewildered and
-overwhelmed.  One aspect in which more transparency could indeed benefit Tor's
-entire user base is when websites don't load, as suggested by one participant:
+users, who often use Tor as a tool to get a specific job done, can easily feel
+bewildered and overwhelmed.  One aspect however in which more transparency could
+benefit Tor's entire user base is when web sites don't load, as suggested by one
+participant:
 
 \begin{displayquote}[P05]
 \dots maybe some sort of graphical representation of is the circuit still
@@ -179,31 +159,51 @@ being built, or is the circuit built, and the site isn't responding at all to
 the third relay?
 \end{displayquote}
 
-\subsubsection{Users lament speed, user interface, and CAPTCHAs}
+\subsubsection{Quantifying anonymity is hard}
 
-Perhaps the most prevalent issue is, still, browsing speed:
+The degree of anonymity that protects a Tor user in a given situation depends on
+a number of variables including her guard relay, intermediate autonomous systems
+on the network path, and other people that are using Tor at the same time, just
+to name a few.  Unlike the JAP anonymity tool~\cite{jap}, Tor Browser makes no
+attempt to display the degree of anonymity it believes it can provide.  Asked
+about how well Tor works for them, one of our participants explained:
+
+\begin{displayquote}[P12]
+In terms of the anonymity, you can't really tell\dots That's fairly opaque, so I
+can't even tell how effective that's working, or whether it is\dots
+\end{displayquote}
+
+Quantifying anonymity in a real-world setting is complex, error-prone, and often
+misleading.  What's more, Tor Browser does not have available all the data it
+needs to quantify its user's anonymity---an ``anonymity meter'' may therefore
+create more problems than it solves.
+
+\subsubsection{UI, speed, and CAPTCHAs remain problematic}
+
+Perhaps the most prevalent usability issue is, still, browsing speed.  An
+interviewee provided the following anecdote:
 
 \begin{displayquote}[P01]
 The speed of it is problematic; sometimes I have a path that allows me to watch
-streaming full HD YouTube videos, and the next time, five minutes later, I'm
-barely getting kilobytes through.
+full HD YouTube videos, and the next time, five minutes later, I'm barely
+getting kilobytes through.
 \end{displayquote}
 
-Occasionally Tor is preceded by its reputation, preparing users for what to
-expect:
+Occasionally, Tor is preceded by its reputation, preparing users for what to
+expect, as another interview participant reported:
 
 \begin{displayquote}[P03]
-I didn't think it was as slow as people say it was. People said it would be much
-slower experience but\ldots a little bit slower, but it didn't matter for the
-things that I was doing.
+I didn't think it was as slow as people say it was. People said it would be a
+much slower experience but\ldots a little bit slower, but it didn't matter for
+the things that I was doing.
 \end{displayquote}
 
 In addition to the perceived slowness, several participants lamented the
-old-fashioned user interface.  Tor Browser's looks were described as ``it felt
-like it was about five years outdated,'' ``it looked like I was in 1982,'' and
-``I think the colors look a bit old fashioned and in the former Soviet Union.''
-Interestingly, one participant drew the opposite conclusion, expressing that the
-antiquated user interface evoked trust:
+old-fashioned user interface, describing Tor Browser's looks as ``it felt like
+it was about five years outdated,'' ``it looked like I was in 1982,'' and ``I
+think the colors look a bit old fashioned and in the former Soviet Union.'' To
+our surprise, one participant expressed that the antiquated user interface also
+evoked trust:
 
 \begin{displayquote}[P02]
 At the same time I thought\ldots it gave them a certain amount of credibility,
@@ -212,27 +212,28 @@ functionality\ldots  At the same time, as I thought it was outdated in terms of
 how it looked, I also thought it was sort of genuine in a way.
 \end{displayquote}
 
-Orthogonal Tor's speed and user interface, the browsing experience occasionally
-suffers.  Relying on naive, IP address-based metrics of ``maliciousness,'' some
-content delivery networks such as Cloudflare label Tor exit relays as malicious
-which results in Tor users having to solve (sometimes multiple) CAPTCHAs before
-being granted access to a website.  In 2016, Khattak \ea documented the issue
-for a number of content providers~\cite{Khattak2016a}.  One interviewee summed
-up the situation as follows:
+Orthogonal to Tor's speed and user interface, the browsing experience
+occasionally suffers.  Relying on naive, IP address-based metrics of
+``maliciousness,'' some content delivery networks such as Cloudflare label Tor
+exit relays as malicious which results in Tor users having to solve (sometimes
+multiple) CAPTCHAs before being granted access to a web site.  In 2016, Khattak
+\ea documented the issue for a number of content providers~\cite{Khattak2016a}.
+Both survey and interview participants brought up the topic and one person
+managed to depict the issue without the use of profanity:
 
 \begin{displayquote}[P06]
-It is still sometimes challenging using some everyday services, because of
+It is still sometimes challenging using some everyday services because of
 CAPTCHAs and those things, but I also understand that's not so much to do with
 Tor, but to do with the creators of those web sites.
 \end{displayquote}
 
-\subsubsection{Tor Browser provides security, privacy, and control}
+\subsubsection{Empowerment through security and privacy}
 
-Let's turn to the advantages that our interviewees see in Tor Browser.  It comes
-as no surprise that the main benefit of Tor Browser is the increase in privacy
-and security, brought up by practically all of our participants.  One of our
-more technical interviewees further distinguished between security and privacy.
-Asked about if they feel safer when using Tor, they responded:
+It comes as no surprise that our data reveals that the main benefit of Tor
+Browser is the increase in privacy and security, brought up by practically all
+of our interview participants.  One of our more technical interviewees (and
+several of our survey respondents) further distinguished between security and
+privacy.  Asked about if they feel safer when using Tor, they responded:
 
 \begin{displayquote}[P06]
 In a privacy sense, I do. In a security sense\ldots I don't assume that Tor is
@@ -241,8 +242,8 @@ encounter\ldots
 \end{displayquote}
 
 Besides the obvious improvement in security and privacy, a defining aspect of
-Tor is that it puts its users back in control, or, as one of our participants
-eloquently put it:
+Tor is that it puts users back in control, or, as one of our participants
+eloquently phrased it:
 
 \begin{displayquote}[P02]
 I feel like I'm more in control of my internet experience that way, I'm not sort
