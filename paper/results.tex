@@ -9,16 +9,16 @@ bringing up anecdotes and findings from our interviews as appropriate.
 
 \subsection{The Tor Project}
 
-While we focused on the usability of onion services and Tor Browser, our
-interviews and some of our survey data provided insight into how users perceive
-The Tor Project and the work it does.
+Our work focuses on the usability of onion services but our interviews and parts
+of our survey data also provided some into how our respondents perceive The Tor
+Project and its work.  We will now briefly summarize these findings.
 
-\subsubsection{Education and documentation}
+\subsubsection{Documentation and localization}
 
-The Tor Project's documentation covers a wide array of issues, including
-installation, use on Android, operation of relays, several FAQs, and a wiki.
-Having worked with this documentation, some of our participants lamented its
-scope:
+The Tor Project's documentation covers an array of topics including
+installation, the use on Android, the operation of Tor relays, several FAQs, and
+a wiki.  Having worked with this documentation, some of our interview and survey
+participants lamented its scope:
 
 \begin{displayquote}[P14]
 Tor does a good job on their web site of telling you to modify your
@@ -26,10 +26,8 @@ Tor does a good job on their web site of telling you to modify your
 basic.  I have to go [to] other people's blog post to find out.
 \end{displayquote}
 
-Comprehensive documentation is only useful if it is understood, \ie, available
-in an array of different languages.  Another participant struggled with the lack
-of localization.  While Tor Browser's user interface is available in Spanish,
-the documentation is not:
+Another participant struggled with the lack of localization.  While Tor
+Browser's user interface is available in Spanish, the documentation is not:
 
 \begin{displayquote}[P11]
 Think more [about] the Spanish community\dots because in my case I'm trying to
@@ -41,19 +39,20 @@ some things that [are] hard for me to explain in terms of how you use Tor\dots
 
 The Tor Project goes to great lengths to minimize the trust its users have to
 place in it by publishing design documents, source code, and coordinating
-development in public.  However, laypeople lack the skill while experts
-typically lack the time to audit source code which is why trust and reputation
-still matter.  Among our interview participants, The Tor Project enjoyed a lot
-of trust:
+development in public.  Laypeople however lack the skill while experts typically
+lack the time to audit source code, which is why trust and reputation matter.
+The Tor Project enjoyed a lot of trust among our interview participants, which,
+admittedly, comes as no surprise because we recruited our interviewees from
+Tor-friendly social media and an Internet freedom event.
 
 \begin{displayquote}[P08]
 Because, you guys\dots have the sort of\dots not a monopoly on trust, but you
 have like a really great brand name when it comes to this stuff\dots
 \end{displayquote}
 
-While the work of Tor developers is held in high esteem, the content that is
-hosted on onion services is perceived very differently.  Upon being told what an
-onion service is, one participant sought clarification:
+While the work of Tor developers is often held in high esteem, the content that
+is hosted on onion services is perceived very differently.  Upon being told what
+an onion service is, one participant sought clarification:
 
 \begin{displayquote}[P03]
 So it's like the Hidden Wiki and stuff like that, where you can buy drugs
@@ -73,46 +72,51 @@ person of interest, just because you're using [Tor].
 
 \subsection{Tor Browser usage}
 
-Our survey started with two general questions about the use of Tor Browser.
-Figure~\ref{fig:tor-usage} illustrates how often our respondents use Tor
-Browser.  Almost half of our participants use Tor Browser either daily or even
-as their main browser.
+Our survey started with two questions about how often our respondents use Tor
+Browser.  The results are illustrated in Figure~\ref{fig:tor-usage}.  Almost
+half of our participants use Tor Browser either daily or even as their main
+browser.  Both Gallagher \ea~\cite[\S~4.3.2]{Gallagher2017a} and our interview
+data suggests that non-experts frequently use Tor for specific tasks but don't
+embed it in their daily workflow:
 
-Figure~\ref{fig:tor-threats} illustrates what entities our respondents seek to
-protect themselves from when using Tor Browser.  The majority considers ad
-companies, governments, and---most prominently---their ISP.  More relatable
-entities such as family, employer, and school are less prevalent.
+\begin{displayquote}[P07]
+Right now, I use it very little, just because I don't have a lot of reasons to,
+because of that fact that I have other security practices that do the trick for
+the kind of work that I do.
+\end{displayquote}
 
 \begin{figure}[t]
     \centering
     \input{figures/tor-usage.tex}
-    \caption{The usage frequency of Tor Browser among our respondents.  Almost
-    half of our respondents use Tor Browser either daily or as their main
-    browser.}
+    \caption{The usage frequency of Tor Browser among our respondents, almost
+    half of whom use Tor Browser either daily or as their main browser.}
     \label{fig:tor-usage}
 \end{figure}
+
+Figure~\ref{fig:tor-threats} illustrates what entities our respondents seek to
+protect themselves from when using Tor Browser.  The majority considers ad
+companies, governments, and---most prominently---their ISP.  More tangible
+entities such as family, employers, and schools are less prevalent.  People who
+selected ``Other'' gave a variety of responses.  A number of respondents
+specifically pointed out Google and Facebook.  ISPs, backbone ISPs, and web
+sites were another common theme.  A number of respondents are struggling with
+personal threats that include identity theft, targeted harassment, and stalking.
+Research is another common theme: Several respondents want to learn about a
+topic without revealing their interest in it.  Some respondents use Tor for
+search engine optimization, computer security research, and to research medical
+conditions.  Finally, Tor has use cases that don't involve a threat actor.  Some
+respondents want IPv6 connectivity, evasion of geographical content
+restrictions, and access to onion services.  One respondent stated that they
+don't need anonymity themselves but use Tor to provide cover traffic for
+``people who need protection.''
 
 \begin{figure}[t]
     \centering
     \input{figures/tor-threats.tex}
     \caption{The threat actors that our respondents seek to protect themselves
-        from by using Tor Browser.}
+    from by using Tor Browser.}
     \label{fig:tor-threats}
 \end{figure}
-
-People who selected ``Other'' gave a variety of responses.  A number of
-respondents specifically pointed out Google and Facebook.  ISPs, backbone ISPs,
-and web sites were another common theme.  A number of respondents are struggling
-with personal threats that include identity theft, targeted harassment, and
-stalking.  Research is another common theme: Several respondents want to learn
-about a topic without revealing their interest in it.  Some respondents use Tor
-for search engine optimization, computer security research, and to research
-medical conditions.  Finally, Tor provides technical advantages that don't
-involve a threat actor.  Some respondents want IPv6 connectivity, evasion of
-geographical content restrictions, and access to onion services.  A small number
-of respondents are only interested in technical aspects other than privacy.  One
-respondent stated that they don't need anonymity themselves but instead use Tor
-to provide cover traffic for ``people who need protection.''
 
 \subsubsection{Quantifying anonymity is hard}
 
