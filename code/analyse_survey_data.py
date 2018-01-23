@@ -300,6 +300,13 @@ def onion_usage(d):
     print("%6.2f%% automatically start to memorize it"                  % d.pct("q3_15", "4"))
     print("%6.2f%% other"                                               % d.pct("q3_15", "5"))
 
+    '''
+    print("---\nQuestion 3.15 txt:")
+    for r in d.responses:
+        if r.q3_15_text != "":
+            print("- %s" % r.q3_15_text)
+    '''
+
     print("---\nQuestion 3.16 (facebookcorewwwi.onion):")
     print("%6.2f%% very easy"                   % d.pct("q3_16_1", "1"))
     print("%6.2f%% somewhat easy"               % d.pct("q3_16_1", "2"))

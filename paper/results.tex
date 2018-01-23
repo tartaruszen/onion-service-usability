@@ -10,7 +10,7 @@ bringing up anecdotes and findings from our interviews as appropriate.
 \subsection{The Tor Project}
 
 Our work focuses on the usability of onion services but our interviews and parts
-of our survey data also provided some into how our respondents perceive The Tor
+of our survey data also provided some insight into how our respondents perceive The Tor
 Project and its work.  We will now briefly summarize these findings.
 
 \subsubsection{Documentation and localization}
@@ -439,7 +439,7 @@ computer.  One of Tor Browser's security requirements is ``disk avoidance,''
 browsing history~\cite[\S~2.1]{Perry2017a}.  Bookmarking links is a violation of
 this security requirement albeit requested by the user.  Many of our respondents
 were aware of this issue and about a dozen respondents who selected ``Other''
-stated that they store onion domains encryptedly---either in a text file or in
+stated that they store onion domains in an encrypted manner---either in a text file or in
 their password manager.  Somewhat less popular is saving onion domains in local
 text files (36\%), getting them from trusted web sites (34\%), using search
 engines (18\%), memorizing domains (16\%), using some other techniques (9\%), or
@@ -447,6 +447,29 @@ employing pen and paper (8\%).  Notably, one quarter of our respondents does not
 have a good solution to the problem.  Given the alarming number of (possibly
 insecure) home-baked solutions, a Tor Browser extension that solves this problem
 may be warranted.
+
+Of the respondents that memorize onion domains, we found that most respondents memorize
+either one onion domain (15\% of total respondents) or four onion domains (11\% of total 
+respondents); significantly fewer respondents memorize two domains (5\%), three domains 
+(4\%), and more than four domains (1\%).  As mentioned in the previous paragraph, bookmarking 
+onion domains can leave a trace of visited sites, and about 28\% of respondents said they 
+memorize onion domains to prevent this digital trace.  On the other hand, more respondents 
+memorize domains to allow them to open the site more quickly (51\%), ensure that they are 
+visiting the correct site and not a phishing site (44\%), and automatically start to memorize it 
+based on typing it many times (60\%).  
+
+Our survey also asked respondents about whether or not they memorize vanity domains --- 
+specifically \url{facebookcorewwwi.onion} --- and how difficult they find it to memorize 
+onion domains of differing levels of vanity.  59\% of respondents replied that \url{facebookcorewwwi.onion} 
+is among the sites that they have memorized. This is because it is ``easy to memorize'' and ``after seeing [it] 
+many times, I automatically start to memorize it.''  When asked about different levels of vanity domains, 
+the respondents expressed differing levels of ease in which to memorize them; these results are shown in 
+Figure \ref{fig:memorize-domains}.  URLs such as \url{expyuzz4wqqyqhjn.onion} and \url{torproz4wqqyqhjn.onion} 
+are harder for respondents to remember because they mention that ``numbers make the names harder to 
+remember.''  Other respondents stated that domains are easier to remember when they are speakable and can be 
+pronounced.  One respondent described it saying ``phonetic pronunciation plays a large part in how I 
+remember onions.'' Many other resondents stated that onion domains that are supported by a mneumonic are
+also easier to remember.  
 
 The next question in our survey asked if our respondents expect the
 next-generation domain format to change their browsing habits.  Interestingly,

@@ -1,0 +1,1091 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.7 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nty/global/}
+    \entry{Abu-Salma2017a}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{hash=fe6dd6ca024e3a461304deed35f762a4}{%
+           family={Abu-Salma},
+           family_i={A\bibinithyphendelim S\bibinitperiod},
+           given={Ruba},
+           given_i={R\bibinitperiod}}}%
+        {{hash=42893595d26e060a049d74a6f939d7da}{%
+           family={Danilova},
+           family_i={D\bibinitperiod},
+           given={Anastasia},
+           given_i={A\bibinitperiod}}}%
+        {{hash=c23f5cc1135d1458efc42296d79f37d4}{%
+           family={Sasse},
+           family_i={S\bibinitperiod},
+           given={M.\bibnamedelimi Angela},
+           given_i={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=4fb0fe439e737304c7743797a0cb1c94}{%
+           family={Naiakshina},
+           family_i={N\bibinitperiod},
+           given={Alena},
+           given_i={A\bibinitperiod}}}%
+        {{hash=e6eb78ec5f92eaff4e9d4b944aff4c9c}{%
+           family={Bonneau},
+           family_i={B\bibinitperiod},
+           given={Joseph},
+           given_i={J\bibinitperiod}}}%
+        {{hash=892bcbf9fb91b1348837862cbf71f80f}{%
+           family={Smith},
+           family_i={S\bibinitperiod},
+           given={Matthew},
+           given_i={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{eac8a74699b6fdbbae5562a6721806c0}
+      \strng{fullhash}{eac8a74699b6fdbbae5562a6721806c0}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Security \& Privacy}
+      \field{title}{Obstacles to the Adoption of Secure Communication Tools}
+      \field{year}{2017}
+      \verb{url}
+      \verb https://www.ieee-security.org/TC/SP2017/papers/84.pdf
+      \endverb
+    \endentry
+    \entry{trac23247}{online}{}
+      \name{author}{1}{}{%
+        {{hash=ff74d7b57a886d740da1cdc924f5cc6b}{%
+           family={Bagueros},
+           family_i={B\bibinitperiod},
+           given={Isabela},
+           given_i={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{ff74d7b57a886d740da1cdc924f5cc6b}
+      \strng{fullhash}{ff74d7b57a886d740da1cdc924f5cc6b}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Communicating security expectations for .onion: what to say about different padlock states for .onion services}
+      \field{urlday}{09}
+      \field{urlmonth}{01}
+      \field{urlyear}{2018}
+      \verb{url}
+      \verb https://bugs.torproject.org/23247
+      \endverb
+    \endentry
+    \entry{Berinsky2014a}{article}{}
+      \name{author}{3}{}{%
+        {{hash=098dfaad950a1e2909f35ddaaf927422}{%
+           family={Berinsky},
+           family_i={B\bibinitperiod},
+           given={Adam\bibnamedelima J.},
+           given_i={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=8079190da3fd0c32177e6fa05fb9717c}{%
+           family={Margolis},
+           family_i={M\bibinitperiod},
+           given={Michele\bibnamedelima F.},
+           given_i={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=ae8cce88a47b13d68e4373b3345c55f3}{%
+           family={Sances},
+           family_i={S\bibinitperiod},
+           given={Michael\bibnamedelima W.},
+           given_i={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{14fb5d73fe11019e8275b522948627af}
+      \strng{fullhash}{14fb5d73fe11019e8275b522948627af}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{American Journal of Political Science}
+      \field{number}{3}
+      \field{title}{Separating the Shirkers from the Workers? Making Sure Respondents Pay Attention on Self-Administered Surveys}
+      \field{volume}{58}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://web.mit.edu/berinsky/www/files/shirkers1.pdf
+      \endverb
+    \endentry
+    \entry{ricochet}{online}{}
+      \name{author}{1}{}{%
+        {{hash=a2e4f77e1e52b3bd4dd4028b3ff6f271}{%
+           family={Brooks},
+           family_i={B\bibinitperiod},
+           given={John},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{a2e4f77e1e52b3bd4dd4028b3ff6f271}
+      \strng{fullhash}{a2e4f77e1e52b3bd4dd4028b3ff6f271}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Ricochet}}
+      \field{urlday}{15}
+      \field{urlmonth}{05}
+      \field{urlyear}{2017}
+      \verb{url}
+      \verb https://ricochet.im
+      \endverb
+    \endentry
+    \entry{Clark2007a}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=d0054c54f53e249b95a1f7e7b702a6bf}{%
+           family={Clark},
+           family_i={C\bibinitperiod},
+           given={Jeremy},
+           given_i={J\bibinitperiod}}}%
+        {{hash=f95d1b0dc351882d4014dd40729b9b61}{%
+           family={Oorschot},
+           family_i={O\bibinitperiod},
+           given={Paul\bibnamedelimb C.\bibnamedelimi Van},
+           given_i={P\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=918081b9a8494c2488cc8dd5fbbf2661}{%
+           family={Adams},
+           family_i={A\bibinitperiod},
+           given={Carlisle},
+           given_i={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{9d360da6297d14f9278cb14bbc12e5ff}
+      \strng{fullhash}{9d360da6297d14f9278cb14bbc12e5ff}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{SOUPS}
+      \field{title}{Usability of Anonymous Web Browsing: An Examination of {Tor} Interfaces and Deployability}
+      \field{year}{2007}
+      \verb{url}
+      \verb https://www.freehaven.net/anonbib/cache/tor-soups07.pdf
+      \endverb
+    \endentry
+    \entry{Collins2003a}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5913acca196e084b92cf419f96152390}{%
+           family={Collins},
+           family_i={C\bibinitperiod},
+           given={Debbie},
+           given_i={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{5913acca196e084b92cf419f96152390}
+      \strng{fullhash}{5913acca196e084b92cf419f96152390}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Quality of Life Research}
+      \field{number}{3}
+      \field{title}{Pretesting Survey Instruments: An Overview of Cognitive Methods}
+      \field{volume}{12}
+      \field{year}{2003}
+      \verb{url}
+      \verb https://link.springer.com/content/pdf/10.1023%2FA%3A1023254226592.pdf
+      \endverb
+    \endentry
+    \entry{DigiCert2015a}{online}{}
+      \name{author}{1}{}{%
+        {{hash=81eae513e622d8528f5b3ecb851e97d3}{%
+           family={DigiCert},
+           family_i={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{81eae513e622d8528f5b3ecb851e97d3}
+      \strng{fullhash}{81eae513e622d8528f5b3ecb851e97d3}
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{title}{Ordering a .Onion Certificate from {DigiCert}}
+      \field{urlday}{05}
+      \field{urlmonth}{12}
+      \field{urlyear}{2017}
+      \field{year}{2015}
+      \verb{url}
+      \verb https://www.digicert.com/blog/ordering-a-onion-certificate-from-digicert/
+      \endverb
+    \endentry
+    \entry{Fifield2015a}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=a2c9d4565fa7cc9270b084bf5b40dcdf}{%
+           family={Fifield},
+           family_i={F\bibinitperiod},
+           given={David},
+           given_i={D\bibinitperiod}}}%
+        {{hash=28d462d7a922f052ac7d6254366de7dc}{%
+           family={Lee},
+           family_i={L\bibinitperiod},
+           given={Linda\bibnamedelima N.},
+           given_i={L\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=9986e1a6903b4495e02aece21e4bbf0d}{%
+           family={Egelman},
+           family_i={E\bibinitperiod},
+           given={Serge},
+           given_i={S\bibinitperiod}}}%
+        {{hash=45a593fbd4e5b2f4d60199ccfdb4fe59}{%
+           family={Wagner},
+           family_i={W\bibinitperiod},
+           given={David},
+           given_i={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{2d82bad125c3a39a3e282ac2d4ea3286}
+      \strng{fullhash}{2d82bad125c3a39a3e282ac2d4ea3286}
+      \field{sortinit}{F}
+      \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{HotPETS}
+      \field{title}{Tor's Usability for Censorship Circumvention}
+      \verb{url}
+      \verb https://petsymposium.org/2015/papers/fifield-tor-censorship-usability-hotpets2015.pdf
+      \endverb
+    \endentry
+    \entry{Forte2017a}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=1d01d81a5cc5ecce88f7a7f6fcf131d3}{%
+           family={Forte},
+           family_i={F\bibinitperiod},
+           given={Andrea},
+           given_i={A\bibinitperiod}}}%
+        {{hash=f7480db405066514acaaa48d0420f235}{%
+           family={Andalibi},
+           family_i={A\bibinitperiod},
+           given={Nazanin},
+           given_i={N\bibinitperiod}}}%
+        {{hash=c2c72fc578663fab79fc999080ccbcbd}{%
+           family={Greenstadt},
+           family_i={G\bibinitperiod},
+           given={Rachel},
+           given_i={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{8d8dbc0520a6da1361f76ed3098c1e88}
+      \strng{fullhash}{8d8dbc0520a6da1361f76ed3098c1e88}
+      \field{sortinit}{F}
+      \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{CSCW}
+      \field{title}{Privacy, Anonymity, and Perceived Risk in Open Collaboration: A Study of {Tor} Users and {Wikipedians}}
+      \field{year}{2017}
+      \verb{url}
+      \verb http://andreaforte.net/ForteCSCW17-Anonymity.pdf
+      \endverb
+    \endentry
+    \entry{Gallagher2017a}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=712ad5f242bb8cce6956af0035670e92}{%
+           family={Gallagher},
+           family_i={G\bibinitperiod},
+           given={Kevin},
+           given_i={K\bibinitperiod}}}%
+        {{hash=543edd27031cacf0c3da828ec55c1f18}{%
+           family={Patil},
+           family_i={P\bibinitperiod},
+           given={Sameer},
+           given_i={S\bibinitperiod}}}%
+        {{hash=09c1479ba74e772074143ca4223000b8}{%
+           family={Memon},
+           family_i={M\bibinitperiod},
+           given={Nasir},
+           given_i={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{13143b44e66ee5aa29b415117adf1168}
+      \strng{fullhash}{13143b44e66ee5aa29b415117adf1168}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{SOUPS}
+      \field{title}{New Me: Understanding Expert and Non-Expert Perceptions and Usage of the {Tor} Anonymity Network}
+      \field{year}{2017}
+      \verb{url}
+      \verb https://www.usenix.org/system/files/conference/soups2017/soups2017-gallagher.pdf
+      \endverb
+    \endentry
+    \entry{jap}{online}{}
+      \name{author}{1}{}{%
+        {{hash=7d6be1f70f79c5ba486b211829c390d9}{%
+           family={{JAP Team}},
+           family_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{7d6be1f70f79c5ba486b211829c390d9}
+      \strng{fullhash}{7d6be1f70f79c5ba486b211829c390d9}
+      \field{sortinit}{J}
+      \field{sortinithash}{ec3950a647c092421b9fcca6d819504a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{JAP -- Anonymity \& Privacy}
+      \field{urlday}{12}
+      \field{urlmonth}{01}
+      \field{urlyear}{2018}
+      \verb{url}
+      \verb https://anon.inf.tu-dresden.de/screenshot_en.html
+      \endverb
+    \endentry
+    \entry{Kadianakis2017a}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=bde3c2f2d86232ecab63d1d359b4e4d0}{%
+           family={Kadianakis},
+           family_i={K\bibinitperiod},
+           given={George},
+           given_i={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{bde3c2f2d86232ecab63d1d359b4e4d0}
+      \strng{fullhash}{bde3c2f2d86232ecab63d1d359b4e4d0}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{title}{Cooking With Onions: Names for your onions}
+      \field{urlday}{04}
+      \field{urlmonth}{05}
+      \field{urlyear}{2017}
+      \field{year}{2017}
+      \verb{url}
+      \verb https://blog.torproject.org/blog/cooking-onions-names-your-onions
+      \endverb
+    \endentry
+    \entry{Kadianakis2016a}{online}{}
+      \name{author}{3}{}{%
+        {{hash=bde3c2f2d86232ecab63d1d359b4e4d0}{%
+           family={Kadianakis},
+           family_i={K\bibinitperiod},
+           given={George},
+           given_i={G\bibinitperiod}}}%
+        {{hash=717b28b10f293ef01540bf6fc3bb875b}{%
+           family={Angel},
+           family_i={A\bibinitperiod},
+           given={Yawning},
+           given_i={Y\bibinitperiod}}}%
+        {{hash=a95f655400a5e926498302feace0aeba}{%
+           family={Goulet},
+           family_i={G\bibinitperiod},
+           given={David},
+           given_i={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{99f6e0e5fb9cb21d76af991d689e6d9b}
+      \strng{fullhash}{99f6e0e5fb9cb21d76af991d689e6d9b}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A Name System {API} for {Tor} Onion Services}
+      \field{urlday}{07}
+      \field{urlmonth}{11}
+      \field{urlyear}{2017}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://gitweb.torproject.org/torspec.git/tree/proposals/279-naming-layer-api.txt
+      \endverb
+    \endentry
+    \entry{Khattak2016a}{inproceedings}{}
+      \name{author}{8}{}{%
+        {{hash=0a7b04ed06cdb374f7b481ddb4a43283}{%
+           family={Khattak},
+           family_i={K\bibinitperiod},
+           given={Sheharbano},
+           given_i={S\bibinitperiod}}}%
+        {{hash=a2c9d4565fa7cc9270b084bf5b40dcdf}{%
+           family={Fifield},
+           family_i={F\bibinitperiod},
+           given={David},
+           given_i={D\bibinitperiod}}}%
+        {{hash=8c8de8a16d06d1bb2ed2c8ae700365b1}{%
+           family={Afroz},
+           family_i={A\bibinitperiod},
+           given={Sadia},
+           given_i={S\bibinitperiod}}}%
+        {{hash=0c20d761ef709afb0c5ec01ad77898a7}{%
+           family={Javed},
+           family_i={J\bibinitperiod},
+           given={Mobin},
+           given_i={M\bibinitperiod}}}%
+        {{hash=935825f5dd2d5750ed384bd08ff5d2dc}{%
+           family={Sundaresan},
+           family_i={S\bibinitperiod},
+           given={Srikanth},
+           given_i={S\bibinitperiod}}}%
+        {{hash=64469f291d02ccaef81afd5cc785044f}{%
+           family={Paxson},
+           family_i={P\bibinitperiod},
+           given={Vern},
+           given_i={V\bibinitperiod}}}%
+        {{hash=41ccaddfee38a28f8ec7e861eed7dcc9}{%
+           family={Murdoch},
+           family_i={M\bibinitperiod},
+           given={Steven\bibnamedelima J.},
+           given_i={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=5aa95937949aa05ba5443b2869aa21e6}{%
+           family={McCoy},
+           family_i={M\bibinitperiod},
+           given={Damon},
+           given_i={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Internet Society}%
+      }
+      \strng{namehash}{a035d68bc27970276f20b5380dce6258}
+      \strng{fullhash}{a035d68bc27970276f20b5380dce6258}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{NDSS}
+      \field{title}{Do You See What I See? Differential Treatment of Anonymous Users}
+      \field{year}{2016}
+      \verb{url}
+      \verb http://www.icir.org/vern/papers/tor-differential.NDSS16.pdf
+      \endverb
+    \endentry
+    \entry{Lee2017a}{article}{}
+      \name{author}{6}{}{%
+        {{hash=b2f76df1e4fbbda968c7534981dabe51}{%
+           family={Lee},
+           family_i={L\bibinitperiod},
+           given={Linda},
+           given_i={L\bibinitperiod}}}%
+        {{hash=a2c9d4565fa7cc9270b084bf5b40dcdf}{%
+           family={Fifield},
+           family_i={F\bibinitperiod},
+           given={David},
+           given_i={D\bibinitperiod}}}%
+        {{hash=bd1cc9fd508ef7eac452d94a1c835335}{%
+           family={Malkin},
+           family_i={M\bibinitperiod},
+           given={Nathan},
+           given_i={N\bibinitperiod}}}%
+        {{hash=65003729066494b076c6a6df0c598348}{%
+           family={Iyer},
+           family_i={I\bibinitperiod},
+           given={Ganesh},
+           given_i={G\bibinitperiod}}}%
+        {{hash=9986e1a6903b4495e02aece21e4bbf0d}{%
+           family={Egelman},
+           family_i={E\bibinitperiod},
+           given={Serge},
+           given_i={S\bibinitperiod}}}%
+        {{hash=45a593fbd4e5b2f4d60199ccfdb4fe59}{%
+           family={Wagner},
+           family_i={W\bibinitperiod},
+           given={David},
+           given_i={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{8c7bf05ca2da6a957b68741f0f47030c}
+      \strng{fullhash}{8c7bf05ca2da6a957b68741f0f47030c}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PoPETS}
+      \field{number}{3}
+      \field{title}{A Usability Evaluation of {Tor} Launcher}
+      \field{volume}{2017}
+      \field{year}{2017}
+      \verb{url}
+      \verb https://petsymposium.org/2017/papers/issue3/paper2-2017-3-source.pdf
+      \endverb
+    \endentry
+    \entry{onionshare}{online}{}
+      \name{author}{1}{}{%
+        {{hash=82318d9f10d73b7d188b153f9189b097}{%
+           family={Lee},
+           family_i={L\bibinitperiod},
+           given={Micah},
+           given_i={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{82318d9f10d73b7d188b153f9189b097}
+      \strng{fullhash}{82318d9f10d73b7d188b153f9189b097}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{OnionShare}}
+      \field{urlday}{15}
+      \field{urlmonth}{05}
+      \field{urlyear}{2017}
+      \verb{url}
+      \verb https://onionshare.org
+      \endverb
+    \endentry
+    \entry{Mathewson2013a}{online}{}
+      \name{author}{1}{}{%
+        {{hash=1ee2592c88d805ce30055d25a49a8327}{%
+           family={Mathewson},
+           family_i={M\bibinitperiod},
+           given={Nick},
+           given_i={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{1ee2592c88d805ce30055d25a49a8327}
+      \strng{fullhash}{1ee2592c88d805ce30055d25a49a8327}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Next-Generation Hidden Services in {Tor}}
+      \field{urlday}{27}
+      \field{urlmonth}{04}
+      \field{urlyear}{2017}
+      \field{year}{2013}
+      \verb{url}
+      \verb https://gitweb.torproject.org/torspec.git/tree/proposals/224-rend-spec-ng.txt
+      \endverb
+    \endentry
+    \entry{Matic2015a}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=b11cb1bb37e7eb8bd5e0ca7af4ef515e}{%
+           family={Matic},
+           family_i={M\bibinitperiod},
+           given={Srdjan},
+           given_i={S\bibinitperiod}}}%
+        {{hash=8bcf12eb3ba8db175db65db7d37e62d4}{%
+           family={Kotzias},
+           family_i={K\bibinitperiod},
+           given={Platon},
+           given_i={P\bibinitperiod}}}%
+        {{hash=d9eac53f0965985e136500a64f52f15d}{%
+           family={Caballero},
+           family_i={C\bibinitperiod},
+           given={Juan},
+           given_i={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{a745176400f34787a03c7c28a17faad6}
+      \strng{fullhash}{a745176400f34787a03c7c28a17faad6}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{CCS}
+      \field{title}{{CARONTE}: Detecting Location Leaks for Deanonymizing {Tor} Hidden Services}
+      \field{year}{2015}
+      \verb{url}
+      \verb https://software.imdea.org/~juanca/papers/caronte_ccs15.pdf
+      \endverb
+    \endentry
+    \entry{Monteiro2016a}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=4ef083c21e53cb666c568f7503295720}{%
+           family={Monteiro},
+           family_i={M\bibinitperiod},
+           given={Chris},
+           given_i={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{4ef083c21e53cb666c568f7503295720}
+      \strng{fullhash}{4ef083c21e53cb666c568f7503295720}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{Intercepting drug deals, charity and onionland}
+      \field{urlday}{23}
+      \field{urlmonth}{10}
+      \field{urlyear}{2017}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://pirate.london/intercepting-drug-deals-charity-and-onionland-a2f9bb306b04
+      \endverb
+    \endentry
+    \entry{facebook-users}{online}{}
+      \name{author}{1}{}{%
+        {{hash=98844aff1570f4b9005308a5417023a7}{%
+           family={Muffett},
+           family_i={M\bibinitperiod},
+           given={Alec},
+           given_i={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{98844aff1570f4b9005308a5417023a7}
+      \strng{fullhash}{98844aff1570f4b9005308a5417023a7}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{title}{1 Million People use {Facebook} over {Tor}}
+      \field{urlday}{15}
+      \field{urlmonth}{05}
+      \field{urlyear}{2017}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://www.facebook.com/notes/facebook-over-tor/1-million-people-use-facebook-over-tor/865624066877648/
+      \endverb
+    \endentry
+    \entry{Norcie2014a}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=29b7a54ce566e9d23e899b2c5214fd0d}{%
+           family={Norcie},
+           family_i={N\bibinitperiod},
+           given={Greg},
+           given_i={G\bibinitperiod}}}%
+        {{hash=8ac7b436d732f456c905b0097f3bdec6}{%
+           family={Blythe},
+           family_i={B\bibinitperiod},
+           given={Jim},
+           given_i={J\bibinitperiod}}}%
+        {{hash=87c5318bda8af4b30ada1f094d31795c}{%
+           family={Caine},
+           family_i={C\bibinitperiod},
+           given={Kelly},
+           given_i={K\bibinitperiod}}}%
+        {{hash=0330330b53c2aa7af2ae297fd326ae0c}{%
+           family={Camp},
+           family_i={C\bibinitperiod},
+           given={L.\bibnamedelimi Jean},
+           given_i={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Internet Society}%
+      }
+      \strng{namehash}{74d9f8e6b38c0c46c3d5f20a284e8b31}
+      \strng{fullhash}{74d9f8e6b38c0c46c3d5f20a284e8b31}
+      \field{sortinit}{N}
+      \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{USEC}
+      \field{title}{Why {Johnny} Can't Blow the Whistle: Identifying and Reducing Usability Issues in Anonymity Systems}
+      \field{year}{2014}
+      \verb{url}
+      \verb https://www.freehaven.net/anonbib/cache/usableTor.pdf
+      \endverb
+    \endentry
+    \entry{ahmia}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b7c51966b2847e96e1b953293b93dbb8}{%
+           family={Nurmi},
+           family_i={N\bibinitperiod},
+           given={Juha},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b7c51966b2847e96e1b953293b93dbb8}
+      \strng{fullhash}{b7c51966b2847e96e1b953293b93dbb8}
+      \field{sortinit}{N}
+      \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ahmia -- Search {Tor} Hidden Services}
+      \field{urlday}{08}
+      \field{urlmonth}{01}
+      \field{urlyear}{2018}
+      \verb{url}
+      \verb https://ahmia.fi
+      \endverb
+    \endentry
+    \entry{Nurmi2015a}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b7c51966b2847e96e1b953293b93dbb8}{%
+           family={Nurmi},
+           family_i={N\bibinitperiod},
+           given={Juha},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b7c51966b2847e96e1b953293b93dbb8}
+      \strng{fullhash}{b7c51966b2847e96e1b953293b93dbb8}
+      \field{sortinit}{N}
+      \field{sortinithash}{925374ca63e7594de7fafdb83e64d41d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{6}
+      \field{title}{Warning: 255 fake and booby trapped onion sites}
+      \field{urlday}{05}
+      \field{urlmonth}{12}
+      \field{urlyear}{2017}
+      \field{year}{2015}
+      \verb{url}
+      \verb https://lists.torproject.org/pipermail/tor-talk/2015-June/038295.html
+      \endverb
+    \endentry
+    \entry{Perry2017a}{online}{}
+      \name{author}{4}{}{%
+        {{hash=526bf1b0d1910d1efdd59340dd2d371e}{%
+           family={Perry},
+           family_i={P\bibinitperiod},
+           given={Mike},
+           given_i={M\bibinitperiod}}}%
+        {{hash=a2d3906fbb7a72154aeaf49f3154fdfc}{%
+           family={Clark},
+           family_i={C\bibinitperiod},
+           given={Erinn},
+           given_i={E\bibinitperiod}}}%
+        {{hash=a9ae963ffd07812e8f69f040aff296e2}{%
+           family={Murdoch},
+           family_i={M\bibinitperiod},
+           given={Steven},
+           given_i={S\bibinitperiod}}}%
+        {{hash=7b765a9c0c6f9cf3d3a0dc365a48428c}{%
+           family={Koppen},
+           family_i={K\bibinitperiod},
+           given={Georg},
+           given_i={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{0cc54d2e6130b536ef01bf6cf92bfd88}
+      \strng{fullhash}{0cc54d2e6130b536ef01bf6cf92bfd88}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{3}
+      \field{note}{Draft document}
+      \field{title}{The Design and Implementation of the Tor Browser}
+      \field{year}{2017}
+      \verb{url}
+      \verb https://www.torproject.org/projects/torbrowser/design/
+      \endverb
+    \endentry
+    \entry{Sai2012a}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=76d15fb569e1a9589568618cecaa9454}{%
+           family={Sai},
+           family_i={S\bibinitperiod}}}%
+        {{hash=ce7afa8576d403ac73bf32bd05363567}{%
+           family={Fink},
+           family_i={F\bibinitperiod},
+           given={Alex},
+           given_i={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{0883589d6442518ca72913fb9d4848f1}
+      \strng{fullhash}{0883589d6442518ca72913fb9d4848f1}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{2}
+      \field{title}{Mnemonic .onion {URL}s}
+      \field{urlday}{04}
+      \field{urlmonth}{05}
+      \field{urlyear}{2017}
+      \field{year}{2012}
+      \verb{url}
+      \verb https://gitweb.torproject.org/torspec.git/tree/proposals/194-mnemonic-urls.txt
+      \endverb
+    \endentry
+    \entry{Sawaya2017a}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{hash=2299a359842219993f2cd92b87eb6f80}{%
+           family={Sawaya},
+           family_i={S\bibinitperiod},
+           given={Yukiko},
+           given_i={Y\bibinitperiod}}}%
+        {{hash=cce1efa146609d8b583e2e8c007c1d34}{%
+           family={Sharif},
+           family_i={S\bibinitperiod},
+           given={Mahmood},
+           given_i={M\bibinitperiod}}}%
+        {{hash=49b6e4efae3e3fb3bde55e0e65e09c8d}{%
+           family={Christin},
+           family_i={C\bibinitperiod},
+           given={Nicolas},
+           given_i={N\bibinitperiod}}}%
+        {{hash=59b776dc5797aa19354146ba071fc779}{%
+           family={Kubota},
+           family_i={K\bibinitperiod},
+           given={Ayumu},
+           given_i={A\bibinitperiod}}}%
+        {{hash=5072511bb60b8f1529b25507a0ec1d1b}{%
+           family={Nakarai},
+           family_i={N\bibinitperiod},
+           given={Akihiro},
+           given_i={A\bibinitperiod}}}%
+        {{hash=1652010c1b0ba6d0af9cedda6c2377df}{%
+           family={Yamada},
+           family_i={Y\bibinitperiod},
+           given={Akira},
+           given_i={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{44a7742d45a4f520e4497b615cf6abfd}
+      \strng{fullhash}{44a7742d45a4f520e4497b615cf6abfd}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{CHI}
+      \field{title}{Self-Confidence Trumps Knowledge: A Cross-Cultural Study of Security Behavior}
+      \field{year}{2017}
+      \verb{url}
+      \verb https://users.ece.cmu.edu/~mahmoods/publications/chi17-cross-cultural-study.pdf
+      \endverb
+    \endentry
+    \entry{Schanzenbach2012a}{online}{}
+      \name{author}{1}{}{%
+        {{hash=c3057edc38c6bf3b26a9b109b62fe274}{%
+           family={Schanzenbach},
+           family_i={S\bibinitperiod},
+           given={Martin},
+           given_i={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{c3057edc38c6bf3b26a9b109b62fe274}
+      \strng{fullhash}{c3057edc38c6bf3b26a9b109b62fe274}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The {GNU} Name System}
+      \field{urlday}{07}
+      \field{urlmonth}{11}
+      \field{urlyear}{2017}
+      \field{year}{2012}
+      \verb{url}
+      \verb https://gnunet.org/gns
+      \endverb
+    \endentry
+    \entry{scallion}{online}{}
+      \name{author}{1}{}{%
+        {{hash=a349f64f53ab7f6d628bdb5d82bd44dc}{%
+           family={Swanson},
+           family_i={S\bibinitperiod},
+           given={Eric},
+           given_i={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{a349f64f53ab7f6d628bdb5d82bd44dc}
+      \strng{fullhash}{a349f64f53ab7f6d628bdb5d82bd44dc}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Scallion: {GPU}-based Onion Hash generator}
+      \field{urlday}{05}
+      \field{urlmonth}{05}
+      \field{urlyear}{2017}
+      \verb{url}
+      \verb https://github.com/lachesis/scallion
+      \endverb
+    \endentry
+    \entry{Syverson2005a}{online}{}
+      \name{author}{1}{}{%
+        {{hash=ab5ed679e78db4d6fd5091d79c026cd3}{%
+           family={Syverson},
+           family_i={S\bibinitperiod},
+           given={Paul},
+           given_i={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab5ed679e78db4d6fd5091d79c026cd3}
+      \strng{fullhash}{ab5ed679e78db4d6fd5091d79c026cd3}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Onion Routing: Brief Selected History}
+      \field{urlday}{30}
+      \field{urlmonth}{10}
+      \field{urlyear}{2017}
+      \field{year}{2005}
+      \verb{url}
+      \verb https://www.onion-router.net/History.html
+      \endverb
+    \endentry
+    \entry{Freenet}{online}{}
+      \name{author}{1}{}{%
+        {{hash=d74a1b9c5aa898e02069093e879f635d}{%
+           family={{The Freenet Project}},
+           family_i={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{d74a1b9c5aa898e02069093e879f635d}
+      \strng{fullhash}{d74a1b9c5aa898e02069093e879f635d}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Documentation}
+      \field{urlday}{28}
+      \field{urlmonth}{04}
+      \field{urlyear}{2017}
+      \verb{url}
+      \verb https://freenetproject.org/pages/documentation.html
+      \endverb
+    \endentry
+    \entry{pluggable}{online}{}
+      \name{author}{1}{}{%
+        {{hash=704ff61d0df70c37864c946a45fbc2d7}{%
+           family={{The Tor Project}},
+           family_i={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{704ff61d0df70c37864c946a45fbc2d7}
+      \strng{fullhash}{704ff61d0df70c37864c946a45fbc2d7}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Tor}: Pluggable Transports}
+      \field{urlday}{11}
+      \field{urlmonth}{01}
+      \field{urlyear}{2018}
+      \verb{url}
+      \verb https://www.torproject.org/docs/pluggable-transports
+      \endverb
+    \endentry
+    \entry{Victors2017a}{article}{}
+      \name{author}{3}{}{%
+        {{hash=a8b3f2bf3b4ab9344b9f77fa93553ee2}{%
+           family={Victors},
+           family_i={V\bibinitperiod},
+           given={Jesse},
+           given_i={J\bibinitperiod}}}%
+        {{hash=dbe83fd8da75338203d4e8dd0e20be17}{%
+           family={Li},
+           family_i={L\bibinitperiod},
+           given={Ming},
+           given_i={M\bibinitperiod}}}%
+        {{hash=dcaf50e6bb3672848bcaa6f4f32f33e2}{%
+           family={Fu},
+           family_i={F\bibinitperiod},
+           given={Xinwen},
+           given_i={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{825669c2a1437001c9e046bb91779e51}
+      \strng{fullhash}{825669c2a1437001c9e046bb91779e51}
+      \field{sortinit}{V}
+      \field{sortinithash}{d18f5ce25ce0b5ca7f924e3f6c04870e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PoPETS}
+      \field{number}{1}
+      \field{title}{The Onion Name System}
+      \field{volume}{2017}
+      \field{year}{2017}
+      \verb{url}
+      \verb https://www.degruyter.com/downloadpdf/j/popets.2017.2017.issue-1/popets-2017-0003/popets-2017-0003.pdf
+      \endverb
+    \endentry
+    \entry{mnemonicode}{online}{}
+      \name{author}{1}{}{%
+        {{hash=59c4ce104098755a1e516030b886dbb2}{%
+           family={Weber},
+           family_i={W\bibinitperiod},
+           given={Stephen\bibnamedelima Paul},
+           given_i={S\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{59c4ce104098755a1e516030b886dbb2}
+      \strng{fullhash}{59c4ce104098755a1e516030b886dbb2}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{mnemonicode}
+      \field{urlday}{27}
+      \field{urlmonth}{04}
+      \field{urlyear}{2017}
+      \field{year}{2017}
+      \verb{url}
+      \verb https://github.com/singpolyma/mnemonicode
+      \endverb
+    \endentry
+    \entry{Winter2015a}{online}{}
+      \name{author}{1}{}{%
+        {{hash=644137e492ad05bebb348858fc8bc8cc}{%
+           family={Winter},
+           family_i={W\bibinitperiod},
+           given={Philipp},
+           given_i={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{644137e492ad05bebb348858fc8bc8cc}
+      \strng{fullhash}{644137e492ad05bebb348858fc8bc8cc}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{Are vanity onion domains a good idea?}
+      \field{urlday}{05}
+      \field{urlmonth}{12}
+      \field{urlyear}{2017}
+      \field{year}{2015}
+      \verb{url}
+      \verb https://moderncrypto.org/mail-archive/messaging/2015/001928.html
+      \endverb
+    \endentry
+    \entry{Winter2017a}{online}{}
+      \name{author}{1}{}{%
+        {{hash=644137e492ad05bebb348858fc8bc8cc}{%
+           family={Winter},
+           family_i={W\bibinitperiod},
+           given={Philipp},
+           given_i={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{644137e492ad05bebb348858fc8bc8cc}
+      \strng{fullhash}{644137e492ad05bebb348858fc8bc8cc}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Take Part in a Study to Help Improve Onion Services}
+      \field{urlday}{25}
+      \field{urlmonth}{10}
+      \field{urlyear}{2017}
+      \verb{url}
+      \verb https://blog.torproject.org/take-part-study-help-improve-onion-services
+      \endverb
+    \endentry
+    \entry{Winter2016a}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=644137e492ad05bebb348858fc8bc8cc}{%
+           family={Winter},
+           family_i={W\bibinitperiod},
+           given={Philipp},
+           given_i={P\bibinitperiod}}}%
+        {{hash=10cb3cc348cc81a4c7dfc6157caf383c}{%
+           family={Ensafi},
+           family_i={E\bibinitperiod},
+           given={Roya},
+           given_i={R\bibinitperiod}}}%
+        {{hash=7f08946ef7f7d90b6306d303d14afb38}{%
+           family={Loesing},
+           family_i={L\bibinitperiod},
+           given={Karsten},
+           given_i={K\bibinitperiod}}}%
+        {{hash=ddc392a97c1ef32887361a67ff1aab9c}{%
+           family={Feamster},
+           family_i={F\bibinitperiod},
+           given={Nick},
+           given_i={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {USENIX}%
+      }
+      \strng{namehash}{12c06b2f38749621f5f72753cc4560c9}
+      \strng{fullhash}{12c06b2f38749621f5f72753cc4560c9}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{USENIX Security}
+      \field{title}{Identifying and characterizing {Sybils} in the {Tor} network}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://nymity.ch/sybilhunting/pdf/sybilhunting-sec16.pdf
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+
