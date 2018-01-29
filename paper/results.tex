@@ -60,7 +60,7 @@ and\dots or supposedly.
 \end{displayquote}
 
 Questions 6.4 and 6.6 asked how safe our respondents feel when using Tor Browser
-and onion services, respectively.  Figure~\ref{fig:perceived-security} shows the
+and onion services, respectively.  \Cref{fig:perceived-security} shows the
 results.  The use of Tor Browser makes 86\% of our respondents feel at least
 somewhat safe.  The same is true for 67\% when using onion services---clearly
 not as many as for Tor Browser.
@@ -100,7 +100,7 @@ person of interest, just because you're using [Tor].
 Some survey respondents were not sure if their Tor setup works properly---a
 common theme that we also noticed in our interviews: Non-technical users desire
 visual feedback confirming that their network traffic comes out ``somewhere
-else,'' a point that we will elaborate on in Section~\ref{sec:under-the-hood}.
+else,'' a point that we will elaborate on in \Cref{sec:under-the-hood}.
 
 With respect to onion services, the majority expressed that the added security
 and anonymity makes them feel safe.  Another factor contributing to the
@@ -113,11 +113,11 @@ contribute to this perception.
 \subsection{Tor Browser usage}
 
 Our survey started with two questions about how often our respondents use Tor
-Browser.  The results are illustrated in Figure~\ref{fig:tor-usage}.  Almost
-half of our participants use Tor Browser either daily or even as their main
-browser.  Both Gallagher \ea~\cite[\S~4.3.2]{Gallagher2017a} and our interview
-data suggests that non-experts frequently use Tor for specific tasks but do not
-embed it in their daily workflow:
+Browser.  The results are illustrated in \Cref{fig:tor-usage}.  Almost half of
+our participants use Tor Browser either daily or even as their main browser.
+Both Gallagher \ea~\cite[\S~4.3.2]{Gallagher2017a} and our interview data
+suggests that non-experts frequently use Tor for specific tasks but do not embed
+it in their daily workflow:
 
 \begin{displayquote}[P07]
 Right now, I use it very little, just because I don't have a lot of reasons to,
@@ -133,14 +133,14 @@ the kind of work that I do.
     \label{fig:tor-usage}
 \end{figure}
 
-Figure~\ref{fig:tor-threats} illustrates what entities our respondents seek to
-protect themselves from when using Tor Browser.  The majority considers ad
-companies, governments, and---most prominently---their ISP.  More tangible
-entities such as family, employers, and schools are less prevalent.  People who
-selected ``Other'' gave a variety of responses.  A number of respondents
-specifically pointed out Google and Facebook.  ISPs, backbone ISPs, and web
-sites were another common theme.  A number of respondents are struggling with
-personal threats that include identity theft, targeted harassment, and stalking.
+\Cref{fig:tor-threats} illustrates what entities our respondents seek to protect
+themselves from when using Tor Browser.  The majority considers ad companies,
+governments, and---most prominently---their ISP.  More tangible entities such as
+family, employers, and schools are less prevalent.  People who selected
+``Other'' gave a variety of responses.  A number of respondents specifically
+pointed out Google and Facebook.  ISPs, backbone ISPs, and web sites were
+another common theme.  A number of respondents are struggling with personal
+threats that include identity theft, targeted harassment, and stalking.
 Research is another common theme: Several respondents want to learn about a
 topic without revealing their interest in it.  Some respondents use Tor for
 search engine optimization, computer security research, and to research medical
@@ -170,8 +170,8 @@ who need protection.''
 \end{figure}
 
 By clicking on the onion icon in the top left corner of Tor Browser (see
-Figure~\ref{fig:tor-button}), one can see the circuit that is used for the
-current web site.  Some of our interviewees appreciated this visual feedback:
+\Cref{fig:tor-button}), one can see the circuit that is used for the current web
+site.  Some of our interviewees appreciated this visual feedback:
 
 \begin{displayquote}[P08]
 I love how I can monitor the network through this little kind of bar that comes
@@ -310,18 +310,18 @@ participants use onion services for non-browsing activities at least once a
 week.
 
 But why do Tor users browse onion services in the first place?
-Figure~\ref{fig:onion-usage} provides some insight.  The majority uses onion
-services because of the additional anonymity (70\%) and the additional security
-(61\%).  For 46\% it is the only way to access content they enjoy, making the
-use of onion services a necessity.  27\% of our respondents found themselves
-eager to learn more about the ``Dark Web'' and set out to satisfy their
-curiosity while 19\% occasionally stumble upon links to onion services in their
-day-to-day browsing activity.  Respondents who selected ``Other'' gave a variety
-of reasons, the most predominant being the ability to set up a TCP service
-behind a NAT device.  That makes it possible to run an SSH server in a home
-network that has neither a permanent IP address nor port forwarding.  Others use
-onion services to reduce the load on exit relays, to do technical research, and
-to access sites that are otherwise unavailable.
+\Cref{fig:onion-usage} provides some insight.  The majority uses onion services
+because of the additional anonymity (70\%) and the additional security (61\%).
+For 46\% it is the only way to access content they enjoy, making the use of
+onion services a necessity.  27\% of our respondents found themselves eager to
+learn more about the ``Dark Web'' and set out to satisfy their curiosity while
+19\% occasionally stumble upon links to onion services in their day-to-day
+browsing activity.  Respondents who selected ``Other'' gave a variety of
+reasons, the most predominant being the ability to set up a TCP service behind a
+NAT device.  That makes it possible to run an SSH server in a home network that
+has neither a permanent IP address nor port forwarding.  Others use onion
+services to reduce the load on exit relays, to do technical research, and to
+access sites that are otherwise unavailable.
 
 \begin{figure}[t]
     \centering
@@ -339,14 +339,14 @@ onion services.\footnote{All sketches are available online at
 sketch of Tor but some did not draw onion services because they had not
 experienced them.  Interestingly, all participants understood that key to Tor's
 anonymity is the bouncing of network traffic across several relays, as evidenced
-by Figure~\ref{fig:tor-sketch}, drawn by a participant with no technical
+by \Cref{fig:tor-sketch}, drawn by a participant with no technical
 background.\footnote{The however sketch got two details wrong: the number of
 hops in a Tor circuit is three and the circuit's forward and reverse path are
 identical.} Analogously, most of our participants understood that network
 traffic does not leave the Tor network when connecting to onion services.
-Figure~\ref{fig:os-sketch} illustrates an example, again drawn by a
-non-technical participant.  The last hop in the circuit is an onion, correctly
-suggesting that network traffic does not leave the Tor network.
+\Cref{fig:os-sketch} illustrates an example, again drawn by a non-technical
+participant.  The last hop in the circuit is an onion, correctly suggesting that
+network traffic does not leave the Tor network.
 
 \begin{figure}[t]
     \centering
@@ -403,13 +403,13 @@ Recall that a freshly set up onion service is private by default, leaving it up
 to its operator to disseminate the domain.  Established search engines such as
 Google are therefore inadequate to find content on onion services.  We wanted to
 find out how our respondents discover onion services.
-Figure~\ref{fig:onion-discovery} illustrates the results.  The three most
-popular ways of discovering new onion sites, all approximating 50\%, are
-\first~social networking sites such as Twitter and Reddit, \second~the list of
-search engines such as Ahmia\footnote{Ahmia.fi is an onion site search engine
-that crawls user-submitted onion domains.  It publishes the list of all indexed
-onion services at \url{https://ahmia.fi/onions/}.}, and \third~randomly
-encountering links when browsing the web.
+\Cref{fig:onion-discovery} illustrates the results.  The three most popular ways
+of discovering new onion sites, all approximating 50\%, are \first~social
+networking sites such as Twitter and Reddit, \second~the list of search engines
+such as Ahmia\footnote{Ahmia.fi is an onion site search engine that crawls
+user-submitted onion domains.  It publishes the list of all indexed onion
+services at \url{https://ahmia.fi/onions/}.}, and \third~randomly encountering
+links when browsing the web.
 
 While significantly less popular, discovering onion domains through friends and
 family has the advantage that domains come from a trusted source---and aspect
@@ -462,7 +462,7 @@ that there is nothing that can be done about it.
 Conventional domains are designed to be easy to remember and recognize.  But how
 do users handle randomly-generated onion domains?  Our survey question 3.8
 sought an answer and the results are illustrated in
-Figure~\ref{fig:onion-domain-mgmt}.
+\Cref{fig:onion-domain-mgmt}.
 
 \begin{figure}[t]
     \centering
@@ -507,8 +507,8 @@ replied that facebookcorewwwi.onion is among the sites that they have memorized.
 This is because it is ``easy to memorize'' and ``after seeing [it] many times, I
 automatically start to memorize it.''  When asked about different levels of
 vanity domains, the respondents expressed differing levels of ease in which to
-memorize them; these results are shown in Figure \ref{fig:memorize-domains}.
-URLs such as expyuzz4wqqyqhjn.onion and torproz4wqqyqhjn.onion are harder for
+memorize them; these results are shown in \Cref{fig:memorize-domains}.  URLs
+such as expyuzz4wqqyqhjn.onion and torproz4wqqyqhjn.onion are harder for
 respondents to remember because they mention that ``numbers make the names
 harder to remember.''  Other respondents stated that domains are easier to
 remember when they can be pronounced.  One respondent described it saying
@@ -535,7 +535,7 @@ respondents who never have, 31\% have considered doing so while 30\% have never
 considered it.  Interestingly, 79\% of operators have run an onion service for
 private use while 53\% have run them for the public.
 
-Figure~\ref{fig:onion-operation-reasons} gives an overview of the reasons our
+\Cref{fig:onion-operation-reasons} gives an overview of the reasons our
 respondents have for running onion services.  Interestingly, the extra security
 properties outweigh the anonymity properties of onion services.  Another popular
 motivation is NAT traversal---many respondents noted that onion services allow
@@ -558,15 +558,15 @@ leaking metadata.
     \label{fig:onion-operation-reasons}
 \end{figure}
 
-Figure~\ref{fig:onion-operation-concerns} illustrates the concerns that onion
-service operators experience.  We consider three attacks; \first somebody
-setting up a phishing site for the operator's site, \second a denial-of-service
-attack, and \third a deanonymization attack.  More than half of our respondents
-are at least somewhat concerned about all of these attacks.  Almost 40\% claim
-to be extremely concerned about somebody deanonymizing their onion service.
-Indeed, many respondents lamented the difficulty of protecting onion services
-from application-layer deanonymization attacks.  Matic \ea demonstrated some of
-these issues in 2015~\cite{Matic2015a}.
+\Cref{fig:onion-operation-concerns} illustrates the concerns that onion service
+operators experience.  We consider three attacks; \first somebody setting up a
+phishing site for the operator's site, \second a denial-of-service attack, and
+\third a deanonymization attack.  More than half of our respondents are at least
+somewhat concerned about all of these attacks.  Almost 40\% claim to be
+extremely concerned about somebody deanonymizing their onion service.  Indeed,
+many respondents lamented the difficulty of protecting onion services from
+application-layer deanonymization attacks.  Matic \ea demonstrated some of these
+issues in 2015~\cite{Matic2015a}.
 
 \begin{figure}[t]
     \centering
@@ -592,7 +592,7 @@ attacks?  If so, what can we do to mitigate the issue?
 We asked our respondents if they ever thought about the authenticity of an onion
 site.  The majority of our respondents (80\%) did while 20\% did not.  Clearly,
 there is a need for verification but how does one verify that an onion service
-is authentic?  Figure~\ref{fig:determining-legitimacy} gives an overview of the
+is authentic?  \Cref{fig:determining-legitimacy} gives an overview of the
 strategies that our respondents employ.  More than half either consult trusted
 sources (\eg, friends or another, trusted web site) or use bookmarks when
 revisiting onion services.  Many respondents also verify the domain in the
