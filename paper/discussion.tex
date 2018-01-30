@@ -1,37 +1,47 @@
 \section{Discussion}
 \label{sec:discussion}
 
+We now reflect on our work by elaborating on its shortcomings
+(\Cref{sec:biases}) and summarizing key findings that hopefully lead to
+improvements in the field (\Cref{sec:take-aways}).
+
 \subsection{Biases}
+\label{sec:biases}
 
-It is difficult to draw a truly uniform sample of Tor users.  The only way to
-reach all Tor users uniformly would be to modify Tor Browser's landing page
-that is displayed on start---an approach that we considered prohibitively
-invasive.  Instead, we decided to ask The Tor Project to disseminate our survey
-on its blog and social media accounts.  We believe that this recruitment
-strategy was subject to the following biases.
+A truly uniform sample of Tor users is difficult to obtain.  One strategy would
+have been to work with The Tor Project to add a link to our experiment on Tor
+Browser's landing page.  While this approach would have reached a large number
+of Tor users, we considered it prohibitively invasive.  Besides, people who
+rarely restart their Tor Browser or pay no attention to the landing page would
+have still missed our experiment.  We therefore decided to ask The Tor Project
+to disseminate our survey on its blog and Twitter account.  We believe that this
+recruitment strategy was subject to the following biases.
 
-\paragraph{Non-response bias.} 
-People who noticed our call for volunteers and decided against participating
-may exhibit traits that are fundamentally different from those who did
-participate.  These non-respondents may have valued their privacy too much,
-falsely believed that their experience is irrelevant, lacked the time, or had
-other reasons not to participate.
+\paragraph{Non-response bias.}
+People who noticed our call for volunteers but decided against participating may
+have valued their privacy too much, falsely believed that their perspective is
+irrelevant, lacked time, or had other reasons not to participate.  Nevertheless,
+non-respondents may exhibit traits that are fundamentally different from those
+who did participate, which is why their absence in our sample may bias our
+results.
 
 \paragraph{Survivor bias.}
 We predominantly heard from people who can tolerate Tor's usability issues,
 which is why they are still around to tell their tale.  We likely did not hear
-from many---if any---people who gave up on Tor and were thus unable to tell us
-what drove them away.  The danger of survivor bias lies in optimizing the user
-experience for the subset of people who can tolerate a non-optimal user
-experience.
+from many---if any---people who decided that Tor Browser was not for them, and
+were thus unable to tell us what drove them away.  The danger of survivor bias
+lies in optimizing the user experience for the subset of people whose tolerance
+for inconvenience is higher than the rest.
 
 \paragraph{Self-selection bias.}
 Due to the nature of our online survey, participants could voluntarily select
 themselves into the group of respondents.  This set of people may be unusually
 engaged and technical, which is why they have formed opinions that they
-consider worth sharing.
+consider worth sharing.  Indeed, the demographic for our online survey in
+\Cref{sec:online-survey} was rather young and educated.
 
-\subsection{Take-aways for Tor developers}
+\subsection{Take-aways}
+\label{sec:take-aways}
 
 Several of our interview participants pointed out Tor Browser's antiquated user
 interface.  Past work has shown that users interpret unrelated aspects such as
@@ -48,18 +58,13 @@ so, it is important to equip Tor Browser with a modern user interface.
     \label{fig:tor-comic}
 \end{figure}
 
-\subsection{Take-aways for Tor users}
+\paragraph{Take-aways for Tor users.}
 
 The strong security properties of onion services are futile if users cannot tell
 apart a genuine domain from its impersonation.  Awareness of this issue is the
 first step and several onion services have long begun to alert their users.
 
-
-
-% could tor show you when an onion service descriptor was first published?
-
-
-\subsection{Take-aways for Tor researchers}
+\paragraph{Take-aways for Tor researchers.}
 
 We found it challenging, yet rewarding and illuminating to study the Tor
 community.  Tor users obviously value their privacy which reduces their

@@ -7,10 +7,11 @@ lesser-known use case is \emph{server anonymity} which allows a web service to
 disguise its IP address.  Service operators have good reasons to employ server
 anonymity; be it to escape harassment, speak out against power, or voice
 dissenting opinions.  Tor's onion services provide what may be the most popular
-way of running an anonymous TCP service.\footnote{Onion services used to be
-known as ``hidden services'' but were recently renamed to reflect the fact
-that onion services provide more than just ``hiding'' a service---most
-importantly end-to-end security and self-authenticating names.}
+way of running an anonymous TCP service.\footnote{Onion services were originally
+called ``hidden services'' but were recently renamed to reflect the fact that
+onion services provide more than just ``hiding'' a
+service~\cite{Johnson2015a}---most importantly end-to-end security and
+self-authenticating names.}
 
 Originally deployed in 2004, onion services have grown substantially over the
 last years, both in the number of services and users.  As of January 2018, The
@@ -34,17 +35,16 @@ users interact with onion services.  In particular, we set out to understand
 users' mental model of Tor, their expectations of privacy, issues that they
 experience, and how they adapted their workflows to deal with onion services.
 
-Onion services don't exist in a vacuum.  They are tightly coupled to their
+Onion services do not exist in a vacuum.  They are tightly coupled to their
 surrounding software ecosystem---most importantly Tor Browser---which is why an
-isolated study of onion services is bound to miss important context.  While our
-research question is about onion services, we aim to get as complete a picture
-as possible by casting a wider net and answering open questions about the use of
-Tor Browser in particular and privacy expectations in general.  To that end we
-employ a mixed-methods approach involving the creation of an online survey that
-asked participants to answer an array of questions on Tor Browser, onion service
-usage and operation, onion site phishing, and general expectations of privacy.
-Based on our survey questions, our interviews let us ask follow-up questions and
-dive deeper into unexpected answers.
+isolated study of onion services is bound to miss crucial context.  We therefore
+aim to get as complete a picture as possible by casting a wide net and also
+studying the use of Tor Browser in particular and privacy expectations in
+general.  To that end we employ a mixed-methods approach involving an online
+survey that featured an array of questions on Tor Browser, onion service usage
+and operation, onion site phishing, and general expectations of privacy.  Based
+on our survey questions, our interviews let us ask follow-up questions and dive
+deeper into unexpected answers.
 
 Our most salient findings show that \first the flawed mental model some users
 have of Tor may cause security issues such as a blind reliance on vanity onion
@@ -57,9 +57,9 @@ of strategies, many of which are ineffective.
 At the time of this writing, The Tor Project is testing the next generation of
 onion services, intended to fix security issues and transition to faster and
 future-proof cryptography.  We hope that our results can inform this process.
-Finally, as many of our findings touch on various aspects of privacy and
-anonymity, we believe that systems beyond the Tor network can benefit.  In
-summary, we make the following contributions:
+Finally, since many of our findings touch on various aspects of privacy and
+anonymity, we believe that privacy tools other than Tor, \eg I2P, can benefit
+from our findings.  In summary, we make the following contributions:
 
 \begin{itemize}
     \item We interviewed seventeen Tor users of diverse backgrounds to
@@ -77,9 +77,8 @@ summary, we make the following contributions:
 \end{itemize}
 
 The rest of this paper is structured as follows.  We begin by discussing related
-work in Section~\ref{sec:related-work}, followed by background on onion services
-in Section~\ref{sec:background}.  Section~\ref{sec:method} then presents the
-methods we used for our interviews and online survey, followed by
-Section~\ref{sec:results} which discusses our findings from both data sources.
-Finally, we discuss our results in Section~\ref{sec:discussion} and conclude our
-work in Section~\ref{sec:conclusion}.
+work in \Cref{sec:related-work}, followed by background on onion services in
+\Cref{sec:background}.  \Cref{sec:method} then presents the methods we used for
+our interviews and online survey, followed by \Cref{sec:results} which discusses
+our findings from both data sources.  Finally, we discuss our results in
+\Cref{sec:discussion} and conclude our work in \Cref{sec:conclusion}.

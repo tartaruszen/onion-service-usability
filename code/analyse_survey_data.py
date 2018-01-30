@@ -466,6 +466,20 @@ def demographic_info(d):
     print("%3d%6.2f%% n/a"      % (d.count("q1_6", ""),  d.pct("q1_6", "")))
 
 
+def onion_preference(d):
+    print("---\nQuestion 3.18:")
+    print("%6.2f%% Always the normal web site"              % d.pct("q3_18", "4"))
+    print("%6.2f%% Always the onion site"                   % d.pct("q3_18", "2"))
+    print("%6.2f%% Other (Please elaborate below.)"         % d.pct("q3_18", "5"))
+
+    print("---\nQuestion 3.20:")
+    print("%6.2f%% No, never"                               % d.pct("q3_20", "3"))
+    print("%6.2f%% Yes, for some sites"                     % d.pct("q3_20", "2"))
+    print("%6.2f%% Yes, always"                             % d.pct("q3_20", "1"))
+    print("%6.2f%% Other (Please elaborate below.)"         % d.pct("q3_20", "6"))
+
+    print(d["q3_18_text"])
+
 def analyse():
     """Analyse the data set."""
 
@@ -509,6 +523,9 @@ def analyse():
 
     log("Analysing demographic information.")
     demographic_info(population)
+
+    log("Analyzing preference for regular sites vs onion sites.")
+    onion_preference(population)
 
     return 0
 

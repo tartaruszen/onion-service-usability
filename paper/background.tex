@@ -5,7 +5,7 @@ Onion services are TCP services that are only accessible over the Tor network.
 Onion domains take the place of IP addresses, which traditional TCP services use
 for addressing.  These onion domains are resolved and routed inside the Tor
 network, resulting in a circuit between the client and the onion service which
-(by default) features six hops (see Figure~\ref{fig:onion-connection}).
+(by default) features six hops (see \Cref{fig:onion-connection}).
 
 \begin{figure}[t]
 \centering
@@ -77,7 +77,7 @@ method will not produce fully-meaningful domains, it can facilitate memorization
 as evidenced by the vanity domains of Facebook
 (\href{https://www.facebookcorewwwi.onion}{facebookcorewwwi.onion}),
 ProPublica
-(\href{http://propub3r6espa33w.onion}{propub3r6espa33w.onion}),
+(\href{https://www.propub3r6espa33w.onion}{propub3r6espa33w.onion}),
 and the New York Times
 (\href{https://www.nytimes3xbfgragh.onion}{nytimes3xbfgragh.onion}).  In
 practice, many onion service operators use the tool scallion~\cite{scallion} to
@@ -91,10 +91,9 @@ to disseminate onion services, most importantly an array of search engines and
 curated lists.
 
 On the usability front, Tor Browser's user interface when accessing onion
-services is designed to be seamless.  Figure~\ref{fig:non-onion-service} shows
-the UI when accessing The Tor Project's web site while
-Figure~\ref{fig:onion-service} shows a connection to the corresponding onion
-site.
+services is designed to be seamless.  \Cref{fig:non-onion-service} shows the UI
+when accessing The Tor Project's web site while \Cref{fig:onion-service} shows a
+connection to the corresponding onion site.
 
 \begin{figure}[t]
     \centering
@@ -118,5 +117,5 @@ site.
     \caption{Tor Browser 7.0.10's user interface on Windows 10 when opening a
     conventional domain (top) and when opening the corresponding onion service
     (bottom).  Note that the onion version lacks a padlock icon---an issue
-    that's currently being worked on~\cite{trac23247}.}
+    that is currently being worked on~\cite{trac23247}.}
 \end{figure}
