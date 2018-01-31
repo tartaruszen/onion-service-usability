@@ -1,6 +1,6 @@
-Difficulty,\url{facebookcorewwwi.onion},\url{expyuzz4wqqyqhjn.onion},\url{torproz4wqqyqhjn.onion},\url{torprojectqyqhjn.onion}
-Very Easy,55.03,1.24,1.65,7.39
-Somewhat Easy,34.50,3.93,5.97,27.93
-Neither Easy Nor Difficult,5.34,5.79,14.61,21.36
-Somewhat Difficult,4.11,32.64,43.21,27.31
-Very Difficult,1.03,56.40,34.57,16.02
+Difficulty,\texttt{facebookcorewwwi},\texttt{torprojectqyqhjn},\texttt{torproz4wqqyqhjn},\texttt{expyuzz4wqqyqhjn}
+Very easy,55.03,7.39,1.65,1.24
+Somewhat easy,34.50,27.93,5.97,3.93
+Neutral,5.34,21.36,14.61,5.79
+Somewhat difficult,4.11,27.31,43.21,32.64
+Very difficult,1.03,16.02,34.57,56.40
