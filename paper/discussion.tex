@@ -2,8 +2,8 @@
 \label{sec:discussion}
 
 We now reflect on our work by elaborating on its shortcomings
-(\Cref{sec:biases}) and summarizing key findings that hopefully lead to
-improvements in the field (\Cref{sec:take-aways}).
+(\Cref{sec:biases}) and proposing future research directions
+(\Cref{sec:future-work}).
 
 \subsection{Biases}
 \label{sec:biases}
@@ -40,47 +40,35 @@ engaged and technical, which is why they have formed opinions that they
 consider worth sharing.  Indeed, the demographic for our online survey in
 \Cref{sec:online-survey} was rather young and educated.
 
-\subsection{Take-aways}
-\label{sec:take-aways}
+\subsection{Future work}
+\label{sec:future-work}
 
-Several of our interview participants pointed out Tor Browser's antiquated user
-interface.  Past work has shown that users interpret unrelated aspects such as
-voice quality as a proxy signal for security, which raises the question if the
-same holds true for user interface design~\cite[\S~IV.A]{Abu-Salma2017a}.  If
-so, it is important to equip Tor Browser with a modern user interface.
+The Tor Project is currently working on a security indicator for onion
+services~\cite{trac23247}.  Recall that the current version of Tor Browser (see
+\Cref{fig:onion-service}) displays an onion service like a plain HTTP
+connection, which greatly ``undersells'' the security and privacy that an onion
+service connection provides.  Porter Felt \ea~\cite{Felt2016a} showed that many
+subtleties must be considered when designing security indicators which is why an
+evaluation of The Tor Project's design would be of great value.  For example, do
+users (correctly) understand what an onion service indicator means and what it
+provides on top of an HTTPS indicator?
 
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=\linewidth]{figures/tor-comic.jpg}
-    \caption{A comic draft that illustrates what Tor can and cannot provide for
-        non-technical users.  The comic was drawn by artist Jason Li while
-        working with one of the authors.}
-    \label{fig:tor-comic}
-\end{figure}
+Ensuring that users understand technology correctly does not stop at security
+indicators.  Another one of Tor Browser's striking UI deviations from Firefox is
+its Tor circuit display (see \Cref{fig:tor-button}).  Some users are not
+familiar with the concept of guard relays and incorrectly expect each relay in
+their circuit to change.
 
-\paragraph{Take-aways for Tor users.}
+Going forward, we believe that there is a need for a system that automates onion
+service discovery, \eg, by providing an opt-in mechanism that automatically
+publishes onion domains in a public log.  Users can then monitor this log and
+learn about new onion domains as they get published.
 
-The strong security properties of onion services are futile if users cannot tell
-apart a genuine domain from its impersonation.  Awareness of this issue is the
-first step and several onion services have long begun to alert their users.
+An orthogonal issue is transparent redirection to onion domains, which we
+discussed in \Cref{sec:onion-redirection}.  Clearly, there is a need for some
+kind of redirection mechanism.  The Tor Project is already experimenting with
+prototypes.
 
-\paragraph{Take-aways for Tor researchers.}
-
-We found it challenging, yet rewarding and illuminating to study the Tor
-community.  Tor users obviously value their privacy which reduces their
-willingness to participate in research projects.  Past academic research
-projects that involved questionable methods turned this care into distrust for
-many users.  Showing willingness to directly interact with the community and
-taking seriously their concerns signals respect and transparent methods.  For
-our online survey, we recommend to use software that works in Tor
-Browser\footnote{Note that Tor Browser supports three security levels; the
-default of ``low,'' ``medium,'' and ``high.''  Some users brought to our
-attention that our survey did not work when the security level is set to
-``high'' because it disables JavaScript, which our survey required---an
-oversight on our end.} and does not fetch tracking scripts such as Google
-Analytics.  For the survey design, one likely has to forego asking questions
-that are best practice such as income level and country of residence.  We made
-even the basic information we asked optional so our respondents had the chance
-to answer the survey without providing any personal information at all.  In our
-interviews we tried to accomodate the needs of our participants by using
-software of their choice.
+Finally, our survey responses suggest that there is a need for a
+privacy-preserving bookmarking tool that allows Tor Browser users to bookmark
+sites without leaving a browsing trail on their hard drives.
