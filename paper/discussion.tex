@@ -44,31 +44,28 @@ consider worth sharing.  Indeed, the demographic for our online survey in
 \label{sec:future-work}
 
 The Tor Project is currently working on a security indicator for onion
-services~\cite{trac23247}.  Recall that the current version of Tor Browser (see
-\Cref{fig:onion-service}) displays an onion service like a plain HTTP
-connection, which greatly ``undersells'' the security and privacy that an onion
-service connection provides.  Porter Felt \ea~\cite{Felt2016a} showed that many
-subtleties must be considered when designing security indicators which is why an
-evaluation of The Tor Project's design would be of great value.  For example, do
-users (correctly) understand what an onion service indicator means and what it
-provides on top of an HTTPS indicator?
-
-Ensuring that users understand technology correctly does not stop at security
-indicators.  Another one of Tor Browser's striking UI deviations from Firefox is
-its Tor circuit display (see \Cref{fig:tor-button}).  Some users are not
+services~\cite{trac23247}.  \Cref{fig:onion-service} illustrates that Tor
+Browser currently, in version 7.0.10, displays an onion service connection like
+a plain HTTP connection, thus greatly ``underselling'' the security and privacy
+that an onion service connection provides.  The work of Porter Felt
+\ea~\cite{Felt2016a} revealed the subtleties that one must consider when
+designing security indicators, which highlights the importance of an independent
+study of an onion connection security indicator.  Do users correctly understand
+the meaning of an onion service indicator?  Do they also understand how it
+differs from an HTTPS indicator?  Tor Browser's circuit display UI (see
+\Cref{fig:tor-button}) is currently experiencing a redesign~\cite{trac24309}.
+Similar to the onion service indicator, an empirical evaluation of the circuit
+display could reveal user misunderstandings.  For example, some users are not
 familiar with the concept of guard relays and incorrectly expect each relay in
 their circuit to change.
 
-Going forward, we believe that there is a need for a system that automates onion
-service discovery, \eg, by providing an opt-in mechanism that automatically
-publishes onion domains in a public log.  Users can then monitor this log and
-learn about new onion domains as they get published.
-
-An orthogonal issue is transparent redirection to onion domains, which we
-discussed in \Cref{sec:onion-redirection}.  Clearly, there is a need for some
-kind of redirection mechanism.  The Tor Project is already experimenting with
-prototypes.
-
-Finally, our survey responses suggest that there is a need for a
-privacy-preserving bookmarking tool that allows Tor Browser users to bookmark
-sites without leaving a browsing trail on their hard drives.
+Our survey results suggest that there is a need for a system that automates
+onion service discovery, \eg, by providing an opt-in mechanism that
+automatically publishes onion domains in a public log, allowing users to learn
+about new onion domains as they are added to the log.  An orthogonal usability
+improvement would be transparent ``upgrading'' from a web site to its
+corresponding onion service.  The Tor Project is currently investigating the
+problem space on its bug tracker~\cite{trac21952}.  Finally, our survey
+responses suggest that there is a need for a privacy-preserving bookmarking tool
+that allows users to bookmark sites without leaving a browsing trail on their
+hard drives.
