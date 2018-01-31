@@ -472,13 +472,31 @@ def onion_preference(d):
     print("%6.2f%% Always the onion site"                   % d.pct("q3_18", "2"))
     print("%6.2f%% Other (Please elaborate below.)"         % d.pct("q3_18", "5"))
 
+    print("---\nQuestion 3.18 txt:")
+    for r in d.responses:
+        if r.q3_18_text != "":
+            print("- %s" % r.q3_18_text)
+
+    print("---\nQuestion 3.19:")
+    for r in d.responses:
+        if r.q3_19 != "":
+            print("- %s" % r.q3_19)
+
     print("---\nQuestion 3.20:")
     print("%6.2f%% No, never"                               % d.pct("q3_20", "3"))
     print("%6.2f%% Yes, for some sites"                     % d.pct("q3_20", "2"))
     print("%6.2f%% Yes, always"                             % d.pct("q3_20", "1"))
     print("%6.2f%% Other (Please elaborate below.)"         % d.pct("q3_20", "6"))
 
-    print(d["q3_18_text"])
+    print("---\nQuestion 3.20 txt:")
+    for r in d.responses:
+        if r.q3_20_text != "":
+            print("- %s" % r.q3_20_text)
+
+    print("---\nQuestion 3.21:")
+    for r in d.responses:
+        if r.q3_21 != "":
+            print("- %s" % r.q3_21)
 
 def analyse():
     """Analyse the data set."""
