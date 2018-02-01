@@ -335,12 +335,12 @@ access sites that are otherwise unavailable.
 \subsubsection{Mental models are often patchy}
 
 Recall that we asked our interview participants to draw sketches of Tor and
-onion services.\footnote{All sketches are available online at
-\url{https://nymity.ch/onion-services/mental-models/}.}   Everybody drew a
-sketch of Tor but some did not draw onion services because they had not
-experienced them.  Interestingly, all participants understood that key to Tor's
-anonymity is the bouncing of network traffic across several relays, as evidenced
-by \Cref{fig:tor-sketch}, drawn by a participant with no technical
+onion services.\footnote{All sketches are available online but we redacted the
+URL for our anonymous paper submission.}  Everybody drew a sketch of Tor but
+some did not draw onion services because they had not experienced them.
+Interestingly, all participants understood that key to Tor's anonymity is the
+bouncing of network traffic across several relays, as evidenced by
+\Cref{fig:tor-sketch}, drawn by a participant with no technical
 background.\footnote{The however sketch got two details wrong: the number of
 hops in a Tor circuit is three and the circuit's forward and reverse path are
 identical.} Analogously, most of our participants understood that network
@@ -591,7 +591,7 @@ issues in 2015~\cite{Matic2015a}.
 Phishing remains an issue despite onion services' extra anonymity and security
 properties.  Past work has documented phishing onion sites that transparently
 rewrote Bitcoin addresses to hijack Bitcoin
-transactions~\cite{Winter2016a,Nurmi2015a,Monteiro2016a}.  Key to this attack is
+transactions~\cite{Nurmi2015a,Monteiro2016a}.  Key to this attack is
 the difficulty of telling apart an authentic from an impersonation onion domain.
 For conventional domains we rely on (EV) certificates, browser protections,
 search results, and long-lived reputation, but none of these methods has matured
@@ -627,7 +627,7 @@ importance of this issue.
 Originally meant to provide ``branding'' for an onion service, vanity onion
 domains also play a role in the context of phishing.  There is concern that the
 short and recognizable prefixes tempt users to only verify the prefix and ignore
-subsequent characters~\cite{Winter2015a}.  Quoting two of our survey responses:
+subsequent characters.  Quoting two of our survey responses:
 
 \begin{displayquote}[Survey respondent]
 I only memorize the first part of the domain.
