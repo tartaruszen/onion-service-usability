@@ -17,6 +17,7 @@
 \usepackage[english]{babel}
 \usepackage{csquotes}
 \usepackage[nameinlink]{cleveref}
+\usepackage{fontawesome} % For the link icon in the bibliography.
 
 \usepackage[T1]{fontenc}
 \usepackage[scaled=0.8]{beramono}
@@ -29,6 +30,9 @@
 \addbibresource{paper.bib}
 
 \definecolor{darkblue}{rgb}{0.1,0.1,0.4}
+
+% Use a link icon instead of BibLaTeX's "URL" string.
+\DeclareFieldFormat{url}{{\scriptsize \faExternalLink}\xspace\url{#1}}
 
 \usetikzlibrary{positioning}
 
