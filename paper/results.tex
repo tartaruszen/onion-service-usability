@@ -333,6 +333,7 @@ access sites that are otherwise unavailable.
 \end{figure}
 
 \subsubsection{Mental models are often patchy}
+\label{sec:mental-models}
 
 Recall that we asked our interview participants to draw sketches of Tor and
 onion services.\footnote{All sketches are available online at
@@ -525,33 +526,6 @@ also easier to remember.
     \label{fig:memorize-domains}
 \end{figure}
 
-We asked respondents if popular web sites such as YouTube, Twitter, or Amazon
-offered onion sites in parallel to their normal web sites, would they prefer the
-normal site or the onion site. 20.21\% of respondents said they would always prefer
-the normal web site, 49.07\% said they would always prefer the onion site, and 30.72\%
-chose ``Other.'' Many of those who selected ``Other'' had performance concerns.
-One user stated, ``I would always prefer the onion site, but for video sites like
-YouTube I would likely often use the normal site to be able to get a higher quality
-stream due to higher bandwidth.'' Others mentioned not wanting to log in to onion sites
-because they believe it defeats the purpose, but this is not true (see Section 5.3.1).
-In explaining their responses, respondents mentioned that they like the privacy that
-onion sites provide, and they hope that they wouldn't have to deal with CAPTCHAs and
-discrimination against Tor users.
-
-We also asked respondents if Tor Browser could automatically redirect them from a
-normal web site to its corresponding onion site (e.g., from facebook.com to
-facebookcorewwwi.onion), would they use that feature. Respondents were largely in
-favor of this: 15.61\% of respondents said they would never use that feature,
-34.91\% said they would use it for some sites, 37.78\% said they would always use it,
-and 11.70\% chose ``Other.'' Respondents liked the convenience of being redirected.
-The naysayers were quite passionate, though, and they were concerned about potential
-security issues. One respondent said, ``I don't trust the Tor project enough to allow
-them to redirect me from clearnet sites to onion sites. What's to stop them from man in
-the middle'ing me, either by choice, at the behest of some nefarious entity,
-or after being hacked? I would only be inclined to trust it if it was based on some
-kind of immutable blockchain thing like namecoin, and the Tor project did not act
-as some kind of intermediary.''
-
 The next question in our survey asked if our respondents expect the
 next-generation domain format to change their browsing habits.  Interestingly,
 only 17\% expect their browsing habits to change while 83\% do not.  Among the
@@ -561,6 +535,44 @@ People who selected ``No'' mostly brought up that they treat onion domains as
 opaque identifiers and handle via tools such as bookmarks.  These results
 suggest that the current state is dire, yet not expected to worsen with the new
 domain format.
+
+\subsubsection{Onion services as popular alternatives}
+
+We asked respondents if popular web sites such as YouTube, Twitter, or Amazon
+offered onion sites in parallel to their normal web sites, would they prefer the
+normal site or the onion site. 20.21\% of respondents said they would always
+prefer the normal web site, 49.07\% said they would always prefer the onion
+site, and 30.72\% chose ``Other.'' Many of those who selected ``Other'' had
+performance concerns.  One user stated, ``I would always prefer the onion site,
+but for video sites like YouTube I would likely often use the normal site to be
+able to get a higher quality stream due to higher bandwidth.'' Others mentioned
+not wanting to log in to onion sites because they believe it defeats the
+purpose, but this is not true (see \Cref{sec:mental-models}).  In explaining
+their responses, respondents mentioned that they like the privacy that onion
+sites provide, and they hope that they wouldn't have to deal with CAPTCHAs and
+discrimination against Tor users.
+
+We also asked respondents if Tor Browser could automatically redirect them from
+a normal web site to its corresponding onion site (\eg, from facebook.com to
+facebookcorewwwi.onion), would they use that feature. Respondents were largely
+in favor of this: 15.61\% of respondents said they would never use that feature,
+34.91\% said they would use it for some sites, 37.78\% said they would always
+use it, and 11.70\% chose ``Other.'' Respondents liked the convenience of being
+redirected.  The naysayers were quite passionate, though, and they were
+concerned about potential security issues. One respondent said, 
+
+\begin{displayquote}[Survey respondent]
+I don't trust the Tor project enough to allow them to redirect me from clearnet
+sites to onion sites.  What's to stop them from man in the middle'ing me, either
+by choice, at the behest of some nefarious entity, or after being hacked? I
+would only be inclined to trust it if it was based on some kind of immutable
+blockchain thing like namecoin, and the Tor project did not act as some kind of
+intermediary.
+\end{displayquote}
+
+We conclude that there is clear interest in such an ``upgrade'' feature provided
+that it is carefully designed and offers users an option to control the process
+on a per-site basis.
 
 \subsubsection{Onion services have many use cases}
 
