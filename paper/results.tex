@@ -16,9 +16,9 @@ Project and its work.  We will now briefly summarize these findings.
 \subsubsection{Documentation and localization}
 
 The Tor Project's documentation covers an array of topics including
-installation, the use on Android, the operation of Tor relays, several FAQs, and
-a wiki.  Having worked with this documentation, some of our interview and survey
-participants lamented its scope:
+installation, the use on Android, the operation of Tor relays, several
+\textsc{faq}s, and a wiki.  Having worked with this documentation, some of our
+interview and survey participants lamented its scope:
 
 \begin{displayquote}[P14]
 Tor does a good job on their web site of telling you to modify your
@@ -69,7 +69,7 @@ when using onion services---clearly not as many as for Tor Browser.
     \centering
     \input{figures/perceived-security.tex}
     \caption{The level of safety our respondents perceive when using Tor
-    Browser (TB) and onion services (OSs).}
+    Browser (\textsc{tb}) and onion services (\textsc{os}s).}
     \label{fig:perceived-security}
 \end{figure}
 
@@ -135,20 +135,21 @@ the kind of work that I do.
 
 \Cref{fig:tor-threats} illustrates what entities our respondents seek to protect
 themselves from when using Tor Browser.  The majority considers ad companies,
-governments, and---most prominently---their ISP.  More tangible entities such as
-family, employers, and schools are less prevalent.  People who selected
-``Other'' gave a variety of responses.  A number of respondents specifically
-pointed out Google and Facebook.  ISPs, backbone ISPs, and web sites were
-another common theme.  A number of respondents are struggling with personal
-threats that include identity theft, targeted harassment, and stalking.
-Research is another common theme: Several respondents want to learn about a
-topic without revealing their interest in it.  Some respondents use Tor for
-search engine optimization, computer security research, and to research medical
-conditions.  Finally, Tor has use cases that do not involve a threat actor.
-Some respondents want IPv6 connectivity, evasion of geographical content
-restrictions, and access to onion services.  One respondent stated that they do
-not need anonymity themselves but use Tor to provide cover traffic for ``people
-who need protection.''
+governments, and---most prominently---their \textsc{isp}.  More tangible
+entities such as family, employers, and schools are less prevalent.  People who
+selected ``Other'' gave a variety of responses.  A number of respondents
+specifically pointed out Google and Facebook.  \textsc{isp}s, backbone
+\textsc{isp}s, and web sites were another common theme.  A number of respondents
+are struggling with personal threats that include identity theft, targeted
+harassment, and stalking.  Research is another common theme: Several respondents
+want to learn about a topic without revealing their interest in it.  Some
+respondents use Tor for search engine optimization, computer security research,
+and to research medical conditions.  Finally, Tor has use cases that do not
+involve a threat actor.  Some respondents want IPv6 connectivity, evasion of
+geographical content restrictions, and access to onion services.  One respondent
+stated that they do not need anonymity themselves but use Tor to provide cover
+traffic for ``people who need protection.''
+
 
 \begin{figure}[t]
     \centering
@@ -206,9 +207,9 @@ the third relay?
 The degree of anonymity that protects a Tor user in a given situation depends on
 a number of variables including her guard relay, intermediate autonomous systems
 on the network path, and other people that are using Tor at the same time, just
-to name a few.  Unlike the JAP anonymity tool~\cite{jap}, Tor Browser makes no
-attempt to display the degree of anonymity it believes it can provide.  Asked
-about how well Tor works for them, one of our participants explained:
+to name a few.  Unlike the \textsc{jap} anonymity tool~\cite{jap}, Tor Browser
+makes no attempt to display the degree of anonymity it believes it can provide.
+Asked about how well Tor works for them, one of our participants explained:
 
 \begin{displayquote}[P12]
 In terms of the anonymity, you can't really tell\dots That's fairly opaque, so I
@@ -220,15 +221,15 @@ misleading.  What is more, Tor Browser does not have available all the data it
 needs to quantify its user's anonymity---an ``anonymity meter'' may therefore
 create more problems than it solves.
 
-\subsubsection{UI, speed, and CAPTCHAs remain frustrating}
+\subsubsection{\textsc{ui}, speed, and \textsc{captcha}s remain frustrating}
 
 Perhaps the most prevalent usability issue is, still, browsing speed.  An
 interviewee provided the following anecdote:
 
 \begin{displayquote}[P01]
 The speed of it is problematic; sometimes I have a path that allows me to watch
-full HD YouTube videos, and the next time, five minutes later, I'm barely
-getting kilobytes through.
+full \textsc{hd} YouTube videos, and the next time, five minutes later, I'm
+barely getting kilobytes through.
 \end{displayquote}
 
 Occasionally, Tor is preceded by its reputation, preparing users for what to
@@ -255,18 +256,19 @@ how it looked, I also thought it was sort of genuine in a way.
 \end{displayquote}
 
 Orthogonal to Tor's speed and user interface, the browsing experience
-occasionally suffers.  Relying on naive, IP address-based metrics of
+occasionally suffers.  Relying on naive, \textsc{ip} address-based metrics of
 ``maliciousness,'' some content delivery networks such as Cloudflare label Tor
 exit relays as malicious which results in Tor users having to solve (sometimes
-multiple) CAPTCHAs before being granted access to a web site.  In 2016, Khattak
-\ea documented the issue for a number of content providers~\cite{Khattak2016a}.
-Both survey and interview participants brought up the topic and one person
-managed to depict the issue without the use of profanity:
+multiple) \textsc{captcha}s before being granted access to a web site.  In 2016,
+Khattak \ea documented the issue for a number of content
+providers~\cite{Khattak2016a}.  Both survey and interview participants brought
+up the topic and one person managed to depict the issue without the use of
+profanity:
 
 \begin{displayquote}[P06]
 It is still sometimes challenging using some everyday services because of
-CAPTCHAs and those things, but I also understand that's not so much to do with
-Tor, but to do with the creators of those web sites.
+\textsc{captcha}s and those things, but I also understand that's not so much to
+do with Tor, but to do with the creators of those web sites.
 \end{displayquote}
 
 \subsubsection{Empowerment through security and privacy}
@@ -305,10 +307,10 @@ The majority of our respondents (61.8\%) has used onion services for purposes
 other than web browsing before.  Several protocols such as the chat application
 Ricochet~\cite{ricochet} and the file sharing application
 OnionShare~\cite{onionshare} were purpose-built on top of onion services while
-existing TCP-based tools such as SSH can transparently use onion addresses
-instead of traditional IP addresses.  Almost one third (29.7\%) of our
-participants use onion services for non-browsing activities at least once a
-week.
+existing \textsc{tcp}-based tools such as \textsc{ssh} can transparently use
+onion addresses instead of traditional \textsc{ip} addresses.  Almost one third
+(29.7\%) of our participants use onion services for non-browsing activities at
+least once a week.
 
 But why do Tor users browse onion services in the first place?
 \Cref{fig:onion-usage} provides some insight.  The majority uses onion services
@@ -318,11 +320,11 @@ onion services a necessity.  27\% of our respondents found themselves eager to
 learn more about the ``Dark Web'' and set out to satisfy their curiosity while
 19\% occasionally stumble upon links to onion services in their day-to-day
 browsing activity.  Respondents who selected ``Other'' gave a variety of
-reasons, the most predominant being the ability to set up a TCP service behind a
-NAT device.  That makes it possible to run an SSH server in a home network that
-has neither a permanent IP address nor port forwarding.  Others use onion
-services to reduce the load on exit relays, to do technical research, and to
-access sites that are otherwise unavailable.
+reasons, the most predominant being the ability to set up a \textsc{tcp} service
+behind a \textsc{nat} device.  That makes it possible to run an \textsc{ssh}
+server in a home network that has neither a permanent \textsc{ip} address nor
+port forwarding.  Others use onion services to reduce the load on exit relays,
+to do technical research, and to access sites that are otherwise unavailable.
 
 \begin{figure}[t]
     \centering
@@ -375,11 +377,11 @@ network traffic does not leave the Tor network.
     how Tor works (top) and how onion services work (bottom).}
 \end{figure}
 
-Some of our interviewees did not distinguish disguising their IP address from
-disguising their real-world identity, and instead used the umbrella term of
-``anonymity'' to refer to both concepts.  This conflation of concepts paints an
-incomplete picture of the security and privacy guarantees that Tor provides,
-further illustrated by one participant's question:
+Some of our interviewees did not distinguish disguising their \textsc{ip}
+address from disguising their real-world identity, and instead used the umbrella
+term of ``anonymity'' to refer to both concepts.  This conflation of concepts
+paints an incomplete picture of the security and privacy guarantees that Tor
+provides, further illustrated by one participant's question:
 
 \begin{displayquote}[P07]
 What's the point of going to Facebook using onion services when their business
@@ -387,8 +389,8 @@ model is still about collecting your data?
 \end{displayquote}
 
 There is merit in using Facebook's onion service.  While the company indeed
-knows who is logging in, it does not know Tor users' IP address (and hence
-location) or operating system.  On top of that, onion services provide
+knows who is logging in, it does not know Tor users' \textsc{ip} address (and
+hence location) or operating system.  On top of that, onion services provide
 end-to-end security and self-authenticating names.  These benefits are difficult
 to convey to non-technical users and even experts sometimes advocate an ``all or
 nothing'' approach to online anonymity, overlooking important nuances.
@@ -509,10 +511,10 @@ replied that facebookcorewwwi.onion is among the sites that they have memorized.
 This is because it is ``easy to memorize'' and ``after seeing [it] many times, I
 automatically start to memorize it.''  When asked about different levels of
 vanity domains, the respondents expressed differing levels of ease in which to
-memorize them; these results are shown in \Cref{fig:memorize-domains}.  URLs
-such as expyuzz4wqqyqhjn.onion and torproz4wqqyqhjn.onion are harder for
-respondents to remember because they mention that ``numbers make the names
-harder to remember.''  Other respondents stated that domains are easier to
+memorize them; these results are shown in \Cref{fig:memorize-domains}.
+\textsc{url}s such as expyuzz4wqqyqhjn.onion and torproz4wqqyqhjn.onion are
+harder for respondents to remember because they mention that ``numbers make the
+names harder to remember.''  Other respondents stated that domains are easier to
 remember when they can be pronounced.  One respondent described it saying
 ``phonetic pronunciation plays a large part in how I remember onions.'' Many
 other respondents stated that onion domains that are supported by a mnemonic are
@@ -549,8 +551,8 @@ able to get a higher quality stream due to higher bandwidth.'' Others mentioned
 not wanting to log in to onion sites because they believe it defeats the
 purpose, but this is not true (see \Cref{sec:mental-models}).  In explaining
 their responses, respondents mentioned that they like the privacy that onion
-sites provide, and they hope that they wouldn't have to deal with CAPTCHAs and
-discrimination against Tor users.
+sites provide, and they hope that they wouldn't have to deal with
+\textsc{captcha}s and discrimination against Tor users.
 
 We also asked respondents if Tor Browser could automatically redirect them from
 a normal web site to its corresponding onion site (\eg, from facebook.com to
@@ -586,12 +588,12 @@ private use while 53\% have run them for the public.
 \Cref{fig:onion-operation-reasons} gives an overview of the reasons our
 respondents have for running onion services.  Interestingly, the extra security
 properties outweigh the anonymity properties of onion services.  Another popular
-motivation is NAT traversal---many respondents noted that onion services allow
-them to expose a TCP service in their home network despite being behind a NAT
-device.  Finally, some people run onion services indirectly because third-party
-tools such as OnionShare~\cite{onionshare} or Ricochet~\cite{ricochet} are built
-on top of them.  A survey respondent gave the following reason for running onion
-services:
+motivation is \textsc{nat} traversal---many respondents noted that onion
+services allow them to expose a \textsc{tcp} service in their home network
+despite being behind a \textsc{nat} device.  Finally, some people run onion
+services indirectly because third-party tools such as
+OnionShare~\cite{onionshare} or Ricochet~\cite{ricochet} are built on top of
+them.  A survey respondent gave the following reason for running onion services:
 
 \begin{displayquote}[Survey respondent]
 We use it for delivering updates to our router to customers securely and without
@@ -632,10 +634,10 @@ properties.  Past work has documented phishing onion sites that transparently
 rewrote Bitcoin addresses to hijack Bitcoin
 transactions~\cite{Winter2016a,Nurmi2015a,Monteiro2016a}.  Key to this attack is
 the difficulty of telling apart an authentic from an impersonation onion domain.
-For conventional domains we rely on (EV) certificates, browser protections,
-search results, and long-lived reputation, but none of these methods has matured
-for onion services.  Does the nature of onion services facilitate phishing
-attacks?  If so, what can we do to mitigate the issue?
+For conventional domains we rely on (\textsc{ev}) certificates, browser
+protections, search results, and long-lived reputation, but none of these
+methods has matured for onion services.  Does the nature of onion services
+facilitate phishing attacks?  If so, what can we do to mitigate the issue?
 
 We asked our respondents if they ever thought about the authenticity of an onion
 site.  The majority of our respondents (80\%) did while 20\% did not.  Clearly,
@@ -645,16 +647,16 @@ strategies that our respondents employ.  More than half either consult trusted
 sources (\eg, friends or another, trusted web site) or use bookmarks when
 revisiting onion services.  Many respondents also verify the domain in the
 browser's address bar (46\%), check if the corresponding web site has a link to
-its onion site (41\%), or hope that the onion service has an HTTPS certificate
-(36\%).\footnote{DigiCert is issuing EV-certificates for onion
-sites~\cite{DigiCert2015a} but adoption has been slow---presumably in part
-because EV certificates require the CA to verify the applicant's identity and
-they are not free.}  Alarmingly, almost 30\% of respondents stated that they
-sometimes cannot tell the difference between an authentic service and an
-impersonation, and 11\% never check a service's legitimacy in the first place.
-People who selected ``Other'' provided a wide variety of ad-hoc phishing
-protections, some of which clearly misguided, further highlighting the
-importance of this issue.
+its onion site (41\%), or hope that the onion service has an \textsc{https}
+certificate (36\%).\footnote{DigiCert is issuing \textsc{ev} certificates for
+onion sites~\cite{DigiCert2015a} but adoption has been slow---presumably in part
+because \textsc{ev} certificates require the \textsc{ca} to verify the
+applicant's identity and they are not free.}  Alarmingly, almost 30\% of
+respondents stated that they sometimes cannot tell the difference between an
+authentic service and an impersonation, and 11\% never check a service's
+legitimacy in the first place.  People who selected ``Other'' provided a wide
+variety of ad-hoc phishing protections, some of which clearly misguided, further
+highlighting the importance of this issue.
 
 \begin{figure}[t]
     \centering
