@@ -2,83 +2,84 @@
 \label{sec:introduction}
 
 The colloquial meaning behind online anonymity implies \emph{client} anonymity,
-\ie, a user disguises her \textsc{ip} address, for example by using a
-\textsc{vpn}.  A lesser-known use case is \emph{server} anonymity which allows a
-web service to disguise its \textsc{ip} address.  Service operators have good
-reasons to employ server anonymity: be it to escape harassment, speak out
-against power, or voice dissenting opinions.  Tor's onion services provide what
-may be the most popular way of running an anonymous \textsc{tcp}
-service.\footnote{Onion services were originally called ``hidden services'' but
-were recently renamed to reflect the fact that onion services provide more than
-just ``hiding'' a service~\cite{Johnson2015a}---most importantly end-to-end
-security and self-authenticating names.}
+\eg, the use of a \textsc{vpn} to disguise one's \textsc{ip} address.  A
+lesser-known use case is \emph{server} anonymity which allows a web service to
+disguise its \textsc{ip} address.  Service operators have good reasons to employ
+server anonymity; be it to escape harassment, speak out against power, or voice
+dissenting opinions.  Tor's onion services provide what may be the most popular
+way of running an anonymous \textsc{tcp} service.\footnote{Onion services were
+originally called ``hidden services'' but were recently renamed to reflect the
+fact that onion services provide more than just ``hiding'' a
+service~\cite{Johnson2015a}---most importantly end-to-end security and
+self-authenticating names.}
 
 Originally deployed in 2004, onion services have grown substantially over the
-last years, both in the number of services and users.  As of January 2018, The
+last years, both in the number of servers and users.  As of February 2018, The
 Tor Project's statistics count more than 60,000 onion services each day,
-relaying an aggregate of more than 750 Mbps of network traffic.  Not all of
-these services host web sites; use cases such as metadata-free instant
+relaying an aggregate of 1 Gbps of network traffic.  Not all of these services
+host web sites; use cases such as metadata-free instant
 messaging~\cite{ricochet} and file sharing~\cite{onionshare} have emerged as
-well.  The Tor Project currently does not have information on the number of
-onion service users but Facebook reported in 2016 that more than one million
-users logged into their onion service over a one-month
-period~\cite{facebook-users}.
+well.  The Tor Project currently does not have data on the number of onion
+service users but Facebook reported in 2016 that more than one million users
+logged into their onion service over a one-month period~\cite{facebook-users}.
 
-Regarding usability, onion services differ from conventional web services in
-several aspects; \first they can only be accessed over the Tor network; \second
-their domain is a hash over their public key, rendering them hard to remember;
-\third network latency is noticeable because of the additional hops in between
-client and onion service; and \fourth onion services are private by default,
-requiring manual dissemination.  To date our understanding of how users deal
-with these idiosyncrasies is anecdotal.  We fill this gap by studying how Tor
-users interact with onion services.  In particular, we set out to understand
-users' mental model of Tor, their expectations of privacy, issues that they
-experience, and how they adapted their workflows to deal with onion services.
+Onion services differ from conventional web services in several aspects; \first
+they can only be accessed over the Tor network; \second their domain is a hash
+over their public key, rendering them hard to remember; \third network latency
+is noticeable because of the additional hops in between client and onion
+service; and \fourth onion services are private by default, requiring manual
+dissemination.  To date our understanding of how users deal with these
+idiosyncrasies is anecdotal.  We fill this gap by studying how Tor users
+interact with onion services.  In particular, we set out to understand users'
+mental model of Tor, their expectations of privacy, issues that they experience,
+and how they adapt their workflow to deal with onion services.
 
 Onion services do not exist in a vacuum.  They are tightly coupled to their
 surrounding software ecosystem---most importantly Tor Browser---which is why an
 isolated study of onion services is bound to miss crucial context.  We therefore
 aim to get as complete a picture as possible by casting a wide net and also
-studying the use of Tor Browser in particular and privacy expectations in
-general.  To that end we employ a mixed-methods approach involving an online
-survey that featured an array of questions on Tor Browser, onion service usage
-and operation, onion site phishing, and general expectations of privacy.  Based
-on our survey questions, our interviews let us ask follow-up questions and dive
-deeper into unexpected answers.
+studying the use of Tor Browser and general privacy expectations.  To that end
+we employ a mixed-methods approach involving an online survey that featured an
+array of questions on Tor Browser, onion service usage and operation, onion site
+phishing, and general expectations of privacy.  Based on our survey questions,
+our interviews let us ask follow-up questions and dive deeper into unexpected
+answers.
 
-Our most salient findings show that \first the flawed mental model some users
-have of Tor may cause security issues such as a blind reliance on vanity onion
-domains, \second the domain format of onion services, while cumbersome, is not
-among the most pressing usability issues, \third the content that onion services
-are perceived to host causes trust issues for non-technical users, and \fourth
-onion service operators seek to foil phishing attacks by having devised a number
-of strategies, many of which are ineffective.
+Our findings include that \first many Tor users misunderstand technical aspects
+of onion services, \eg the nature of the domain format, rendering these users
+more vulnerable to phishing attacks; \second users handle the pseudo-random
+onion domain format differently, but mostly by bookmarking them; and \third the
+way people discover onion services is provisional and in need of technical
+enhancements to ease the process.
 
 At the time of this writing, The Tor Project is testing the next generation of
-onion services intended to fix security issues and transition to faster and
+onion services intended to fix security issues and upgrade to faster and
 future-proof cryptography.  We hope that our results can inform this process.
-Finally, because many of our findings touch on various aspects of privacy and
-anonymity, we believe that privacy tools other than Tor, \eg I2P, can benefit
+Finally, because some of our findings touch on general aspects of privacy and
+anonymity, we believe that privacy engineers beyond The Tor Project can benefit
 from our findings.  In summary, we make the following contributions:
 
 \begin{itemize}
     \item We interviewed seventeen Tor users of diverse backgrounds to
         understand their issues, assumptions, and expectations related to Tor.
-        Using qualitative data coding, we identified novel themes that underlay
-        our interview data.
+        Using qualitative data coding, we identified and present themes and
+        anecdotes that underlay our interview data.
 
-    \item We administered an online survey for Tor users, reaching 621 people.
-        Our survey focused on the most salient issues around onion services,
-        \eg, the domain format, onion service discovery, and phishing attacks.
+    \item We administered an online survey for Tor users, gathering 828
+        responses.  Our survey focused on the most salient issues around onion
+        services, \ie, the domain format, onion service discovery, and phishing
+        attacks.
 
-    \item Drawing on our two datasets, we identify \first incorrect mental
-        models, \second key issues that impede the adoption and use of onion
-        services, and \third ways forward to improve onion services.
+    \item Drawing on our two datasets, we identify key issues that impede the
+        adoption of onion services and propose ways forward, \eg, an opt-in
+        publishing mechanism for onion services, and a Tor Browser extension
+        that allows its users to securely bookmark onion domains without leaving
+        a browsing trail.
 \end{itemize}
 
 The rest of this paper is structured as follows.  We begin by discussing related
 work in \Cref{sec:related-work}, followed by background on onion services in
 \Cref{sec:background}.  \Cref{sec:method} then presents the methods we used for
 our interviews and online survey, followed by \Cref{sec:results} which discusses
-our findings from both data sources.  Finally, we discuss our results in
-\Cref{sec:discussion} and conclude our work in \Cref{sec:conclusion}.
+our findings from both data sources.  Finally, we discuss our work in
+\Cref{sec:discussion} and conclude in \Cref{sec:conclusion}.
