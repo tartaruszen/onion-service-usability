@@ -63,7 +63,7 @@ service's public key, a checksum, and a version number.  Because of the next
 generation using elliptic curve cryptography, the entire public key (instead of
 just a hash over the public key) is embedded in the domain.
 
-Due to an onion domain being a function of its public key, onion domains are
+Due to an onion domain's being a function of its public key, onion domains are
 self-authenticating, \ie, as long as a client has the correct domain, it knows
 what public key to expect.  The downside is that sixteen random characters are
 impractical to remember, let alone 56 characters.
