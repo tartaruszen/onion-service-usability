@@ -55,7 +55,7 @@ data exchange point.}
 The creation of a new onion domain requires a Tor daemon to generate an
 \textsc{rsa} key pair.  It then computes the \textsc{sha}-1 hash over the
 \textsc{rsa} public key, truncates it to 80 bits, and encodes these 80 bits in
-Base32, resulting in sixteen characters, \eg, expyuzz4wqqyqhjn.  As of January
+Base32, resulting in sixteen characters, \eg, expyuzz4wqqyqhjn.  As of February
 2018, The Tor Project is deploying the next generation of onion services whose
 domain format will feature 56 instead of sixteen
 characters~\cite[\S~6]{Mathewson2013a}---a Base32 encoding of the onion
@@ -77,19 +77,15 @@ one can search this set for the domain that is the easiest to remember, \eg, by
 using a Markov model to filter domains that resemble words in the English
 language.  While this method will not produce fully-meaningful domains, it can
 facilitate memorization as evidenced by the vanity domains of Facebook
-(\href{https://www.facebookcorewwwi.onion}{facebookcorewwwi.onion}),
-ProPublica
-(\href{https://www.propub3r6espa33w.onion}{propub3r6espa33w.onion}),
-and the New York Times
-(\href{https://www.nytimes3xbfgragh.onion}{nytimes3xbfgragh.onion}).  In
-practice, many onion service operators use the tool scallion~\cite{scallion} to
-find vanity domains in parallel.
+(facebookcorewwwi.onion), ProPublica (propub3r6espa33w.onion), and the New York
+Times (nytimes3xbfgragh.onion).  In practice, many onion service operators use
+the tool scallion~\cite{scallion} to parallelize the search for vanity domains.
 
 Onion services are private by default.  Once an onion service is created, it is
 its operator's task to disseminate the domain, \eg, by adding it to onion site
 search engines such as Ahmia~\cite{ahmia}.  The lack of a go-to service such as
-Google for onion service discovery prompted the community to devise various ways
-to disseminate onion services, most importantly an array of search engines and
+a ``Google for onion services'' prompted the community to devise various ways to
+disseminate onion services, most importantly an array of search engines and
 curated lists.
 
 On the usability front, Tor Browser's user interface when accessing onion
