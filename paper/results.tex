@@ -9,9 +9,10 @@ bringing up anecdotes and findings from our interviews as appropriate.
 
 \subsection{The Tor Project}
 
-Our work focuses on the usability of onion services, but our interviews and parts
-of our survey data also provided some insight into how our respondents perceive The Tor
-Project and its work.  We summarize these findings here.
+Our work focuses on the usability of onion services, but our interviews and
+parts of our survey data also provided some insight into how our respondents
+perceive The Tor Project and its work, extending the results of Gallagher
+\ea~\cite{Gallagher2017a}.  We summarize these findings here.
 
 \subsubsection{Documentation and localization}
 
@@ -38,26 +39,21 @@ some things that [are] hard for me to explain in terms of how you use Tor\dots
 \subsubsection{Public perception}
 
 The Tor Project goes to great lengths to minimize the trust its users have to
-place in it by publishing design documents and source code and coordinating
+place in it by publishing design documents and source code, and coordinating
 development in public.  Laypeople however lack the skill while experts typically
-lack the time to audit source code, which is why trust and reputation matter.
-The Tor Project enjoyed a lot of trust among our interview participants, which,
-admittedly, comes as no surprise because we recruited our interviewees from
-Tor-friendly social media and an Internet freedom event.
-
-\begin{displayquote}[P08]
-Because, you guys\dots have the sort of\dots not a monopoly on trust, but you
-have like a really great brand name when it comes to this stuff\dots
-\end{displayquote}
+lack the time to audit source code, which is why trust and reputation still
+matter.  The Tor Project enjoyed a lot of trust among our interview
+participants, which, admittedly, comes as no surprise because we recruited our
+interviewees from Tor-friendly social media and an Internet freedom event:
+\textquote[P08]{Because, you guys\dots have the sort of\dots not a monopoly on
+trust, but you have like a really great brand name when it comes to this
+stuff\dots}
 
 While the work of Tor developers is often held in high esteem, the content that
 is hosted on onion services is perceived very differently.  Upon being told what
 an onion service is, one participant sought clarification:
-
-\begin{displayquote}[P03]
-So it's like the Hidden Wiki and stuff like that, where you can buy drugs
-and\dots or supposedly.
-\end{displayquote}
+\textquote[P03]{So it's like the Hidden Wiki and stuff like that, where you can
+buy drugs and\dots or supposedly.}
 
 \hyperref[q6_3]{Questions 6.3} and \hyperref[q6_5]{6.5} asked how safe our
 respondents feel when using Tor Browser and onion services, respectively.
@@ -84,18 +80,15 @@ were unhappy with Firefox's exploit mitigation techniques, the lack of
 sandboxing, and the complex code base.  Chrome was sometimes brought up as the
 gold standard for browser security.\footnote{Note that we conducted our survey
 before Mozilla released Firefox Quantum on November 14, 2017, which brought
-substantial improvements in both security and usability.}  Malicious exit relays
-were a concern for a handful of participants while another couple of
-participants were concerned that their use of Tor makes them stick out and turns 
-them into targets for government agencies.  Tor Browser comes with modules that
-disguise the fact that one is using Tor, but a standard Tor connection does not
-use these modules, making it easy to identify for Internet service
-providers~\cite{pluggable}.  One interview participant worried:
-
-\begin{displayquote}[P03]
-I guess you could put yourself on some kind of watch lists, that you are a
-person of interest, just because you're using [Tor].
-\end{displayquote}
+substantial improvements in both security and usability~\cite{firefox-quantum}.}
+Malicious exit relays were a concern for a handful of participants while another
+couple of participants were concerned that their use of Tor makes them stick out
+and turns them into targets for government agencies.  Tor Browser comes with
+modules that disguise the fact that one is using Tor, but a standard Tor
+connection does not use these modules, making it easy to identify for Internet
+service providers~\cite{pluggable}.  One interview participant worried:
+\textquote[P03]{I guess you could put yourself on some kind of watch lists, that
+you are a person of interest, just because you're using [Tor].}
 
 Some survey respondents were not sure if their Tor setup works properly---a
 common theme that we also noticed in our interviews: Non-technical users desire
@@ -104,11 +97,11 @@ else,'' a point that we will elaborate on in \Cref{sec:under-the-hood}.
 
 With respect to onion services, the majority expressed that the added security
 and anonymity makes them feel safe.  Another factor contributing to the
-perceived security is that onion services make use of far fewer advertising
-companies.  Orthogonal to the technology, many participants voiced concern about
-illegal and questionable content on onion services, described by some as a
-``Wild West.''  Phishing sites, honeypots, and compromised onion sites further
-contribute to this perception.
+perceived security is that advertising companies are nowhere near as present on
+onion services as they are on the web.  Orthogonal to the technology, many
+participants voiced concern about illegal and questionable content on onion
+services, described by some as a ``Wild West.''  Phishing sites, honeypots, and
+compromised onion sites further contribute to this perception.
 
 \subsection{Tor Browser usage}
 
@@ -166,7 +159,7 @@ traffic for ``people who need protection.''
     \centering
     \includegraphics[width=\linewidth]{figures/tor-button-screenshot.jpg}
     \caption{A click on the onion icon reveals the Tor relays that constitute
-    the circuit that was used to fetch the current page.  As of January 2018,
+    the circuit that was used to fetch the current page.  As of February 2018,
     the user interface is subject to a redesign~\cite{trac24309}.}
     \label{fig:tor-button}
 \end{figure}
