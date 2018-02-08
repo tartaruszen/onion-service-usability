@@ -375,24 +375,35 @@ address from disguising their real-world identity and instead used the umbrella
 term of ``anonymity'' to refer to both concepts.  This conflation of concepts
 paints an incomplete picture of the security and privacy guarantees that Tor
 provides, further illustrated by one participant's question:
-
-\begin{displayquote}[P07]
-What's the point of going to Facebook using onion services when their business
-model is still about collecting your data?
-\end{displayquote}
+\textquote[P07]{What's the point of going to Facebook using onion services when
+their business model is still about collecting your data?}
 
 There is merit in using Facebook's onion service.  While the company indeed
 knows who is logging in, it does not know Tor users' \textsc{ip} address (and
 hence location) or operating system.  On top of that, onion services provide
-end-to-end security and self-authenticating names.  These benefits are difficult
-to convey to non-technical users, and even experts sometimes advocate an ``all or
-nothing'' approach to online anonymity, overlooking important nuances.
+end-to-end security and self-authenticating names.  Syverson and Boyce took a
+step back and looked at how onion services can improve website
+authentication~\cite{Syverson2015a}.  These benefits are difficult to convey to
+non-technical users, and even experts sometimes advocate an ``all or nothing''
+approach to online anonymity, overlooking important nuances.
 
-An unrelated, yet hardly unexpected, flawed mental model is the domain format of
+An unrelated, yet hardly unexpected, source of confusion is the domain format of
 onion services.  Some users have come to believe that the seemingly-random
-characters in onion domains are the reason why onion services are anonymous.
+characters in onion domains are the reason why onion services are anonymous:
+
+\begin{displayquote}[Survey respondent]
+I find an issue with vanity onion domains. The simple fact being, that the Onion
+Services stay anonymous through changing their domain, and I feel that there is
+a possibility of decreased anonymity with a constant domain name.
+\end{displayquote}
+
 Accordingly, these users also believe that vanity domains are ``less anonymous''
-because part of their domains is clearly not random.
+because part of their domains is clearly not random.  A survey participant
+further wrote: \textquote{I understand vanity onion domains are a sign of the
+weakness of the hash algorithm used by Tor.}  An unrelated yet equally incorrect
+opinion was voiced by a different survey respondent: \textquote{These people who
+created their onion name using scallion or other tools should notice that other
+people can make same private key.}
 
 \subsubsection{Makeshift solutions ease onion service discovery}
 
