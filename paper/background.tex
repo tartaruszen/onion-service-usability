@@ -4,9 +4,9 @@
 Onion services are \textsc{tcp} services that are only accessible over the Tor
 network.  Onion domains take the place of \textsc{ip} addresses, which
 traditional \textsc{tcp} services use for addressing.  These onion domains are
-resolved and routed inside the Tor network, resulting in a circuit between the
-client and the onion service which (by default) features six hops (see
-\Cref{fig:onion-connection}).
+only meaningful inside the Tor network, and help in establishing a circuit
+between the client and the onion service which (by default) features six hops
+(see \Cref{fig:onion-connection}).
 
 \begin{figure}[t]
 \centering
