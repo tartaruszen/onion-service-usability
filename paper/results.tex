@@ -167,11 +167,8 @@ traffic for ``people who need protection.''
 By clicking on the onion icon in the top left corner of Tor Browser (see
 \Cref{fig:tor-button}), one can see the circuit that is used for the current web
 site.  Some of our interviewees appreciated this visual feedback:
-
-\begin{displayquote}[P08]
-I love how I can monitor the network through this little kind of bar that comes
-up.
-\end{displayquote}
+\textquote[P08]{I love how I can monitor the network through this little kind of
+bar that comes up.}
 
 Not satisfied with seeing only the current circuit, some participants wished it
 were easier to learn what else is happening behind the scenes:
@@ -203,18 +200,16 @@ on the network path, and other people that are using Tor at the same time, just
 to name a few.  Unlike the \textsc{jap} anonymity tool~\cite{jap}, Tor Browser
 makes no attempt to display the degree of anonymity it believes it can provide.
 Asked about how well Tor works for them, one of our participants explained:
-
-\begin{displayquote}[P12]
-In terms of the anonymity, you can't really tell\dots That's fairly opaque, so I
-can't even tell how effective that's working, or whether it is\dots
-\end{displayquote}
+\textquote[P12]{In terms of the anonymity, you can't really tell\dots That's
+fairly opaque, so I can't even tell how effective that's working, or whether it
+is\dots}
 
 Quantifying anonymity in a real-world setting is complex, error-prone, and often
 misleading.  What is more, Tor Browser does not have available all the data it
 needs to quantify its user's anonymity---an ``anonymity meter'' may therefore
 create more problems than it solves.
 
-\subsubsection{\textsc{ui}, speed, and \textsc{captcha}s remain frustrating}
+\subsubsection{\textsc{Ui}, speed, and \textsc{captcha}s remain frustrating}
 
 Perhaps the most prevalent usability issue is, still, browsing speed.  An
 interviewee provided the following anecdote:
@@ -254,9 +249,9 @@ occasionally suffers.  Relying on naive, \textsc{ip} address-based metrics of
 exit relays as malicious which results in Tor users' having to solve (sometimes
 multiple) \textsc{captcha}s before being granted access to a web site.  In 2016,
 Khattak \ea\ documented the issue for a number of content
-providers~\cite{Khattak2016a}.  Both survey and interview participants brought
-up the topic and one person managed to depict the issue without the use of
-profanity:
+providers~\cite{Khattak2016a}.  Both our survey and interview participants
+brought up the topic and one person managed to depict the issue without the use
+of profanity:
 
 \begin{displayquote}[P06]
 It is still sometimes challenging using some everyday services because of
@@ -314,7 +309,7 @@ learn more about the ``Dark Web'' and set out to satisfy their curiosity while
 19\% occasionally stumble upon links to onion services in their day-to-day
 browsing activity.  Respondents who selected ``Other'' gave a variety of
 reasons, the most predominant being the ability to set up a \textsc{tcp} service
-behind a \textsc{nat} device.  That makes it possible to run an \textsc{ssh}
+behind a \textsc{nat} device.  That makes it possible to expose an \textsc{ssh}
 server in a home network that has neither a permanent \textsc{ip} address nor
 port forwarding.  Others use onion services to reduce the load on exit relays,
 to do technical research, and to access sites that are otherwise unavailable.
@@ -332,18 +327,19 @@ to do technical research, and to access sites that are otherwise unavailable.
 
 Recall that we asked our interview participants to draw sketches of Tor and
 onion services.\footnote{All sketches are available online at
-\url{https://nymity.ch/onion-services/mental-models/}.}   Everybody drew a
-sketch of Tor but some did not draw onion services because they had not
-experienced them.  Interestingly, all participants understood that key to Tor's
-anonymity is the bouncing of network traffic across several relays, as evidenced
-by \Cref{fig:tor-sketch}, drawn by a participant with no technical
+\url{https://nymity.ch/onion-services/mental-models/}.}  Everybody drew a
+sketch of Tor but not all drew onion services because they had not experienced
+them.  Interestingly, all participants understood that key to Tor's anonymity is
+the bouncing of network traffic across several relays, as evidenced by
+\Cref{fig:tor-sketch}, drawn by a participant with no technical
 background.\footnote{However, the sketch got two details wrong: the number of
 hops in a Tor circuit is three, and the circuit's forward and reverse path are
 identical.} Analogously, most of our participants understood that network
 traffic does not leave the Tor network when connecting to onion services.
 \Cref{fig:os-sketch} illustrates an example, again drawn by a non-technical
 participant.  The last hop in the circuit is an onion, correctly suggesting that
-network traffic does not leave the Tor network.
+network traffic does not leave the Tor network, albeit the number of hops is
+incorrect.
 
 \begin{figure}[t]
     \centering
