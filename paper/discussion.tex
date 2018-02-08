@@ -45,20 +45,19 @@ population \emph{is} young and educated.
 \label{sec:future-work}
 
 The Tor Project is currently working on a security indicator for onion
-services~\cite{trac23247}.  \Cref{fig:onion-service} illustrates that Tor
-Browser currently, in version 7.0.10, displays an onion service connection like
-a plain \textsc{http} connection, thus greatly ``underselling'' the security and
-privacy that an onion service connection provides.  The work of Porter Felt
-\ea~\cite{Felt2016a} revealed the subtleties that one must consider when
-designing security indicators, which highlights the importance of an independent
-study of an onion connection security indicator.  Do users correctly understand
-the meaning of an onion service indicator?  Do they also understand how it
-differs from an \textsc{https} indicator?  Tor Browser's circuit display
-\textsc{ui} (see \Cref{fig:tor-button}) is currently experiencing a
-redesign~\cite{trac24309}.  Similar to the onion service indicator, an empirical
-evaluation of the circuit display could reveal user misunderstandings.  For
-example, some users are not familiar with the concept of guard relays and
-incorrectly expect each relay in their circuit to change.
+services~\cite{trac23247}.  Tor Browser currently, in version 7.0.10, displays
+an onion service connection like a plain \textsc{http} connection, thus greatly
+``underselling'' the security and privacy that an onion service connection
+provides.  The work of Porter Felt \ea~\cite{Felt2016a} revealed the subtleties
+that one must consider when designing security indicators, which highlights the
+importance of an independent study of an onion connection security indicator.
+Do users correctly understand the meaning of an onion service indicator?  Do
+they also understand how it differs from an \textsc{https} indicator?  Tor
+Browser's circuit display \textsc{ui} is currently
+experiencing a redesign~\cite{trac24309}.  Similar to the onion service
+indicator, an empirical evaluation of the circuit display could reveal user
+misunderstandings.  For example, some users are not familiar with the concept of
+guard relays and incorrectly expect each relay in their circuit to change.
 
 Our survey results suggest that there is a need for a system that automates
 onion service discovery, \eg, by providing an opt-in mechanism that
