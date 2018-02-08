@@ -4,7 +4,6 @@
 \usepackage{usenix}
 \usepackage[top=2cm,bottom=2.5cm,left=2cm,right=2cm]{geometry}
 \usepackage{tikz}
-\usepackage{xspace} % For reasonable spacing in custom commands.
 \usepackage{xcolor} % For colourful links.
 \usepackage[backend=biber,backref=true,maxnames=20,urldate=long]{biblatex}
 \usepackage{hyperref} % For clickable links.
@@ -31,20 +30,18 @@
 \definecolor{darkblue}{rgb}{0.1,0.1,0.4}
 
 % Use a link icon instead of BibLaTeX's "URL" string.
-\DeclareFieldFormat{url}{{\scriptsize \faExternalLink}\xspace\url{#1}}
+\DeclareFieldFormat{url}{{\scriptsize \faExternalLink}~\url{#1}}
 
 \usetikzlibrary{positioning}
 
-\newcommand{\ie}{i.e.\xspace}
-\newcommand{\eg}{e.g.\xspace}
-\newcommand{\ea}{et al.\xspace}
-\newcommand{\etc}{etc.\xspace}
-\newcommand{\aka}{a.k.a.\xspace}
-\newcommand{\first}{(\textit{i})\xspace}
-\newcommand{\second}{(\textit{ii})\xspace}
-\newcommand{\third}{(\textit{iii})\xspace}
-\newcommand{\fourth}{(\textit{iv})\xspace}
-\newcommand{\fifth}{(\textit{v})\xspace}
+\newcommand{\ie}{i.e.}
+\newcommand{\eg}{e.g.}
+\newcommand{\ea}{et al.}
+\newcommand{\first}{(\textit{i})}
+\newcommand{\second}{(\textit{ii})}
+\newcommand{\third}{(\textit{iii})}
+\newcommand{\fourth}{(\textit{iv})}
+\newcommand{\fifth}{(\textit{v})}
 
 \hypersetup{
 	pdftitle={How do Tor users interact with onion services?},
