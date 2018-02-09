@@ -14,6 +14,28 @@ parts of our survey data also provided some insight into how our respondents
 perceive The Tor Project and its work, extending the results of Gallagher
 \ea~\cite{Gallagher2017a}.  We summarize these findings here.
 
+\subsubsection{Documentation and localization}
+
+The Tor Project's documentation covers an array of topics including
+installation, the use on Android, the operation of Tor relays, several
+\textsc{faq}s, and a wiki.  Having worked with this documentation, some of our
+interview and survey participants lamented its scope:
+
+\begin{displayquote}[P14]
+Tor does a good job on their web site of telling you to modify your
+[configuration] file, and then getting the onion set up.  But it's just very
+basic.  I have to go [to] other people's blog post to find out.
+\end{displayquote}
+
+Another participant struggled with the lack of localization.  While Tor
+Browser's user interface is available in Spanish, the documentation is not:
+
+\begin{displayquote}[P11]
+Think more [about] the Spanish community\dots because in my case I'm trying to
+train people to use Tor but I work in the indigenous communities and there are
+some things that [are] hard for me to explain in terms of how you use Tor\dots
+\end{displayquote}
+
 \subsubsection{Public perception}
 
 The Tor Project goes to great lengths to minimize the trust its users have to
@@ -133,10 +155,20 @@ traffic for ``people who need protection.''
 \subsubsection{Users enjoy a look ``under the hood''}
 \label{sec:under-the-hood}
 
-By clicking on the onion icon in the top left corner of Tor Browser, one can see
-the circuit that is used for the current web site.  Some of our interviewees
-appreciated this visual feedback: \textquote[P08]{I love how I can monitor the
-network through this little kind of bar that comes up.}
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/tor-button-screenshot.jpg}
+    \caption{A click on the onion icon reveals the Tor relays that constitute
+    the circuit that was used to fetch the current page.  As of February 2018,
+    the user interface is subject to a redesign~\cite{trac24309}.}
+    \label{fig:tor-button}
+\end{figure}
+
+By clicking on the onion icon in the top left corner of Tor Browser (see
+\Cref{fig:tor-button}), one can see the circuit that is used for the current web
+site.  Some of our interviewees appreciated this visual feedback:
+\textquote[P08]{I love how I can monitor the network through this little kind of
+bar that comes up.}
 
 Not satisfied with seeing only the current circuit, some participants wished it
 were easier to learn what else is happening behind the scenes:
@@ -159,6 +191,23 @@ one participant:
 being built, or is the circuit built, and the site isn't responding at all to
 the third relay?
 \end{displayquote}
+
+\subsubsection{Quantifying anonymity is hard}
+
+The degree of anonymity that protects a Tor user in a given situation depends on
+a number of variables including her guard relay, intermediate autonomous systems
+on the network path, and other people that are using Tor at the same time, just
+to name a few.  Unlike the \textsc{jap} anonymity tool~\cite{jap}, Tor Browser
+makes no attempt to display the degree of anonymity it believes it can provide.
+Asked about how well Tor works for them, one of our participants explained:
+\textquote[P12]{In terms of the anonymity, you can't really tell\dots That's
+fairly opaque, so I can't even tell how effective that's working, or whether it
+is\dots}
+
+Quantifying anonymity in a real-world setting is complex, error-prone, and often
+misleading.  What is more, Tor Browser does not have available all the data it
+needs to quantify its user's anonymity---an ``anonymity meter'' may therefore
+create more problems than it solves.
 
 \subsubsection{\textsc{Ui}, speed, and \textsc{captcha}s remain frustrating}
 
@@ -348,7 +397,7 @@ opinion was voiced by a different survey respondent: \textquote{These people who
 created their onion name using scallion or other tools should notice that other
 people can make same private key.}
 
-\subsubsection{Makeshift tools ease onion service discovery}
+\subsubsection{Makeshift solutions ease onion service discovery}
 
 Recall that a freshly set up onion service is private by default, leaving it up
 to its operator to disseminate the domain.  Established search engines such as
@@ -581,7 +630,10 @@ sources (\eg, friends or another, trusted web site) or use bookmarks when
 revisiting onion services.  Many respondents also verify the domain in the
 browser's address bar (46\%), check if the corresponding web site has a link to
 its onion site (41\%), or hope that the onion service has an \textsc{https}
-certificate (36\%).  Alarmingly, almost 30\% of
+certificate (36\%).\footnote{DigiCert is issuing \textsc{ev} certificates for
+onion sites~\cite{DigiCert2015a}, but adoption has been slow---presumably in part
+because \textsc{ev} certificates require the \textsc{ca} to verify the
+applicant's identity and they are not free.}  Alarmingly, almost 30\% of
 respondents stated that they sometimes cannot tell the difference between an
 authentic service and an impersonation, and 11\% never check a service's
 legitimacy in the first place.  People who selected ``Other'' provided a wide

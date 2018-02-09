@@ -5,7 +5,52 @@ Onion services are \textsc{tcp} services that are only accessible over the Tor
 network.  Onion domains take the place of \textsc{ip} addresses, which
 traditional \textsc{tcp} services use for addressing.  These onion domains are
 only meaningful inside the Tor network, and help in establishing a circuit
-between the client and the onion service which (by default) features six hops.
+between the client and the onion service which (by default) features six hops
+(see \Cref{fig:onion-connection}).
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[node distance=0.4cm]
+
+\tikzset{>=latex}
+\tikzstyle{block} = [rectangle, draw, rounded corners, text centered,
+                     minimum height=0.5cm]
+
+\node[block,fill=black!60,
+      text=white]         (TB)  {Tor Browser};
+\node[block,right=of TB]  (GR1) {Guard};
+\node[block,right=of GR1] (MR1) {Middle};
+\node[block,below=of MR1] (R)   {Rendezvous};
+\node[block,below=of R]   (MR2) {Middle};
+\node[block,left=of  MR2] (MR3) {Middle};
+\node[block,left=of  MR3] (GR2) {Guard};
+\node[block,fill=black!60,
+            text=white,
+            left=of GR2]  (OS)  {Onion service};
+
+\draw[<->] (TB.east)   -- (GR1.west);
+\draw[<->] (GR1.east)  -- (MR1.west);
+\draw[<->] (MR1.south) -- (R.north);
+\draw[<->] (R.south)   -- (MR2.north);
+\draw[<->] (MR2.west)  -- (MR3.east);
+\draw[<->] (MR3.west)  -- (GR2.east);
+\draw[<->] (GR2.west)  -- (OS.east);
+
+\draw[|-|,gray] ([yshift=3pt] GR1.north west)
+                -- node [above, midway, text=gray] {Circuit}
+                ([yshift=3pt] MR1.north east);
+
+\draw[|-|,gray] ([yshift=-3pt] GR2.south west)
+                -- node [below, midway, text=gray] {Circuit}
+                ([yshift=-3pt] MR2.south east);
+
+\end{tikzpicture}
+\caption{A connection to an onion service typically consists of six Tor relays.
+Both the client and the onion service create a circuit (consisting of two and
+three relays, respectively) to the rendezvous relay that serves as a short-lived
+data exchange point.}
+\label{fig:onion-connection}
+\end{figure}
 
 The creation of a new onion domain requires a Tor daemon to generate an
 \textsc{rsa} key pair.  It then computes the \textsc{sha}-1 hash over the
@@ -42,3 +87,33 @@ search engines such as Ahmia~\cite{ahmia}.  The lack of a go-to service such as
 a ``Google for onion services'' prompted the community to devise various ways to
 disseminate onion services, most importantly an array of search engines and
 curated lists.
+
+On the usability front, Tor Browser's user interface when accessing onion
+services is designed to be seamless.  \Cref{fig:non-onion-service} shows the
+\textsc{ui} when accessing The Tor Project's web site while
+\Cref{fig:onion-service} shows a connection to the corresponding onion site.
+
+\begin{figure}[t]
+    \centering
+
+    \begin{subfigure}[t]{\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/non-onion-service.png}
+        \subcaption{The Tor Project's web site when accessed over its
+        conventional domain.}
+        \label{fig:non-onion-service}
+    \end{subfigure}
+
+    \begin{subfigure}[t]{\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/onion-service.png}
+        \subcaption{The Tor Project's web site when accessed over its onion
+        service.}
+        \label{fig:onion-service}
+    \end{subfigure}
+
+    \caption{Tor Browser 7.0.10's user interface on Windows 10 when opening a
+    conventional domain (top) and when opening the corresponding onion service
+    (bottom).  Note that the onion version lacks a padlock icon---an issue
+    that is currently being worked on~\cite{trac23247}.}
+\end{figure}
