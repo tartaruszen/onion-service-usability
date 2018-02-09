@@ -273,16 +273,20 @@ technical research, and to access sites that are otherwise unavailable.
 \label{sec:mental-models}
 
 Recall that we asked our interview participants to draw sketches of Tor and
-onion services.  Everybody drew a sketch of Tor but not all drew onion services
-because they had not experienced them.  Interestingly, all participants
-understood that key to Tor's anonymity is the bouncing of network traffic across
-several relays, as evidenced by \Cref{fig:tor-sketch}, drawn by a participant
-with no technical background.  Analogously, most of our participants understood
-that network traffic does not leave the Tor network when connecting to onion
-services.  \Cref{fig:os-sketch} illustrates an example, again drawn by a
-non-technical participant.  The last hop in the circuit is an onion, correctly
-suggesting that network traffic does not leave the Tor network, albeit the
-number of hops is incorrect.
+onion services.\footnote{All sketches are available online at
+\url{https://nymity.ch/onion-services/mental-models/}.}  Everybody drew a
+sketch of Tor but not all drew onion services because they had not experienced
+them.  Interestingly, all participants understood that key to Tor's anonymity is
+the bouncing of network traffic across several relays, as evidenced by
+\Cref{fig:tor-sketch}, drawn by a participant with no technical
+background.\footnote{However, the sketch got two details wrong: the number of
+hops in a Tor circuit is three, and the circuit's forward and reverse path are
+identical.} Analogously, most of our participants understood that network
+traffic does not leave the Tor network when connecting to onion services.
+\Cref{fig:os-sketch} illustrates an example, again drawn by a non-technical
+participant.  The last hop in the circuit is an onion, correctly suggesting that
+network traffic does not leave the Tor network, albeit the number of hops is
+incorrect.
 
 \begin{figure}[t]
     \centering
@@ -561,7 +565,7 @@ these issues in 2015~\cite{Matic2015a}.
 Phishing remains an issue despite onion services' extra anonymity and security
 properties.  Past work has documented phishing onion sites that transparently
 rewrote Bitcoin addresses to hijack Bitcoin
-transactions~\cite{Nurmi2015a,Monteiro2016a}.  Key to this attack is
+transactions~\cite{Winter2016a,Nurmi2015a,Monteiro2016a}.  Key to this attack is
 the difficulty of telling apart an authentic onion domain from an impersonation.
 For conventional domains we rely on (\textsc{ev}) certificates, browser
 protections, search results, and long-lived reputation, but none of these
