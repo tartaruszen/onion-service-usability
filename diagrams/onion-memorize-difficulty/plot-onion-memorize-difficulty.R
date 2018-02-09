@@ -2,7 +2,7 @@ library(tikzDevice)
 library(ggplot2)
 library(reshape2)
 
-tikz(file = "onion-memorize-difficulty.tex", height=1.5, width=3.5)
+tikz(file = "onion-memorize-difficulty.tex", height=1.5, width=3.1)
 
 d <- read.csv("data.csv", check.names = FALSE)
 
@@ -19,7 +19,7 @@ ggplot(data = df, aes(x = variable, y = value, fill = Difficulty)) +
        theme_minimal() +
        theme(legend.text = element_text(size = rel(0.7))) +
        theme(axis.title = element_text(size = rel(0.9))) +
-       theme(axis.text.y = element_text(size = rel(0.8))) +
+       theme(axis.text.y = element_text(size = rel(0.7))) +
        theme(legend.key.size = unit(0.8, "line")) +
        theme(legend.margin = margin(l=0, unit="cm")) +
        scale_fill_brewer(palette = "Blues", direction = -1)

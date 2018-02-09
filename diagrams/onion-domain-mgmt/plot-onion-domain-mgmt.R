@@ -1,7 +1,7 @@
 library(tikzDevice)
 library(ggplot2)
 
-tikz(file = "onion-domain-mgmt.tex", height=1.7, width=3.2)
+tikz(file = "onion-domain-mgmt.tex", height=1.7, width=3.1)
 
 df <- data.frame(
     freq = c("Save in local text file", "Save with pen and paper",

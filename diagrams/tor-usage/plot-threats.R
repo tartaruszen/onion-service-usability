@@ -1,7 +1,7 @@
 library(tikzDevice)
 library(ggplot2)
 
-tikz(file = "tor-threats.tex", height=1.7, width=3.2)
+tikz(file = "tor-threats.tex", height=1.7, width=3.1)
 
 df <- data.frame(
     threats = c("My government", "Other governments", "My ISP", "My school",

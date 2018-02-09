@@ -1,7 +1,7 @@
 library(tikzDevice)
 library(ggplot2)
 
-tikz(file = "determining-legitimacy.tex", height=1.6, width=3.2)
+tikz(file = "determining-legitimacy.tex", height=1.6, width=3.1)
 
 df <- data.frame(
     freq = c("Verify address bar", "Use bookmarks",

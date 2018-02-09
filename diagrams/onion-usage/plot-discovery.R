@@ -1,7 +1,7 @@
 library(tikzDevice)
 library(ggplot2)
 
-tikz(file = "onion-discovery.tex", height=1.3, width=3.2)
+tikz(file = "onion-discovery.tex", height=1.3, width=3.1)
 
 df <- data.frame(
     freq = c("Social networking sites", "Search engine lists",

@@ -2,7 +2,7 @@ library(tikzDevice)
 library(ggplot2)
 library(reshape2)
 
-tikz(file = "perceived-security.tex", height=1.2, width=3.2)
+tikz(file = "perceived-security.tex", height=1.2, width=3.1)
 
 d <- read.csv("data.csv", check.names = FALSE)
 

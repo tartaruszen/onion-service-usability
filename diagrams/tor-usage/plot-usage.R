@@ -1,7 +1,7 @@
 library(tikzDevice)
 library(ggplot2)
 
-tikz(file = "tor-usage.tex", height=1.2, width=3.2)
+tikz(file = "tor-usage.tex", height=1.2, width=3.1)
 
 df <- data.frame(
     freq = c("Less than monthly", "Monthly", "Weekly", "Daily", "Main browser"),
