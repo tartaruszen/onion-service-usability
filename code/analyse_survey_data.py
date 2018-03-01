@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #
 # Code to analyse TSV-formatted Qualtrics survey data.
-# Copyright (C) 2017  Philipp Winter
+# Copyright (C) 2017, 2018  Philipp Winter
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
