@@ -413,10 +413,21 @@ def onion_impersonation(d):
 
 def privacy_expectation(d):
 
+    print("---\nQuestion 6.2:")
+    print("%6.2f%% Your Internet service provider (ISP)"    % d.pct("q6_2", "1"))
+    print("%6.2f%% The ISP of example.com"                  % d.pct("q6_2", "2"))
+    print("%6.2f%% Your Tor Exit relay"                     % d.pct("q6_2", "3"))
+    print("%6.2f%% Your Tor Guard relay"                    % d.pct("q6_2", "4"))
+    print("%6.2f%% Nobody"                                  % d.pct("q6_2", "5"))
+    print("%6.2f%% I don't know"                            % d.pct("q6_2", "6"))
+    print("%6.2f%% Other"                                   % d.pct("q6_2", "7"))
+
+    '''
     print("---\nQuestion 6.2 txt:")
     for r in d.responses:
         if r.q6_2_text != "":
             print("- %s" % r.q6_2_text)
+    '''
 
     print("---\nQuestion 6.4:")
     print("%6.2f%% very unsafe"     % d.pct("q6_4", "5"))
@@ -472,6 +483,7 @@ def onion_preference(d):
     print("%6.2f%% Always the onion site"                   % d.pct("q3_18", "2"))
     print("%6.2f%% Other (Please elaborate below.)"         % d.pct("q3_18", "5"))
 
+    '''
     print("---\nQuestion 3.18 txt:")
     for r in d.responses:
         if r.q3_18_text != "":
@@ -481,6 +493,7 @@ def onion_preference(d):
     for r in d.responses:
         if r.q3_19 != "":
             print("- %s" % r.q3_19)
+    '''
 
     print("---\nQuestion 3.20:")
     print("%6.2f%% No, never"                               % d.pct("q3_20", "3"))
@@ -488,6 +501,7 @@ def onion_preference(d):
     print("%6.2f%% Yes, always"                             % d.pct("q3_20", "1"))
     print("%6.2f%% Other (Please elaborate below.)"         % d.pct("q3_20", "6"))
 
+    '''
     print("---\nQuestion 3.20 txt:")
     for r in d.responses:
         if r.q3_20_text != "":
@@ -497,6 +511,7 @@ def onion_preference(d):
     for r in d.responses:
         if r.q3_21 != "":
             print("- %s" % r.q3_21)
+    '''
 
 def analyse():
     """Analyse the data set."""
