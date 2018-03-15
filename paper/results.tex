@@ -1,59 +1,21 @@
 \section{Results}
 \label{sec:results}
 
-We organize the presentation of our findings by topic, starting with Tor
-Browser, and then onion service-specific topics such as service discovery and
-the operation of onion services.  We interleave the results from our online
-survey and from our interviews, focusing primarily on our survey data but
-bringing up anecdotes and findings from our interviews as appropriate.
+We organize the presentation of our findings by topic, including how users
+\emph{perceive} (\Cref{sec:perception}), \emph{discover} (\Cref{sec:discovery}),
+and \emph{operate} (\Cref{sec:operation}) onion services.  We interleave the
+results from our online survey with our interviews, focusing primarily on our
+survey data but bringing up anecdotes and findings from our interviews as
+appropriate.
 
-\subsection{The Tor Project}
-
-Our work focuses on the usability of onion services, but our interviews and
-parts of our survey data also provided some insight into how our respondents
-perceive The Tor Project and its work, extending the results of Gallagher
-\ea~\cite{Gallagher2017a}.  We summarize these findings here.
-
-\subsubsection{Documentation and localization}
-
-The Tor Project's documentation covers an array of topics including
-installation, the use on Android, the operation of Tor relays, several
-\textsc{faq}s, and a wiki.  Having worked with this documentation, some of our
-interview and survey participants lamented its scope:
-
-\begin{displayquote}[P14]
-Tor does a good job on their web site of telling you to modify your
-[configuration] file, and then getting the onion set up.  But it's just very
-basic.  I have to go [to] other people's blog post to find out.
-\end{displayquote}
-
-Another participant struggled with the lack of localization.  While Tor
-Browser's user interface is available in Spanish, the documentation is not:
-
-\begin{displayquote}[P11]
-Think more [about] the Spanish community\dots because in my case I'm trying to
-train people to use Tor but I work in the indigenous communities and there are
-some things that [are] hard for me to explain in terms of how you use Tor\dots
-\end{displayquote}
-
-\subsubsection{Public perception}
-
-The Tor Project goes to great lengths to minimize the trust its users have to
-place in it by publishing design documents and source code, and coordinating
-development in public.  Laypeople however lack the skill while experts typically
-lack the time to audit source code, which is why trust and reputation still
-matter.  The Tor Project enjoyed a lot of trust among our interview
-participants, which, admittedly, comes as no surprise because we recruited our
-interviewees from Tor-friendly social media and an Internet freedom event:
-\textquote[P08]{Because [they]\dots have the sort of\dots not a monopoly on
-trust, but [they] have like a really great brand name when it comes to this
-stuff\dots}
+\subsection{Onion services perceived to be safe}
+\label{sec:perception}
 
 While the work of Tor developers is often held in high esteem, the content that
 is hosted on onion services is perceived very differently.  Upon being told what
-an onion service is, one participant sought clarification:
-\textquote[P03]{So it's like the Hidden Wiki and stuff like that, where you can
-buy drugs and\dots or supposedly.}
+an onion service is, one participant sought clarification: \textquote[P03]{So
+it's like the Hidden Wiki and stuff like that, where you can buy drugs and\dots
+or supposedly.}
 
 \hyperref[q6_3]{Questions 6.3} and \hyperref[q6_5]{6.5} asked how safe our
 respondents feel when using Tor Browser and onion services, respectively.
@@ -72,220 +34,22 @@ when using onion services---clearly not as many as for Tor Browser.
 Asked about why our respondents feel that way about Tor Browser, our results
 reveal that non-experts lack the ability to evaluate (or even understand) Tor's
 design which is why they defer to expert opinion, their gut feeling, or the
-trust they place in Tor developers.  Users perceive The Tor Project to take
-security and privacy more seriously than any other browser vendor, which is
-appreciated among our respondents.  Most of our respondents' criticism focused
-not on Tor Browser but on the underlying Firefox code base.  Many participants
-were unhappy with Firefox's exploit mitigation techniques, the lack of
-sandboxing, and the complex code base.  Chrome was sometimes brought up as the
-gold standard for browser security.\footnote{Note that we conducted our survey
-before Mozilla released Firefox Quantum on November 14, 2017, which brought
-substantial improvements in both security and usability~\cite{firefox-quantum}.}
-Malicious exit relays were a concern for a handful of participants while another
-couple of participants were concerned that their use of Tor makes them stick out
-and turns them into targets for government agencies.  Tor Browser comes with
-modules that disguise the fact that one is using Tor, but a standard Tor
-connection does not use these modules, making it easy to identify for Internet
-service providers~\cite{pluggable}.  One interview participant worried:
-\textquote[P03]{I guess you could put yourself on some kind of watch lists, that
-you are a person of interest, just because you're using [Tor].}
+trust they place in Tor developers.  With respect to onion services, the
+majority expressed that the added security and anonymity makes them feel safe.
+Another factor contributing to the perceived security is that advertising
+companies are nowhere near as present on onion services as they are on the web.
+Orthogonal to the technology, many participants voiced concern about illegal and
+questionable content on onion services, described by some as a ``Wild West.''
+Phishing sites, honeypots, and compromised onion sites further contribute to
+this perception.
 
-Some survey respondents were not sure if their Tor setup works properly---a
-common theme that we also noticed in our interviews: Non-technical users desire
-visual feedback confirming that their network traffic comes out ``somewhere
-else,'' a point that we will elaborate on in \Cref{sec:under-the-hood}.
+\subsection{Onion service usage varies}
 
-With respect to onion services, the majority expressed that the added security
-and anonymity makes them feel safe.  Another factor contributing to the
-perceived security is that advertising companies are nowhere near as present on
-onion services as they are on the web.  Orthogonal to the technology, many
-participants voiced concern about illegal and questionable content on onion
-services, described by some as a ``Wild West.''  Phishing sites, honeypots, and
-compromised onion sites further contribute to this perception.
-
-\subsection{Tor Browser usage}
-
-Our survey started with two questions about how often our respondents use Tor
-Browser.  The results are illustrated in \Cref{fig:tor-usage}.  Almost half of
-our participants use Tor Browser either daily or even as their main browser.
-Both Gallagher \ea~\cite[\S~4.3.2]{Gallagher2017a} and our interview data
-suggests that non-experts frequently use Tor for specific tasks but do not embed
-it in their daily workflow:
-
-\begin{displayquote}[P07]
-Right now, I use it very little, just because I don't have a lot of reasons to,
-because of the fact that I have other security practices that do the trick for
-the kind of work that I do.
-\end{displayquote}
-
-\begin{figure}[t]
-    \centering
-    \input{figures/tor-usage.tex}
-    \caption{The usage frequency of Tor Browser among our respondents, almost
-    half of whom use Tor Browser either daily or as their main browser.}
-    \label{fig:tor-usage}
-\end{figure}
-
-\Cref{fig:tor-threats} illustrates what entities our respondents seek to protect
-themselves from when using Tor Browser.  The majority want to protect themselves
-from ad companies, governments, and most prominently, their \textsc{isp}s.
-More tangible entities such as family, employers, and schools are less prevalent.
-People who selected ``Other'' gave a variety of responses.  A number of respondents
-specifically pointed out Google and Facebook.  \textsc{isp}s, backbone
-\textsc{isp}s, and web sites were another common theme.  A number of respondents
-are struggling with personal threats that include identity theft, targeted
-harassment, and stalking.  Research is another common theme: Several respondents
-want to learn about a topic without revealing their interest in it.  Some
-respondents use Tor for search engine optimization, computer security research,
-and to research medical conditions.  Finally, Tor has use cases that do not
-involve a threat actor.  Some respondents want IPv6 connectivity, evasion of
-geographical content restrictions, and access to onion services.  One respondent
-stated that they do not need anonymity themselves but use Tor to provide cover
-traffic for ``people who need protection.''
-
-
-\begin{figure}[t]
-    \centering
-    \input{figures/tor-threats.tex}
-    \caption{The threat actors that our respondents seek to protect themselves
-    from by using Tor Browser.}
-    \label{fig:tor-threats}
-\end{figure}
-
-\subsubsection{Users enjoy a look ``under the hood''}
-\label{sec:under-the-hood}
-
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=\linewidth]{figures/tor-button-screenshot.jpg}
-    \caption{A click on the onion icon reveals the Tor relays that constitute
-    the circuit that was used to fetch the current page.  As of February 2018,
-    the user interface is subject to a redesign~\cite{trac24309}.}
-    \label{fig:tor-button}
-\end{figure}
-
-By clicking on the onion icon in the top left corner of Tor Browser (see
-\Cref{fig:tor-button}), one can see the circuit that is used for the current web
-site.  Some of our interviewees appreciated this visual feedback:
-\textquote[P08]{I love how I can monitor the network through this little kind of
-bar that comes up.}
-
-Not satisfied with seeing only the current circuit, some participants wished it
-were easier to learn what else is happening behind the scenes:
-
-\begin{displayquote}[P02]
-{[It]} would be nice to have some kind of application, something on that browser,
-that gives you an impression of\dots what the Tor Browser's actually doing.
-\end{displayquote}
-
-Finding the right balance between what information to show and what to hide is
-challenging in itself and only exacerbated by Tor's heterogeneous user base.
-While technical users may appreciate a look ``under the hood,'' non-technical
-users, who often use Tor as a tool to get a specific job done, can easily feel
-bewildered and overwhelmed.  One aspect, however, in which more transparency could
-benefit Tor's entire user base is when web sites do not load, as suggested by
-one participant:
-
-\begin{displayquote}[P05]
-\dots maybe some sort of graphical representation of is the circuit still
-being built, or is the circuit built, and the site isn't responding at all to
-the third relay?
-\end{displayquote}
-
-\subsubsection{Quantifying anonymity is hard}
-
-The degree of anonymity that protects a Tor user in a given situation depends on
-a number of variables including her guard relay, intermediate autonomous systems
-on the network path, and other people that are using Tor at the same time, just
-to name a few.  Unlike the \textsc{jap} anonymity tool~\cite{jap}, Tor Browser
-makes no attempt to display the degree of anonymity it believes it can provide.
-Asked about how well Tor works for them, one of our participants explained:
-\textquote[P12]{In terms of the anonymity, you can't really tell\dots That's
-fairly opaque, so I can't even tell how effective that's working, or whether it
-is\dots}
-
-Quantifying anonymity in a real-world setting is complex, error-prone, and often
-misleading.  What is more, Tor Browser does not have available all the data it
-needs to quantify its user's anonymity---an ``anonymity meter'' may therefore
-create more problems than it solves.
-
-\subsubsection{\textsc{Ui}, speed, and \textsc{captcha}s remain frustrating}
-
-Perhaps the most prevalent usability issue is, still, browsing speed.  An
-interviewee provided the following anecdote:
-
-\begin{displayquote}[P01]
-The speed of it is problematic; sometimes I have a path that allows me to watch
-full \textsc{hd} YouTube videos, and the next time, five minutes later, I'm
-barely getting kilobytes through.
-\end{displayquote}
-
-Occasionally, Tor is preceded by its reputation, preparing users for what to
-expect, as another interview participant reported that \textquote{People said it
-would be a much slower experience but\ldots a little bit slower, but it didn't
-matter for the things that I was doing.}
-
-In addition to the perceived slowness, several participants lamented the
-old-fashioned user interface, describing Tor Browser's looks as ``it felt like
-it was about five years outdated,'' ``it looked like I was in 1982,'' and ``I
-think the colors look a bit old fashioned and in the former Soviet Union.'' To
-our surprise, one participant expressed that the antiquated user interface also
-evoked trust:
-
-\begin{displayquote}[P02]
-At the same time I thought\ldots it gave them a certain amount of credibility,
-like they weren't building this for the looks, but they were building it for
-functionality\ldots  At the same time, as I thought it was outdated in terms of
-how it looked, I also thought it was sort of genuine in a way.
-\end{displayquote}
-
-Orthogonal to Tor's speed and user interface, the browsing experience
-occasionally suffers.  Relying on naive, \textsc{ip} address-based metrics of
-``maliciousness,'' some content delivery networks such as Cloudflare label Tor
-exit relays as malicious which results in Tor users' having to solve (sometimes
-multiple) \textsc{captcha}s before being granted access to a web site.  In 2016,
-Khattak \ea\ documented the issue for a number of content
-providers~\cite{Khattak2016a}.  Both our survey and interview participants
-brought up the topic and one person managed to depict the issue without the use
-of profanity:
-
-\begin{displayquote}[P06]
-It is still sometimes challenging using some everyday services because of
-\textsc{captcha}s and those things, but I also understand that's not so much to
-do with Tor, but to do with the creators of those web sites.
-\end{displayquote}
-
-\subsubsection{Empowerment through security and privacy}
-
-It comes as no surprise that our data reveals that the main benefit of Tor
-Browser is the increase in privacy and security, brought up by practically all
-of our interview participants.  One of our more technical interviewees (and
-several of our survey respondents) further distinguished between security and
-privacy.  Asked about if they feel safer when using Tor, they responded:
-
-\begin{displayquote}[P06]
-In a privacy sense, I do. In a security sense\ldots I don't assume that Tor is
-protecting me from all of the vulnerabilities or exploits that I might
-encounter\ldots
-\end{displayquote}
-
-Besides the obvious improvement in security and privacy, a defining aspect of
-Tor is that it puts users back in control, or, as one of our participants
-eloquently phrased it:
-
-\begin{displayquote}[P02]
-I feel like I'm more in control of my internet experience that way, I'm not sort
-of like a will-less victim of what other people want to do with me, so I feel
-I'm more empowered and have more agency when I use the Tor Browser.
-\end{displayquote}
-
-\subsection{Onion service usage}
-
-We now move on to results specific to onion services, the focus of our online
-survey.  The usage frequency of onion services is almost uniformly distributed
-among our respondents; 24\% use onion sites less than once a month, 22\% use
-them about monthly, 25\% weekly, and 23\% daily.  The remaining 6\% has never
-used an onion service before.
+\hyperref[q2_2]{Question 2.2} asked about how often our respondents browse onion
+services.  The usage frequency is almost uniformly distributed among our
+respondents; 24\% use onion sites less than once a month, 22\% use them about
+monthly, 25\% weekly, and 23\% daily.  The remaining 6\% has never used an onion
+service before.
 
 The majority of our respondents (61.8\%) have used onion services for purposes
 other than web browsing before.  Several protocols, such as the chat application
@@ -318,7 +82,7 @@ technical research, and to access sites that are otherwise unavailable.
     \label{fig:onion-usage}
 \end{figure}
 
-\subsubsection{Mental models are often patchy}
+\subsection{Mental models are often patchy}
 \label{sec:mental-models}
 
 Recall that we asked our interview participants to draw sketches of Tor and
@@ -397,7 +161,8 @@ opinion was voiced by a different survey respondent: \textquote{These people who
 created their onion name using scallion or other tools should notice that other
 people can make same private key.}
 
-\subsubsection{Makeshift solutions ease onion service discovery}
+\subsection{Makeshift solutions ease onion service discovery}
+\label{sec:discovery}
 
 Recall that a freshly set up onion service is private by default, leaving it up
 to its operator to disseminate the domain.  Established search engines such as
@@ -453,7 +218,7 @@ example.com list its onion service prominently in a footer.  Ironically, some
 respondents were surprised that torproject.org has a corresponding onion
 site---they could not find it on the web site.
 
-\subsubsection{Onion domain management is problematic}
+\subsection{Onion domain management is problematic}
 
 Conventional domains are designed to be easy to remember and recognize.  But how
 do users handle randomly-generated onion domains?  Our survey
@@ -530,7 +295,7 @@ People who selected ``No'' mostly brought up that they treat onion domains as
 opaque identifiers and handle via tools such as bookmarks.  We conclude that the
 current state is dire, yet not expected to worsen with the new domain format.
 
-\subsubsection{Onion services as popular alternatives}
+\subsection{Onion services as popular alternatives}
 
 \hyperref[q3_17]{Question 3.17} asked respondents if popular web sites such as
 YouTube, Twitter, or Amazon offered onion sites in parallel to their normal web
@@ -561,7 +326,8 @@ We conclude that there is clear interest in such an ``upgrade'' feature provided
 that it is carefully designed and offers users an option to control the process
 on a per-site basis.
 
-\subsubsection{Onion services have many use cases}
+\subsection{Onion services have many use cases}
+\label{sec:operation}
 
 A question block on onion service operation inquired about the motivation for
 running an onion service and what sort of issues operators encounter in the
@@ -609,7 +375,7 @@ these issues in 2015~\cite{Matic2015a}.
     \label{fig:onion-operation-concerns}
 \end{figure}
 
-\subsubsection{Vanity domains are a double-edged sword}
+\subsection{Vanity domains are a double-edged sword}
 
 Phishing remains an issue despite onion services' extra anonymity and security
 properties.  Past work has documented phishing onion sites that transparently
