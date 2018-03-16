@@ -32,16 +32,16 @@ when using onion services---clearly not as many as for Tor Browser.
 \end{figure}
 
 Asked about why our respondents feel that way about Tor Browser, our results
-reveal that non-experts lack the ability to evaluate (or even understand) Tor's
-design which is why they defer to expert opinion, their gut feeling, or the
-trust they place in Tor developers.  With respect to onion services, the
-majority expressed that the added security and anonymity makes them feel safe.
-Another factor contributing to the perceived security is that advertising
-companies are nowhere near as present on onion services as they are on the web.
-Orthogonal to the technology, many participants voiced concern about illegal and
-questionable content on onion services, described by some as a ``Wild West.''
-Phishing sites, honeypots, and compromised onion sites further contribute to
-this perception.
+reveal that non-experts lack the ability to evaluate (or even understand) the
+Tor network's design which is why they defer to expert opinion, their gut
+feeling, or the trust they place in Tor developers.  With respect to onion
+services, the majority expressed that the added security and anonymity makes
+them feel safe.  Another factor contributing to the perceived security is that
+advertising companies are nowhere near as present on onion services as they are
+on the web.  Orthogonal to the technology, many participants voiced concern
+about illegal and questionable content on onion services, described by some as a
+``Wild West.'' Phishing sites, honeypots, and compromised onion sites further
+contribute to this perception.
 
 \subsection{Onion service usage varies}
 
@@ -85,21 +85,21 @@ technical research, and to access sites that are otherwise unavailable.
 \subsection{Mental models are often patchy}
 \label{sec:mental-models}
 
-Recall that we asked our interview participants to draw sketches of Tor and
-onion services.\footnote{All sketches are available online at
+Recall that we asked our interview participants to draw sketches of the Tor
+network and onion services.\footnote{All sketches are available online at
 \url{https://nymity.ch/onion-services/mental-models/}.}  Everybody drew a
-sketch of Tor but not all drew onion services because they had not experienced
-them.  Interestingly, all participants understood that key to Tor's anonymity is
-the bouncing of network traffic across several relays, as evidenced by
-\Cref{fig:tor-sketch}, drawn by a participant with no technical
-background.\footnote{However, the sketch got two details wrong: the number of
-hops in a Tor circuit is three, and the circuit's forward and reverse path are
-identical.} Analogously, most of our participants understood that network
-traffic does not leave the Tor network when connecting to onion services.
-\Cref{fig:os-sketch} illustrates an example, again drawn by a non-technical
-participant.  The last hop in the circuit is an onion, correctly suggesting that
-network traffic does not leave the Tor network, albeit the number of hops is
-incorrect.
+sketch of the Tor network but not all drew onion services because they had not
+experienced them.  Interestingly, all participants understood that key to the
+Tor network's anonymity is the bouncing of network traffic across several
+relays, as evidenced by \Cref{fig:tor-sketch}, drawn by a participant with no
+technical background.\footnote{However, the sketch got two details wrong: the
+number of hops in a Tor circuit is three, and the circuit's forward and reverse
+path are identical.} Analogously, most of our participants understood that
+network traffic does not leave the Tor network when connecting to onion
+services.  \Cref{fig:os-sketch} illustrates an example, again drawn by a
+non-technical participant.  The last hop in the circuit is an onion, correctly
+suggesting that network traffic does not leave the Tor network, albeit the
+number of hops is incorrect.
 
 \begin{figure}[t]
     \centering
@@ -108,8 +108,8 @@ incorrect.
         \centering
         \includegraphics[width=0.8\linewidth]{figures/tor-sketch.jpg}
         \subcaption{A non-technical interview subject's (P08) sketch of how they
-        believe Tor works.  The participant correctly understands the concept of
-        bouncing network traffic over several hops.}
+        believe the Tor network works.  The participant correctly understands
+        the concept of bouncing network traffic over several hops.}
         \label{fig:tor-sketch}
     \end{subfigure}
 
@@ -123,14 +123,14 @@ incorrect.
     \end{subfigure}
 
     \caption{Sketches of two different, non-technical interview participants of
-    how Tor works (top) and how onion services work (bottom).}
+    how the Tor network works (top) and how onion services work (bottom).}
 \end{figure}
 
 Some of our interviewees did not distinguish disguising their \textsc{ip}
 address from disguising their real-world identity and instead used the umbrella
 term of ``anonymity'' to refer to both concepts.  This conflation of concepts
-paints an incomplete picture of the security and privacy guarantees that Tor
-provides, further illustrated by one participant's question:
+paints an incomplete picture of the security and privacy guarantees that the Tor
+network provides, further illustrated by one participant's question:
 \textquote[P07]{What's the point of going to Facebook using onion services when
 their business model is still about collecting your data?}
 
@@ -156,10 +156,10 @@ name.
 Accordingly, these users also believe that vanity domains are ``less anonymous''
 because part of their domains is clearly not random.  A survey participant
 further wrote: \textquote{I understand vanity onion domains are a sign of the
-weakness of the hash algorithm used by Tor.}  An unrelated yet equally incorrect
-opinion was voiced by a different survey respondent: \textquote{These people who
-created their onion name using scallion or other tools should notice that other
-people can make same private key.}
+weakness of the hash algorithm used by the Tor network.}  An unrelated yet
+equally incorrect opinion was voiced by a different survey respondent:
+\textquote{These people who created their onion name using scallion or other
+tools should notice that other people can make same private key.}
 
 \subsection{Makeshift solutions ease onion service discovery}
 \label{sec:discovery}
@@ -435,11 +435,12 @@ The majority of our respondents appreciate vanity domains because they are easy
 to remember (64\%) and easy to recognize (64\%), and they provide a unique
 ``branding'' (34\%).  Some respondents indicate that a vanity prefix---like a
 traditional domain---informs about an onion service's content, letting visitors
-know what to expect and thus preventing unpleasant surprises.  Only 8\% dislike vanity
-onion domains, and 15\% do not have an opinion.  Interestingly, some respondents
-consider vanity domains economically unfair because wealthy entities can afford
-to generate longer prefixes.  Several respondents also voiced their concern that
-vanity domains create a false sense of security and facilitate phishing attacks.
+know what to expect and thus preventing unpleasant surprises.  Only 8\% dislike
+vanity onion domains, and 15\% do not have an opinion.  Interestingly, some
+respondents consider vanity domains economically unfair because wealthy entities
+can afford to generate longer prefixes.  Several respondents also voiced their
+concern that vanity domains create a false sense of security and facilitate
+phishing attacks.
 
 In a separate question, we inquired how many characters our respondents verify in
 onion domains.  43\% verify thirteen to sixteen digits, \ie, (almost) the full
