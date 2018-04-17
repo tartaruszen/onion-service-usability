@@ -2,13 +2,13 @@
 \label{sec:results}
 
 We organize the presentation of our findings by topic, including how users
-\emph{perceive} (\Cref{sec:perception}), \emph{manage} (\Cref{sec:manage}),
-and \emph{wish to improve} (\Cref{sec:improve}) onion services.  We interleave the
+\emph{perceive} (\Cref{sec:perception}), \emph{discover} (\Cref{sec:discovery}),
+and \emph{operate} (\Cref{sec:operation}) onion services.  We interleave the
 results from our online survey with our interviews, focusing primarily on our
 survey data but bringing up anecdotes and findings from our interviews as
 appropriate.
 
-\subsection{User Perceptions of Onion Services}
+\subsection{Onion services perceived to be safe}
 \label{sec:perception}
 
 While the work of Tor developers is often held in high esteem, the content that
@@ -42,6 +42,8 @@ on the web.  Orthogonal to the technology, many participants voiced concern
 about illegal and questionable content on onion services, described by some as a
 ``Wild West.'' Phishing sites, honeypots, and compromised onion sites further
 contribute to this perception.
+
+\subsection{Onion service usage varies}
 
 \hyperref[q2_2]{Question 2.2} asked about how often our respondents browse onion
 services.  The usage frequency is almost uniformly distributed among our
@@ -79,6 +81,9 @@ technical research, and to access sites that are otherwise unavailable.
     services.}
     \label{fig:onion-usage}
 \end{figure}
+
+\subsection{Mental models are often patchy}
+\label{sec:mental-models}
 
 Recall that we asked our interview participants to draw sketches of the Tor
 network and onion services.\footnote{All sketches are available online at
@@ -156,35 +161,8 @@ equally incorrect opinion was voiced by a different survey respondent:
 \textquote{These people who created their onion name using scallion or other
 tools should notice that other people can make same private key.}
 
-A question block on onion service operation inquired about the motivation for
-running an onion service and what sort of issues operators encounter in the
-process.  40\% of our respondents once set up an onion service.  Among the
-respondents who never have, 31\% have considered doing so while 30\% have never
-considered it.  Interestingly, 79\% of operators have run an onion service for
-private use while 53\% have run them for the public.
-
-\Cref{fig:onion-operation-reasons} gives an overview of the reasons our
-respondents have for running onion services.  Interestingly, the extra security
-properties outweigh the anonymity properties of onion services.  Another popular
-motivation is \textsc{nat} traversal---many respondents noted that onion
-services allow them to expose a \textsc{tcp} service in their home network
-despite being behind a \textsc{nat} device.  Finally, some people run onion
-services indirectly because third-party tools such as
-OnionShare~\cite{onionshare} or Ricochet~\cite{ricochet} are built on top of
-them.  A survey respondent gave the following reason for running onion services:
-\textquote{We use it for delivering updates to our router to customers securely
-and without leaking metadata.}
-
-\begin{figure}[t]
-    \centering
-    \input{figures/onion-operation-reasons.tex}
-    \caption{The (multiple-choice) reasons our respondents have for running
-    onion services.}
-    \label{fig:onion-operation-reasons}
-\end{figure}
-
-\subsection{Onion Service Discovery \& Management}
-\label{sec:manage}
+\subsection{Makeshift solutions ease onion service discovery}
+\label{sec:discovery}
 
 Recall that a freshly set up onion service is private by default, leaving it up
 to its operator to disseminate the domain.  Established search engines such as
@@ -239,6 +217,8 @@ example.com has a corresponding onion service.  A common wish was to have
 example.com list its onion service prominently in a footer.  Ironically, some
 respondents were surprised that torproject.org has a corresponding onion
 site---they could not find it on the web site.
+
+\subsection{Onion domain management is problematic}
 
 Conventional domains are designed to be easy to remember and recognize.  But how
 do users handle randomly-generated onion domains?  Our survey
@@ -315,69 +295,7 @@ People who selected ``No'' mostly brought up that they treat onion domains as
 opaque identifiers and handle via tools such as bookmarks.  We conclude that the
 current state is dire, yet not expected to worsen with the new domain format.
 
-\Cref{fig:onion-operation-concerns} illustrates the concerns that onion service
-operators experience.  We consider three attacks; \first~somebody setting up a
-phishing site for the operator's site, \second~a denial-of-service attack, and
-\third~a deanonymization attack.  More than half of our respondents are at least
-somewhat concerned about all of these attacks.  Almost 40\% claim to be
-extremely concerned about somebody deanonymizing their onion service.  Indeed,
-many respondents lamented the difficulty of protecting onion services from
-application-layer deanonymization attacks.  Matic \ea\ demonstrated some of
-these issues in 2015~\cite{Matic2015a}.
-
-\begin{figure}[t]
-    \centering
-    \input{figures/onion-operation-concerns.tex}
-    \caption{The level of concern onion service operators have with respect to a
-    phishing clone of their service, denial-of-service attacks, and
-    deanonymization.}
-    \label{fig:onion-operation-concerns}
-\end{figure}
-
-We asked our respondents if they ever thought about the authenticity of an onion
-site.  The majority of our respondents (80\%) did while 20\% did not.  Clearly,
-there is a need for verification, but how does one verify that an onion service
-is authentic?  \Cref{fig:determining-legitimacy} gives an overview of the
-strategies that our respondents employ.  More than half either consult trusted
-sources (\eg, friends or another, trusted web site) or use bookmarks when
-revisiting onion services.  Many respondents also verify the domain in the
-browser's address bar (46\%), check if the corresponding web site has a link to
-its onion site (41\%), or hope that the onion service has an \textsc{https}
-certificate (36\%).\footnote{DigiCert is issuing \textsc{ev} certificates for
-onion sites~\cite{DigiCert2015a}, but adoption has been slow---presumably in part
-because \textsc{ev} certificates require the \textsc{ca} to verify the
-applicant's identity and they are not free.}  Alarmingly, almost 30\% of
-respondents stated that they sometimes cannot tell the difference between an
-authentic service and an impersonation, and 11\% never check a service's
-legitimacy in the first place.  People who selected ``Other'' provided a wide
-variety of ad-hoc phishing protections, some of which are clearly misguided,
-further highlighting the importance of this issue.
-
-\begin{figure}[t]
-    \centering
-    \input{figures/determining-legitimacy.tex}
-    \caption{How our respondents determine an onion service's legitimacy.}
-    \label{fig:determining-legitimacy}
-\end{figure}
-
-The majority of our respondents appreciate vanity domains because they are easy
-to remember (64\%) and easy to recognize (64\%), and they provide a unique
-``branding'' (34\%).  Some respondents indicate that a vanity prefix---like a
-traditional domain---informs about an onion service's content, letting visitors
-know what to expect and thus preventing unpleasant surprises.  Only 8\% dislike
-vanity onion domains, and 15\% do not have an opinion.  Interestingly, some
-respondents consider vanity domains economically unfair because wealthy entities
-can afford to generate longer prefixes.  Several respondents also voiced their
-concern that vanity domains create a false sense of security and facilitate
-phishing attacks.
-
-In a separate question, we inquired how many characters our respondents verify in
-onion domains.  43\% verify thirteen to sixteen digits, \ie, (almost) the full
-domain, while 46\% verify up to nine digits, which is within the realm of brute
-force attacks.
-
-\subsection{Onion Service Issues \& Improvements}
-\label{sec:improve}
+\subsection{Onion services as popular alternatives}
 
 \hyperref[q3_17]{Question 3.17} asked respondents if popular web sites such as
 YouTube, Twitter, or Amazon offered onion sites in parallel to their normal web
@@ -408,6 +326,57 @@ We conclude that there is clear interest in such an ``upgrade'' feature provided
 that it is carefully designed and offers users an option to control the process
 on a per-site basis.
 
+\subsection{Onion services have many use cases}
+\label{sec:operation}
+
+A question block on onion service operation inquired about the motivation for
+running an onion service and what sort of issues operators encounter in the
+process.  40\% of our respondents once set up an onion service.  Among the
+respondents who never have, 31\% have considered doing so while 30\% have never
+considered it.  Interestingly, 79\% of operators have run an onion service for
+private use while 53\% have run them for the public.
+
+\Cref{fig:onion-operation-reasons} gives an overview of the reasons our
+respondents have for running onion services.  Interestingly, the extra security
+properties outweigh the anonymity properties of onion services.  Another popular
+motivation is \textsc{nat} traversal---many respondents noted that onion
+services allow them to expose a \textsc{tcp} service in their home network
+despite being behind a \textsc{nat} device.  Finally, some people run onion
+services indirectly because third-party tools such as
+OnionShare~\cite{onionshare} or Ricochet~\cite{ricochet} are built on top of
+them.  A survey respondent gave the following reason for running onion services:
+\textquote{We use it for delivering updates to our router to customers securely
+and without leaking metadata.}
+
+\begin{figure}[t]
+    \centering
+    \input{figures/onion-operation-reasons.tex}
+    \caption{The (multiple-choice) reasons our respondents have for running
+    onion services.}
+    \label{fig:onion-operation-reasons}
+\end{figure}
+
+\Cref{fig:onion-operation-concerns} illustrates the concerns that onion service
+operators experience.  We consider three attacks; \first~somebody setting up a
+phishing site for the operator's site, \second~a denial-of-service attack, and
+\third~a deanonymization attack.  More than half of our respondents are at least
+somewhat concerned about all of these attacks.  Almost 40\% claim to be
+extremely concerned about somebody deanonymizing their onion service.  Indeed,
+many respondents lamented the difficulty of protecting onion services from
+application-layer deanonymization attacks.  Matic \ea\ demonstrated some of
+these issues in 2015~\cite{Matic2015a}.
+
+\begin{figure}[t]
+    \centering
+    \input{figures/onion-operation-concerns.tex}
+    \caption{The level of concern onion service operators have with respect to a
+    phishing clone of their service, denial-of-service attacks, and
+    deanonymization.}
+    \label{fig:onion-operation-concerns}
+\end{figure}
+
+\subsection{Vanity domains: a double-edged sword}
+
 Phishing remains an issue despite onion services' extra anonymity and security
 properties.  Past work has documented phishing onion sites that transparently
 rewrote Bitcoin addresses to hijack Bitcoin
@@ -417,6 +386,32 @@ For conventional domains we rely on (\textsc{ev}) certificates, browser
 protections, search results, and long-lived reputation, but none of these
 methods have matured for onion services.  Does the nature of onion services
 facilitate phishing attacks?  If so, what can we do to mitigate the issue?
+
+We asked our respondents if they ever thought about the authenticity of an onion
+site.  The majority of our respondents (80\%) did while 20\% did not.  Clearly,
+there is a need for verification, but how does one verify that an onion service
+is authentic?  \Cref{fig:determining-legitimacy} gives an overview of the
+strategies that our respondents employ.  More than half either consult trusted
+sources (\eg, friends or another, trusted web site) or use bookmarks when
+revisiting onion services.  Many respondents also verify the domain in the
+browser's address bar (46\%), check if the corresponding web site has a link to
+its onion site (41\%), or hope that the onion service has an \textsc{https}
+certificate (36\%).\footnote{DigiCert is issuing \textsc{ev} certificates for
+onion sites~\cite{DigiCert2015a}, but adoption has been slow---presumably in part
+because \textsc{ev} certificates require the \textsc{ca} to verify the
+applicant's identity and they are not free.}  Alarmingly, almost 30\% of
+respondents stated that they sometimes cannot tell the difference between an
+authentic service and an impersonation, and 11\% never check a service's
+legitimacy in the first place.  People who selected ``Other'' provided a wide
+variety of ad-hoc phishing protections, some of which are clearly misguided,
+further highlighting the importance of this issue.
+
+\begin{figure}[t]
+    \centering
+    \input{figures/determining-legitimacy.tex}
+    \caption{How our respondents determine an onion service's legitimacy.}
+    \label{fig:determining-legitimacy}
+\end{figure}
 
 Originally meant to provide ``branding'' for an onion service, vanity onion
 domains also play a role in the context of phishing.  There is concern that the
@@ -435,3 +430,19 @@ impersonation domain that features the original's prefix but differs in
 subsequent characters.  Nurmi~\cite{Nurmi2015a} and
 Monteiro~\cite{Monteiro2016a} have both documented such an attack, but its
 effectiveness is not known.
+
+The majority of our respondents appreciate vanity domains because they are easy
+to remember (64\%) and easy to recognize (64\%), and they provide a unique
+``branding'' (34\%).  Some respondents indicate that a vanity prefix---like a
+traditional domain---informs about an onion service's content, letting visitors
+know what to expect and thus preventing unpleasant surprises.  Only 8\% dislike
+vanity onion domains, and 15\% do not have an opinion.  Interestingly, some
+respondents consider vanity domains economically unfair because wealthy entities
+can afford to generate longer prefixes.  Several respondents also voiced their
+concern that vanity domains create a false sense of security and facilitate
+phishing attacks.
+
+In a separate question, we inquired how many characters our respondents verify in
+onion domains.  43\% verify thirteen to sixteen digits, \ie, (almost) the full
+domain, while 46\% verify up to nine digits, which is within the realm of brute
+force attacks.
