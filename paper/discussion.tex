@@ -60,6 +60,15 @@ evaluation of the circuit display could reveal user misunderstandings.  For
 example, some users are not familiar with the concept of guard relays and
 incorrectly expect each relay in their circuit to change.
 
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/tor-button-screenshot.jpg}
+    \caption{A click on the onion icon reveals the Tor relays that constitute
+    the circuit that was used to fetch the current page.  As of February 2018,
+    the user interface is subject to a redesign~\cite{trac24309}.}
+    \label{fig:tor-button}
+\end{figure}
+
 Our survey results suggest that there is a need for a system that automates
 onion service discovery, \eg, by providing an opt-in mechanism that
 automatically publishes onion domains in a public log, allowing users to learn
