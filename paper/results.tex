@@ -23,11 +23,11 @@ sketch of the Tor network but not all drew onion services because they had not
 experienced them. \mc{how many were in each category?}  Interestingly, all participants understood that key to the
 Tor network's anonymity is the bouncing of network traffic across several
 relays, as evidenced by \Cref{fig:tor-sketch}, drawn by a participant with no
-technical background.\footnote{However, the sketch got two details wrong: the
+technical background.\footnote{However, the sketch is incorrect in two places: the
 number of hops in a Tor circuit is three, and the circuit's forward and reverse
 path are identical.} Analogously, most of our participants understood that
 network traffic does not leave the Tor network when connecting to onion
-services.  \Cref{fig:os-sketch} illustrates an example, again drawn by a
+services. By contrast, \Cref{fig:os-sketch} illustrates an example of a participants' understanding of an onion serice, again drawn by a
 non-technical participant.  The last hop in the circuit is an onion, correctly
 suggesting that network traffic does not leave the Tor network, albeit the
 number of hops is incorrect.
@@ -65,7 +65,7 @@ network provides, further illustrated by one participant's question:
 \textquote[P07]{What's the point of going to Facebook using onion services when
 their business model is still about collecting your data?}
 
-There is merit in using Facebook's onion service.  While the company indeed
+Many of our \mc{how many} interview participants were unaware of the merit in using Facebook's onion service. For instance, interview participants did not realize that while the company indeed
 knows who is logging in, it does not know Tor users' \textsc{ip} address (and
 hence location) or operating system.  On top of that, onion services provide
 end-to-end security and self-authenticating names.  Syverson and Boyce took a
@@ -73,6 +73,7 @@ step back and looked at how onion services can improve website
 authentication~\cite{Syverson2015a}.  These benefits are difficult to convey to
 non-technical users, and even experts sometimes advocate an ``all or nothing''
 approach to online anonymity, overlooking important nuances.
+
 \subsubsection{Onion Services Do Not Make Users Feel Safer}
 In our survey, we asked how safe our
 respondents feel when using Tor Browser and onion services, respectively.
@@ -87,7 +88,7 @@ respondents feel when using Tor Browser and onion services, respectively.
     \label{fig:perceived-security}
 \end{figure}
 
-Our survey responses indicated that  non-experts lack the ability to evaluate (or even understand) the
+Our survey responses indicated that our participants, many of whom were non-experts, lacked the ability to evaluate (or even understand) the
 Tor network's design which is why they defer to expert opinion, their gut
 feeling, or the trust they place in Tor developers.  With respect to onion
 services, the majority of survey respondents expressed that the added security and anonymity makes
@@ -99,32 +100,32 @@ about illegal and questionable content on onion services, described by some as a
 contribute to this perception.
 
 \subsubsection{Onion Services Used For Purposes Other Than Web Browsing}
-In the survey we asked about how often our respondents browse onion
-services.  The usage frequency is almost uniformly distributed among our survey
+In the survey, we asked about how often our respondents browse onion
+services.  The usage frequency was almost uniformly distributed among our survey
 respondents; 24\% use onion sites less than once a month, 22\% use them about
 monthly, 25\% weekly, and 23\% daily.  The remaining 6\% has never used an onion
 service before.
 
-The majority of our respondents (61.8\%) have used onion services for purposes
+The majority of our survey respondents (61.8\%) had used onion services for purposes
 other than web browsing before.  Several protocols, such as the chat application
 Ricochet~\cite{ricochet} and the file sharing application
 OnionShare~\cite{onionshare}, were purpose-built on top of onion services while
 existing \textsc{tcp}-based tools, such as \textsc{ssh}, can transparently use
 onion addresses instead of traditional \textsc{ip} addresses.  Almost one third
-(29.7\%) of our participants use onion services for non-browsing activities at
-least once a week.
+(29.7\%) of our participants used onion services for non-browsing activities at
+least once a week. \mc{do we know what these were?}
 
-The majority of our participants in the survey used onion services
+The majority of our survey participants  used onion services
 because of the additional anonymity (70\%) and the additional security (61\%) (see \Cref{fig:onion-usage}).
 For 46\% of the survey respondents, it was the only way to access content they enjoy, making the use of
 onion services a necessity.  27\% of our survey respondents wanted to learn more about
 the ``Dark Web'' and set out to satisfy their curiosity while 19\% occasionally
 stumbled upon links to onion services in their day-to-day browsing activity.
-Respondents who selected ``Other'' gave a variety of reasons, the most
+Survey respondents who selected ``Other'' gave a variety of reasons, the most
 predominant being the ability to set up a \textsc{tcp} service behind a
 \textsc{nat} device.  That makes it possible to expose an \textsc{ssh} server in
 a home network that has neither a permanent \textsc{ip} address nor port
-forwarding.  Others use onion services to reduce the load on exit relays, to do
+forwarding.  Other survey respondents reported using onion services to reduce the load on exit relays, to do
 technical research, and to access sites that are otherwise unavailable.
 
 \begin{figure}[t]
@@ -136,9 +137,9 @@ technical research, and to access sites that are otherwise unavailable.
 \end{figure}
 
 
-
-An unrelated, yet hardly unexpected, source of confusion is the domain format of
-onion services.  Some users have come to believe that the seemingly-random
+\subsubsection{Misunderstanding of onion links and anonymity}
+An unrelated, yet hardly unexpected, source of confusion amongst our survey respondents was the domain format of
+onion services.  Some users believed that the seemingly-random
 characters in onion domains are the reason why onion services are anonymous:
 
 \begin{displayquote}[Survey respondent]
@@ -147,7 +148,7 @@ feel that there is a possibility of decreased anonymity with a constant domain
 name.
 \end{displayquote}
 
-Accordingly, these users also believe that vanity domains are ``less anonymous''
+Accordingly, these users also believe that vanity domains \mc{do we explain what a vanity domain is earlier in the paper?} are ``less anonymous''
 because part of their domains is clearly not random.  A survey participant
 further wrote: \textquote{I understand vanity onion domains are a sign of the
 weakness of the hash algorithm used by the Tor network.}  An unrelated yet
@@ -155,12 +156,13 @@ equally incorrect opinion was voiced by a different survey respondent:
 \textquote{These people who created their onion name using scallion or other
 tools should notice that other people can make same private key.}
 
-A question block on onion service operation inquired about the motivation for
+\subsubsection{Reasons for Setting Up An Onion Service}
+We asked if any participants operated an onion service, including the motivation for
 running an onion service and what sort of issues operators encounter in the
-process.  40\% of our respondents once set up an onion service.  Among the
-respondents who never have, 31\% have considered doing so while 30\% have never
-considered it.  Interestingly, 79\% of operators have run an onion service for
-private use while 53\% have run them for the public.
+process.  40\% of our survey respondents had once set up an onion service sometime in the past.  Among the survey
+respondents who never had set up an onion service, 31\% have considered doing so while 30\% have never
+considered it.  Interestingly, 79\% of the survey respondents who had set up onion services of their own had run their onion service for
+private use while 53\% had run them for the public.
 
 \Cref{fig:onion-operation-reasons} gives an overview of the reasons our
 respondents have for running onion services.  Interestingly, the extra security
@@ -174,6 +176,7 @@ them.  A survey respondent gave the following reason for running onion services:
 \textquote{We use it for delivering updates to our router to customers securely
 and without leaking metadata.}
 
+\subsubsection{Onion Service Discovery}
 \begin{figure}[t]
     \centering
     \input{figures/onion-operation-reasons.tex}
