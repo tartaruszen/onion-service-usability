@@ -253,48 +253,60 @@ site---they could not find it on the web site.
 \end{figure}
 
 \subsubsection{Saving and tracking onion links is not straightforward}
-While conventional domains are designed to be easy to remember and recognize, we wanted to know how users handle randomly-generated onion domains. Most survey respondents use Tor Browser's bookmarks to save onion domains as seen in \Cref{fig:onion-domain-mgmt.  While
-convenient, it leaves a trace of (presumably) visited sites on somebody's
+While conventional domains are designed to be easy to remember and recognize, we wanted to know how users handle randomly-generated onion domains. Most survey respondents use Tor Browser's bookmarks to save onion domains as seen in \Cref{fig:onion-domain-mgmt}.  While
+convenient, this method of saving onion links leaves a trace of (presumably) visited sites on somebody's
 computer.  One of Tor Browser's security requirements is ``disk avoidance,''
 \ie, the browser must not write anything to disk that would reveal the user's
 browsing history~\cite[\S~2.1]{Perry2017a}.  Bookmarking links is a violation of
-this security requirement albeit requested by the user.  Many of our respondents
-were aware of this issue, and about a dozen respondents who selected ``Other''
+this security requirement albeit requested by the user.  Many of our survey respondents
+were aware of this issue, and about a dozen survey respondents who selected ``Other''
 stated that they store onion domains in an encrypted manner---either in a text
-file or in their password manager.  Somewhat less popular is saving onion
+file or in their password manager.  Somewhat less popular amongst our survey participants was saving onion
 domains in local text files (36\%), getting them from trusted web sites (34\%),
 using search engines (18\%), memorizing domains (16\%), using some other
-techniques (9\%), or employing pen and paper (8\%).  Notably, one quarter of our
-respondents do not have a good solution to the problem.  Given the alarming
+techniques (9\%), or employing pen and paper (8\%).  Notably, one quarter of our survey
+respondents did not have a good solution to the problem of tracking onion links.  Given the alarming
 number of (possibly insecure) home-baked solutions, a Tor Browser extension that
 solves this problem seems warranted.
 
-Of the respondents who memorize onion domains, we found that most respondents
-memorize either one onion domain (15\% of total respondents) or four onion
-domains (11\%); significantly fewer respondents memorize two domains (5\%),
-three domains (4\%), and more than four domains (1\%).  As mentioned above,
-bookmarking onion domains leaves a trace, and about 28\% of respondents said
-they memorize onion domains to prevent this digital trace.  On the other hand,
-more respondents memorize domains \first~to allow them to open the site more
-quickly (51\%), \second~to ensure that they are visiting the correct site and
-not a phishing site (44\%), and \third~automatically start to memorize domains
-because of typing it many times (60\%).
+Of the survey respondents who memorize onion domains, we found that most respondents
+memorize one to four onion domains (35\% of total respondents) but only 1\% are able to memorize more than four domains (1\%).   Survey respondents memorized domains \first~automatically start to memorize domains
+because of typing it many times (60\%)
+\second~to allow them to open the site more
+quickly (51\%), and \third~to ensure that they are visiting the correct site and
+not a phishing site (44\%). Others were privacy conscious because as mentioned above,
+bookmarking onion domains leaves a trace. These 28\% of survey respondents said
+they memorized onion domains to prevent this digital trace.
 
-Questions \hyperref[q3_12]{3.12} to \hyperref[q3_15]{3.15} asked respondents
+\subsubsection{Vanity domains are easier to memorize and track}
+The majority of our survey respondents appreciated vanity domains because they were easy
+to remember (64\%) and easy to recognize (64\%), and they provided a unique
+``branding'' (34\%).  Some survey respondents indicated that a vanity prefix---like a
+traditional domain---informs about an onion service's content, letting visitors
+know what to expect and thus preventing unpleasant surprises.  Only 8\% disliked
+vanity onion domains, and 15\% did not have an opinion.  Interestingly, some survey
+respondents consider vanity domains economically unfair because wealthy entities
+can afford to generate longer prefixes such as Facebook \mc{explain why in related work}.  Several respondents also voiced their
+concern that vanity domains create a false sense of security and facilitate
+phishing attacks. \mc{how so? can we say more}
+
+
+
+
+We asked survey respondents
 about whether or not they memorize vanity domains---specifically
 facebookcorewwwi.onion---and how difficult they find it to memorize onion
 domains of differing levels of vanity.  59\% of respondents replied that
-facebookcorewwwi.onion is among the sites that they have memorized.  This is
+facebookcorewwwi.onion is among the sites that they have memorized.  This is \mc{what are the participant or survey respondent ids for the quotes}
 because it is ``easy to memorize'' and ``after seeing [it] many times, I
-automatically start to memorize it.''  When asked about different levels of
-vanity domains, the respondents expressed differing levels of ease for
+automatically start to memorize it.'' Depending on the format of the vanity domain, our survey respondents expressed differing levels of ease for
 memorizing them; these results are shown in \Cref{fig:memorize-domains}.
 \textsc{Url}s such as expyuzz4wqqyqhjn.onion and torproz4wqqyqhjn.onion are
 harder for respondents to remember because they mention that ``numbers make the
-names harder to remember.''  Other respondents stated that domains are easier to
-remember when they can be pronounced.  One respondent described it saying
+names harder to remember.''  Other survey respondents stated that vanity domains are easier to
+remember when they can be pronounced.  One respondent described it saying \mc{need participant id}
 ``phonetic pronunciation plays a large part in how I remember onions.'' Many
-other respondents stated that onion domains that are supported by a mnemonic are
+other survey respondents stated that onion domains that are supported by a mnemonic are
 also easier to remember.  
 
 \begin{figure}[t]
@@ -305,22 +317,19 @@ also easier to remember.
     \label{fig:memorize-domains}
 \end{figure}
 
-The next question in our survey asked if our respondents expect the
-next-generation domain format to change their browsing habits.  Interestingly,
-only 17\% expect their browsing habits to change while 83\% do not.  Among the
-respondents who selected ``Yes,'' many expressed that they memorize a small
-number of onion domains (such as Facebook's), which will no longer be possible.
-People who selected ``No'' mostly brought up that they treat onion domains as
-opaque identifiers and handle via tools such as bookmarks.  We conclude that the
-current state is dire, yet not expected to worsen with the new domain format.
+Interestingly, most (83\%) of our survey participants did not expect the
+next-generation domain format to change their browsing habits because they treat onion domains as
+opaque identifiers and handle these links via tools such as bookmarks.  For the 17\% who expressed concern over the next generation domain format \mc{can we define what this is?}, they felt that they would no longer be able to memorize even the small
+number of onion domains (such as Facebook's) that they used.
+ This suggests that although onion links are difficult to handle, usability may not worsen with the new domain format.
 
-\Cref{fig:onion-operation-concerns} illustrates the concerns that onion service
-operators experience.  We consider three attacks; \first~somebody setting up a
+\subsubsection{Onion Services operations}
+We asked our survey respondents if they had ever set up their own onion site and the issues they faced as reported in \Cref{fig:onion-operation-concerns}.  We asked about three potential attacks on onion services; \first~somebody setting up a
 phishing site for the operator's site, \second~a denial-of-service attack, and
-\third~a deanonymization attack.  More than half of our respondents are at least
-somewhat concerned about all of these attacks.  Almost 40\% claim to be
+\third~a deanonymization attack.  More than half of our survey respondents who operated an onion service were at least
+somewhat concerned about all of these attacks.  Almost 40\% of survey respondents claimed to be
 extremely concerned about somebody deanonymizing their onion service.  Indeed,
-many respondents lamented the difficulty of protecting onion services from
+many survey respondents lamented the difficulty of protecting onion services from
 application-layer deanonymization attacks.  Matic \ea\ demonstrated some of
 these issues in 2015~\cite{Matic2015a}.
 
@@ -333,24 +342,28 @@ these issues in 2015~\cite{Matic2015a}.
     \label{fig:onion-operation-concerns}
 \end{figure}
 
-We asked our respondents if they ever thought about the authenticity of an onion
-site.  The majority of our respondents (80\%) did while 20\% did not.  Clearly,
-there is a need for verification, but how does one verify that an onion service
-is authentic?  \Cref{fig:determining-legitimacy} gives an overview of the
-strategies that our respondents employ.  More than half either consult trusted
-sources (\eg, friends or another, trusted web site) or use bookmarks when
-revisiting onion services.  Many respondents also verify the domain in the
-browser's address bar (46\%), check if the corresponding web site has a link to
-its onion site (41\%), or hope that the onion service has an \textsc{https}
+\subsubsection{Onion links and sites are hard to verify as authentic}
+We asked our survey respondents if they ever thought about the authenticity of an onion
+site.  The majority of our survey respondents (80\%) did want to verify an onion service as authentic.  \Cref{fig:determining-legitimacy} gives an overview of the
+strategies that our respondents employ.  More than half of our survey participants either consulted trusted
+sources (\eg, friends or another, trusted web site) or used bookmarks when
+revisiting onion services.  Many respondents also verified the domain in the
+browser's address bar (46\%), checked if the corresponding web site had a link to
+its onion site (41\%), or check that the onion service had an \textsc{https}
 certificate (36\%).\footnote{DigiCert is issuing \textsc{ev} certificates for
 onion sites~\cite{DigiCert2015a}, but adoption has been slow---presumably in part
 because \textsc{ev} certificates require the \textsc{ca} to verify the
 applicant's identity and they are not free.}  Alarmingly, almost 30\% of
-respondents stated that they sometimes cannot tell the difference between an
-authentic service and an impersonation, and 11\% never check a service's
-legitimacy in the first place.  People who selected ``Other'' provided a wide
-variety of ad-hoc phishing protections, some of which are clearly misguided,
-further highlighting the importance of this issue.
+survey respondents stated that they sometimes could not tell the difference between an
+authentic service and an impersonation, and 11\% never checked a service's
+legitimacy in the first place.  Survey participants who selected ``Other'' provided a wide
+variety of ad-hoc phishing protections, some of which were clearly misguided, \mc{whats an example? and why was it misguided}
+further highlighting the importance of being able to verify a site as being the one that they were trying to reach.
+
+When asked how many characters our respondents verify in
+onion domains,  43\% verified thirteen to sixteen digits, \ie, (almost) the full
+domain, while 46\% verified up to nine digits, which is within the realm of brute
+force attacks.
 
 \begin{figure}[t]
     \centering
@@ -359,21 +372,6 @@ further highlighting the importance of this issue.
     \label{fig:determining-legitimacy}
 \end{figure}
 
-The majority of our respondents appreciate vanity domains because they are easy
-to remember (64\%) and easy to recognize (64\%), and they provide a unique
-``branding'' (34\%).  Some respondents indicate that a vanity prefix---like a
-traditional domain---informs about an onion service's content, letting visitors
-know what to expect and thus preventing unpleasant surprises.  Only 8\% dislike
-vanity onion domains, and 15\% do not have an opinion.  Interestingly, some
-respondents consider vanity domains economically unfair because wealthy entities
-can afford to generate longer prefixes.  Several respondents also voiced their
-concern that vanity domains create a false sense of security and facilitate
-phishing attacks.
-
-In a separate question, we inquired how many characters our respondents verify in
-onion domains.  43\% verify thirteen to sixteen digits, \ie, (almost) the full
-domain, while 46\% verify up to nine digits, which is within the realm of brute
-force attacks.
 
 \subsection{Onion service issues \& improvements}
 \label{sec:improve}
