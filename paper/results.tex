@@ -188,22 +188,23 @@ and without leaking metadata.}
 \subsection{Onion service discovery \& management}
 \label{sec:manage}
 
+\subsubsection{Onion links usually discovered on social media, on the web, or via search engines }
 Recall that a freshly set up onion service is private by default, leaving it up
 to its operator to disseminate the domain.  Established search engines such as
 Google are therefore inadequate to find content on onion services.  We wanted to
-find out how our respondents discover onion services.
+find out how our survey respondents discover onion services.
 \Cref{fig:onion-discovery} illustrates the results.  The three most popular ways
-of discovering new onion sites, all approximating 50\%, are \first~social
+that participants discovered new onion sites, all approximating 50\%, were via \first~social
 networking sites such as Twitter and Reddit, \second~the list of search engines
 such as Ahmia,\footnote{Ahmia.fi is an onion site search engine that crawls
 user-submitted onion domains.  It publishes the list of all indexed onion
 services at \url{https://ahmia.fi/onions/}.} and \third~randomly encountering
 links when browsing the web.
 
-While significantly less popular, discovering onion domains through friends and
-family has the advantage that domains come from a trusted source---an aspect
+While significantly less popular, participants told us that discovering onion domains through friends and
+family had the advantage that domains come from a trusted source---an aspect
 that mattered to some of our survey and interview participants.  Finally, a mere
-4\% indicated that they are not interested in learning about new onion services.
+4\% of our survey respondents indicated that they were not interested in learning about new onion services.
 Respondents who selected ``Other'' predominantly brought up
 independently-maintained onion domain aggregators.  A noteworthy example is the
 Hidden Wiki, a community-curated and frequently-forked wiki that contains
@@ -217,11 +218,9 @@ categorized links to onion services.
     \label{fig:onion-discovery}
 \end{figure}
 
-The next question in our survey asked if our respondents are satisfied with the
-way they discover onion services.  60\% selected ``Yes'' while 40\% selected
-``No.'' Some respondents who selected ``Yes'' brought up that they have no
+The majority of our survey respondents (60\%) reported that they were satisfied with how they discover onion services but a significant proportion (40\%) were not. Those who were satisfied with how they discover onion links reported that they have no
 interest in learning about new onion services, in part because they only use a
-small set of onion services.  Among the people who are not satisfied, the most
+small set of onion services.  Among the survey respondents who were not satisfied, the most
 prominent complaint was about link rot on aggregators.  There is significant
 churn among onion sites, and our respondents were frustrated that aggregators
 are typically not curated and therefore link to numerous dead domains.  The lack
@@ -229,23 +228,20 @@ of curation also leads to these aggregators' containing the occasional scam and
 phishing site.  The difficulty of telling apart two given onion domain names
 exacerbates this issue for users.  Another common wish for aggregators was for
 them to be more verbose in their description of onion sites.  In particular,
-some respondents want to avoid illegal and pornographic content, which is often
+some survey respondents wanted to avoid illegal and pornographic content, which is often
 difficult if the description is vague and the onion domain reveals nothing about
-its content.  Many respondents were not aware of search engines such as Ahmia.
-Among those that were, many were dissatisfied with both the search results and
+its content.  Many survey respondents were not aware of search engines such as Ahmia.
+Among those survey respondents that were aware of such engines, many were dissatisfied with both the search results and
 the number of indexed onion sites.  Unsurprisingly, a ``Google for onion sites''
 was a frequent wish.
 
-Many respondents expressed frustration about the difficulty of finding out if
-example.com has a corresponding onion service.  A common wish was to have
-example.com list its onion service prominently in a footer.  Ironically, some
-respondents were surprised that torproject.org has a corresponding onion
+Many survey respondents expressed frustration about the difficulty of finding out if a particular website, such as 
+``example.com'' has a corresponding onion service.  A common wish was to have
+a website list its onion service prominently in a footer.  Ironically, some
+survey respondents were surprised that torproject.org has a corresponding onion
 site---they could not find it on the web site.
 
-Conventional domains are designed to be easy to remember and recognize.  But how
-do users handle randomly-generated onion domains?  Our survey
-\hyperref[q3_7]{question 3.7} sought an answer, and the results are illustrated
-in \Cref{fig:onion-domain-mgmt}.
+
 
 \begin{figure}[t]
     \centering
@@ -256,7 +252,8 @@ in \Cref{fig:onion-domain-mgmt}.
     \label{fig:onion-domain-mgmt}
 \end{figure}
 
-Most respondents use Tor Browser's bookmarks to save onion domains.  While
+\subsubsection{Saving and tracking onion links is not straightforward}
+While conventional domains are designed to be easy to remember and recognize, we wanted to know how users handle randomly-generated onion domains. Most survey respondents use Tor Browser's bookmarks to save onion domains as seen in \Cref{fig:onion-domain-mgmt.  While
 convenient, it leaves a trace of (presumably) visited sites on somebody's
 computer.  One of Tor Browser's security requirements is ``disk avoidance,''
 \ie, the browser must not write anything to disk that would reveal the user's
