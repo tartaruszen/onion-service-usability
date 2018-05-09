@@ -372,40 +372,6 @@ force attacks.
     \label{fig:determining-legitimacy}
 \end{figure}
 
-
-\subsection{Onion service issues \& improvements}
-\label{sec:improve}
-
-\hyperref[q3_17]{Question 3.17} asked respondents if popular web sites such as
-YouTube, Twitter, or Amazon offered onion sites in parallel to their normal web
-sites, would they prefer the normal site or the onion site. 20.21\% of
-respondents said they would always prefer the normal web site, 49.07\% said they
-would always prefer the onion site, and 30.72\% chose ``Other.'' Many of those
-who selected ``Other'' had performance concerns.  One user stated, ``I would
-always prefer the onion site, but for video sites like YouTube I would likely
-often use the normal site to be able to get a higher quality stream due to
-higher bandwidth.'' Others mentioned not wanting to log in to onion sites
-because they believe it defeats the purpose---a fallacy that we discussed in
-\Cref{sec:perception}.  In explaining their responses, respondents mentioned
-that they like the privacy that onion sites provide, and they hope that they
-wouldn't have to deal with \textsc{captcha}s and discrimination against Tor
-users.
-
-
-We also asked respondents if Tor Browser could automatically redirect them from
-a normal web site to its corresponding onion site (\eg, from facebook.com to
-facebookcorewwwi.onion), would they use that feature. Respondents were largely
-in favor of this: 15.61\% said they would never use that feature, 34.91\% said
-they would use it for some sites, 37.78\% said they would always use it, and
-11.70\% chose ``Other.'' Respondents liked the convenience of being redirected.
-The naysayers were quite passionate, though, and they were concerned about
-potential security issues. One respondent said,
-\textquote{What's to stop them from man in the middle'ing me, either by choice,
-at the behest of some nefarious entity, or after being hacked?}
-We conclude that there is clear interest in such an ``upgrade'' feature provided
-that it is carefully designed and offers users an option to control the process
-on a per-site basis.
-
 Phishing remains an issue despite onion services' extra anonymity and security
 properties.  Past work has documented phishing onion sites that transparently
 rewrote Bitcoin addresses to hijack Bitcoin
@@ -420,8 +386,9 @@ Originally meant to provide ``branding'' for an onion service, vanity onion
 domains also play a role in the context of phishing.  There is concern that the
 short and recognizable prefixes tempt users to only verify the prefix and ignore
 subsequent characters.  One respondent reported that \textquote{I only memorize
-the first part of the domain.} while another wrote:
+the first part of the domain.} \mc{need participant id} while another wrote:
 
+\mc{need participant id}
 \begin{displayquote}[Survey respondent]
 If there isn't some cognizable word at the start, it'll be more difficult for me
 to determine if I'm going to the correct domain or a scam. I may end up going to
@@ -433,3 +400,39 @@ impersonation domain that features the original's prefix but differs in
 subsequent characters.  Nurmi~\cite{Nurmi2015a} and
 Monteiro~\cite{Monteiro2016a} have both documented such an attack, but its
 effectiveness is not known.
+
+
+\subsection{Onion service issues \& improvements}
+\label{sec:improve}
+
+\subsubsection{Onion services are preferred for privacy reasons}
+We asked our survey respondents if they would prefer onion versions of popular web sites such as
+YouTube, Twitter, or Amazon to their normal web
+sites. 49.07\% of survey respondents said they
+would always prefer the onion site, 30.72\% chose ``Other'' and 20.21\% of
+respondents said they would always prefer the normal web site,  Many of those
+who selected ``Other'' had performance concerns. \mc{need participant id}  One user stated, ``I would
+always prefer the onion site, but for video sites like YouTube I would likely
+often use the normal site to be able to get a higher quality stream due to
+higher bandwidth.'' Other survey respondents mentioned not wanting to log in to onion sites
+because they believe it defeats the purpose by revealing private data---a fallacy that we discussed in
+\Cref{sec:perception}.  In explaining their responses, survey respondents mentioned
+that they like the privacy that onion sites provide, and they hoped that they
+would not have to deal with \textsc{captcha}s and discrimination against Tor
+users \mc{explain why this happens}.
+
+
+We asked survey respondents if they would want Tor Browser to automatically redirect them from
+a normal web site to its corresponding onion site (\eg, from facebook.com to
+facebookcorewwwi.onion). Survey respondents were largely
+in favor of this feature:37.78\% said they would always use it, 34.91\% said
+they would use it for some sites, 15.61\% said they would never use that feature,   and
+11.70\% chose ``Other.'' Survey respondents reported that they liked the convenience of being redirected.
+The naysayers were quite passionate, though, and they were concerned about
+potential security issues. One respondent said, \mc{participant id needed}
+\textquote{What's to stop them from man in the middle'ing me, either by choice,
+at the behest of some nefarious entity, or after being hacked?}
+We conclude that there is clear interest in such an ``upgrade'' feature provided
+that it is carefully designed and offers users an option to control the process
+on a per-site basis.
+
