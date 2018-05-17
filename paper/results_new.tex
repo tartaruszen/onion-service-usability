@@ -1,6 +1,5 @@
 \section{Results}
 \label{sec:results}
-Hallo
 We organize the presentation of our findings by topic, including how users
 \emph{perceive} (\Cref{sec:perception}), \emph{manage} (\Cref{sec:manage}),
 and \emph{wish to improve} (\Cref{sec:improve}) onion services.  We interleave the
@@ -12,25 +11,27 @@ appropriate.
 \label{sec:perception}
 
 \subsubsection{Mental models of Onion Services}
-While the work of Tor developers is often held in high esteem, the content that
-is hosted on onion services is perceived very differently.  Many of our participants were not able to define what an onion services were, such as one participant who sought clarification: \textquote[P03]{So
-it's like the Hidden Wiki and stuff like that, where you can buy drugs and\dots
-or supposedly.}
+Our participants perceived onion services’ definition, the way they work, as well as their content in many different ways and from different perspectives. However, almost half of our interviewees (8/17) seemed to be confused about onion services, they were not sure how they function, how to describe them and they did not understand how onion services protect them. 
 
-We asked our interview participants to draw sketches of onion services and the Tor network.\footnote{All sketches are available online at
-\url{https://nymity.ch/onion-services/mental-models/}.}  All participants drew a
-sketch of the Tor network but not all drew onion services because they had not
-experienced them. \mc{how many were in each category?}  Interestingly, all participants understood that key to the
-Tor network's anonymity is the bouncing of network traffic across several
-relays, as evidenced by \Cref{fig:tor-sketch}, drawn by a participant with no
-technical background.\footnote{However, the sketch is incorrect in two places: the
-number of hops in a Tor circuit is three, and the circuit's forward and reverse
-path are identical.} Analogously, most of our participants understood that
-network traffic does not leave the Tor network when connecting to onion
-services. By contrast, \Cref{fig:os-sketch} illustrates an example of a participants' understanding of an onion serice, again drawn by a
-non-technical participant.  The last hop in the circuit is an onion, correctly
-suggesting that network traffic does not leave the Tor network, albeit the
-number of hops is incorrect.
+Above all, according to the majority of our respondents (9/17) onion services enable the user to access Web content in anonymous manner. Moreover, 3 participants stressed that such protection is not only for visitors but also for people providing these services. One of the participants was particularly curious how OS facilitate anonymous purchases and pointed out usage of CryptoMoney as one of the characteristics of Onion Links: \textquote[P11]{I was reading the other day about how to use some the web to buy things because I was interested to understand how you can do that, to buy like abortion pills or things like that.} Another two participants also mentioned possibility of participating in illegal actions such as drug trade and credit card data sale. Some of our interviewees did not distinguish disguising their \textsc{ip}  address from disguising their real-world identity and instead used the umbrella term of “anonymity” to refer
+to both concepts. This conflation of concepts paints
+an incomplete picture of the security and privacy guarantees
+that the Tor network provides, further illustrated
+by one participant’s question: \textquote[P07]{What's the point of going to Facebook using onion services when
+their business model is still about collecting your data?}
+
+Six out of seventeen people stated that onion links are related to extra layers of protection, which sketch\footnote{All sketches are available online at
+\url{https://nymity.ch/onion-services/mental-models/}.} and explanation of participant P03 illustrates well:   “I think it's kind of to do with the different hops that you build different layers of making it difficult to find out who this person is. “. It corresponds to the notion of protective feature of OS to which 5/17 participants related to when describing onion links. \adz{insert P03 os sketch}
+
+
+More participants (5/17) saw the connection between Tor and onion services and stated OS are to be accessed through Tor than those that did not see any connection between those two (1/17).
+
+Another interesting assumption was made by P07 – he claimed that OS 
+“It's essentially the Tor project being able to make their technology available to more commercial clients, having that option be available to them. For me, it's all about trying to scale what they're doing.”, thinking about more economic traits of OS than other participants, whereas P08 considered OS as “Internet without hyperlinks”.
+
+Four participants stated that OS work in a similar manner to Tor but what is interesting, the same 4 people also thought that encryption is a little bit different than in Tor. Furthermore, four interviewees described the way of how OS work referring to the encryption of data onto the end point and 3/17 to the fact that last point of the chain of the encryption is an onion link. \adz{insert P01 both sketches}
+
+
 
 \begin{figure}[t]
     \centering
@@ -58,25 +59,12 @@ number of hops is incorrect.
 \end{figure}
 
 
-We asked our participants what is their perception of Onion Services and according to the majority of our respondents (9/17) these are services that enable the user to access Web content in anonymous manner. Moreover, 3 participants stressed that such protection is not only for visitors but also for people providing these services.
-Some of our interviewees did not distinguish disguising their \textsc{ip}
-address from disguising their real-world identity and instead used the umbrella
-term of ``anonymity'' to refer to both concepts.  This conflation of concepts
-paints an incomplete picture of the security and privacy guarantees that the Tor
-network provides, further illustrated by one participant's question:
-\textquote[P07]{What's the point of going to Facebook using onion services when
-their business model is still about collecting your data?}
 
-Many of our \mc{how many} interview participants were unaware of the merit in using Facebook's onion service. For instance, interview participants did not realize that while the company indeed
-knows who is logging in, it does not know Tor users' \textsc{ip} address (and
-hence location) or operating system.  Moreover, 1 participant (P10) claimed that using onion links may influence the usability of their ‘normal’ corresponding websites – he shared a story in which he postulated that his Facebook account had been flagged for suspicious activity and then was deactivated because he had logged in through Tor browser.  Nevertheless, P10 did not get any explanation from Facebook administrators. On top of that, onion services provide
-end-to-end security and self-authenticating names.  Syverson and Boyce took a
-step back and looked at how onion services can improve website
-authentication~\cite{Syverson2015a}.  These benefits are difficult to convey to
-non-technical users, and even experts sometimes advocate an ``all or nothing''
-approach to online anonymity, overlooking important nuances.
 
-\subsubsection{Onion Services Do Not Make Users Feel Safer}
+
+
+
+\subsubsection{The puzzling nature of Onion Services}
 In our survey, we asked how safe our
 respondents feel when using Tor Browser and onion services, respectively.
 \Cref{fig:perceived-security} shows the results.  
@@ -90,7 +78,7 @@ respondents feel when using Tor Browser and onion services, respectively.
     \label{fig:perceived-security}
 \end{figure}
 
-Our survey responses indicated that our participants, many of whom were non-experts, lacked the ability to evaluate (or even understand) the
+Our survey responses indicated that our participants, many of whom were non-experts, \adz{how many?} lacked the ability to evaluate (or even understand) the
 Tor network's design which is why they defer to expert opinion, their gut
 feeling, or the trust they place in Tor developers.  With respect to onion
 services, the majority of survey respondents expressed that the added security and anonymity makes
@@ -101,9 +89,35 @@ about illegal and questionable content on onion services, described by some as a
 ``Wild West.'' Phishing sites, honeypots, and compromised onion sites further
 contribute to this perception.
 
-Although our interviewees tended to evaluate Onion links as safer than corresponding websites (8 vs. 4 participants), 6 people stressed that you need to be careful while using OS, as P13 shared with us: “You can compromise endpoints, I know we've seen cases where people have visited onion services that aren't particularly well protected. Sure, you're visiting a service that is technically only existing within the Tor network, but perhaps it's leaking some information that allows people to then find the location of the server and use that to derive people's identities.”. 
+Although our interviewees tended to evaluate Onion links as safer than corresponding websites (8 vs. 4 participants), 6 people stressed that you need to be careful while using onion services.Five interviewees expressed lack of trust towards OS  and one even frustration.  Two persons mentioned that websites cannot identify you as the general advantage of OS but one of these persons plus 2 others draw attention to the fact that websites actually can determine your identity if you write down your personal details as well as if you log in into any private accounts while using OS. Moreover, 1 participant (P10) claimed that using onion links may influence the usability of their ‘normal’ corresponding websites – he shared a story in which he postulated that his Facebook account had been flagged for suspicious activity and then was deactivated because he had logged in through Tor browser.  Nevertheless, P10 did not get any explanation from Facebook administrators. These interview participants did not realize that while the company indeed
+knows who is logging in, it does not know Tor users' \textsc{ip} address (and
+hence location) or operating system. On top of that, onion services provide
+end-to-end security and self-authenticating names.  Syverson and Boyce took a
+step back and looked at how onion services can improve website
+authentication~\cite{Syverson2015a}.  These benefits are difficult to convey to
+non-technical users, and even experts sometimes advocate an ``all or nothing''
+approach to online anonymity, overlooking important nuances. On the other hand, 4 persons were content and believed in future of OS and 2 put trust in them.
 
-\subsubsection{Onion Services Used For Purposes Other Than Web Browsing}
+Another source of confusion amongst our survey respondents was the domain format of
+onion services.  Some users believed that the seemingly-random
+characters in onion domains are the reason why onion services are anonymous:
+
+\begin{displayquote}[Survey respondent]
+\ldots [The] Onion Services stay anonymous through changing their domain, and I
+feel that there is a possibility of decreased anonymity with a constant domain
+name.
+\end{displayquote}
+
+Accordingly, these users also believe that vanity domains \mc{do we explain what a vanity domain is earlier in the paper?} are ``less anonymous''
+because part of their domains is clearly not random.  A survey participant
+further wrote: \textquote{I understand vanity onion domains are a sign of the
+weakness of the hash algorithm used by the Tor network.}  An unrelated yet
+equally incorrect opinion was voiced by a different survey respondent:
+\textquote{These people who created their onion name using scallion or other
+tools should notice that other people can make same private key.}
+
+Similarly, What was perceived as disadvantage by our interviewees was the fact that the URL strings of Onion links were considered long (4/17) and among these participant was one who complained also on random numbers in URL strings. Two persons criticized onion links for being hard to remember. Another drawback of OS was identified in the latency and according to 3 participants the access time was too slow. 
+\subsubsection{ Versatility of Onion Services }
 In the survey, we asked about how often our respondents browse onion
 services.  The usage frequency was almost uniformly distributed among our survey
 respondents; 24\% use onion sites less than once a month, 22\% use them about
@@ -142,23 +156,7 @@ technical research, and to access sites that are otherwise unavailable. Furtherm
 
 
 \subsubsection{Misunderstanding of onion links and anonymity}
-An unrelated, yet hardly unexpected, source of confusion amongst our survey respondents was the domain format of
-onion services.  Some users believed that the seemingly-random
-characters in onion domains are the reason why onion services are anonymous:
 
-\begin{displayquote}[Survey respondent]
-\ldots [The] Onion Services stay anonymous through changing their domain, and I
-feel that there is a possibility of decreased anonymity with a constant domain
-name.
-\end{displayquote}
-
-Accordingly, these users also believe that vanity domains \mc{do we explain what a vanity domain is earlier in the paper?} are ``less anonymous''
-because part of their domains is clearly not random.  A survey participant
-further wrote: \textquote{I understand vanity onion domains are a sign of the
-weakness of the hash algorithm used by the Tor network.}  An unrelated yet
-equally incorrect opinion was voiced by a different survey respondent:
-\textquote{These people who created their onion name using scallion or other
-tools should notice that other people can make same private key.}
 
 \subsubsection{Reasons for Setting Up An Onion Service}
 We asked if any participants operated an onion service, including the motivation for
