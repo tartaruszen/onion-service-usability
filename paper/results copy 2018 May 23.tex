@@ -1,0 +1,441 @@
+\section{Results}
+\label{sec:results}
+
+We organize the presentation of our findings by topic, including how users
+\emph{perceive} (\Cref{sec:perception}), \emph{manage} (\Cref{sec:manage}),
+and \emph{wish to improve} (\Cref{sec:improve}) onion services.  We interleave the
+results from our online survey with our interviews, focusing primarily on our
+survey data but bringing up anecdotes and findings from our interviews as
+appropriate.
+
+\subsection{User perceptions of onion services}
+\label{sec:perception}
+
+\subsubsection{Mental models of Onion Services}
+While the work of Tor developers is often held in high esteem, the content that
+is hosted on onion services is perceived very differently.  Many of our participants were not able to define what an onion services were, such as one participant who sought clarification: \textquote[P03]{So
+it's like the Hidden Wiki and stuff like that, where you can buy drugs and\dots
+or supposedly.}
+
+We asked our interview participants to draw sketches of onion services and the Tor network.\footnote{All sketches are available online at
+\url{https://nymity.ch/onion-services/mental-models/}.}  All participants drew a
+sketch of the Tor network but not all drew onion services because they had not
+experienced them. \mc{how many were in each category?}  Interestingly, all participants understood that key to the
+Tor network's anonymity is the bouncing of network traffic across several
+relays, as evidenced by \Cref{fig:tor-sketch}, drawn by a participant with no
+technical background.\footnote{However, the sketch is incorrect in two places: the
+number of hops in a Tor circuit is three, and the circuit's forward and reverse
+path are identical.} Analogously, most of our participants understood that
+network traffic does not leave the Tor network when connecting to onion
+services. By contrast, \Cref{fig:os-sketch} illustrates an example of a participants' understanding of an onion serice, again drawn by a
+non-technical participant.  The last hop in the circuit is an onion, correctly
+suggesting that network traffic does not leave the Tor network, albeit the
+number of hops is incorrect.
+
+\begin{figure}[t]
+    \centering
+
+    \begin{subfigure}[t]{\linewidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{figures/tor-sketch.jpg}
+        \subcaption{A non-technical interview subject's (P08) sketch of how they
+        believe the Tor network works.  The participant correctly understands
+        the concept of bouncing network traffic over several hops.}
+        \label{fig:tor-sketch}
+    \end{subfigure}
+
+    \begin{subfigure}[t]{\linewidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{figures/os-sketch.jpg}
+        \subcaption{A non-technical interview subject's (P13) sketch of their
+        mental model of an onion service.  Instead of a web site, the final hop
+        is another Tor hop.}
+        \label{fig:os-sketch}
+    \end{subfigure}
+
+    \caption{Sketches of two different, non-technical interview participants of
+    how the Tor network works (top) and how onion services work (bottom).}
+\end{figure}
+
+
+We asked our participants what is their perception of Onion Services and according to the majority of our respondents (9/17) these are services that enable the user to access Web content in anonymous manner. Moreover, 3 participants stressed that such protection is not only for visitors but also for people providing these services.
+Some of our interviewees did not distinguish disguising their \textsc{ip}
+address from disguising their real-world identity and instead used the umbrella
+term of ``anonymity'' to refer to both concepts.  This conflation of concepts
+paints an incomplete picture of the security and privacy guarantees that the Tor
+network provides, further illustrated by one participant's question:
+\textquote[P07]{What's the point of going to Facebook using onion services when
+their business model is still about collecting your data?}
+
+Many of our \mc{how many} interview participants were unaware of the merit in using Facebook's onion service. For instance, interview participants did not realize that while the company indeed
+knows who is logging in, it does not know Tor users' \textsc{ip} address (and
+hence location) or operating system.  Moreover, 1 participant (P10) claimed that using onion links may influence the usability of their ‘normal’ corresponding websites – he shared a story in which he postulated that his Facebook account had been flagged for suspicious activity and then was deactivated because he had logged in through Tor browser.  Nevertheless, P10 did not get any explanation from Facebook administrators. On top of that, onion services provide
+end-to-end security and self-authenticating names.  Syverson and Boyce took a
+step back and looked at how onion services can improve website
+authentication~\cite{Syverson2015a}.  These benefits are difficult to convey to
+non-technical users, and even experts sometimes advocate an ``all or nothing''
+approach to online anonymity, overlooking important nuances.
+
+\subsubsection{Onion Services Do Not Make Users Feel Safer}
+In our survey, we asked how safe our
+respondents feel when using Tor Browser and onion services, respectively.
+\Cref{fig:perceived-security} shows the results.  
+86\% of our survey respondents feel at least somewhat safe using Tor Browser as compared to just over two thirds (67\%) of users of onion services.
+
+\begin{figure}[t]
+    \centering
+    \input{figures/perceived-security.tex}
+    \caption{The level of safety our respondents perceive when using Tor
+    Browser (\textsc{tb}) and onion services (\textsc{os}s).}
+    \label{fig:perceived-security}
+\end{figure}
+
+Our survey responses indicated that our participants, many of whom were non-experts, lacked the ability to evaluate (or even understand) the
+Tor network's design which is why they defer to expert opinion, their gut
+feeling, or the trust they place in Tor developers.  With respect to onion
+services, the majority of survey respondents expressed that the added security and anonymity makes
+them feel safe.  Another factor contributing to the perceived security is that
+advertising companies are nowhere near as present on onion services as they are
+on the web.  Orthogonal to the technology, many participants voiced concern
+about illegal and questionable content on onion services, described by some as a
+``Wild West.'' Phishing sites, honeypots, and compromised onion sites further
+contribute to this perception.
+
+Although our interviewees tended to evaluate Onion links as safer than corresponding websites (8 vs. 4 participants), 6 people stressed that you need to be careful while using OS, as P13 shared with us: “You can compromise endpoints, I know we've seen cases where people have visited onion services that aren't particularly well protected. Sure, you're visiting a service that is technically only existing within the Tor network, but perhaps it's leaking some information that allows people to then find the location of the server and use that to derive people's identities.”. 
+
+\subsubsection{Onion Services Used For Purposes Other Than Web Browsing}
+In the survey, we asked about how often our respondents browse onion
+services.  The usage frequency was almost uniformly distributed among our survey
+respondents; 24\% use onion sites less than once a month, 22\% use them about
+monthly, 25\% weekly, and 23\% daily.  The remaining 6\% has never used an onion
+service before.
+
+The majority of our survey respondents (61.8\%) had used onion services for purposes
+other than web browsing before.  Several protocols, such as the chat application
+Ricochet~\cite{ricochet} and the file sharing application
+OnionShare~\cite{onionshare}, were purpose-built on top of onion services while
+existing \textsc{tcp}-based tools, such as \textsc{ssh}, can transparently use
+onion addresses instead of traditional \textsc{ip} addresses.  Almost one third
+(29.7\%) of our participants used onion services for non-browsing activities at
+least once a week. \mc{do we know what these were?}
+
+The majority of our survey participants  used onion services
+because of the additional anonymity (70\%) and the additional security (61\%) (see \Cref{fig:onion-usage}). Also it was the main reason why interviewees actually used OS (6/17). Another reassuring factor of using OS was sense of security and safety (2/17).   
+For 46\% of the survey respondents, it was the only way to access content they enjoy, making the use of
+onion services a necessity. Similarly, for three participants, OS were considered as the only way to certain websites. 27\% of our survey respondents wanted to learn more about
+the ``Dark Web'' and set out to satisfy their curiosity while 19\% occasionally
+stumbled upon links to onion services in their day-to-day browsing activity.
+Survey respondents who selected ``Other'' gave a variety of reasons, the most
+predominant being the ability to set up a \textsc{tcp} service behind a
+\textsc{nat} device.  That makes it possible to expose an \textsc{ssh} server in
+a home network that has neither a permanent \textsc{ip} address nor port
+forwarding.  Other survey respondents reported using onion services to reduce the load on exit relays, to do
+technical research, and to access sites that are otherwise unavailable. Furthermore, two interviewees decided on OS thinking of it as “harm reduction technique.
+
+\begin{figure}[t]
+    \centering
+    \input{figures/onion-usage.tex}
+    \caption{Our respondents' (multiple choice) reasons for using onion
+    services.}
+    \label{fig:onion-usage}
+\end{figure}
+
+
+\subsubsection{Misunderstanding of onion links and anonymity}
+An unrelated, yet hardly unexpected, source of confusion amongst our survey respondents was the domain format of
+onion services.  Some users believed that the seemingly-random
+characters in onion domains are the reason why onion services are anonymous:
+
+\begin{displayquote}[Survey respondent]
+\ldots [The] Onion Services stay anonymous through changing their domain, and I
+feel that there is a possibility of decreased anonymity with a constant domain
+name.
+\end{displayquote}
+
+Accordingly, these users also believe that vanity domains \mc{do we explain what a vanity domain is earlier in the paper?} are ``less anonymous''
+because part of their domains is clearly not random.  A survey participant
+further wrote: \textquote{I understand vanity onion domains are a sign of the
+weakness of the hash algorithm used by the Tor network.}  An unrelated yet
+equally incorrect opinion was voiced by a different survey respondent:
+\textquote{These people who created their onion name using scallion or other
+tools should notice that other people can make same private key.}
+
+\subsubsection{Reasons for Setting Up An Onion Service}
+We asked if any participants operated an onion service, including the motivation for
+running an onion service and what sort of issues operators encounter in the
+process.  40\% of our survey respondents had once set up an onion service sometime in the past.  Among the survey
+respondents who never had set up an onion service, 31\% have considered doing so while 30\% have never
+considered it.  Interestingly, 79\% of the survey respondents who had set up onion services of their own had run their onion service for
+private use while 53\% had run them for the public.
+
+\Cref{fig:onion-operation-reasons} gives an overview of the reasons our
+respondents have for running onion services.  Interestingly, the extra security
+properties outweigh the anonymity properties of onion services.  Another popular
+motivation is \textsc{nat} traversal---many respondents noted that onion
+services allow them to expose a \textsc{tcp} service in their home network
+despite being behind a \textsc{nat} device.  Finally, some people run onion
+services indirectly because third-party tools such as
+OnionShare~\cite{onionshare} or Ricochet~\cite{ricochet} are built on top of
+them.  A survey respondent gave the following reason for running onion services:
+\textquote{We use it for delivering updates to our router to customers securely
+and without leaking metadata.}
+
+\begin{figure}[t]
+    \centering
+    \input{figures/onion-operation-reasons.tex}
+    \caption{The (multiple-choice) reasons our respondents have for running
+    onion services.}
+    \label{fig:onion-operation-reasons}
+\end{figure}
+
+\subsection{Onion service discovery \& management}
+\label{sec:manage}
+
+\subsubsection{Onion links usually discovered on social media, on the web, or via search engines }
+Recall that a freshly set up onion service is private by default, leaving it up
+to its operator to disseminate the domain.  Established search engines such as
+Google are therefore inadequate to find content on onion services.  We wanted to
+find out how our survey respondents discover onion services.
+\Cref{fig:onion-discovery} illustrates the results.  The three most popular ways
+that participants discovered new onion sites, all approximating 50\%, were via \first~social
+networking sites such as Twitter and Reddit, \second~the list of search engines
+such as Ahmia,\footnote{Ahmia.fi is an onion site search engine that crawls
+user-submitted onion domains.  It publishes the list of all indexed onion
+services at \url{https://ahmia.fi/onions/}.} and \third~randomly encountering
+links when browsing the web.
+
+While significantly less popular, participants told us that discovering onion domains through friends and
+family had the advantage that domains come from a trusted source---an aspect
+that mattered to some of our survey and interview participants.  Finally, a mere
+4\% of our survey respondents indicated that they were not interested in learning about new onion services.
+Respondents who selected ``Other'' predominantly brought up
+independently-maintained onion domain aggregators.  A noteworthy example is the
+Hidden Wiki, a community-curated and frequently-forked wiki that contains
+categorized links to onion services.
+
+\begin{figure}[t]
+    \centering
+    \input{figures/onion-discovery.tex}
+    \caption{Our respondents' (multiple choice) methods of discovering onion
+    services.}
+    \label{fig:onion-discovery}
+\end{figure}
+
+The majority of our survey respondents (60\%) reported that they were satisfied with how they discover onion services but a significant proportion (40\%) were not. Those who were satisfied with how they discover onion links reported that they have no
+interest in learning about new onion services, in part because they only use a
+small set of onion services.  Among the survey respondents who were not satisfied, the most
+prominent complaint was about link rot on aggregators.  There is significant
+churn among onion sites, and our respondents were frustrated that aggregators
+are typically not curated and therefore link to numerous dead domains.  The lack
+of curation also leads to these aggregators' containing the occasional scam and
+phishing site.  The difficulty of telling apart two given onion domain names
+exacerbates this issue for users.  Another common wish for aggregators was for
+them to be more verbose in their description of onion sites.  In particular,
+some survey respondents wanted to avoid illegal and pornographic content, which is often
+difficult if the description is vague and the onion domain reveals nothing about
+its content.  Many survey respondents were not aware of search engines such as Ahmia.
+Among those survey respondents that were aware of such engines, many were dissatisfied with both the search results and
+the number of indexed onion sites.  Unsurprisingly, a ``Google for onion sites''
+was a frequent wish.
+
+Many survey respondents expressed frustration about the difficulty of finding out if a particular website, such as 
+``example.com'' has a corresponding onion service.  A common wish was to have
+a website list its onion service prominently in a footer.  Ironically, some
+survey respondents were surprised that torproject.org has a corresponding onion
+site---they could not find it on the web site.
+
+
+
+\begin{figure}[t]
+    \centering
+    \input{figures/onion-domain-mgmt.tex}
+    \caption{The strategies that our respondents use to handle onion domains.
+    More than half use bookmarks inside of Tor Browser and a quarter thinks that
+    there is no good solution.}
+    \label{fig:onion-domain-mgmt}
+\end{figure}
+
+\subsubsection{Saving and tracking onion links is not straightforward}
+While conventional domains are designed to be easy to remember and recognize, we wanted to know how users handle randomly-generated onion domains. Most survey respondents use Tor Browser's bookmarks to save onion domains as seen in \Cref{fig:onion-domain-mgmt}.  While
+convenient, this method of saving onion links leaves a trace of (presumably) visited sites on somebody's
+computer.  One of Tor Browser's security requirements is ``disk avoidance,''
+\ie, the browser must not write anything to disk that would reveal the user's
+browsing history~\cite[\S~2.1]{Perry2017a}.  Bookmarking links is a violation of
+this security requirement albeit requested by the user.  Many of our survey respondents
+were aware of this issue, and about a dozen survey respondents who selected ``Other''
+stated that they store onion domains in an encrypted manner---either in a text
+file or in their password manager.  Somewhat less popular amongst our survey participants was saving onion
+domains in local text files (36\%), getting them from trusted web sites (34\%),
+using search engines (18\%), memorizing domains (16\%), using some other
+techniques (9\%), or employing pen and paper (8\%).  Notably, one quarter of our survey
+respondents did not have a good solution to the problem of tracking onion links.  Given the alarming
+number of (possibly insecure) home-baked solutions, a Tor Browser extension that
+solves this problem seems warranted.
+
+Of the survey respondents who memorize onion domains, we found that most respondents
+memorize one to four onion domains (35\% of total respondents) but only 1\% are able to memorize more than four domains (1\%).   Survey respondents memorized domains \first~automatically start to memorize domains
+because of typing it many times (60\%)
+\second~to allow them to open the site more
+quickly (51\%), and \third~to ensure that they are visiting the correct site and
+not a phishing site (44\%). Others were privacy conscious because as mentioned above,
+bookmarking onion domains leaves a trace. These 28\% of survey respondents said
+they memorized onion domains to prevent this digital trace.
+
+\subsubsection{Vanity domains are easier to memorize and track}
+The majority of our survey respondents appreciated vanity domains because they were easy
+to remember (64\%) and easy to recognize (64\%), and they provided a unique
+``branding'' (34\%).  Some survey respondents indicated that a vanity prefix---like a
+traditional domain---informs about an onion service's content, letting visitors
+know what to expect and thus preventing unpleasant surprises.  Only 8\% disliked
+vanity onion domains, and 15\% did not have an opinion.  Interestingly, some survey
+respondents consider vanity domains economically unfair because wealthy entities
+can afford to generate longer prefixes such as Facebook \mc{explain why in related work}.  Several respondents also voiced their
+concern that vanity domains create a false sense of security and facilitate
+phishing attacks. \mc{how so? can we say more}
+
+
+
+
+We asked survey respondents
+about whether or not they memorize vanity domains---specifically
+facebookcorewwwi.onion---and how difficult they find it to memorize onion
+domains of differing levels of vanity.  59\% of respondents replied that
+facebookcorewwwi.onion is among the sites that they have memorized.  This is \mc{what are the participant or survey respondent ids for the quotes}
+because it is ``easy to memorize'' and ``after seeing [it] many times, I
+automatically start to memorize it.'' Depending on the format of the vanity domain, our survey respondents expressed differing levels of ease for
+memorizing them; these results are shown in \Cref{fig:memorize-domains}.
+\textsc{Url}s such as expyuzz4wqqyqhjn.onion and torproz4wqqyqhjn.onion are
+harder for respondents to remember because they mention that ``numbers make the
+names harder to remember.''  Other survey respondents stated that vanity domains are easier to
+remember when they can be pronounced.  One respondent described it saying \mc{need participant id}
+``phonetic pronunciation plays a large part in how I remember onions.'' Many
+other survey respondents stated that onion domains that are supported by a mnemonic are
+also easier to remember.  
+
+\begin{figure}[t]
+    \centering
+    \input{figures/onion-memorize-difficulty.tex}
+    \caption{The difficulty our respondents would expect to face when trying to
+    memorize four onion domains.}
+    \label{fig:memorize-domains}
+\end{figure}
+
+Interestingly, most (83\%) of our survey participants did not expect the
+next-generation domain format to change their browsing habits because they treat onion domains as
+opaque identifiers and handle these links via tools such as bookmarks.  For the 17\% who expressed concern over the next generation domain format \mc{can we define what this is?}, they felt that they would no longer be able to memorize even the small
+number of onion domains (such as Facebook's) that they used.
+ This suggests that although onion links are difficult to handle, usability may not worsen with the new domain format.
+
+\subsubsection{Onion Services operations}
+We asked our survey respondents if they had ever set up their own onion site and the issues they faced as reported in \Cref{fig:onion-operation-concerns}.  We asked about three potential attacks on onion services; \first~somebody setting up a
+phishing site for the operator's site, \second~a denial-of-service attack, and
+\third~a deanonymization attack.  More than half of our survey respondents who operated an onion service were at least
+somewhat concerned about all of these attacks.  Almost 40\% of survey respondents claimed to be
+extremely concerned about somebody deanonymizing their onion service.  Indeed,
+many survey respondents lamented the difficulty of protecting onion services from
+application-layer deanonymization attacks.  Matic \ea\ demonstrated some of
+these issues in 2015~\cite{Matic2015a}.
+
+\begin{figure}[t]
+    \centering
+    \input{figures/onion-operation-concerns.tex}
+    \caption{The level of concern onion service operators have with respect to a
+    phishing clone of their service, denial-of-service attacks, and
+    deanonymization.}
+    \label{fig:onion-operation-concerns}
+\end{figure}
+
+\subsubsection{Onion links and sites are hard to verify as authentic}
+We asked our survey respondents if they ever thought about the authenticity of an onion
+site.  The majority of our survey respondents (80\%) did want to verify an onion service as authentic.  \Cref{fig:determining-legitimacy} gives an overview of the
+strategies that our respondents employ.  More than half of our survey participants either consulted trusted
+sources (\eg, friends or another, trusted web site) or used bookmarks when
+revisiting onion services.  Many respondents also verified the domain in the
+browser's address bar (46\%), checked if the corresponding web site had a link to
+its onion site (41\%), or check that the onion service had an \textsc{https}
+certificate (36\%).\footnote{DigiCert is issuing \textsc{ev} certificates for
+onion sites~\cite{DigiCert2015a}, but adoption has been slow---presumably in part
+because \textsc{ev} certificates require the \textsc{ca} to verify the
+applicant's identity and they are not free.}  Alarmingly, almost 30\% of
+survey respondents stated that they sometimes could not tell the difference between an
+authentic service and an impersonation, and 11\% never checked a service's
+legitimacy in the first place.  Survey participants who selected ``Other'' provided a wide
+variety of ad-hoc phishing protections, some of which were clearly misguided, \mc{whats an example? and why was it misguided}
+further highlighting the importance of being able to verify a site as being the one that they were trying to reach.
+
+When asked how many characters our respondents verify in
+onion domains,  43\% verified thirteen to sixteen digits, \ie, (almost) the full
+domain, while 46\% verified up to nine digits, which is within the realm of brute
+force attacks.
+
+\begin{figure}[t]
+    \centering
+    \input{figures/determining-legitimacy.tex}
+    \caption{How our respondents determine an onion service's legitimacy.}
+    \label{fig:determining-legitimacy}
+\end{figure}
+
+Phishing remains an issue despite onion services' extra anonymity and security
+properties.  Past work has documented phishing onion sites that transparently
+rewrote Bitcoin addresses to hijack Bitcoin
+transactions~\cite{Winter2016a,Nurmi2015a,Monteiro2016a}.  Key to this attack is
+the difficulty of telling apart an authentic onion domain from an impersonation.
+For conventional domains we rely on (\textsc{ev}) certificates, browser
+protections, search results, and long-lived reputation, but none of these
+methods have matured for onion services.  Does the nature of onion services
+facilitate phishing attacks?  If so, what can we do to mitigate the issue?
+
+Originally meant to provide ``branding'' for an onion service, vanity onion
+domains also play a role in the context of phishing.  There is concern that the
+short and recognizable prefixes tempt users to only verify the prefix and ignore
+subsequent characters.  One respondent reported that \textquote{I only memorize
+the first part of the domain.} \mc{need participant id} while another wrote:
+
+\mc{need participant id}
+\begin{displayquote}[Survey respondent]
+If there isn't some cognizable word at the start, it'll be more difficult for me
+to determine if I'm going to the correct domain or a scam. I may end up going to
+less .onion sites as a result.
+\end{displayquote}
+
+Focusing only on the vanity part of a domain allows attackers to create an
+impersonation domain that features the original's prefix but differs in
+subsequent characters.  Nurmi~\cite{Nurmi2015a} and
+Monteiro~\cite{Monteiro2016a} have both documented such an attack, but its
+effectiveness is not known.
+
+
+\subsection{Onion service issues \& improvements}
+\label{sec:improve}
+
+\subsubsection{Onion services are preferred for privacy reasons}
+We asked our survey respondents if they would prefer onion versions of popular web sites such as
+YouTube, Twitter, or Amazon to their normal web
+sites. 49.07\% of survey respondents said they
+would always prefer the onion site, 30.72\% chose ``Other'' and 20.21\% of
+respondents said they would always prefer the normal web site,  Many of those
+who selected ``Other'' had performance concerns. \mc{need participant id}  One user stated, ``I would
+always prefer the onion site, but for video sites like YouTube I would likely
+often use the normal site to be able to get a higher quality stream due to
+higher bandwidth.'' Other survey respondents mentioned not wanting to log in to onion sites
+because they believe it defeats the purpose by revealing private data---a fallacy that we discussed in
+\Cref{sec:perception}.  In explaining their responses, survey respondents mentioned
+that they like the privacy that onion sites provide, and they hoped that they
+would not have to deal with \textsc{captcha}s and discrimination against Tor
+users \mc{explain why this happens}.
+
+
+We asked survey respondents if they would want Tor Browser to automatically redirect them from
+a normal web site to its corresponding onion site (\eg, from facebook.com to
+facebookcorewwwi.onion). Survey respondents were largely
+in favor of this feature:37.78\% said they would always use it, 34.91\% said
+they would use it for some sites, 15.61\% said they would never use that feature,   and
+11.70\% chose ``Other.'' Survey respondents reported that they liked the convenience of being redirected.
+The naysayers were quite passionate, though, and they were concerned about
+potential security issues. One respondent said, \mc{participant id needed}
+\textquote{What's to stop them from man in the middle'ing me, either by choice,
+at the behest of some nefarious entity, or after being hacked?}
+We conclude that there is clear interest in such an ``upgrade'' feature provided
+that it is carefully designed and offers users an option to control the process
+on a per-site basis.
+
