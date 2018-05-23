@@ -5,8 +5,8 @@ We will now elaborate on how we designed our interviews
 (\Cref{sec:interviews}) and our online survey
 (\Cref{sec:online-survey}).  For both we will discuss participant
 recruitment, how we structured the interview or survey process, and research
-ethics.  \annie{Lastly, we discuss how we obtained and used data on {\tt .onion} domains 
-leaked via DNS.}
+ethics.  Lastly, we discuss how we obtained and used data on {\tt .onion} domains 
+leaked via DNS.
 
 \subsection{Interviews}
 \label{sec:interviews}
@@ -200,14 +200,15 @@ highly knowledgeable in matters of Internet privacy and security.
 	\end{tabular}
 \end{table*}
 
-\annie{\subsection{DNS Root Data}
+\subsection{DNS Root Data}
+\label{sec:root_data}
 We supplement our survey and interview data with analysis of {\tt .onion} 
 domains leaked via the Domain Name System (DNS).  While onion domains are 
 not accessible using DNS or traditional browsers, Internet users may attempt 
 to access an onion site using a traditional browser; in this case, the onion domain 
-will appear in DNS data collected at the DNS root servers.} 
+will appear in DNS data collected at the DNS root servers.
 
-\annie{We obtained about 72 hours worth of DNS data from the B root server~\cite{b_root}.  This 
+We obtained about 72 hours worth of DNS data from the B root server~\cite{b_root}.  This 
 data consists of several hundred pcap files that contain full packet captures with pseudonymized 
 IP addresses.  We analyze the DNS requests evident in the dataset and present our results 
-alongside our findings from the survey and interview results.}
+alongside our findings from the survey and interview results.
