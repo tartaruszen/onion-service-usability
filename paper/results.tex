@@ -1,47 +1,91 @@
 \section{Results}
 \label{sec:results}
+
 We organize the presentation of our findings by topic, including how users
-\emph{perceive} (\Cref{sec:perception}), \emph{manage} (\Cref{sec:manage}),
-and \emph{wish to improve} (\Cref{sec:improve}) onion services.  We interleave the
+\emph{perceive} (\Cref{sec:perception}), \emph{manage} (\Cref{sec:manage}), and
+\emph{wish to improve} (\Cref{sec:improve}) onion services.  We interleave the
 results from our online survey with our interviews, focusing primarily on our
 survey data but bringing up anecdotes and findings from our interviews as
 appropriate.
 
-\subsection{User Perceptions of Onion Services}
+\subsection{User Perception of Onion Services}
 \label{sec:perception}
 
 \subsubsection{Mental Models of Onion Services}
 
+Our participants perceived onion services' definition, the way they work, and
+the content they host in many different ways and from different perspectives.
+However, almost half of our interviewees (8/17) seemed confused about onion
+services.  They were unsure how they function, how to describe them, and they
+did not understand how onion services protect them.
 
-Our participants perceived onion services’ definition, the way they work, as well as their content in many different ways and from different perspectives. However, almost half of our interviewees (8/17) seemed to be confused about onion services, they were not sure how they function, how to describe them and they did not understand how onion services protect them. 
-
-Above all, according to the majority of our interviewees (9/17) onion services enable the user to access Web content in anonymous manner. Moreover, 3 interview participants stressed that such protection is not only for visitors but also for people providing these services. One of the interviewees was particularly curious how OS facilitate anonymous purchases and pointed out usage of CryptoMoney as one of the characteristics of Onion Links: \textquote[P11]{I was reading the other day about how to use some the web to buy things because I was interested to understand how you can do that, to buy like abortion pills or things like that.} Another two participants also mentioned possibility of participating in illegal actions such as drug trade and credit card data sale. Some of our interviewees did not distinguish disguising their \textsc{ip}  address from disguising their real-world identity and instead used the umbrella term of “anonymity” to refer
-to both concepts. This conflation of concepts paints
-an incomplete picture of the security and privacy guarantees
-that the Tor network provides, further illustrated
-by one interview participant’s question: \textquote[P07]{What's the point of going to Facebook using onion services when
+Above all, according to the majority of our interviewees (9/17), onion services
+enable the user to access Web content in an anonymous manner.  Moreover, three
+interview participants stressed that such protection is not only for visitors
+but also for people providing these services.  One of the interviewees was
+particularly curious how OSs facilitate anonymous purchases and pointed out
+usage of CryptoMoney as one of the characteristics of Onion Links:
+\textquote[P11]{I was reading the other day about how to use some the web to buy
+things because I was interested to understand how you can do that, to buy like
+abortion pills or things like that.}  Another two participants also mentioned
+the possibility of participating in drug trade and credit card data sale.  Some
+of our interviewees did not distinguish disguising their \textsc{ip} address
+from disguising their real-world identity and instead used the umbrella term
+``anonymity'' to refer to both concepts.  This conflation of concepts paints an
+incomplete picture of the security and privacy guarantees that the Tor network
+provides, further illustrated by one interview participant's question:
+\textquote[P07]{What's the point of going to Facebook using onion services when
 their business model is still about collecting your data?}
 
-Six interviewees stated that onion links are related to extra layers of protection, which sketch\footnote{All sketches are available online at
-\url{https://nymity.ch/onion-services/mental-models/}.} that we can see on \Cref{fig:os-sketch} and explanation of participant P03 illustrates well:   “I think it's kind of to do with the different hops that you build different layers of making it difficult to find out who this person is. “. It corresponds to the notion of protective feature of OS to which 5 interviewees related to when describing onion links.
+Six interviewees stated that onion services are related to extra layers of
+protection, an idea that is well-illustrated in
+\Cref{fig:os-sketch},\footnote{All sketches are available online at
+\url{https://nymity.ch/onion-services/mental-models/}.} and further elaborated
+on by participant P03: ``I think it's kind of to do with the different hops that
+you build different layers of making it difficult to find out who this person
+is.''
+% ---Philipp: Not clear what the text below means, exactly.---
+% It corresponds to the notion of protective feature of OS to which five
+% interviewees related to when describing onion services.
 
-
-\begin{figure}[!ht]
-    \centering
-        \centering
-        \includegraphics[width=0.8\linewidth]{figures/p03-os-sketch-kopia2.jpg}
-        \caption{Sketch of interviewee's (P03) mental model of Onion Services. The participant referred to extra layers of protection.}
-        \label{fig:os-sketch}
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.8\linewidth]{figures/p03-os-sketch-kopia2.jpg}
+  \caption{A sketch of interviewee P03's mental model of onion services.  The
+  participant referred to several layers of protection.}
+  \label{fig:os-sketch}
 \end{figure}
 
-More interview participants (5) saw the connection between Tor and onion services and stated OS are to be accessed through Tor than those that did not see any connection between those two (1).  While the participants that saw this connection between Tor and onionservices  stated  that  onion  services are to be accessed through Tor, we can  see that this knowledge is notwidespread, as evidenced by our findings in analyz-ing the root DNS data described in \Cref{sec:root-data}.We found 15,471 correctly-formatted onion domains\footnote{Note that these may not all correspond to real onion sites, as some-one could have entered a bogus onion domain name into a browser; un-fortunately, there is no way for us to evaluate the validity of each oniondomain.} in the dataset,  indicating that Internet users are attempting tovisit an onion domain in a non-Tor browser.
+% ---Philipp: I'm not sure if the text below is correct.---
+Five interview participants saw the connection between Tor and onion services,
+stating that OSs are to be accessed through Tor.  This differs from our one
+participant who did not see a connection.
 
-Another interesting assumption was made by interview participant P07 – he claimed that OS 
+% ---Philipp: The text below is speculation and misleading.---
+% While the participants that saw this connection between Tor and onion services
+% stated that  onion  services are to be accessed through Tor, we can  see that
+% this knowledge is not widespread, as evidenced by our findings in analyzing
+% the root DNS data described in \Cref{sec:root-data}.
+%
+% We found 15,471 correctly-formatted onion domains\footnote{Note that these may
+% not all correspond to real onion sites, as some-one could have entered a bogus
+% onion domain name into a browser; unfortunately, there is no way for us to
+% evaluate the validity of each onion domain.} in the dataset,  indicating that
+% Internet users are attempting to visit an onion domain in a non-Tor browser.
 
-“It's essentially the Tor project being able to make their technology available to more commercial clients, having that option be available to them. For me, it's all about trying to scale what they're doing.”, thinking about more economic traits of OS than other participants, whereas P08 considered OS as “Internet without hyperlinks”.
+Another interesting assumption was made by interview participant P07; they
+claimed that OS ``[are] essentially the Tor project being able to make their
+technology available to more commercial clients, having that option be available
+to them.  For me, it's all about trying to scale what they're doing.'', thinking
+about more economic traits of OS than other participants, whereas P08 considered
+OS as ``Internet without hyperlinks.''
 
-Four interviewees stated that OS work in a similar manner to Tor but what is interesting, the same 4 participants also thought that encryption is a little bit different than in Tor, which we can see on \Cref{fig:toros-sketch}. Furthermore, four interviewees described the way of how OS work referring to the encryption of data onto the end point and 3/17 to the fact that last point of the chain of the encryption is an onion link. 
-
+Four interviewees stated that OSs work in a similar manner to Tor but the same
+four participants also thought that encryption is a little bit different than in
+Tor, which we can see on \Cref{fig:toros-sketch}.  Furthermore, four
+interviewees described the way of how OS work referring to the encryption of
+data onto the end point and 3/17 to the fact that last point of the chain of the
+encryption is an onion link. 
 
 \begin{figure}[!ht]
         \centering
