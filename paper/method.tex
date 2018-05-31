@@ -1,24 +1,25 @@
 \section{Method}
 \label{sec:method}
 
-We will now elaborate on how we designed our interviews
-(\Cref{sec:interviews}) and our online survey
-(\Cref{sec:online-survey}).  For both we will discuss participant
-recruitment, how we structured the interview or survey process, and research
-ethics.  Lastly, we discuss how we obtained and used data on {\tt .onion} domains 
-leaked via DNS.
+We will now elaborate on how we designed our interviews (\Cref{sec:interviews})
+and our online survey (\Cref{sec:online-survey}).  For both we will discuss
+participant recruitment, how we structured the interview or survey process, and
+research ethics.  Lastly, we will discuss how we obtained and used a dataset
+that allowed us to study .onion domains in DNS data (\Cref{sec:root-data}).
 
 \subsection{Interviews}
 \label{sec:interviews}
 
 We developed a question set that served as the basis for each
-interview.\footnote{The question set is available online at
+interview.\footnote{The question set is available online at\\
 \url{https://nymity.ch/onion-services/pdf/interview-checklist.pdf}.}  The
 semi-structured nature of our interviews allowed us to deviate from this
 question set, \eg, by asking follow-up questions.  We began by asking
 demographic information (gender, age range, occupation, country of residence,
 and level of education), followed by information about online behavior, and
-finally questions specific to Tor Browser and onion services such as when users started to use these services, how they track onion links as well as the drawbacks and strengths of these services based on their own experiences.
+finally questions specific to Tor Browser and onion services such as when users
+started to use these services, how they track onion links as well as the
+drawbacks and strengths of these services based on their own experiences.
 
 \subsubsection{Procedure}
 
@@ -46,33 +47,35 @@ We had our recordings transcribed by a company that offered transcription
 services and a non-disclosure agreement protected the confidentiality of our
 data.  Once our interview recordings were transcribed, we deleted the original
 recordings and employed qualitative data coding to analyze the transcripts.
-Interview transcripts were coded by at least three members of our team and we held regular research meetings to reach consensus on the final themes.  This process
-identified twenty-six themes that are all listed in \Cref{sec:coding-themes}.
+Each interview transcript was coded by at least three members of our team and we
+held regular research meetings to reach consensus on the final themes.  This
+process identified twenty-six themes.
+% TODO: Link to themes online.
 
 \subsubsection{Recruitment}
 
 To select eligible interview subjects, we created a short pre-interview survey
-(see \Cref{sec:interview-survey}), which was advertised by The Tor Project both
-in a blog post~\cite{Winter2017a} and on its Twitter account.  Our selection
-process favored laypeople and sought to maximize cultural, gender, location,
-education, and age diversity.  In addition to our online screening, we recruited
-participants in person at an Internet freedom event.  We found it difficult to
-draw a uniform sample of Tor users to interview. We believe that The Tor
-Project's blog and Twitter account are mainly followed by disproportionately
-technical users while many non-technical users may install Tor Browser in a
+which was advertised by The Tor Project both in a blog post~\cite{Winter2017a}
+and on its Twitter account.\footnote{The pre-interview survey is available
+online at\\\url{https://nymity.ch/onion-services/pdf/pre-interview-survey.pdf}.}
+Our selection process favored laypeople and sought to maximize cultural, gender,
+location, education, and age diversity.  In addition to our online screening, we
+recruited participants in person at an Internet freedom event.  We found it
+difficult to draw a uniform sample of Tor users to interview. We believe that
+The Tor Project's blog and Twitter account are followed by disproportionately
+many technical users while non-technical users may install Tor Browser in a
 one-off process and then cease to follow news and updates related to Tor.  To
-make matters worse, many Tor users value their privacy significantly more than
-the average Internet user, making it challenging to evoke enough trust to have
-users open up to us about their browsing habits.
+make matters worse, Tor users value their privacy significantly more than the
+average Internet user, making it challenging to evoke enough trust to have users
+open up to us about their browsing habits.
 
 We ended up interviewing seventeen subjects whose demographic information is
-shown in \Cref{tab:interviewees}.  Given the sensitive nature of our
-interviews, we only present aggregate information to protect the identity of our
-participants.  We believe that our sample is biased towards educated and
-technical users (almost 60\% of our participants have a postgraduate degree) but
-it also shows the diversity among Tor's user base: Our participants comprise
-human rights activists, legal professionals, writers, artists, and journalists,
-just to name a few.
+shown in \Cref{tab:interviewees}.  We only present aggregate information to
+protect the identify of our interview participants.  We believe that our sample
+is biased towards educated and technical users (almost 60\% of our participants
+have a postgraduate degree) but it also shows the diversity among Tor's user
+base: Our participants comprise human rights activists, legal professionals,
+writers, artists, and journalists, just to name a few.
 
 \begin{table*}[ht]
 	\centering
@@ -100,8 +103,10 @@ just to name a few.
 \subsection{Online Survey}
 \label{sec:online-survey}
 
-Shortly after we conducted our first batch of interviews, we designed, refined, and launched an online
-survey to complement our interview data.
+Shortly after we conducted our first batch of interviews, we designed, refined,
+and launched an online survey to complement our interview data.\footnote{The
+full survey is available online at
+\url{https://nymity.ch/onion-services/pdf/survey-questions.pdf}.}
 
 \subsubsection{Procedure}
 
@@ -135,9 +140,11 @@ second language.
 
 The majority of our survey focused on onion services, but we also added some
 questions about Tor in general.  Our survey consisted of forty-nine questions
-distributed over six blocks that are ordered by topic. Aside from collecting basic demographic information, the survey asked about Tor usage, onion site usage including questions around the usability of onion links, onion site operation, onion site phishing and impersonation and finally on users' general expectations of privacy. The survey took about fifteen
-minutes to complete.  The full survey is listed in
-\Cref{app:survey}.
+distributed over six blocks that are ordered by topic. Aside from collecting
+basic demographic information, the survey asked about Tor usage, onion site
+usage including questions around the usability of onion links, onion site
+operation, onion site phishing and impersonation, and finally on users' general
+expectations of privacy. The survey took about fifteen minutes to complete.
 
 \subsubsection{Recruitment}
 
@@ -201,14 +208,18 @@ highly knowledgeable in matters of Internet privacy and security.
 \end{table*}
 
 \subsection{DNS Root Data}
-\label{sec:root_data}
-We supplement our survey and interview data with analysis of {\tt .onion} 
-domains leaked via the Domain Name System (DNS).  While onion domains are 
-not accessible using DNS or traditional browsers, Internet users may attempt 
-to access an onion site using a traditional browser; in this case, the onion domain 
-will appear in DNS data collected at the DNS root servers.
+\label{sec:root-data}
 
-We obtained about 72 hours worth of DNS data from the B root server~\cite{b_root}.  This 
-data consists of several hundred pcap files that contain full packet captures with pseudonymized 
-IP addresses.  We analyze the DNS requests evident in the dataset and present our results 
-alongside our findings from the survey and interview results.
+We supplemented our survey and interview data with an analysis of .onion domains
+leaked via the Domain Name System (\textsc{dns}).  While onion domains are only
+resolvable inside the Tor network, Internet users may attempt to access an onion
+site using a browser that is not configured to use Tor, resulting in the onion
+domain ``leaking'' into the domain name system.  \textsc{dns} root servers can
+get the most comprehensive picture of the extent of this leakage.
+
+We obtained about 72 hours worth of \textsc{dns} data from the B root server
+over the \textsc{impact} Cyber Trust program~\cite{b_root}.  This data consists
+of several hundred pcap files that contain full packet captures with
+pseudonymized IP addresses.  We analyze the \textsc{dns} requests evident in the
+dataset and present our results alongside our findings from the survey and
+interview results.
