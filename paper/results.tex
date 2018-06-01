@@ -350,35 +350,32 @@ onion services, in part because they only use a small set of onion services.
 
 \subsubsection{Saving and Tracking Onion Links Is Not Straightforward}
 
-While conventional domains are designed to be easy to remember and recognize, we
-wanted to know how users handle randomly-generated onion domains. Most survey
-respondents use Tor Browser's bookmarks to save onion domains as seen in
-\Cref{fig:onion-domain-mgmt}. Additionally, same tactic used two interview
-participants.   While convenient, this method of saving onion links leaves a
-trace of (presumably) visited sites on somebody's computer.  One of Tor
-Browser's security requirements is ``disk avoidance,'' \ie, the browser must not
-write anything to disk that would reveal the user's browsing
-history~\cite[\S~2.1]{Perry2017a}.  Bookmarking links is a violation of this
-security requirement albeit requested by the user.  Many of our survey
-respondents were aware of this issue, and about a dozen survey respondents who
-selected ``Other'' stated that they store onion domains in an encrypted
-manner---either in a text file or in their password manager.  Somewhat less
-popular amongst our survey participants was saving onion domains in local text
-files (36\%), getting them from trusted websites (34\%), using search engines
-(18\%), memorizing domains (16\%), using some other techniques (9\%), or
-employing pen and paper (8\%).  When it comes to our interviewees, it seemed
-that they liked the old fashioned way the most for keeping track on onion links
-- 4 reported that they keep them simply as a list and a note, furthermore 3 use
-their memory as storage place, simply remembering the addresses. Apart from
-these, one interviewee used his Twitter feed and another Tor chat as storage
-places. Moreover one interviewee stated that Tor browser remembers the links and
-another interview participant (P01) explained: ``The onion services we run
-professionally we keep track of because we operate the server, so that's easy.''
-Notably, one quarter of our survey respondents did not have a good solution to
-the problem of tracking onion links and  two interviewees admitted that they did
-not have any storage system for Onion links.  Given the alarming number of
-(possibly insecure) home-baked solutions, a Tor Browser extension that solves
-this problem seems warranted.
+Conventional domains are designed to be easy to remember and recognize but how
+do users handle randomly-generated onion domains. Most survey respondents use
+Tor Browser's bookmarks to save onion domains as seen in
+\Cref{fig:onion-domain-mgmt}.  Two interview participants did the same.  While
+convenient, this method of saving onion links leaves a trace of (presumably)
+visited sites on somebody's computer.  One of Tor Browser's security
+requirements is ``disk avoidance,'' \ie, the browser must not write anything to
+disk that would reveal the user's browsing history~\cite[\S~2.1]{Perry2017a}.
+Bookmarking links is a violation of this security requirement albeit requested
+by the user.  Many of our survey respondents were aware of this issue, and about
+a dozen survey respondents who selected ``Other'' stated that they store onion
+domains in an encrypted manner---either in a text file or in their password
+manager.  Somewhat less popular amongst our survey participants was saving onion
+domains in local text files (36\%), getting them from trusted websites (34\%),
+using search engines (18\%), memorizing domains (16\%), using some other
+techniques (9\%), or employing pen and paper (8\%).  Four of our interviewees
+reported that they store onion services in a list and three remember (some)
+onion services.  Besides one interviewee used his Twitter feed and another
+TorChat as storage places.  Moreover one interviewee believed that Tor Browser
+remembers the links and another interview participant (P01) explained: ``The
+onion services we run professionally we keep track of because we operate the
+server, so that's easy.''  Notably, one quarter of our survey respondents did
+not have a good solution to the problem of tracking onion links and two
+interviewees pointed out that they lacked a management mechanism.  Given the
+alarming number of (possibly insecure) home-baked solutions, a Tor Browser
+extension that solves this problem seems warranted.
 
 Of the survey respondents who memorize onion domains, we found that most
 respondents memorize one to four onion domains (35\% of total respondents) but
@@ -414,12 +411,12 @@ them; these results are shown in \Cref{fig:memorize-domains}.
     \label{fig:memorize-domains}
 \end{figure}
 
-From another perspective, it is interesting how our participants actually
-entered onion links. The most often mentioned technique for going to onion
-websites was copy and paste, used by 4 interviewees. Another simple, yet used by
-3 interviewees, technique was going via direct links.  Also, two interview
-participants would go to onion websites through their bookmarks and two via
-Google. One interview participant said that he typed the links from the notes.
+We asked our interviewees how they typically reach onion services.  The most
+often mentioned technique was copy and pasting domains, done by four
+participants, followed by three interviewees who simply click on links they
+encounter.  Two participants would go to onion sites over bookmarks while
+another two use Google.  One interview participant said that they typed the
+domains from their notes.
 
 \subsubsection{Onion Links and Sites Are Hard to Verify as Authentic}
 
@@ -454,7 +451,6 @@ verified up to nine digits, which is within the realm of brute force attacks.
     \caption{How our respondents determine an onion service's legitimacy.}
     \label{fig:determining-legitimacy}
 \end{figure}
-
 
 We also asked our interview participants how they knew that the websites they
 went to were actually the ones that they wanted to go to.  We observed mainly
