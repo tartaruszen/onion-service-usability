@@ -215,11 +215,19 @@ leaked via the Domain Name System (\textsc{dns}).  While onion domains are only
 resolvable inside the Tor network, Internet users may attempt to access an onion
 site using a browser that is not configured to use Tor, resulting in the onion
 domain ``leaking'' into the domain name system.  \textsc{dns} root servers can
-get the most comprehensive picture of the extent of this leakage.
+get the most comprehensive picture of the extent of this leakage.  
 
 We obtained about 72 hours worth of \textsc{dns} data from the B root server
 over the \textsc{impact} Cyber Trust program~\cite{b_root}.  This data consists
 of several hundred pcap files that contain full packet captures with
-pseudonymized IP addresses.  We analyze the \textsc{dns} requests evident in the
+pseudonymized IP addresses of all DNS traffic to the B root from 10:00 on September 
+19, 2017 to 0:00 on September 22nd, 2017.  We analyze the \textsc{dns} requests evident in the
 dataset and present our results alongside our findings from the survey and
 interview results.
+
+After parsing the data by extracting the QNAME of each DNS query, we found 15,471 correctly-formatted onion domains\footnote{Note that these may
+not all correspond to real onion sites, as some-one could have entered a bogus
+onion domain name into a browser; unfortunately, there is no way for us to
+evaluate the validity of each onion domain.} in the dataset; a correctly-formatted onion domain 
+is one that is 16 characters in length (representing an 80-bit hash of the owner's public key) and 
+consists of any letters of the alphabet and any numbers between 2 and 7.
