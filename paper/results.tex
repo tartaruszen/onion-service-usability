@@ -418,28 +418,27 @@ encounter.  Two participants would go to onion sites over bookmarks while
 another two use Google.  One interview participant said that they typed the
 domains from their notes.
 
-\subsubsection{Onion Links and Sites Are Hard to Verify as Authentic}
+\subsubsection{Onion Sites Are Hard to Verify as Authentic}
 
 We asked our survey respondents if they ever thought about the authenticity of
 an onion site.  The majority of our survey respondents (80\%) did want to verify
 an onion service as authentic.  \Cref{fig:determining-legitimacy} gives an
-overview of the strategies that our respondents employ.  More than half of our
-survey participants either consulted trusted sources (\eg, friends or another,
-trusted website) or used bookmarks when revisiting onion services.  Many
-respondents also verified the domain in the browser's address bar (46\%),
-checked if the corresponding website had a link to its onion site (41\%), or
-check that the onion service had an \textsc{https} certificate
-(36\%).\footnote{DigiCert is issuing \textsc{ev} certificates for onion
-sites~\cite{DigiCert2015a}, but adoption has been slow---presumably in part
-because \textsc{ev} certificates require the \textsc{ca} to verify the
-applicant's identity and they are not free.}  Alarmingly, almost 30\% of survey
-respondents stated that they sometimes could not tell the difference between an
-authentic service and an impersonation, and 11\% never checked a service's
-legitimacy in the first place.  Survey participants who selected ``Other''
-provided a wide variety of ad-hoc phishing protections, some of which were
-clearly misguided, \mc{whats an example? and why was it misguided} further
-highlighting the importance of being able to verify a site as being the one that
-they were trying to reach.
+overview of the strategies that our respondents employ.  More than half either
+consulted trusted sources (\eg, friends or another, trusted website) or used
+bookmarks when revisiting onion services.  Many respondents also verified the
+domain in the browser's address bar (46\%), checked if the corresponding website
+had a link to its onion site (41\%), or check that the onion service had an
+\textsc{https} certificate (36\%).\footnote{DigiCert is issuing \textsc{ev}
+certificates for onion sites~\cite{DigiCert2015a}, but adoption has been
+slow---presumably in part because \textsc{ev} certificates require the
+\textsc{ca} to verify the applicant's identity and they are not free.}
+Alarmingly, almost 30\% of survey respondents stated that they sometimes could
+not tell the difference between an authentic service and an impersonation, and
+11\% never checked a service's legitimacy in the first place.  Survey
+participants who selected ``Other'' provided a wide variety of ad-hoc phishing
+protections, some of which were clearly misguided, \mc{whats an example? and why
+was it misguided} further highlighting the importance of being able to verify a
+site as being the one that they were trying to reach.
 
 When asked how many characters our respondents verify in onion domains,  43\%
 verified thirteen to sixteen digits, \ie, (almost) the full domain, while 46\%
@@ -452,27 +451,30 @@ verified up to nine digits, which is within the realm of brute force attacks.
     \label{fig:determining-legitimacy}
 \end{figure}
 
-We also asked our interview participants how they knew that the websites they
-went to were actually the ones that they wanted to go to.  We observed mainly
-two different patterns---when people relied on someone else and when they tried
-to work this out on their own. Starting from the first group, the biggest number
-of interviewees responded that their main strategy for verification of onion
-links was word of mouth (5) and assistance of someone else while using OS (4) as
-P03 admitted ``(I) Let people show me them. I don't go there myself.''  Also two
-interview participants relied on trusted resources and two entered OS via their
-corresponding websites as a way of protection. One of the most often (3
-interviewees) approach taken in the second category, was simply checking and
-comparing URLs to see whether they matched to ``clear net site'' (P14).
-Furthermore, two interview participants depend on their own experience, one on
-http certificate, another one would lower the security settings in order to
-check the website. There was one interviewee who believed that just using Tor is
-verification itself and from the other hand, there was one interview participant
-who simply avoided onion pages.
+We also asked our interview participants how they knew that the site they went
+to was the one that they wanted to visit.  We observed two groups: people
+relying on someone else and people trying to work this out on their own.
 
-Our interviewees listed many different strategies which they used to verify the
-authenticity of Onion links but the biggest number of them (6) stated that they
-don't know how to do that and ``That's the whole problem'' (P03). Moreover, two
-interviewees thought it is not even possible.
+Most interviewees in the first group stated that they rely on word of mouth for
+verification (5), followed by assistance from someone else (4).  P03 explained
+``[I] let people show me them.  I don't go there myself.''  Two interview
+participants relied on trusted resources
+% ---Philipp: What are ``trusted resources''?---
+and two accessed onion services by first visting their corresponding websites.
+One of the most common approaches (three interviewees) in the second group was
+to check and compare \textsc{url}s to see whether they matched to ``clear net
+site'' (P14).  Furthermore, two interview participants rely on their own
+experience, one on \textsc{https} certificates, another one would lower the
+security settings to check the website.
+% ---Philipp: What does it mean to ``lower security settings to check the
+%  website?---
+One interviewee believed that just using Tor is verification in itself and
+another participant avoided onion sites altogether.
+
+Our interviewees employed many strategies which to verify the authenticity of
+onion sites but the biggest number (6) states that they don't know how to do
+that.  P03 summarized the issue as ``That's the whole problem.'' Two
+interviewees even believed onion site authentication to be impossible.
 
 \subsection{Onion Service Issues \& Improvements}
 \label{sec:improve}
