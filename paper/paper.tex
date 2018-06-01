@@ -6,7 +6,6 @@
 \usepackage{xcolor} % For colourful links.
 \usepackage[backend=biber,backref=true,maxnames=20,urldate=long]{biblatex}
 \usepackage{hyperref} % For clickable links.
-\hypersetup{draft}
 \usepackage[l2tabu, orthodox]{nag}
 \usepackage{subcaption}
 \usepackage{booktabs}
@@ -16,6 +15,7 @@
 \usepackage{csquotes}
 \usepackage[nameinlink]{cleveref}
 \usepackage{fontawesome} % For the link icon in the bibliography.
+\usepackage{balance}
 
 \usepackage[T1]{fontenc}
 \usepackage[scaled=0.8]{beramono}
@@ -66,22 +66,22 @@
 }
 
 \author{
-	{\rm \phantom{ZZZZ}Philipp Winter\phantom{ZZZZ}} \\
+	\textup{\phantom{ZZZZ}Philipp Winter\phantom{ZZZZ}} \\
 	Princeton University
 	\and
-	{\rm \phantom{ZZZZ}Anne Edmundson\phantom{ZZZZ}} \\
+	\textup{\phantom{ZZZZ}Anne Edmundson\phantom{ZZZZ}} \\
 	Princeton University
 	\and
-	{\rm \phantom{ZZZ}Laura M. Roberts\phantom{ZZZ}} \\
+	\textup{\phantom{ZZZ}Laura M. Roberts\phantom{ZZZ}} \\
 	Princeton University
 	\and
-	{\rm Agnieszka Dutkowska-Żuk} \\
+	\textup{Agnieszka Dutkowska-Żuk} \\
 	Independent
 	\and
-	{\rm \phantom{ZZZZ}Marshini Chetty\phantom{ZZZZ}} \\
+	\textup{\phantom{ZZZZ}Marshini Chetty\phantom{ZZZZ}} \\
 	Princeton University
 	\and
-	{\rm \phantom{ZZZZ}Nick Feamster\phantom{ZZZZ}} \\
+	\textup{\phantom{ZZZZ}Nick Feamster\phantom{ZZZZ}} \\
 	Princeton University
 }
 
@@ -108,6 +108,8 @@
 \input{conclusion}
 
 \input{acknowledgements}
+
+\balance
 
 {\footnotesize
 \printbibliography}
