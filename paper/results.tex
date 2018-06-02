@@ -336,6 +336,9 @@ The majority of our survey respondents (60\%) reported that they were satisfied
 with how they discover onion services but a significant proportion (40\%) were
 not. Those satisfied reported that they have no interest in learning about new
 onion services, in part because they only use a small set of onion services.
+Similarly, one of the biggest issues for our interview participants was that
+onion sites are hard to find (5/17), or as P13 put it: ``How do you find stuff
+if you don't know what you're looking for or only have a vague idea?''
 
 \begin{figure}[t]
     \centering
@@ -474,21 +477,10 @@ onion sites but the biggest number (6) states that they don't know how to do
 that.  P03 summarized the issue as ``That's the whole problem.'' Two
 interviewees even believed onion site authentication to be impossible.
 
-\subsection{Onion Service Issues \& Improvements}
+\subsection{Onion Service Issues and Improvements}
 \label{sec:improve}
 
 \subsubsection{Vanity Domains vs. Phishing Attacks}
-
-The majority of our interview participants (9/17) agreed on the fact that there
-is a big likelihood of phishing attacks, one of them explained the phenomenon
-this way: ``the two approaches I know from the normal Web still apply here,
-which is typo-squatting, registering an .onion that's only a slight variation
-away, or bit-squatting, which is slightly different, but it involves a single or
-a few bit flips within an .onion address, so that it looks relatively similar.''
-(P06), while another interview participant showed his solution for this problem:
-``If you're manually typing it in I suppose they could be a problem, but I
-primarily cut and paste.'' (P25). In three interviewees the anonymous character
-of OS raised doubt over their security.
 
 Phishing remains an issue despite onion services' extra anonymity and security
 properties.  Past work has documented phishing onion sites that transparently
@@ -500,57 +492,58 @@ protections, search results, and long-lived reputation, but none of these
 methods have matured for onion services.  Does the nature of onion services
 facilitate phishing attacks?  If so, what can we do to mitigate the issue?
 
-Ten out of 17 interviewees found the idea of vanity domains as the big usability
+Most interview participants (9/17) agreed that phishing constitutes a serious
+risk, one of them explained the phenomenon this way: ``the two approaches I know
+from the normal Web still apply here, which is typo-squatting, registering an
+onion [domain] that's only a slight variation away, or bit-squatting, which is
+slightly different, but it involves a single or a few bit flips within an onion
+address, so that it looks relatively similar'' (P06), while another interview
+participant presented their solution to this problem: ``If you're manually
+typing it in I suppose they could be a problem, but I primarily cut and paste''
+(P25).
+
+Ten out of seventeen interviewees saw vanity domains as a significant usability
 improvement: ``In terms of mnemonics and easier recollection if you can chunk
-words that are associated with daily life and not just a random. If there's
+words that are associated with daily life and not just a random.  If there's
 entropy in the stream, there's no way I'm going to remember that more than a few
-characters.'' (P18) and from different perspective, P10 thought of vanity
-domains as a sort of mapping tool that makes you feel safer and more protected:
-``I think that for people who don't spend a lot of time using those types of
-services, it definitely gives you a more familiar framework for thinking about
-where you are on the Internet. If people think ... people have a pretty strange
-geographic metaphors for navigating the internet, but I think this idea of where
-are you? Well, I'm at this place I can't even name, I can't say it out loud, I
-think that can be a barrier for people.'' While 1 person, P26, did not find
-vanity domains practical and seemed to distrust them: ``I don't think it's
-useful because, you know, only the first ... only some character and it's
-followed by another random word, so I don't think it's very useful. And phishing
-can still copy that. They can use more similar upper. I think this not valuable
-because I think phishing can use a combination (...) I don't think what I can
-remember is safe now. Even I don't know what my password is or my e-mail is.''
-Interestingly, some \adz{how many} survey respondents consider vanity domains
-economically unfair because wealthy entities can afford to generate longer
-prefixes such as Facebook \mc{explain why in related work}.
+characters'' (P18).  P10 had a different perspective: ``I think that for people
+who don't spend a lot of time using those types of services, it definitely gives
+you a more familiar framework for thinking about where you are on the Internet.
+If people think \ldots people have a pretty strange geographic metaphors for
+navigating the internet, but I think this idea of where are you?  Well, I'm at
+this place I can't even name, I can't say it out loud, I think that can be a
+barrier for people.''
 
+P26 did not find vanity domains practical and seemed to distrust them: ``I don't
+think it's useful because \ldots it's followed by another random word \ldots and
+phishing can still copy that \ldots I don't think what I can remember is safe
+now.''  Interestingly, some \adz{how many} survey respondents consider vanity
+domains economically unfair because wealthy entities can afford to generate
+longer prefixes such as Facebook \mc{explain why in related work}.
 
-What is more interesting, the problem of phishing attacks, that lays in mistyped
-variation of the real address, and thinking of and proposing vanity domains as
-possible improvement generates another problem that 8 of our interview
-participants saw: such improvement could multiple phishing attacks. As P13
-elaborated: ``I think in theory, on the one, it makes it easier for you to
-recognize where you are, it makes it easier for you to perhaps, share the URL or
-type it out. On the other hand, I've seen concerns that, by having a vanity URL
-where perhaps people only look for the Facebook portion and they don't pay
-attention to what comes after it could potentially make it easier to exploit
-unsuspecting users. Send them a link that also says Facebook but the numbers
-after it are different, but you just see the Facebook part and go, ``It's fine,
-it's Facebook.'' That can be a risk to them.''  In addition, P05 simply
-explained:  ``It seems like it would encourage more trust on behalf of the user,
-but then again, maybe make phishing easier too, if phishers are making vanity
-domains themselves. Yeah, that seems like it could go both ways actually.''
-Furthermore, one interviewee expressed his concern about onion vanity domains
-saying that he ``wouldn't use it for fun'' (P02).  Among our survey respondents
-there was concern that the short and recognizable prefixes tempt users to only
-verify the prefix and ignore subsequent characters.  One survey respondent
-reported that \textquote{I only memorize the first part of the domain.} \mc{need
-participant id} while another wrote:
-
-\mc{need participant id}
-\begin{displayquote}[Survey respondent]
-If there isn't some cognizable word at the start, it'll be more difficult for me
-to determine if I'm going to the correct domain or a scam. I may end up going to
-less .onion sites as a result.
-\end{displayquote}
+Some of our interview participants noticed that vanity domains can negatively
+affect security.  P13 explained: ``I think in theory, on the one [hand], it
+makes it easier for you to recognize where you are, it makes it easier for you
+to perhaps, share the \textsc{url} or type it out.  On the other hand, I've seen
+concerns that, by having a vanity \textsc{url} where perhaps people only look
+for the Facebook portion and they don't pay attention to what comes after it
+could potentially make it easier to exploit unsuspecting users. Send them a link
+that also says Facebook but the numbers after it are different, but you just see
+the Facebook part and go, `It's fine, it's Facebook.' That can be a risk to
+them.''  P05 also shared their view on vanity domains: ``It seems like it would
+encourage more trust on behalf of the user, but then again, maybe make phishing
+easier too, if phishers are making vanity domains themselves.  Yeah, that seems
+like it could go both ways actually.''  
+% ---Philipp: The sentence below seems irrelevant.---
+% Furthermore, one interviewee expressed their concern about onion vanity
+% domains, saying that he ``wouldn't use it for fun'' (P02).
+Among our survey respondents was also concern that the short and recognizable
+prefixes tempt users to only verify the prefix and ignore the non-vanity part of
+the onion domain.  One survey respondent reported that \textquote{I only
+memorize the first part of the domain.} \mc{need participant id} while another
+wrote: ``If there isn't some cognizable word at the start, it'll be more
+difficult for me to determine if I'm going to the correct domain or a scam. I
+may end up going to less onion sites as a result.'' \mc{need participant id}
 
 Focusing only on the vanity part of a domain allows attackers to create an
 impersonation domain that features the original's prefix but differs in
@@ -565,36 +558,37 @@ correctly-formatted onion domains from the dataset and then computed a
 similarity metric between each unique pair of onion domains.  Using the
 Jaro-Winkler string similarity metric, which is the edit distance between two
 strings and gives more weight to strings with common prefixes, we assign a
-similarity value between \[0,1\], where 0 represents completely different
-strings and 1 represents matching strings, to each unique domain pair. We use
+similarity value between $[0,1]$, where 0 represents completely different
+strings and 1 represents matching strings, to each unique domain pair. We used
 this metric because people tend to check the first part of the domain as opposed
 to the last part.  Our results show that .007\% (8,672) of all unique domain
 pairs (119,668,185) have an extremely high similarity ($> .90$); for example,
-\url{bitfog2jzic5tnh7.onion} and \url{bitfog2y7y2pfv75.onion} have a similarity
-of .917.
+bitfog2jzic5tnh7.onion and bitfog2y7y2pfv75.onion have a similarity of .917.
 
-Moreover, 6 interviewees reported that one of their issues is correct webpage
-dilemma---you can never be sure whether you are on the right website, three
-reported that .onion links are easy to mistype and also, one interview
-participant noticed that onion URL changes randomly. All of these problems led
-to proposed improvements like stable pattern of words or numbers in URL (3/17)
-to make it more readable and one interviewee suggested that the URL should be
-composed without numbers, only with letters - which corresponds to complaint of
-survey respondents mentioned in \Cref{sec:perception}.
+% ---Philipp: The paragraph below is confusing and doesn't contribute.---
+% Six interviewees reported that one of their issues is correct webpage
+% dilemma---you can never be sure whether you are on the right website, three
+% reported that .onion links are easy to mistype and also, one interview
+% participant noticed that onion URL changes randomly. All of these problems led
+% to proposed improvements like stable pattern of words or numbers in URL (3/17)
+% to make it more readable and one interviewee suggested that the URL should be
+% composed without numbers, only with letters - which corresponds to complaint of
+% survey respondents mentioned in \Cref{sec:perception}.
 
-\subsubsection{Onion Services Operations}
+\subsubsection{Onion Service Operations}
 
-We asked our survey respondents if they had ever set up their own onion site and
-the issues they faced as reported in \Cref{fig:onion-operation-concerns}.  We
-asked about three potential attacks on onion services; \first~somebody setting
-up a phishing site for the operator's site, \second~a denial-of-service attack,
-and \third~a deanonymization attack.  More than half of our survey respondents
-who operated an onion service were at least somewhat concerned about all of
-these attacks.  Almost 40\% of survey respondents claimed to be extremely
-concerned about somebody deanonymizing their onion service.  Indeed, many survey
+We asked our survey respondents if they had ever set up their own onion site
+and, if so, the issues they faced.  As part of that, we inquired how worried our
+respondents were about three potential attacks on their onion services;
+\first~somebody setting up a phishing site for the operator's site, \second~a
+denial-of-service attack, and \third~a deanonymization attack.  According to the
+results, shown in \Cref{fig:onion-operation-concerns}, more than half of our
+survey respondents who operated an onion service were at least somewhat
+concerned about all of these attacks.  Almost 40\% claimed to be extremely
+concerned about somebody deanonymizing their onion service.  Indeed, many
 respondents lamented the difficulty of protecting onion services from
 application-layer deanonymization attacks.  Matic \ea\ demonstrated some of
-these issues in 2015~\cite{Matic2015a}.
+these attacks in 2015~\cite{Matic2015a}.
 
 \begin{figure}[t]
     \centering
@@ -605,88 +599,77 @@ these issues in 2015~\cite{Matic2015a}.
     \label{fig:onion-operation-concerns}
 \end{figure}
 
-One of our interviewee, P16, explained encryption technology issues, his wish to
-secure his content but also his positive attitude towards the future of onion
-services: ``As far as other websites, I do have some sites that I want to run,
-but I'm just waiting for the encryption technology to become better, and I don't
-think we're that far off it, as in we're talking months. (\ldots) another thing
-about onion services, is whether or not those hosts are actually encrypted, and
-that the data that you actually post on those things is also encrypted, so if
-they are actually taken down by third parties for whatever reason, that you can
-say, "Well it doesn't matter the site's gone, but my stuff's pretty much safe,
-because I have my own key.''
+% ---Philipp: The paragraph below doesn't seem to contribute anything.---
+% One interviewee, P16, explained encryption technology issues, his wish to
+% secure his content but also his positive attitude towards the future of onion
+% services: ``As far as other websites, I do have some sites that I want to run,
+% but I'm just waiting for the encryption technology to become better, and I
+% don't think we're that far off it, as in we're talking months. (\ldots)
+% another thing about onion services, is whether or not those hosts are actually
+% encrypted, and that the data that you actually post on those things is also
+% encrypted, so if they are actually taken down by third parties for whatever
+% reason, that you can say, "Well it doesn't matter the site's gone, but my
+% stuff's pretty much safe, because I have my own key.''
 
-Another problems that our interview participants listed were browser
-fingerprinting (2), as well as changing domain problem, when one site is taken
-down and its domain is changed it is hard to find it (1). There was also one
-interviewee who claimed that his problem lies in remembering where the exact
-domain was but one person saw no domain format problems. Furthermore,
-participant P01 had a problem with a Firefox  browser regarding onion links---it
-did not recognize .onion domains as being secure. 
-
-Interestingly, most (83\%) of our survey participants did not expect the
-next-generation domain format to change their browsing habits because they treat
-onion domains as opaque identifiers and handle these links via tools such as
-bookmarks.  For the 17\% who expressed concern over the next generation domain
-format \mc{can we define what this is?}, they felt that they would no longer be
-able to memorize even the small number of onion domains (such as Facebook's)
-that they used.  This suggests that although onion links are difficult to
-handle, usability may not worsen with the new domain format.
+% ---Philipp: The paragraph below doesn't belong to this section.---
+% Another problems that our interview participants listed were browser
+% fingerprinting (2), as well as changing domain problem, when one site is taken
+% down and its domain is changed it is hard to find it (1). There was also one
+% interviewee who claimed that his problem lies in remembering where the exact
+% domain was but one person saw no domain format problems. Furthermore,
+% participant P01 had a problem with a Firefox  browser regarding onion
+% links---it did not recognize .onion domains as being secure. 
 
 \subsubsection{User Experience Design}
 
-Many survey respondents had performance concerns when it comes to onion
-services. \mc{need participant id}  One survey user stated, ``I would always
-prefer the onion site, but for video sites like YouTube I would likely often use
-the normal site to be able to get a higher quality stream due to higher
-bandwidth.'' Another drawback of OS was identified in the latency and according
-to 3 interview participants the access time was too slow. 
+Many survey respondents had performance concerns about onion services. \mc{need
+participant id}  One survey user stated, ``I would always prefer the onion site
+but for video sites like YouTube I would likely often use the normal site to be
+able to get a higher quality stream due to higher bandwidth.''  Three interview
+participants brought up the ``slowness'' of onion services.
 
 Other survey respondents mentioned not wanting to log in to onion sites because
 they believe it defeats the purpose by revealing private data---a fallacy that
-we discussed in \Cref{sec:perception}.  Our interviewees mentioned a lot
-technical improvements that they would like to see. Four of them put the
-emphasis on importance of creating valid search engine type tool, while two
-interviewees would like to see safe bookmarking tool.  Three interviewees wanted
-CAPTCHAs to be gone and one interview participant wanted login facility as well
-as to see some authentication to be added to onion sites. 
+we discussed in \Cref{sec:perception}.  Our interviewees mentioned various
+technical improvements they would like to see.  Four emphasized the importance
+of useful search engines, two would like to see a secure bookmarking tool, and
+another interviewee wanted \textsc{captcha}s to be gone.
 
-Moreover, another interviewee thought that OS should be safer but they should
-preserve anonymity at the same time. When it come to anonymity, participants
-listed such possible improvements as anonymous video calls (1), email (1) and
-file sharing (1). Two interview participants mentioned that faster access time
-to websites would be a feature they would like to see. From a different
-perspective, two interviewees wished there would be a way to automatically
-redirect to onion services while using Tor and furthermore, one person thought
-that there should be auto-redirect to Tor, whenever typing onion links, even in
-a different browser. In addition to that, we asked survey respondents if they
-would want Tor Browser to automatically redirect them from a normal website to
-its corresponding onion site (\eg, from facebook.com to facebookcorewwwi.onion).
-Survey respondents were largely in favor of this feature:37.78\% said they would
-always use it, 34.91\% said they would use it for some sites, 15.61\% said they
-would never use that feature,   and 11.70\% chose ``Other.'' Survey respondents
-reported that they liked the convenience of being redirected.  The naysayers
-were quite passionate, though, and they were concerned about potential security
-issues. One respondent said, \mc{participant id needed} \textquote{What's to
-stop them from man in the middle'ing me, either by choice, at the behest of some
-nefarious entity, or after being hacked?} We conclude that there is clear
-interest in such an ``upgrade'' feature provided that it is carefully designed
-and offers users an option to control the process on a per-site basis.
+% ---Philipp: No idea what the paragraph below means.---
+% Moreover, another interviewee thought that OS should be safer but they should
+% preserve anonymity at the same time. When it come to anonymity, participants
+% listed such possible improvements as anonymous video calls (1), email (1) and
+% file sharing (1). Two interview participants mentioned that faster access time
+% to websites would be a feature they would like to see. 
 
-\subsubsection{Education, Accessibility \& Knowledge}
+When asked about the new onion domain format, we were surprised to learn that
+most (83\%) of our survey participants did not expect the next-generation domain
+format to change their browsing habits because they treat onion domains as
+opaque identifiers and handle these links via tools such as bookmarks.  For the
+17\% who expressed concern over the next generation domain format \mc{can we
+define what this is?}, they felt that they would no longer be able to memorize
+even the small number of onion domains (such as Facebook's) that they used.
+This suggests that although onion links are difficult to handle, usability may
+not worsen with the new domain format.
 
-One of the biggest issues for participants was the fact that onion sites are
-hard to find (5/17): ``In my line of work, people talk about, `You can get all
-sorts of things on the Dark Web. There's all sorts of things, marketplaces where
-things are bought and sold or all sorts of information you can find'.'' But
-unless you know, if I want to find out, what are all of the forums where people
-sell credit card data? I would have to rely on someone who has previously
-collated the directory of that sort of stuff. I think that would be the main
-thought I'd have is how do you discover that? How do you find stuff if you don't
-know what you're looking for or only have a vague idea? (P13) and for one
-interviewee onion links were also hard to share.  In addition to that, one
-participant wished to be able to find Onion Links through ``normal'' browsers.
+We asked survey respondents if they would want Tor Browser to automatically
+redirect them from a normal website to its corresponding onion site, \eg, from
+facebook.com to facebookcorewwwi.onion.  Our respondents were largely in favor
+of this feature: 37.78\% would always use it, 34.91\% would use it for some
+sites, 15.61\% would never use that feature, and 11.70\% chose ``Other.'' Survey
+respondents reported that they liked the convenience of being redirected.  The
+naysayers were quite passionate, though, and were concerned about potential
+security issues.  One respondent said, \mc{participant id needed}
+\textquote{What's to stop them from man-in-the-middle'ing me, either by choice,
+at the behest of some nefarious entity, or after being hacked?}  We conclude
+that there is clear interest in such an ``upgrade'' feature, provided that it is
+carefully designed and offers users an option to control the process on a
+per-site basis.  Two interviewees felt similarly, wishing that there was a way
+to automatically redirect to onion services while using Tor.
 
+\subsubsection{Education, Accessibility, and Knowledge}
+
+% this is OS discovery
 Among the survey respondents who were not satisfied with how they discover onion
 services (40\%), the most prominent complaint was about link rot on aggregators.
 There is significant churn among onion sites, and our respondents were
@@ -703,75 +686,68 @@ that were aware of such engines, many were dissatisfied with both the search
 results and the number of indexed onion sites.  Unsurprisingly, a ``Google for
 onion sites'' was a frequent wish.
 
-Moreover, 7 interviewees wished that OS would be simply more accessible for
+Seven interviewees wished that onion services would be more accessible for
 everybody, not only in work but also in every other aspect of our lives, for
 example in having an access to social media or even planning a wedding with
-friends on Signal - P10 elaborated: ``A lot of it is about adoption. I feel like
-it's important to normalize the use of these tools outside of this world to
-people and just to sort of, in groups of friends or colleagues or whatever (...)
-Communication is not always top secret and hardcore, sometimes it's fun. If
-people are doing their fun communication one place and their serious
-communication in another, then there's lots of security problems with that.'' 
+friends on Signal.  P10 elaborated: ``A lot of it is about adoption.  I feel
+like it's important to normalize the use of these tools outside of this world to
+people and \ldots in groups of friends or colleagues or whatever.  \ldots
+Communication is not always top secret and hardcore, sometimes it's fun.  If
+people are doing their fun communication in one place and their serious
+communication in another, then there's lots of security problems with that.''
+% ---Philipp: The following is similar but redundant.---
+% P07 pointed out, OS are not as popular as they could be: ``I think usability
+% is one part. I think. I'm not so much concerned, actually, about the onion
+% services being improved, 'cause I think you guys do a very good job. My
+% concern is more about getting this out to people who aren't in this space,
+% communicating what that is, making sure that there's more uptake of it.'' 
 
-We also asked our survey respondents if they would prefer onion versions of
-popular websites such as YouTube, Twitter, or Amazon to their normal websites.
-49.07\% of survey respondents said they would always prefer the onion site,
-30.72\% chose ``Other'' and 20.21\% of respondents said they would always prefer
-the normal website. As a further matter, 3 interviewees wished to see big
-popular domains having OS, which P06 explained and brought up different aspect
-of such change: ``I think a lot of people would enjoy being more anonymous in
-some of those spaces. I also think that would have an effect on the culture of
-those spaces, and it would change. That's not necessarily a good or bad thing,
-it's just that you behave differently in a space where everyone is anonymous, or
-if everyone's not anonymous. But in mixed spaces, where some people are and some
-people aren't, there are some interesting culture clashes.'', but also, one
-interviewee thought that not only big domains, but every website should have its
-correspondent onion site. In addition, any survey respondents expressed
-frustration about the difficulty of finding out if a particular website, such as
-``example.com'' has a corresponding onion service.  A common wish was to have a
-website list its onion service prominently in a footer.  Ironically, some survey
-respondents were surprised that torproject.org has a corresponding onion
-site---they could not find it on the website.
+We also asked our survey respondents if they would prefer an onion version of
+popular websites such as YouTube, Twitter, or Amazon over the corresponding
+websites.  49.07\% would always prefer the onion site, 20.21\% would always
+prefer the website, and 30.72\% chose ``Other.''  Three interviewees pointed out
+that they wished to see influential websites set up corresponding onion sites.
+For example, P06 explained: ``I think a lot of people would enjoy being more
+anonymous in some of those spaces.  I also think that would have an effect on
+the culture of those spaces, and it would change.  That's not necessarily a good
+or bad thing, it's just that you behave differently in a space where everyone is
+anonymous, or if everyone's not anonymous.  But in mixed spaces, where some
+people are and some people aren't, there are some interesting culture clashes.''
+One interviewee pushed the idea further, expressing that all websites instead of
+just big ones should have a corresponding onion site.  In addition, many survey
+respondents expressed frustration about the difficulty of finding out if a
+particular website, such as ``example.com'' has a corresponding onion service.
+A common wish was to have a website list its onion service prominently in a
+footer.  Ironically, some survey respondents were surprised that torproject.org
+has a corresponding onion site---they could not find it on the website.
 
- On the other hand, one person wished to see more ``practical'' for general
- public related content rather than Facebook; websites that would be safe for
- example for activists to use or ``For instance, any kind of website that gives
- Chinese dissidents access to information about how to go around a firewall.
- Much more applied, like that.'' (P07)
+% ---Philipp: Vague, not clear what this is teaching us.---
+% On the other hand, one person wished to see more ``practical'' for general
+% public related content rather than Facebook; websites that would be safe for
+% example for activists to use or ``For instance, any kind of website that gives
+% Chinese dissidents access to information about how to go around a firewall.
+% Much more applied, like that.'' (P07)
 
-Finally, the possible improvement that was mentioned most often by our
-participants was education about onion services (7/17). Our interviewees seemed
-concern about not enough resources that they could find to learn how to use OS
-in secure way and even know what OS are. Furthermore, as P07 pointed out, OS are
-not as popular as they could be: ``I think usability is one part. I think. I'm
-not so much concerned, actually, about the onion services being improved, 'cause
-I think you guys do a very good job. My concern is more about getting this out
-to people who aren't in this space, communicating what that is, making sure that
-there's more uptake of it.'' Some wanted to know how to use onion service
-correctly and stop being uncertain about its properties: ``Like really clear
-user education in the installation process would be great for people like me and
-for people [...] like me, who are like ``Okay, this is a thing I can use, why am
-I using it again? What am I using it for? What does it do?'' And why would it
-potentially even be breaking these other apps. I'm I being watched and now my
-phone is being destroyed. Or is it like a simple technical problem, that can be
-overcome? (P08). One of our interviewee thought that bulletin would be a good
-idea, while 2 thought that there should be some websites that would help and
-inform people about usage of OS---also, according to one interview participant,
-the fact that there was no support center was a big problem related to OS.  The
-lack of proper education accompanies by a phenomenon, which 3 of our
-participants called ``cultural mysticism''. Since people do not have extended
-(and sometime even little) knowledge about OS, they tend to misinterpret some
-information about them, as P10 explained: ``the perception that these are
-hardcore security tools sometimes signals to ordinary users that they are also
-difficult or badly designed or complicated to use, and that's not really the
-case with Tor,'' but also they may be even afraid to use them, as P08's opinion
-mentioned before: Because it's also super scary. Like you think you're playing
-with this spy thing [...] Sometimes it's actually a really simple technical
-thing that's not terrifying. And to like demystify those kind of things would be
-really nice.'' This also led to suggested improvement to have directory ordered
-by categories that would make usage of OS simpler (3/17) since there was also
-one interviewee who wished that OS would be easier to use. Moreover, one
-interviewee proposed warnings to alert when something goes wrong, for example
-the site that one would like to enter might deanonymize the user. Also, there
-was one interviewee who felt under qualified to answer what kind of improvements
-he would like to see in OS.
+Finally, many of our interviewees brought up education about onion services
+(7/17).  A common theme was a lack of documentation or resources that would
+allow newcomers to learn more about onion services.  P08, for example, wanted to
+know how to use onion service correctly and stop being uncertain about its
+properties: ``Like really clear user education in the installation process would
+be great for people like me \ldots who are like `Okay, this is a thing I can
+use, why am I using it again? What am I using it for? What does it do?'''
+
+% ---Philipp: Doesn't seem to teach us anything.---
+% One of our interviewee thought that bulletin would be a good idea, while 2
+% thought that there should be some websites that would help and inform people
+% about usage of OS---also, according to one interview participant, the fact that
+% there was no support center was a big problem related to OS.
+
+Three of our interviewees referred to the lack of proper education as ``cultural
+mysticism.''  Uneducated users often misunderstand concepts, as P10 explains:
+``The perception that these are hardcore security tools sometimes signals to
+ordinary users that they are also difficult or badly designed or complicated to
+use, and that's not really the case with Tor.''  Even if knowledge was not an
+issue, fear of consequences may, as P08 mentioned before: ``Because it's also
+super scary. Like you think you're playing with this spy thing \ldots Sometimes
+it's actually a really simple technical thing that's not terrifying.  And to
+like demystify those kind of things would be really nice.''
